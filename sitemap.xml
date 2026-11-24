@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://edgetr.com/learn/</loc></url>
-  <url><loc>https://edgetr.com/library/</loc></url>
-  <url><loc>https://edgetr.com/foundations/</loc></url>
   <url><loc>https://edgetr.com/compare/</loc></url>
   <url><loc>https://edgetr.com/glossary/</loc></url>
   <url><loc>https://edgetr.com/search/</loc></url>
@@ -322,6 +320,8 @@
   <url><loc>https://edgetr.com/terms/</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://edgetr.com/privacy/</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://edgetr.com/contact/</loc><lastmod>2026-11-23</lastmod></url>
+  <url><loc>https://edgetr.com/foundations/</loc></url>
+  <url><loc>https://edgetr.com/library/</loc></url>
   <url><loc>https://edgetr.com/glossary/ath/</loc></url>
   <url><loc>https://edgetr.com/glossary/atl/</loc></url>
   <url><loc>https://edgetr.com/glossary/ask/</loc></url>
