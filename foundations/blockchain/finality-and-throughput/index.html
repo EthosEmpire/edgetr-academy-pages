@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en" data-base="/">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Finality &amp; Throughput | edgeTR Academy</title>
+<meta name="description" content="Finality is the point after which a transaction is practically irreversible. Throughput is how many transactions a chain processes per second. Both trade off against decentralisation and security.">
+<meta name="theme-color" content="#070b12">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://edgetr.com/foundations/blockchain/finality-and-throughput/">
+<meta property="og:url" content="https://edgetr.com/foundations/blockchain/finality-and-throughput/">
+<meta property="og:image" content="https://edgetr.com/img/brand/og-default.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="edgeTR Academy">
+<meta property="og:title" content="Finality &amp; Throughput">
+<meta property="og:description" content="Finality is the point after which a transaction is practically irreversible. Throughput is how many transactions a chain processes per second. Both trade off against decentralisation and security.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.edgetrSearch)document.documentElement.classList.remove("js")},3000)</script>
+</head>
+<body class="page-article">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="edgeTR Academy home">
+      <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR">
+      <span class="brand-sub">Academy</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="/learn/">Learn</a></li>
+        <li><a href="/library/">Library</a></li>
+        <li><a href="/foundations/" aria-current="true">Foundations</a></li>
+        <li><a href="/compare/">Compare</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+        <li class="nav-search-link"><a href="/search/">Search</a></li>
+      </ul>
+    </nav>
+    <form class="header-search" action="/search/" method="get" role="search" aria-label="Site search" data-suggest>
+      <label class="sr-only" for="hq">Search the Academy</label>
+      <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="hq" name="q" type="search" placeholder="Search: RSI, doji, wallet..." autocomplete="off" spellcheck="false" aria-controls="hq-list" aria-expanded="false" aria-autocomplete="list" role="combobox">
+      <kbd aria-hidden="true">/</kbd>
+      <div class="suggest" id="hq-list" role="listbox" aria-label="Search suggestions" hidden></div>
+    </form>
+    <a class="header-search-btn" href="/search/" aria-label="Search"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false">
+      <span class="sr-only">Menu</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<article class="article">
+  <header class="article-hero">
+    <div class="wrap">
+      
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/foundations/">Foundations</a></li>
+    <li><a href="/foundations/blockchain/">Blockchain</a></li>
+    <li><span aria-current="page">Finality &amp; Throughput</span></li>
+  </ol>
+</nav>
+
+      <p class="eyebrow">Foundations · Blockchain</p>
+      <h1>Finality &amp; Throughput</h1>
+      <p class="lede">Finality is the point after which a transaction is practically irreversible. Throughput is how many transactions a chain processes per second. Both trade off against decentralisation and security.</p>
+      <ul class="meta-chips"><li><span class="chip chip--diff chip--advanced"><i aria-hidden="true"></i>Advanced</span></li>
+        <li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>5 min read</span></li><li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Updated <time datetime="2026-11-21">21 November 2026</time></span></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="wrap article-grid">
+    <aside class="toc" aria-label="On this page">
+      <details open>
+        <summary>On this page</summary>
+        <ol>
+          <li><a href="#why-it-matters">Why it matters</a></li>
+          <li><a href="#finality">Finality</a></li>
+          <li><a href="#throughput">Throughput</a></li>
+          <li><a href="#the-trade-off">The trade-off</a></li>
+          <li><a href="#going-deeper">Going deeper</a></li>
+          <li><a href="#what-it-does-not-mean">What it does NOT mean</a></li>
+          <li><a href="#common-misunderstandings">Common misunderstandings</a></li>
+          <li><a href="#risks-and-limits">Risks and limits</a></li>
+        </ol>
+      </details>
+    </aside>
+
+    <div class="prose">
+
+      <h2 id="why-it-matters">Why it matters</h2>
+<p>Two questions decide how usable a <a class="gl" href="/glossary/blockchain/" title="A shared record of transactions grouped into blocks, where each block is cryptographically linked to the one before it.">blockchain</a> is: how long until a payment cannot be undone, and how many payments the network can handle. The first is finality and the second is throughput. Both are routinely quoted in marketing, often as a single flattering number. Reading them properly requires knowing what is being measured and what was given up to achieve it.</p>
+<h2 id="finality">Finality</h2>
+<p><strong>Finality</strong> is the point after which a transaction is practically irreversible. Before that point, the block containing it could still be replaced by a competing block in a <strong>reorganisation</strong>, covered in <a href="/foundations/blockchain/consensus/">consensus</a>.</p>
+<figure class="viz viz--compare" data-animate><div class="viz-title">Two kinds of finality</div><div class="viz-canvas"><div class="dg-compare" tabindex="0" role="region" aria-label="Comparison of Probabilistic and Explicit; scrolls sideways on small screens"><table><thead><tr><th scope="col"><span class="sr-only">Aspect</span></th><th scope="col" class="t-info">Probabilistic</th><th scope="col" class="t-warn">Explicit</th></tr></thead><tbody><tr><th scope="row">How it arrives</th><td>Gradually, as blocks pile on top</td><td>At a defined moment, by a vote</td></tr><tr><th scope="row">What makes reversal hard</th><td>The work needed to overtake the chain</td><td>The stake that would be slashed</td></tr><tr><th scope="row">Typical of</th><td>Proof-of-work chains such as Bitcoin</td><td>Voting-based proof-of-stake chains</td></tr><tr><th scope="row">If participants go offline</th><td>Blocks slow down, the chain continues</td><td>Finality can stall until enough return</td></tr></tbody></table></div></div><figcaption>Neither kind is absolute. Both describe a cost that an attacker would have to bear.</figcaption></figure>
+<h3 id="probabilistic-finality">Probabilistic finality</h3>
+<p>On a <a href="/foundations/blockchain/proof-of-work/">proof-of-work</a> chain, nothing ever declares a block final. Each new block built on top makes a reversal harder, because an attacker would have to redo all of that work and overtake the honest chain. The blocks on top are called <strong>confirmations</strong>.</p>
+<figure class="viz viz--curve viz--wide" data-animate><div class="viz-title">Chance that an attacker with 10% of the hash rate catches up</div><div class="viz-scroll" data-scroll-label="Chance that an attacker with 10% of the hash rate catches up"><div class="viz-canvas"><svg class="vz vz-curve" viewBox="0 0 720 340" role="img" aria-label="Line chart falling steeply from 100 percent at zero confirmations to about 20 percent at one, 5 percent at two, 1.3 percent at three and near zero by six."><line class="vz-grid" x1="58" x2="698" y1="294" y2="294"/><text class="vz-t-axis" x="50" y="298" text-anchor="end">0</text><line class="vz-grid" x1="58" x2="698" y1="229.4" y2="229.4"/><text class="vz-t-axis" x="50" y="233.4" text-anchor="end">25</text><line class="vz-grid" x1="58" x2="698" y1="164.8" y2="164.8"/><text class="vz-t-axis" x="50" y="168.8" text-anchor="end">50</text><line class="vz-grid" x1="58" x2="698" y1="100.1" y2="100.1"/><text class="vz-t-axis" x="50" y="104.1" text-anchor="end">75</text><line class="vz-grid" x1="58" x2="698" y1="35.5" y2="35.5"/><text class="vz-t-axis" x="50" y="39.5" text-anchor="end">100</text><text class="vz-t-axis" x="58" y="312" text-anchor="middle">0</text><text class="vz-t-axis" x="164.7" y="312" text-anchor="middle">1</text><text class="vz-t-axis" x="271.3" y="312" text-anchor="middle">2</text><text class="vz-t-axis" x="378" y="312" text-anchor="middle">3</text><text class="vz-t-axis" x="484.7" y="312" text-anchor="middle">4</text><text class="vz-t-axis" x="591.3" y="312" text-anchor="middle">5</text><text class="vz-t-axis" x="698" y="312" text-anchor="middle">6</text><line x1="58" x2="698" y1="294" y2="294" stroke="var(--viz-border)"/><line x1="58" x2="58" y1="20" y2="294" stroke="var(--viz-border)"/><path class="vz-draw" pathLength="1" d="M58,35.5 L164.7,241 L271.3,280.8 L378,290.6 L484.7,293.1 L591.3,293.8 L698,293.9" fill="none" stroke="var(--info)" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round"/><g class="vz-fade vz-late" style="--i:0"><circle cx="164.7" cy="241" r="5" fill="var(--viz-label-bg)" stroke="var(--info)" stroke-width="2.2"/><rect x="174.7" y="215" width="79.9" height="22" rx="6" fill="var(--viz-label-bg)" stroke="var(--viz-border)"/><text class="vz-t-sub" x="182.7" y="230" fill="var(--text)">About 20%</text></g><g class="vz-fade vz-late" style="--i:1"><circle cx="698" cy="293.9" r="5" fill="var(--viz-label-bg)" stroke="var(--info)" stroke-width="2.2"/><rect x="593.9" y="267.9" width="94.1" height="22" rx="6" fill="var(--viz-label-bg)" stroke="var(--viz-border)"/><text class="vz-t-sub" x="601.9" y="282.9" fill="var(--text)">About 0.02%</text></g><text class="vz-t-axis" x="378" y="332" text-anchor="middle">Blocks on top of the transaction</text><text class="vz-t-axis" transform="translate(14 157) rotate(-90)" text-anchor="middle">Probability (%)</text></svg></div></div><figcaption>Rounded values from the calculation in the Bitcoin white paper. The probability falls roughly exponentially and never reaches zero.</figcaption></figure>
+<p>The chance of reversal shrinks rapidly with each confirmation but is never exactly zero. Recipients choose how many confirmations to wait for, depending on the value at stake. Six confirmations, about an hour, is a long-standing convention on Bitcoin, not a rule of the protocol. See <a href="/foundations/bitcoin/mempool-and-confirmations/">mempool and confirmations</a>.</p>
+<h3 id="explicit-finality">Explicit finality</h3>
+<p>Many <a href="/foundations/blockchain/proof-of-stake/">proof-of-stake</a> chains finalise blocks by vote. When validators holding a set share of the stake, commonly two thirds, have signed, the block is final. Reversing it would require a large share of validators to sign a conflicting history, for which their stake would be destroyed.</p>
+<p>This gives a clear moment of finality. The cost is that if too many validators are offline, the vote cannot complete and finality stalls, even though blocks may still be produced.</p>
+<div class="callout callout--beginner"><p class="callout-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 8.500l5.500 3.500-5.500 3.500z"/></svg><span>In plain words</span></p>
+<p>Probabilistic finality is like concrete setting: it is firmer every minute, and at some point you stop worrying, though no bell rings. Explicit finality is like a notary’s stamp: one moment the document is not official, the next it is, provided enough notaries are in the office.</p>
+</div>
+<h2 id="throughput">Throughput</h2>
+<p><strong>Throughput</strong> is the amount of activity a chain can process in a given time, usually expressed as <strong>transactions per second (TPS)</strong>.</p>
+<div class="formula"><code>Throughput (TPS) = transactions per block / block time in seconds</code><span>A simplification. Transactions vary in size and complexity, so real capacity is set by a block's data or gas limit.</span></div>
+<p>Three different times are often confused:</p>
+<div class="table-wrap" data-scroll-label="Table"><table><thead>
+<tr>
+<th>Measure</th>
+<th>Question it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Block time</td>
+<td>How long until the next block?</td>
+</tr>
+<tr>
+<td>Time to finality</td>
+<td>How long until a transaction is irreversible?</td>
+</tr>
+<tr>
+<td>Throughput</td>
+<td>How many transactions fit per second?</td>
+</tr>
+</tbody>
+</table></div><p>A chain can have fast blocks and slow finality. The base layers of Bitcoin and Ethereum carry far fewer transactions per second than chains that report figures in the thousands, which achieve them through larger or faster blocks, fewer validators or more demanding hardware.</p>
+<h2 id="the-trade-off">The trade-off</h2>
+<figure class="viz viz--stack" data-animate><div class="viz-title">Three goals that pull against each other</div><div class="viz-canvas"><div class="dg-stack"><div class="dg-layer t-info" style="--i:0"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><div><strong>Throughput</strong><span>Many transactions per second, at low cost.</span></div></div><div class="dg-layer t-neutral" style="--i:1"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.800 0 18M12 3c-3 3.200-3 14.800 0 18"/></svg></span><div><strong>Decentralisation</strong><span>Many independent parties able to run a node and verify.</span></div></div><div class="dg-layer t-neutral" style="--i:2"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2l8 3v6c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V5z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg></span><div><strong>Security</strong><span>A high cost to attack or rewrite the chain.</span></div></div></div></div><figcaption>Often called the scalability trilemma. Pushing hard on one tends to cost something on another.</figcaption></figure>
+<p>Raising throughput on a base chain means bigger blocks, more frequent blocks, or both. Every <a href="/foundations/blockchain/nodes-validators-miners/">full node</a> must download, verify and store all of it.</p>
+<figure class="viz viz--bars" data-animate><div class="viz-title">Data each node must handle per day (hypothetical, 250 bytes per transaction)</div><div class="viz-canvas"><div class="dg-bars" role="list"><div class="dg-bar t-bull" role="listitem" style="--i:0"><div class="dg-bar-head"><span class="dg-bar-label">5 transactions per second</span><span class="dg-bar-value">0.108 GB</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:2%"></span></div></div><div class="dg-bar t-info" role="listitem" style="--i:1"><div class="dg-bar-head"><span class="dg-bar-label">50 transactions per second</span><span class="dg-bar-value">1.08 GB</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:2.5%"></span></div></div><div class="dg-bar t-bear" role="listitem" style="--i:2"><div class="dg-bar-head"><span class="dg-bar-label">2,000 transactions per second</span><span class="dg-bar-value">43.2 GB</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:100%"></span></div><p class="dg-bar-note">400 times the first row.</p></div></div></div><figcaption>Higher throughput means heavier nodes, and heavier nodes mean fewer people able to run one.</figcaption></figure>
+<p>As requirements grow, fewer participants can afford to run a node, and verification concentrates in data centres. Blocks that are large and frequent also take longer to spread, which increases accidental forks. A chain can be made faster by using a small, fixed set of powerful validators, at the cost of relying on that set.</p>
+<p>This is why capacity is increasingly added in layers. A <a href="/foundations/blockchain/layer-1-and-layer-2/">Layer 2</a> executes transactions elsewhere and uses the base chain mainly for settlement.</p>
+<h2 id="going-deeper">Going deeper</h2>
+<p><strong>Economic finality.</strong> In both models, “irreversible” means that reversal would cost more than an attacker could plausibly gain. The strength of finality therefore depends on the total work or stake protecting the chain. The same number of confirmations means much less on a small chain than on a large one.</p>
+<p><strong>Reading TPS claims.</strong> A headline figure may come from a test network, count only the simplest kind of transfer, or include validators’ own voting messages. Theoretical maximum, tested maximum and actual daily usage are three different numbers.</p>
+<div class="example"><p class="example-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.600-7 10-7 10 7 10 7-3.600 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>Throughput and what it costs a node</span><em>Hypothetical illustration</em></p>
+<p>Hypothetical chains, assuming an average transaction of 250 bytes.</p>
+<ul>
+<li><strong>Chain A:</strong> 3,000 transactions per block, one block every 600 seconds. Throughput: 3,000 / 600 = 5 TPS.</li>
+<li><strong>Chain B:</strong> 4,000 transactions per block, one block every 2 seconds. Throughput: 4,000 / 2 = 2,000 TPS.</li>
+</ul>
+<p>Data per second is TPS x 250 bytes, and a day has 86,400 seconds.</p>
+<ul>
+<li>Chain A: 5 x 250 = 1,250 bytes per second, or 108 megabytes a day.</li>
+<li>Chain B: 2,000 x 250 = 500,000 bytes per second, or 43,200 megabytes a day: about 43 gigabytes.</li>
+</ul>
+<p>Chain B handles 400 times the traffic of Chain A and asks each node to download, verify and store 400 times the data.</p>
+</div>
+<section class="notmean" aria-labelledby="what-it-does-not-mean"><h2 id="what-it-does-not-mean"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg><span>What it does NOT mean</span></h2>
+<ul>
+<li><strong>Final does not mean impossible to reverse.</strong> It means reversal is prohibitively costly under the chain’s assumptions.</li>
+<li><strong>“Confirmed” does not mean final.</strong> One confirmation is the start of the process on a probabilistic chain.</li>
+<li><strong>A fast block time is not fast finality.</strong> The two are separate measures.</li>
+<li><strong>A high TPS figure does not mean a better chain.</strong> It shows a different set of trade-offs.</li>
+<li><strong>A quoted maximum is not typical performance.</strong> Real throughput depends on demand and on the mix of transactions.</li>
+</ul>
+</section>
+<h2 id="common-misunderstandings">Common misunderstandings</h2>
+<div class="mistakes">
+<ol>
+<li><strong>Comparing TPS numbers without their conditions.</strong> Figures measured differently are not comparable.</li>
+<li><strong>Treating a <a class="gl" href="/glossary/layer-2/" title="A network built on top of a base blockchain that processes transactions off the main chain while relying on it for security.">Layer 2</a> confirmation as settlement.</strong> A <a class="gl" href="/glossary/rollup/" title="A type of layer 2 that executes transactions off the main chain and posts compressed data or proofs back to it in batches.">rollup</a> operator’s quick confirmation is a promise. The transaction is final only when its batch is final on the base chain.</li>
+<li><strong>Ignoring what speed required.</strong> High throughput usually reflects heavier nodes or fewer validators.</li>
+</ol>
+</div>
+<h2 id="risks-and-limits">Risks and limits</h2>
+<ul>
+<li>Recent transactions can be reorganised, especially on chains with little work or stake behind them.</li>
+<li>Explicit finality can stall when many validators are offline.</li>
+<li>High hardware requirements reduce the number of independent verifiers.</li>
+<li>Congestion raises fees and delays inclusion whatever the theoretical capacity.</li>
+<li>Performance claims are hard to verify independently and are often made by interested parties.</li>
+</ul>
+<div class="takeaway"><p class="takeaway-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg><span>Key takeaway</span></p>
+<p>Finality tells you when a transaction can be relied on, and throughput tells you how much a chain can carry. Each can be improved, usually by spending some decentralisation or security, so both numbers only make sense alongside what was traded for them.</p>
+</div>
+
+      <section class="sources" aria-labelledby="sources">
+        <h2 id="sources">Sources and further reading</h2>
+        <ul>
+          <li><a class="ext" href="https://bitcoin.org/bitcoin.pdf" rel="noopener noreferrer" target="_blank">Bitcoin: A Peer-to-Peer Electronic Cash System<span class="sr-only"> (opens in a new tab)</span></a>, Satoshi Nakamoto (2008). Section 11, Calculations: the probability that an attacker catches up from a given number of blocks behind</li>
+          <li><a class="ext" href="https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/gasper/" rel="noopener noreferrer" target="_blank">Gasper<span class="sr-only"> (opens in a new tab)</span></a>, ethereum.org. Explains justified and finalized checkpoint blocks and what finality means on Ethereum</li>
+          <li><cite>Mastering Bitcoin</cite>, Andreas M. Antonopoulos. Chapter on mining and consensus, including confirmations and chain reorganisations</li>
+        </ul>
+      </section>
+
+      <aside class="edu-note" aria-label="Educational notice">
+        <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+        <p><strong>Educational content only.</strong> This page explains a concept. It is not financial advice and not a recommendation to buy, sell or hold anything. <a href="/educational-disclaimer/">Full disclaimer</a>. Last updated <time datetime="2026-11-21">21 November 2026</time>.</p>
+      </aside>
+    </div>
+  </div>
+  <section class="related band" aria-labelledby="related">
+    <div class="wrap">
+      <h2 id="related">Related topics</h2>
+      <div class="card-grid">
+<a class="card topic-card" href="/foundations/blockchain/consensus/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.5"/><path d="M2 21a7 7 0 0 1 14 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.5a7 7 0 0 1 4 6.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Blockchain</span>
+    <span class="card-title">Consensus</span>
+    <span class="card-text">Consensus is the process by which the independent computers of a blockchain network agree on a single history of transactions without relying on a central authority.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/bitcoin/mempool-and-confirmations/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Bitcoin Knowledge Center</span>
+    <span class="card-title">Mempool &amp; Confirmations</span>
+    <span class="card-text">The mempool is where valid Bitcoin transactions wait before a miner includes them in a block. Each block added after that counts as one confirmation.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/blockchain/proof-of-work/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Blockchain</span>
+    <span class="card-title">Proof of Work</span>
+    <span class="card-text">Proof of work secures a blockchain by making block production cost computation and energy: miners compete to find a block hash below a target, and rewriting history means redoing that work.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/blockchain/proof-of-stake/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Blockchain</span>
+    <span class="card-title">Proof of Stake</span>
+    <span class="card-text">Proof of stake secures a blockchain with locked capital: validators deposit the network&#39;s coin as a stake, are chosen to propose and vote on blocks, and can lose that stake for misbehaving.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/blockchain/layer-1-and-layer-2/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12.5l9 5 9-5M3 17l9 5 9-5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Blockchain</span>
+    <span class="card-title">Layer 1 &amp; Layer 2</span>
+    <span class="card-text">A Layer 1 is a base blockchain that secures and settles transactions itself. A Layer 2 processes transactions off that base chain and settles the results to it, to increase capacity.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/blockchain/nodes-validators-miners/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.5M7 16.5h.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Blockchain</span>
+    <span class="card-title">Nodes, Validators &amp; Miners</span>
+    <span class="card-text">Nodes store and verify a blockchain&#39;s ledger. Miners, under proof of work, and validators, under proof of stake, are the participants that propose new blocks for the nodes to check.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager wrap" aria-label="More in this shelf"><a class="pager-link pager-prev" href="/foundations/blockchain/bridges/"><span><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg>Previous</span><strong>Bridges</strong></a>
+    <a class="pager-up" href="/foundations/blockchain/">Back to Blockchain</a><a class="pager-link pager-next" href="/foundations/blockchain/public-and-private-blockchains/"><span>Next<svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span><strong>Public &amp; Private Blockchains</strong></a>
+  </nav>
+</article>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Finality & Throughput","description":"Finality is the point after which a transaction is practically irreversible. Throughput is how many transactions a chain processes per second. Both trade off against decentralisation and security.","inLanguage":"en","dateModified":"2026-11-21","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"edgeTR Academy"}}]}
+</script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR" loading="lazy">
+        <p>Learn the market. Understand the tools. Make your own decisions.</p>
+        <p class="footer-family">Part of <strong>Ethos Empire</strong></p>
+        <ul class="trust" aria-label="What edgeTR Academy is"><li>Free to read</li><li>No login</li><li>No paywall</li><li>Educational reference</li>
+        </ul>
+      </div>
+      <nav aria-label="Learn and browse">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="/learn/">Learn: Chapters 1-10</a></li>
+          <li><a href="/library/">Library</a></li>
+          <li><a href="/patterns/">Pattern gallery</a></li>
+          <li><a href="/foundations/">Foundations</a></li>
+          <li><a href="/compare/">Compare</a></li>
+          <li><a href="/glossary/">A-Z Glossary</a></li>
+          <li><a href="/watch/">Watch in 60 Seconds</a></li>
+          <li><a href="/search/">Search</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Library shelves">
+        <h2>Library</h2>
+        <ul>
+          <li><a href="/library/candlesticks/">Candlesticks</a></li>
+          <li><a href="/library/chart-patterns/">Chart Patterns</a></li>
+          <li><a href="/library/indicators/">Indicators</a></li>
+          <li><a href="/library/market-structure/">Market Structure</a></li>
+          <li><a href="/library/support-resistance/">Support &amp; Resistance</a></li>
+          <li><a href="/library/bull-bear-long-short/">Bull, Bear, Long &amp; Short</a></li>
+          <li><a href="/library/trading-mechanics/">Trading Mechanics</a></li>
+          <li><a href="/library/">All shelves</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Foundations shelves">
+        <h2>Foundations</h2>
+        <ul>
+          <li><a href="/foundations/markets-finance/">Markets &amp; Finance</a></li>
+          <li><a href="/foundations/crypto/">Crypto Basics</a></li>
+          <li><a href="/foundations/bitcoin/">Bitcoin Knowledge Center</a></li>
+          <li><a href="/foundations/blockchain/">Blockchain</a></li>
+          <li><a href="/foundations/wallets-security/">Wallets &amp; Security</a></li>
+          <li><a href="/foundations/exchanges-dex-defi/">Exchanges, DEX &amp; DeFi</a></li>
+          <li><a href="/foundations/derivatives-perpetuals/">Derivatives &amp; Perpetuals</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="About">
+        <h2>About</h2>
+        <ul>
+          <li><a href="/about/">About edgeTR Academy</a></li>
+          <li><a href="/educational-disclaimer/">Educational disclaimer</a></li>
+          <li><a href="/terms/">Terms of use</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/contact/">Contact and support</a></li>
+          <li><a href="/about/#editorial-standards">Editorial standards</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-disclaimer"><strong>Educational only.</strong> edgeTR Academy provides educational information only. It does not provide financial, investment, legal or tax advice, does not recommend specific assets or trades, and does not guarantee outcomes. Users are responsible for their own research and decisions. <a href="/educational-disclaimer/">Read the full disclaimer</a>.</p>
+    <p class="footer-legal">&copy; 2026 edgeTR Academy, part of Ethos Empire. Free to read. No account needed. <a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/contact/">Contact</a></p>
+  </div>
+</footer>
+<script src="/js/search-core.js" defer></script>
+<script src="/js/site.js" defer></script>
+</body>
+</html>

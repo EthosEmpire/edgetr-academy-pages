@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en" data-base="/">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nodes &amp; Decentralization | edgeTR Academy</title>
+<meta name="description" content="A Bitcoin node is a computer that independently checks blocks and transactions against the rules. Decentralization describes how widely that checking is spread.">
+<meta name="theme-color" content="#070b12">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://edgetr.com/foundations/bitcoin/nodes-and-decentralization/">
+<meta property="og:url" content="https://edgetr.com/foundations/bitcoin/nodes-and-decentralization/">
+<meta property="og:image" content="https://edgetr.com/img/brand/og-default.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="edgeTR Academy">
+<meta property="og:title" content="Nodes &amp; Decentralization">
+<meta property="og:description" content="A Bitcoin node is a computer that independently checks blocks and transactions against the rules. Decentralization describes how widely that checking is spread.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.edgetrSearch)document.documentElement.classList.remove("js")},3000)</script>
+</head>
+<body class="page-article">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="edgeTR Academy home">
+      <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR">
+      <span class="brand-sub">Academy</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="/learn/">Learn</a></li>
+        <li><a href="/library/">Library</a></li>
+        <li><a href="/foundations/" aria-current="true">Foundations</a></li>
+        <li><a href="/compare/">Compare</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+        <li class="nav-search-link"><a href="/search/">Search</a></li>
+      </ul>
+    </nav>
+    <form class="header-search" action="/search/" method="get" role="search" aria-label="Site search" data-suggest>
+      <label class="sr-only" for="hq">Search the Academy</label>
+      <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="hq" name="q" type="search" placeholder="Search: RSI, doji, wallet..." autocomplete="off" spellcheck="false" aria-controls="hq-list" aria-expanded="false" aria-autocomplete="list" role="combobox">
+      <kbd aria-hidden="true">/</kbd>
+      <div class="suggest" id="hq-list" role="listbox" aria-label="Search suggestions" hidden></div>
+    </form>
+    <a class="header-search-btn" href="/search/" aria-label="Search"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false">
+      <span class="sr-only">Menu</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<article class="article">
+  <header class="article-hero">
+    <div class="wrap">
+      
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/foundations/">Foundations</a></li>
+    <li><a href="/foundations/bitcoin/">Bitcoin Knowledge Center</a></li>
+    <li><span aria-current="page">Nodes &amp; Decentralization</span></li>
+  </ol>
+</nav>
+
+      <p class="eyebrow">Foundations · Bitcoin Knowledge Center</p>
+      <h1>Nodes &amp; Decentralization</h1>
+      <p class="lede">A Bitcoin node is a computer that independently checks blocks and transactions against the rules. Decentralization describes how widely that checking is spread.</p>
+      <ul class="meta-chips"><li><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></li>
+        <li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>5 min read</span></li><li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Updated <time datetime="2026-11-21">21 November 2026</time></span></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="wrap article-grid">
+    <aside class="toc" aria-label="On this page">
+      <details open>
+        <summary>On this page</summary>
+        <ol>
+          <li><a href="#why-it-matters">Why it matters</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#types-of-participant">Types of participant</a></li>
+          <li><a href="#how-rules-change">How rules change</a></li>
+          <li><a href="#going-deeper-how-decentralized-is-it">Going deeper: how decentralized is it?</a></li>
+          <li><a href="#what-it-does-not-mean">What it does NOT mean</a></li>
+          <li><a href="#common-misunderstandings">Common misunderstandings</a></li>
+          <li><a href="#limits-and-open-questions">Limits and open questions</a></li>
+        </ol>
+      </details>
+    </aside>
+
+    <div class="prose">
+
+      <h2 id="why-it-matters">Why it matters</h2>
+<p>Statements such as “nobody controls Bitcoin” are easy to repeat and hard to check. The concrete version is this: Bitcoin’s rules are enforced by many independent computers, called <strong>nodes</strong>, and no single one of them can overrule the others.</p>
+<p>How true that is, and where it is less true, is what <strong>decentralization</strong> means in practice. It is a property that can be examined, not a slogan.</p>
+<h2 id="how-it-works">How it works</h2>
+<figure class="viz viz--flow" data-animate><div class="viz-title">What a full node does with a new block</div><div class="viz-canvas"><ol class="dg-flow dg-flow--row dg-flow--long" style="--n:5"><li class="dg-step t-neutral" style="--i:0"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.800 0 18M12 3c-3 3.200-3 14.800 0 18"/></svg></span><span class="dg-step-body"><strong>Receive</strong><span>A peer announces a new block.</span></span></li><li class="dg-step t-neutral" style="--i:1"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><span class="dg-step-body"><strong>Check the work</strong><span>Is the hash below the current target?</span></span></li><li class="dg-step t-neutral" style="--i:2"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="15" r="4.5"/><path d="M11.3 11.7L20 3M16 7l3 3M13.5 9.5l2 2"/></svg></span><span class="dg-step-body"><strong>Check transactions</strong><span>Valid signatures, no coin spent twice.</span></span></li><li class="dg-step t-neutral" style="--i:3"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v18M7 21h10M5 7h14"/><path d="M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/></svg></span><span class="dg-step-body"><strong>Check the limits</strong><span>Reward and block size within the rules.</span></span></li><li class="dg-step t-info" style="--i:4"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8L16.5 9.5"/></svg></span><span class="dg-step-body"><strong>Accept or reject</strong><span>Valid blocks are stored and relayed. Invalid ones are ignored.</span></span></li></ol></div><figcaption>Every full node runs these checks for itself. None of them takes another node's word for it.</figcaption></figure>
+<p>A <strong>full node</strong> is a computer running Bitcoin software that downloads every block and checks it against the complete set of rules: valid <a href="/foundations/bitcoin/proof-of-work-and-mining/">proof of work</a>, valid signatures, no double spending, no reward above the allowed amount, no block over the size limit.</p>
+<p>A block that fails any check is discarded, whoever produced it and however much computing power stands behind it. Nodes then pass valid blocks and transactions on to their peers, which is how information spreads without a central server.</p>
+<div class="callout callout--beginner"><p class="callout-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 8.500l5.500 3.500-5.500 3.500z"/></svg><span>In plain words</span></p>
+<p>Picture a game played in a park with no referee. Every player carries a copy of the rulebook and watches every move. If someone cheats, the others simply do not count that move. A cheat cannot win by being stronger or louder, because the score is kept separately by everyone.</p>
+</div>
+<h2 id="types-of-participant">Types of participant</h2>
+<figure class="viz viz--stack" data-animate><div class="viz-title">Three ways to take part in the network</div><div class="viz-canvas"><div class="dg-stack"><div class="dg-layer t-warn" style="--i:0"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><div><strong>Mining node</strong><span>Proposes new blocks by doing proof of work. Usually part of a pool.</span></div></div><div class="dg-layer t-info" style="--i:1"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.5M7 16.5h.5"/></svg></span><div><strong>Full node</strong><span>Verifies every block and transaction against all the rules. Does not need to mine.</span></div></div><div class="dg-layer t-neutral" style="--i:2"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4H18v4"/><rect x="3" y="8" width="18" height="12" rx="2.5"/><circle cx="16.5" cy="14" r="1.4"/></svg></span><div><strong>Light client</strong><span>Checks block headers only and relies on full nodes for transaction data. Common in phone wallets.</span></div></div></div></div><figcaption>Miners propose. Full nodes verify. Light clients trust that the chain with the most work is valid.</figcaption></figure>
+<p><strong>Miners and nodes are different roles.</strong> Miners spend energy to propose blocks. Nodes decide whether those blocks are acceptable. Every miner needs a node, but the great majority of nodes do not mine. The general distinction is covered in <a href="/foundations/blockchain/nodes-validators-miners/">nodes, validators and miners</a>.</p>
+<p><strong>A wallet is not necessarily a node.</strong> Most phone wallets are <strong>light clients</strong>. They download only block headers and ask other nodes about their own transactions, a method the white paper calls simplified payment verification. This is convenient, but it means relying on others for full validation.</p>
+<p>Some full nodes are <strong>pruned</strong>: they verify everything and then delete old block data to save disk space, keeping only what is needed to validate new transactions.</p>
+<h2 id="how-rules-change">How rules change</h2>
+<p>Bitcoin has no owner to issue an update. A rule change succeeds only if the people running nodes choose to install software that enforces it.</p>
+<ul>
+<li>A <strong>soft fork</strong> tightens the rules. Blocks valid under the new rules are also valid under the old ones, so nodes that have not upgraded still follow the same chain.</li>
+<li>A <strong>hard fork</strong> loosens or alters the rules in a way old nodes reject. If part of the network does not upgrade, the chain can split into two separate networks with a shared history.</li>
+</ul>
+<p>A long public dispute over the block size limit ended in 2017 with exactly such a split, when a group favouring larger blocks created a separate network. The episode showed that neither miners, developers nor businesses could impose a change on node operators who declined it. It also showed how slow and contentious decision-making without a central authority can be.</p>
+<div class="example"><p class="example-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.600-7 10-7 10 7 10 7-3.600 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>A hypothetical invalid block</span><em>Hypothetical illustration</em></p>
+<p>Suppose the subsidy allowed at the current height is 3.125 bitcoin. A large miner finds a valid <a class="gl" href="/glossary/proof-of-work/" title="A consensus method in which miners compete to solve a computational puzzle, and the winner adds the next block.">proof of work</a> but writes a reward of 10 bitcoin into its block.</p>
+<ol>
+<li>The miner broadcasts the block.</li>
+<li>Each full node recalculates the permitted reward: 3.125 plus the block’s fees.</li>
+<li>The block claims more, so every node following the rules rejects it and does not relay it.</li>
+<li>Other miners keep building on the previous block. The oversized block never becomes part of the chain.</li>
+</ol>
+<p>The miner has spent the electricity and earned nothing. This is how <a href="/foundations/bitcoin/the-21-million-limit/">the 21 million limit</a> is enforced without an enforcer.</p>
+</div>
+<h2 id="going-deeper-how-decentralized-is-it">Going deeper: how decentralized is it?</h2>
+<figure class="viz viz--split" data-animate><div class="viz-title">Decentralization is uneven</div><div class="viz-canvas"><div class="dg-split"><div class="dg-side t-info"><div class="dg-side-head"><span class="dg-side-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.800 0 18M12 3c-3 3.200-3 14.800 0 18"/></svg></span><div><p class="dg-side-title">WIDELY SPREAD</p><p>Hard for one party to control.</p></div></div><ul><li>Anyone can run a full node on modest hardware</li><li>The rules are public and the code is open</li><li>No party can change the rules for everyone else</li></ul></div><div class="dg-side t-warn"><div class="dg-side-head"><span class="dg-side-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg></span><div><p class="dg-side-title">MORE CONCENTRATED</p><p>Points that critics watch.</p></div></div><ul><li>A few pools coordinate much of the mining</li><li>Few firms make mining hardware</li><li>Most nodes run the same software</li><li>Many users leave coins with large custodians</li></ul></div></div></div><figcaption>Decentralization is a matter of degree and differs from one part of the system to another.</figcaption></figure>
+<p>Decentralization is not one number. It helps to ask the question separately for each layer.</p>
+<p><strong>Verification.</strong> Running a full node needs an ordinary computer, storage and an internet connection. Keeping this cheap is the main argument for small blocks, and it is the direct cause of Bitcoin’s low base-layer capacity. See <a href="/foundations/bitcoin/fees-and-block-space/">fees and block space</a>.</p>
+<p><strong>Mining.</strong> Block production is concentrated in a small number of pools, and mining hardware comes from few manufacturers. Individual miners can switch pools, which limits a pool’s power, but the concentration is real.</p>
+<p><strong>Software.</strong> Most nodes run one implementation, Bitcoin Core, maintained by a relatively small group of reviewers. The code is open and nobody is forced to upgrade, yet a bug in that software would affect most of the network at once.</p>
+<p><strong>Custody.</strong> A large share of users never touch the network directly. They hold claims on exchanges or other custodians, which reintroduces the intermediaries the design set out to remove. See <a href="/foundations/wallets-security/custodial-and-non-custodial-wallets/">custodial and non-custodial wallets</a>.</p>
+<section class="notmean" aria-labelledby="what-it-does-not-mean"><h2 id="what-it-does-not-mean"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg><span>What it does NOT mean</span></h2>
+<ul>
+<li><strong>Decentralized does not mean leaderless in every respect.</strong> Developers, large miners and big companies have influence, even though none can dictate the rules.</li>
+<li><strong>More nodes does not mean more transaction capacity.</strong> Nodes add independent verification. They do not add throughput.</li>
+<li><strong>Running a node does not earn rewards.</strong> Only mining is paid by the protocol. A node gives its operator independent verification.</li>
+<li><strong>Decentralization does not mean the system cannot be regulated.</strong> Laws apply to people and companies that use it, and they differ by jurisdiction.</li>
+<li><strong>Miners do not “vote” on the rules.</strong> They choose which valid chain to extend. Validity itself is checked by nodes.</li>
+</ul>
+</section>
+<h2 id="common-misunderstandings">Common misunderstandings</h2>
+<div class="mistakes">
+<ol>
+<li><strong>Using “node” and “miner” as synonyms.</strong> They perform different jobs with different costs.</li>
+<li><strong>Assuming a wallet app verifies everything.</strong> Many depend on servers run by the wallet provider.</li>
+<li><strong>Treating decentralization as all or nothing.</strong> It varies between verification, mining, development and custody.</li>
+<li><strong>Believing a majority of miners can rewrite the rules.</strong> They can reorder recent transactions at great cost. They cannot make nodes accept an invalid block.</li>
+</ol>
+</div>
+<h2 id="limits-and-open-questions">Limits and open questions</h2>
+<ul>
+<li>The total number of nodes cannot be counted exactly, because many do not accept incoming connections. Published figures are estimates.</li>
+<li><a class="gl" href="/glossary/blockchain/" title="A shared record of transactions grouped into blocks, where each block is cryptographically linked to the one before it.">Blockchain</a> data keeps growing, which slowly raises the cost of running a full node.</li>
+<li>Coordinating upgrades without a central authority is slow, and useful changes can stall for years.</li>
+<li>How much concentration in mining or custody is tolerable before the system’s guarantees weaken is debated and has no agreed threshold.</li>
+</ul>
+<div class="takeaway"><p class="takeaway-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg><span>Key takeaway</span></p>
+<p>Nodes enforce Bitcoin’s rules by checking everything themselves and ignoring whatever fails. Decentralization is the degree to which that power is spread out, and it is stronger in some parts of the system than in others.</p>
+</div>
+
+      <section class="sources" aria-labelledby="sources">
+        <h2 id="sources">Sources and further reading</h2>
+        <ul>
+          <li><a class="ext" href="https://bitcoin.org/bitcoin.pdf" rel="noopener noreferrer" target="_blank">Bitcoin: A Peer-to-Peer Electronic Cash System<span class="sr-only"> (opens in a new tab)</span></a>, Satoshi Nakamoto (2008). Section 5 describes the network; section 8 describes simplified payment verification</li>
+          <li><cite>Mastering Bitcoin</cite>, Andreas M. Antonopoulos. Chapters on the Bitcoin network and on consensus</li>
+          <li><a class="ext" href="https://developer.bitcoin.org/devguide/p2p_network.html" rel="noopener noreferrer" target="_blank">P2P Network (Bitcoin Developer Guide)<span class="sr-only"> (opens in a new tab)</span></a>, Bitcoin Project. Full nodes download and verify every block and transaction before relaying them</li>
+          <li><a class="ext" href="https://developer.bitcoin.org/devguide/operating_modes.html" rel="noopener noreferrer" target="_blank">Operating Modes (Bitcoin Developer Guide)<span class="sr-only"> (opens in a new tab)</span></a>, Bitcoin Project. Compares the full node model with SPV clients that download only block headers</li>
+        </ul>
+      </section>
+
+      <aside class="edu-note" aria-label="Educational notice">
+        <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+        <p><strong>Educational content only.</strong> This page explains a concept. It is not financial advice and not a recommendation to buy, sell or hold anything. <a href="/educational-disclaimer/">Full disclaimer</a>. Last updated <time datetime="2026-11-21">21 November 2026</time>.</p>
+      </aside>
+    </div>
+  </div>
+  <section class="related band" aria-labelledby="related">
+    <div class="wrap">
+      <h2 id="related">Related topics</h2>
+      <div class="card-grid">
+<a class="card topic-card" href="/foundations/blockchain/nodes-validators-miners/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.5M7 16.5h.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Blockchain</span>
+    <span class="card-title">Nodes, Validators &amp; Miners</span>
+    <span class="card-text">Nodes store and verify a blockchain&#39;s ledger. Miners, under proof of work, and validators, under proof of stake, are the participants that propose new blocks for the nodes to check.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/bitcoin/proof-of-work-and-mining/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Bitcoin Knowledge Center</span>
+    <span class="card-title">Proof of Work &amp; Mining</span>
+    <span class="card-text">Mining is the process by which Bitcoin blocks are created. Miners compete to find a hash below a target, and that costly search is called proof of work.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/bitcoin/the-21-million-limit/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Bitcoin Knowledge Center</span>
+    <span class="card-title">The 21 Million Limit</span>
+    <span class="card-text">Bitcoin&#39;s rules allow just under 21 million bitcoin to be created. The limit is the result of a block subsidy that halves every 210,000 blocks until it reaches zero.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/blockchain/consensus/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.5"/><path d="M2 21a7 7 0 0 1 14 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.5a7 7 0 0 1 4 6.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Blockchain</span>
+    <span class="card-title">Consensus</span>
+    <span class="card-text">Consensus is the process by which the independent computers of a blockchain network agree on a single history of transactions without relying on a central authority.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/bitcoin/fees-and-block-space/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22a7 7 0 0 0 7-7c0-3-2-5-3-7-1 2-2 3-3 3 0-3-1-6-4-9 0 4-4 7-4 13a7 7 0 0 0 7 7z"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Bitcoin Knowledge Center</span>
+    <span class="card-title">Fees &amp; Block Space</span>
+    <span class="card-text">Bitcoin blocks have limited room, so transactions compete for it by offering fees. The fee depends on a transaction&#39;s data size, not on the amount being sent.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/wallets-security/custodial-and-non-custodial-wallets/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 10l9-6 9 6"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8"/><path d="M3 21h18"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Wallets &amp; Security</span>
+    <span class="card-title">Custodial &amp; Non-Custodial Wallets</span>
+    <span class="card-text">In a custodial wallet a company holds the private keys for its customers. In a non-custodial wallet the user holds them. The difference decides who can move, freeze or lose the funds.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager wrap" aria-label="More in this shelf"><a class="pager-link pager-prev" href="/foundations/bitcoin/mempool-and-confirmations/"><span><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg>Previous</span><strong>Mempool &amp; Confirmations</strong></a>
+    <a class="pager-up" href="/foundations/bitcoin/">Back to Bitcoin Knowledge Center</a><a class="pager-link pager-next" href="/foundations/bitcoin/keys-and-addresses/"><span>Next<svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span><strong>Keys &amp; Addresses</strong></a>
+  </nav>
+</article>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Nodes & Decentralization","description":"A Bitcoin node is a computer that independently checks blocks and transactions against the rules. Decentralization describes how widely that checking is spread.","inLanguage":"en","dateModified":"2026-11-21","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"edgeTR Academy"}}]}
+</script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR" loading="lazy">
+        <p>Learn the market. Understand the tools. Make your own decisions.</p>
+        <p class="footer-family">Part of <strong>Ethos Empire</strong></p>
+        <ul class="trust" aria-label="What edgeTR Academy is"><li>Free to read</li><li>No login</li><li>No paywall</li><li>Educational reference</li>
+        </ul>
+      </div>
+      <nav aria-label="Learn and browse">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="/learn/">Learn: Chapters 1-10</a></li>
+          <li><a href="/library/">Library</a></li>
+          <li><a href="/patterns/">Pattern gallery</a></li>
+          <li><a href="/foundations/">Foundations</a></li>
+          <li><a href="/compare/">Compare</a></li>
+          <li><a href="/glossary/">A-Z Glossary</a></li>
+          <li><a href="/watch/">Watch in 60 Seconds</a></li>
+          <li><a href="/search/">Search</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Library shelves">
+        <h2>Library</h2>
+        <ul>
+          <li><a href="/library/candlesticks/">Candlesticks</a></li>
+          <li><a href="/library/chart-patterns/">Chart Patterns</a></li>
+          <li><a href="/library/indicators/">Indicators</a></li>
+          <li><a href="/library/market-structure/">Market Structure</a></li>
+          <li><a href="/library/support-resistance/">Support &amp; Resistance</a></li>
+          <li><a href="/library/bull-bear-long-short/">Bull, Bear, Long &amp; Short</a></li>
+          <li><a href="/library/trading-mechanics/">Trading Mechanics</a></li>
+          <li><a href="/library/">All shelves</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Foundations shelves">
+        <h2>Foundations</h2>
+        <ul>
+          <li><a href="/foundations/markets-finance/">Markets &amp; Finance</a></li>
+          <li><a href="/foundations/crypto/">Crypto Basics</a></li>
+          <li><a href="/foundations/bitcoin/">Bitcoin Knowledge Center</a></li>
+          <li><a href="/foundations/blockchain/">Blockchain</a></li>
+          <li><a href="/foundations/wallets-security/">Wallets &amp; Security</a></li>
+          <li><a href="/foundations/exchanges-dex-defi/">Exchanges, DEX &amp; DeFi</a></li>
+          <li><a href="/foundations/derivatives-perpetuals/">Derivatives &amp; Perpetuals</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="About">
+        <h2>About</h2>
+        <ul>
+          <li><a href="/about/">About edgeTR Academy</a></li>
+          <li><a href="/educational-disclaimer/">Educational disclaimer</a></li>
+          <li><a href="/terms/">Terms of use</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/contact/">Contact and support</a></li>
+          <li><a href="/about/#editorial-standards">Editorial standards</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-disclaimer"><strong>Educational only.</strong> edgeTR Academy provides educational information only. It does not provide financial, investment, legal or tax advice, does not recommend specific assets or trades, and does not guarantee outcomes. Users are responsible for their own research and decisions. <a href="/educational-disclaimer/">Read the full disclaimer</a>.</p>
+    <p class="footer-legal">&copy; 2026 edgeTR Academy, part of Ethos Empire. Free to read. No account needed. <a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/contact/">Contact</a></p>
+  </div>
+</footer>
+<script src="/js/search-core.js" defer></script>
+<script src="/js/site.js" defer></script>
+</body>
+</html>

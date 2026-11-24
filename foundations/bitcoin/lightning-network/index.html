@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en" data-base="/">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Lightning Network | edgeTR Academy</title>
+<meta name="description" content="The Lightning Network is a second layer built on Bitcoin in which two parties lock funds in a shared channel and exchange many payments without recording each one on the blockchain.">
+<meta name="theme-color" content="#070b12">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://edgetr.com/foundations/bitcoin/lightning-network/">
+<meta property="og:url" content="https://edgetr.com/foundations/bitcoin/lightning-network/">
+<meta property="og:image" content="https://edgetr.com/img/brand/og-default.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="edgeTR Academy">
+<meta property="og:title" content="The Lightning Network">
+<meta property="og:description" content="The Lightning Network is a second layer built on Bitcoin in which two parties lock funds in a shared channel and exchange many payments without recording each one on the blockchain.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.edgetrSearch)document.documentElement.classList.remove("js")},3000)</script>
+</head>
+<body class="page-article">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="edgeTR Academy home">
+      <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR">
+      <span class="brand-sub">Academy</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="/learn/">Learn</a></li>
+        <li><a href="/library/">Library</a></li>
+        <li><a href="/foundations/" aria-current="true">Foundations</a></li>
+        <li><a href="/compare/">Compare</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+        <li class="nav-search-link"><a href="/search/">Search</a></li>
+      </ul>
+    </nav>
+    <form class="header-search" action="/search/" method="get" role="search" aria-label="Site search" data-suggest>
+      <label class="sr-only" for="hq">Search the Academy</label>
+      <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="hq" name="q" type="search" placeholder="Search: RSI, doji, wallet..." autocomplete="off" spellcheck="false" aria-controls="hq-list" aria-expanded="false" aria-autocomplete="list" role="combobox">
+      <kbd aria-hidden="true">/</kbd>
+      <div class="suggest" id="hq-list" role="listbox" aria-label="Search suggestions" hidden></div>
+    </form>
+    <a class="header-search-btn" href="/search/" aria-label="Search"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false">
+      <span class="sr-only">Menu</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<article class="article">
+  <header class="article-hero">
+    <div class="wrap">
+      
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/foundations/">Foundations</a></li>
+    <li><a href="/foundations/bitcoin/">Bitcoin Knowledge Center</a></li>
+    <li><span aria-current="page">The Lightning Network</span></li>
+  </ol>
+</nav>
+
+      <p class="eyebrow">Foundations · Bitcoin Knowledge Center</p>
+      <h1>The Lightning Network</h1>
+      <p class="lede">The Lightning Network is a second layer built on Bitcoin in which two parties lock funds in a shared channel and exchange many payments without recording each one on the blockchain.</p>
+      <ul class="meta-chips"><li><span class="chip chip--diff chip--advanced"><i aria-hidden="true"></i>Advanced</span></li>
+        <li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>5 min read</span></li><li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Updated <time datetime="2026-11-21">21 November 2026</time></span></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="wrap article-grid">
+    <aside class="toc" aria-label="On this page">
+      <details open>
+        <summary>On this page</summary>
+        <ol>
+          <li><a href="#why-it-matters">Why it matters</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#on-chain-and-lightning-compared">On-chain and Lightning compared</a></li>
+          <li><a href="#going-deeper">Going deeper</a></li>
+          <li><a href="#what-it-does-not-mean">What it does NOT mean</a></li>
+          <li><a href="#common-misunderstandings">Common misunderstandings</a></li>
+          <li><a href="#limits-and-open-questions">Limits and open questions</a></li>
+        </ol>
+      </details>
+    </aside>
+
+    <div class="prose">
+
+      <h2 id="why-it-matters">Why it matters</h2>
+<p>Bitcoin’s <a class="gl" href="/glossary/layer-1/" title="A base blockchain that processes and finalises transactions on its own network, such as Bitcoin or Ethereum.">base layer</a> handles only a few transactions per second, and its <a href="/foundations/bitcoin/fees-and-block-space/">fees</a> rise with demand. That makes it poorly suited to small, frequent payments.</p>
+<p>The <strong>Lightning Network</strong> is the best-known attempt to address this without changing the base layer’s limits. Instead of making blocks larger, it moves most payments off the <a class="gl" href="/glossary/blockchain/" title="A shared record of transactions grouped into blocks, where each block is cryptographically linked to the one before it.">blockchain</a> and uses the chain only to settle. It is a clear example of the <a href="/foundations/blockchain/layer-1-and-layer-2/">layer 2</a> idea, and of the fact that such designs trade one set of constraints for another.</p>
+<h2 id="how-it-works">How it works</h2>
+<figure class="viz viz--flow" data-animate><div class="viz-title">The life of a payment channel</div><div class="viz-canvas"><ol class="dg-flow dg-flow--row" style="--n:4"><li class="dg-step t-neutral" style="--i:0"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg></span><span class="dg-step-body"><strong>Open</strong><span>An on-chain transaction locks funds so that both parties must sign to move them.</span></span></li><li class="dg-step t-info" style="--i:1"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><span class="dg-step-body"><strong>Pay</strong><span>The two sign updated balances privately, as often as they like.</span></span></li><li class="dg-step t-info" style="--i:2"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="5" cy="19" r="2"/><circle cx="19" cy="5" r="2"/><path d="M7 19h6a4 4 0 0 0 0-8h-2a4 4 0 0 1 0-8h6"/></svg></span><span class="dg-step-body"><strong>Route</strong><span>Payments can hop across several connected channels.</span></span></li><li class="dg-step t-neutral" style="--i:3"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="8" width="5.5" height="8" rx="1.2"/><rect x="9.25" y="8" width="5.5" height="8" rx="1.2"/><rect x="16" y="8" width="5.5" height="8" rx="1.2"/><path d="M8 12h1.25M14.75 12H16"/></svg></span><span class="dg-step-body"><strong>Close</strong><span>One on-chain transaction pays out the final balances.</span></span></li></ol></div><figcaption>Only the opening and closing transactions touch the blockchain. Everything in between happens off-chain.</figcaption></figure>
+<p>The building block is a <strong>payment channel</strong> between two parties.</p>
+<ol>
+<li><strong>Opening.</strong> A normal Bitcoin transaction places funds into an output that can only be spent with signatures from both parties. This is the channel’s capacity.</li>
+<li><strong>Paying.</strong> To pay each other, the two exchange signed transactions that divide the locked funds differently. These are valid Bitcoin transactions, but they are held back and not broadcast. Each new one replaces the last.</li>
+<li><strong>Closing.</strong> Either party can broadcast the latest version to the blockchain. The funds are paid out according to that final split.</li>
+</ol>
+<p>Thousands of payments can pass through a channel while the blockchain records just two transactions.</p>
+<div class="callout callout--beginner"><p class="callout-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 8.500l5.500 3.500-5.500 3.500z"/></svg><span>In plain words</span></p>
+<p>Think of a bar tab. Instead of paying by card for every drink, you open a tab, the barman keeps a running total, and you settle once at the end. Lightning is a tab that both sides sign after every change, with the bank standing by to enforce the last signed total if either side walks away.</p>
+</div>
+<h3 id="what-stops-cheating">What stops cheating</h3>
+<p>A channel partner could try to broadcast an old version that gave them more. The design discourages this with a penalty: each time the balance is updated, both sides exchange secrets that cancel the previous version. If someone publishes a cancelled version, the other party can use the secret to claim all the funds in the channel, provided they notice within a set time window.</p>
+<p>This is why Lightning participants need to be online, or to delegate monitoring to a service that watches on their behalf.</p>
+<h3 id="paying-someone-you-have-no-channel-with">Paying someone you have no channel with</h3>
+<p>Channels connect into a network. If Ana has a channel with Ben, and Ben has one with Cara, Ana can pay Cara through Ben.</p>
+<p>The link is secured by a <strong>hashed time-locked contract</strong> (HTLC). Each hop is a conditional payment: “you receive this only if you reveal a particular secret before a deadline”. Cara reveals the secret to collect from Ben, which lets Ben collect from Ana. Either the whole chain of payments completes or none of it does, so Ben cannot keep the money.</p>
+<h2 id="on-chain-and-lightning-compared">On-chain and Lightning compared</h2>
+<figure class="viz viz--compare" data-animate><div class="viz-title">On-chain payments and Lightning payments</div><div class="viz-canvas"><div class="dg-compare" tabindex="0" role="region" aria-label="Comparison of Bitcoin base layer and Lightning Network; scrolls sideways on small screens"><table><thead><tr><th scope="col"><span class="sr-only">Aspect</span></th><th scope="col" class="t-info">Bitcoin base layer</th><th scope="col" class="t-warn">Lightning Network</th></tr></thead><tbody><tr><th scope="row">Where it is recorded</th><td>In a block, publicly and permanently</td><td>Between channel partners; only open and close are on-chain</td></tr><tr><th scope="row">Speed</th><td>Minutes to an hour or more</td><td>Usually seconds</td></tr><tr><th scope="row">Fee</th><td>Set by demand for block space</td><td>Usually small; set by routing nodes</td></tr><tr><th scope="row">Must be online</th><td>No, to receive</td><td>Generally yes, to send and receive</td></tr><tr><th scope="row">Capacity limit</th><td>Block space</td><td>Funds locked in channels along a route</td></tr><tr><th scope="row">Keys</th><td>Can be kept offline</td><td>Kept on a connected device</td></tr></tbody></table></div></div></figure>
+<div class="example"><p class="example-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.600-7 10-7 10 7 10 7-3.600 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>A hypothetical channel, in numbers</span><em>Hypothetical illustration</em></p>
+<p>All amounts are in satoshis and invented.</p>
+<p><strong>Opening.</strong> Ana opens a channel with Ben and funds it with 100,000. Balances: Ana 100,000, Ben 0.</p>
+<p><strong>Payment 1.</strong> Ana pays Ben 30,000. Balances: Ana 70,000, Ben 30,000.</p>
+<p><strong>Payment 2.</strong> Ben pays Ana 10,000. Balances: Ana 80,000, Ben 20,000.</p>
+<p><strong>A routed payment.</strong> Ana pays Cara 5,000 through Ben, who also has a channel with Cara. In the Ana and Ben channel: Ana 75,000, Ben 25,000. In the Ben and Cara channel, 5,000 moves from Ben’s side to Cara’s. Ben ends where he started overall, apart from a small routing fee ignored here.</p>
+<p><strong>The limits show up.</strong> Ana now tries to pay 90,000. She cannot: her side of the channel holds only 75,000. Ben cannot receive more than 75,000 from her either, and the routed payment only worked because Ben had at least 5,000 on his side of the channel with Cara.</p>
+<p><strong>Closing.</strong> The channel closes on-chain with Ana 75,000 and Ben 25,000, less the on-chain fee. Three payments, two blockchain transactions.</p>
+</div>
+<h2 id="going-deeper">Going deeper</h2>
+<h3 id="liquidity">Liquidity</h3>
+<p>A channel is not a pipe of unlimited width. Funds sit on one side or the other, and a payment needs enough on the correct side at every hop. To receive, a user needs <strong>inbound capacity</strong>: funds on the partner’s side of a channel. Managing this is the main practical difficulty of running Lightning, and it is why large payments fail more often than small ones.</p>
+<h3 id="custodial-and-non-custodial-use">Custodial and non-custodial use</h3>
+<p>Running a Lightning node means managing channels, backups and uptime. Many people instead use wallets where a company runs the node and holds the funds. That is convenient, but it is a <a class="gl" href="/glossary/custodial/" title="Describing a wallet or service in which a third party, such as an exchange, holds the private keys on the user's behalf.">custodial</a> arrangement with the trade-offs described in <a href="/foundations/bitcoin/keys-and-addresses/">keys and addresses</a>. <a class="gl" href="/glossary/non-custodial/" title="Describing a wallet in which the user alone holds the private keys, with no custodian able to move or block the funds, although some tokens can still be frozen by their issuer.">Non-custodial</a> wallets exist too, often with a provider handling channel management in the background.</p>
+<h3 id="history-and-status">History and status</h3>
+<p>The design was proposed in a paper by Joseph Poon and Thaddeus Dryja, and software for the main Bitcoin network became available in 2018. Several independent implementations follow a shared specification. The technology continues to change, and published network statistics describe only publicly announced channels.</p>
+<section class="notmean" aria-labelledby="what-it-does-not-mean"><h2 id="what-it-does-not-mean"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg><span>What it does NOT mean</span></h2>
+<ul>
+<li><strong>Lightning is not a separate coin.</strong> Channels hold ordinary bitcoin, locked by ordinary Bitcoin transactions.</li>
+<li><strong>“Instant” does not mean without conditions.</strong> A payment needs a route with enough liquidity, and both ends generally need to be online.</li>
+<li><strong>Off-chain does not mean trustless in every setup.</strong> A custodial Lightning wallet is an account with a company.</li>
+<li><strong>Lightning does not remove on-chain fees.</strong> Opening and closing channels cost base-layer fees, which are highest exactly when the chain is congested.</li>
+<li><strong>Off-chain does not mean fully private.</strong> Payments are not published in blocks, but channel partners and routing nodes see part of what passes through them.</li>
+</ul>
+</section>
+<h2 id="common-misunderstandings">Common misunderstandings</h2>
+<div class="mistakes">
+<ol>
+<li><strong>Treating channel capacity as spendable balance.</strong> Only the funds on your own side can be sent.</li>
+<li><strong>Assuming a <a class="gl" href="/glossary/seed-phrase/" title="A list of usually 12 or 24 words that encodes the master secret from which all of a wallet's private keys are derived.">seed phrase</a> alone restores a Lightning wallet.</strong> Channel state changes with every payment, so backups work differently from on-chain wallets and vary between products.</li>
+<li><strong>Sending an on-chain payment to a Lightning invoice, or the reverse.</strong> They are different formats and not interchangeable.</li>
+<li><strong>Expecting any amount to route.</strong> Success depends on liquidity along the path at that moment.</li>
+</ol>
+</div>
+<h2 id="limits-and-open-questions">Limits and open questions</h2>
+<ul>
+<li><strong>Keys stay online.</strong> Signing each update requires keys on a connected device, which is a larger attack surface than <a class="gl" href="/glossary/cold-wallet/" title="A crypto wallet whose private keys are generated and kept offline, away from internet-connected devices.">cold storage</a>.</li>
+<li><strong>Monitoring burden.</strong> Security against old-state fraud depends on someone watching the chain in time.</li>
+<li><strong>Dependence on the base layer.</strong> If on-chain fees are very high or blocks are full, closing channels and enforcing penalties becomes slower and costlier.</li>
+<li><strong>Concentration.</strong> Well-connected nodes with large balances carry much of the routing, which raises questions about centralisation.</li>
+<li><strong>Scale.</strong> Whether channel-based designs can serve very large numbers of independent users without custodians remains an open question.</li>
+</ul>
+<div class="takeaway"><p class="takeaway-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg><span>Key takeaway</span></p>
+<p>The Lightning Network lets two parties update a shared balance off-chain and settle on Bitcoin only at the start and end. It gains speed and low cost by accepting new constraints: locked liquidity, online keys and the need to watch the chain.</p>
+</div>
+
+      <section class="sources" aria-labelledby="sources">
+        <h2 id="sources">Sources and further reading</h2>
+        <ul>
+          <li><cite>The Bitcoin Lightning Network: Scalable Off-Chain Instant Payments</cite>, Joseph Poon and Thaddeus Dryja (2016). The paper that proposed the design</li>
+          <li><cite>Mastering Bitcoin</cite>, Andreas M. Antonopoulos. Covers payment channels and the Lightning Network</li>
+          <li><a class="ext" href="https://developer.bitcoin.org/devguide/contracts.html" rel="noopener noreferrer" target="_blank">Contracts (Bitcoin Developer Guide)<span class="sr-only"> (opens in a new tab)</span></a>, Bitcoin Project. Micropayment channel example built from a 2-of-2 multisig output and time-locked refund transactions</li>
+        </ul>
+      </section>
+
+      <aside class="edu-note" aria-label="Educational notice">
+        <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+        <p><strong>Educational content only.</strong> This page explains a concept. It is not financial advice and not a recommendation to buy, sell or hold anything. <a href="/educational-disclaimer/">Full disclaimer</a>. Last updated <time datetime="2026-11-21">21 November 2026</time>.</p>
+      </aside>
+    </div>
+  </div>
+  <section class="related band" aria-labelledby="related">
+    <div class="wrap">
+      <h2 id="related">Related topics</h2>
+      <div class="card-grid">
+<a class="card topic-card" href="/foundations/blockchain/layer-1-and-layer-2/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12.5l9 5 9-5M3 17l9 5 9-5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Blockchain</span>
+    <span class="card-title">Layer 1 &amp; Layer 2</span>
+    <span class="card-text">A Layer 1 is a base blockchain that secures and settles transactions itself. A Layer 2 processes transactions off that base chain and settles the results to it, to increase capacity.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/bitcoin/fees-and-block-space/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22a7 7 0 0 0 7-7c0-3-2-5-3-7-1 2-2 3-3 3 0-3-1-6-4-9 0 4-4 7-4 13a7 7 0 0 0 7 7z"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Bitcoin Knowledge Center</span>
+    <span class="card-title">Fees &amp; Block Space</span>
+    <span class="card-text">Bitcoin blocks have limited room, so transactions compete for it by offering fees. The fee depends on a transaction&#39;s data size, not on the amount being sent.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/bitcoin/mempool-and-confirmations/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Bitcoin Knowledge Center</span>
+    <span class="card-title">Mempool &amp; Confirmations</span>
+    <span class="card-text">The mempool is where valid Bitcoin transactions wait before a miner includes them in a block. Each block added after that counts as one confirmation.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/bitcoin/utxo-model/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><ellipse cx="9" cy="7" rx="6" ry="3"/><path d="M3 7v5c0 1.7 2.7 3 6 3s6-1.3 6-3V7"/><path d="M9 15v2c0 1.7 2.7 3 6 3s6-1.3 6-3v-5c0-1.2-1.4-2.2-3.4-2.7"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Bitcoin Knowledge Center</span>
+    <span class="card-title">The UTXO Model</span>
+    <span class="card-text">Bitcoin does not store account balances. It tracks unspent transaction outputs (UTXOs): discrete chunks of bitcoin that each transaction consumes and replaces.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/bitcoin/keys-and-addresses/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="15" r="4.5"/><path d="M11.3 11.7L20 3M16 7l3 3M13.5 9.5l2 2"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Bitcoin Knowledge Center</span>
+    <span class="card-title">Keys &amp; Addresses</span>
+    <span class="card-text">In Bitcoin, a private key is the secret that authorises spending, a public key is derived from it, and an address is a shareable form used to receive payments.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/compare/layer-1-vs-layer-2/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v18"/><path d="M5 7h5M14 7h5M5 12h5M14 12h5M5 17h5M14 17h5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Compare</span>
+    <span class="card-title">Layer 1 vs Layer 2</span>
+    <span class="card-text">A Layer 1 is a base blockchain with its own consensus. A Layer 2 processes transactions off that base chain and settles the results back to it, aiming for lower fees and higher capacity.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager wrap" aria-label="More in this shelf"><a class="pager-link pager-prev" href="/foundations/bitcoin/fees-and-block-space/"><span><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg>Previous</span><strong>Fees &amp; Block Space</strong></a>
+    <a class="pager-up" href="/foundations/bitcoin/">Back to Bitcoin Knowledge Center</a><a class="pager-link pager-next" href="/foundations/bitcoin/bitcoin-misconceptions/"><span>Next<svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span><strong>Common Bitcoin Misconceptions</strong></a>
+  </nav>
+</article>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"The Lightning Network","description":"The Lightning Network is a second layer built on Bitcoin in which two parties lock funds in a shared channel and exchange many payments without recording each one on the blockchain.","inLanguage":"en","dateModified":"2026-11-21","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"edgeTR Academy"}}]}
+</script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR" loading="lazy">
+        <p>Learn the market. Understand the tools. Make your own decisions.</p>
+        <p class="footer-family">Part of <strong>Ethos Empire</strong></p>
+        <ul class="trust" aria-label="What edgeTR Academy is"><li>Free to read</li><li>No login</li><li>No paywall</li><li>Educational reference</li>
+        </ul>
+      </div>
+      <nav aria-label="Learn and browse">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="/learn/">Learn: Chapters 1-10</a></li>
+          <li><a href="/library/">Library</a></li>
+          <li><a href="/patterns/">Pattern gallery</a></li>
+          <li><a href="/foundations/">Foundations</a></li>
+          <li><a href="/compare/">Compare</a></li>
+          <li><a href="/glossary/">A-Z Glossary</a></li>
+          <li><a href="/watch/">Watch in 60 Seconds</a></li>
+          <li><a href="/search/">Search</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Library shelves">
+        <h2>Library</h2>
+        <ul>
+          <li><a href="/library/candlesticks/">Candlesticks</a></li>
+          <li><a href="/library/chart-patterns/">Chart Patterns</a></li>
+          <li><a href="/library/indicators/">Indicators</a></li>
+          <li><a href="/library/market-structure/">Market Structure</a></li>
+          <li><a href="/library/support-resistance/">Support &amp; Resistance</a></li>
+          <li><a href="/library/bull-bear-long-short/">Bull, Bear, Long &amp; Short</a></li>
+          <li><a href="/library/trading-mechanics/">Trading Mechanics</a></li>
+          <li><a href="/library/">All shelves</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Foundations shelves">
+        <h2>Foundations</h2>
+        <ul>
+          <li><a href="/foundations/markets-finance/">Markets &amp; Finance</a></li>
+          <li><a href="/foundations/crypto/">Crypto Basics</a></li>
+          <li><a href="/foundations/bitcoin/">Bitcoin Knowledge Center</a></li>
+          <li><a href="/foundations/blockchain/">Blockchain</a></li>
+          <li><a href="/foundations/wallets-security/">Wallets &amp; Security</a></li>
+          <li><a href="/foundations/exchanges-dex-defi/">Exchanges, DEX &amp; DeFi</a></li>
+          <li><a href="/foundations/derivatives-perpetuals/">Derivatives &amp; Perpetuals</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="About">
+        <h2>About</h2>
+        <ul>
+          <li><a href="/about/">About edgeTR Academy</a></li>
+          <li><a href="/educational-disclaimer/">Educational disclaimer</a></li>
+          <li><a href="/terms/">Terms of use</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/contact/">Contact and support</a></li>
+          <li><a href="/about/#editorial-standards">Editorial standards</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-disclaimer"><strong>Educational only.</strong> edgeTR Academy provides educational information only. It does not provide financial, investment, legal or tax advice, does not recommend specific assets or trades, and does not guarantee outcomes. Users are responsible for their own research and decisions. <a href="/educational-disclaimer/">Read the full disclaimer</a>.</p>
+    <p class="footer-legal">&copy; 2026 edgeTR Academy, part of Ethos Empire. Free to read. No account needed. <a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/contact/">Contact</a></p>
+  </div>
+</footer>
+<script src="/js/search-core.js" defer></script>
+<script src="/js/site.js" defer></script>
+</body>
+</html>

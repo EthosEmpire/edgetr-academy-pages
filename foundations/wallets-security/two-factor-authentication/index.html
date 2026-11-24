@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en" data-base="/">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Two-Factor Authentication | edgeTR Academy</title>
+<meta name="description" content="Two-factor authentication (2FA) adds a second proof of identity to a password when signing in. Authenticator apps and hardware security keys are generally stronger second factors than SMS codes.">
+<meta name="theme-color" content="#070b12">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://edgetr.com/foundations/wallets-security/two-factor-authentication/">
+<meta property="og:url" content="https://edgetr.com/foundations/wallets-security/two-factor-authentication/">
+<meta property="og:image" content="https://edgetr.com/img/brand/og-default.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="edgeTR Academy">
+<meta property="og:title" content="Two-Factor Authentication">
+<meta property="og:description" content="Two-factor authentication (2FA) adds a second proof of identity to a password when signing in. Authenticator apps and hardware security keys are generally stronger second factors than SMS codes.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.edgetrSearch)document.documentElement.classList.remove("js")},3000)</script>
+</head>
+<body class="page-article">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="edgeTR Academy home">
+      <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR">
+      <span class="brand-sub">Academy</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="/learn/">Learn</a></li>
+        <li><a href="/library/">Library</a></li>
+        <li><a href="/foundations/" aria-current="true">Foundations</a></li>
+        <li><a href="/compare/">Compare</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+        <li class="nav-search-link"><a href="/search/">Search</a></li>
+      </ul>
+    </nav>
+    <form class="header-search" action="/search/" method="get" role="search" aria-label="Site search" data-suggest>
+      <label class="sr-only" for="hq">Search the Academy</label>
+      <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="hq" name="q" type="search" placeholder="Search: RSI, doji, wallet..." autocomplete="off" spellcheck="false" aria-controls="hq-list" aria-expanded="false" aria-autocomplete="list" role="combobox">
+      <kbd aria-hidden="true">/</kbd>
+      <div class="suggest" id="hq-list" role="listbox" aria-label="Search suggestions" hidden></div>
+    </form>
+    <a class="header-search-btn" href="/search/" aria-label="Search"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false">
+      <span class="sr-only">Menu</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<article class="article">
+  <header class="article-hero">
+    <div class="wrap">
+      
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/foundations/">Foundations</a></li>
+    <li><a href="/foundations/wallets-security/">Wallets &amp; Security</a></li>
+    <li><span aria-current="page">Two-Factor Authentication</span></li>
+  </ol>
+</nav>
+
+      <p class="eyebrow">Foundations · Wallets &amp; Security</p>
+      <h1>Two-Factor Authentication</h1>
+      <p class="lede">Two-factor authentication (2FA) adds a second proof of identity to a password when signing in. Authenticator apps and hardware security keys are generally stronger second factors than SMS codes.</p>
+      <ul class="meta-chips"><li><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></li>
+        <li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>5 min read</span></li><li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Updated <time datetime="2026-11-21">21 November 2026</time></span></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="wrap article-grid">
+    <aside class="toc" aria-label="On this page">
+      <details open>
+        <summary>On this page</summary>
+        <ol>
+          <li><a href="#why-it-matters">Why it matters</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#the-common-methods">The common methods</a></li>
+          <li><a href="#the-sim-swap">The SIM swap</a></li>
+          <li><a href="#going-deeper">Going deeper</a></li>
+          <li><a href="#what-it-does-not-mean">What it does NOT mean</a></li>
+          <li><a href="#common-mistakes">Common mistakes</a></li>
+          <li><a href="#risks-and-limitations">Risks and limitations</a></li>
+        </ol>
+      </details>
+    </aside>
+
+    <div class="prose">
+
+      <h2 id="why-it-matters">Why it matters</h2>
+<p>Passwords leak. They are reused across sites, captured by <a href="/foundations/wallets-security/phishing/">phishing</a> pages and exposed in data breaches. An account protected by a password alone is protected by a secret that may already be known to others.</p>
+<p><strong>Two-factor authentication</strong>, or <strong>2FA</strong>, requires a second and different kind of proof. It is one of the most effective protections for accounts on a <a href="/foundations/exchanges-dex-defi/centralized-exchanges/">centralized exchange</a> and for the email account behind it. The methods are not equally strong, and the differences matter most to exactly the people attackers target.</p>
+<h2 id="how-it-works">How it works</h2>
+<figure class="viz viz--flow" data-animate><div class="viz-title">Signing in with two factors</div><div class="viz-canvas"><ol class="dg-flow dg-flow--row" style="--n:3"><li class="dg-step t-neutral" style="--i:0"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="15" r="4.5"/><path d="M11.3 11.7L20 3M16 7l3 3M13.5 9.5l2 2"/></svg></span><span class="dg-step-body"><strong>Password</strong><span>Something you know.</span></span></li><li class="dg-step t-info" style="--i:1"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2l8 3v6c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V5z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg></span><span class="dg-step-body"><strong>Second factor</strong><span>Something you have: a code, an app or a key.</span></span></li><li class="dg-step t-bull" style="--i:2"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8L16.5 9.5"/></svg></span><span class="dg-step-body"><strong>Access</strong><span>Granted only when both are correct.</span></span></li></ol></div><figcaption>A stolen password alone is no longer enough to open the account.</figcaption></figure>
+<p>Authentication factors fall into three families: something you <strong>know</strong> (a password or PIN), something you <strong>have</strong> (a phone, a device or a key) and something you <strong>are</strong> (a fingerprint or a face). Two-factor authentication combines two different families, so that stealing one is not enough.</p>
+<div class="callout callout--beginner"><p class="callout-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 8.500l5.500 3.500-5.500 3.500z"/></svg><span>In plain words</span></p>
+<p>A cash machine already works this way. The card is something you have and the PIN is something you know. A thief with only the card, or only the PIN, gets nothing.</p>
+</div>
+<h2 id="the-common-methods">The common methods</h2>
+<figure class="viz viz--stack" data-animate><div class="viz-title">Common second factors, from more exposed to less exposed</div><div class="viz-canvas"><div class="dg-stack"><div class="dg-layer t-warn" style="--i:0"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></svg></span><div><strong>SMS or voice code</strong><span>Sent to a phone number. Exposed to SIM swaps and can be phished.</span></div></div><div class="dg-layer t-warn" style="--i:1"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/></svg></span><div><strong>Email code</strong><span>Only as strong as the email account itself.</span></div></div><div class="dg-layer t-info" style="--i:2"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span><div><strong>Authenticator app</strong><span>Codes generated on the device. Not tied to the phone number. Can still be phished.</span></div></div><div class="dg-layer t-bull" style="--i:3"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg></span><div><strong>Hardware security key or passkey</strong><span>Checks the website's real address before responding. Resists phishing.</span></div></div></div></div><figcaption>Any second factor is generally better than a password alone. The differences are in what each one can be tricked by.</figcaption></figure>
+<p><strong>SMS codes.</strong> The service sends a code by text message. This ties the account’s security to a phone number, and a phone number is controlled by the mobile carrier, not by its user.</p>
+<p><strong>Authenticator apps.</strong> During setup, the service shows a QR code containing a secret, which the app stores. From then on the app calculates a short code from that secret and the current time, commonly six digits that change every 30 seconds. It works without any network connection, and nothing is sent to the phone number.</p>
+<p><strong>Hardware security keys.</strong> A small physical device that is registered with the account and tapped or plugged in at sign-in. The key checks the address of the website asking and only answers the genuine one. <strong>Passkeys</strong>, built into phones and computers, use the same underlying approach.</p>
+<div class="table-wrap" data-scroll-label="Table"><table><thead>
+<tr>
+<th></th>
+<th>SMS code</th>
+<th>Authenticator app</th>
+<th>Security key or passkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exposed to a SIM swap</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Can be typed into a fake site</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Needs a mobile signal</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>If the device is lost</td>
+<td>Number can be restored by the carrier</td>
+<td>Backup codes or the saved setup secret are needed</td>
+<td>A second registered key or backup codes are needed</td>
+</tr>
+</tbody>
+</table></div><h2 id="the-sim-swap">The SIM swap</h2>
+<figure class="viz viz--flow" data-animate><div class="viz-title">A SIM swap, as the victim sees it</div><div class="viz-canvas"><ol class="dg-flow dg-flow--row" style="--n:4"><li class="dg-step t-warn" style="--i:0"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></svg></span><span class="dg-step-body"><strong>No signal</strong><span>The phone suddenly loses service for no clear reason.</span></span></li><li class="dg-step t-bear" style="--i:1"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><span class="dg-step-body"><strong>Number moved</strong><span>The mobile carrier was persuaded to move it to another SIM.</span></span></li><li class="dg-step t-bear" style="--i:2"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/></svg></span><span class="dg-step-body"><strong>Codes redirected</strong><span>Text-message codes and reset links now reach the attacker.</span></span></li><li class="dg-step t-bear" style="--i:3"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg></span><span class="dg-step-body"><strong>Accounts opened</strong><span>Email first, then everything that email can reset.</span></span></li></ol></div><figcaption>The phone was never stolen and no password was guessed. The phone number itself changed hands.</figcaption></figure>
+<p>In a <strong>SIM swap</strong>, an attacker convinces a mobile carrier’s staff that they are the customer and has the phone number moved to a SIM card they control. Text-message codes and password-reset links then go to the attacker. This is the main reason SMS is regarded as the weakest of the common second factors.</p>
+<h2 id="going-deeper">Going deeper</h2>
+<p><strong>Codes can be phished in real time.</strong> A fake sign-in page can ask for the password and the current code and pass both to the real site within seconds. Authenticator codes do not stop this. Security keys and passkeys do, because they will not respond to the wrong address.</p>
+<p><strong>The setup secret is the factor.</strong> The QR code shown when an authenticator app is set up is the secret from which every future code is calculated. A screenshot of it is a copy of the second factor.</p>
+<p><strong>Backup codes.</strong> Most services issue one-time backup codes for when the device is lost. They bypass the second factor by design and need the same care as a password.</p>
+<p><strong>Email is the root.</strong> Almost every account can be reset through its email address. An email account with weak protection undoes strong protection everywhere else.</p>
+<p><strong>Not for self-held wallets.</strong> 2FA protects accounts held with a company. A <a class="gl" href="/glossary/non-custodial/" title="Describing a wallet in which the user alone holds the private keys, with no custodian able to move or block the funds, although some tokens can still be frozen by their issuer.">non-custodial wallet</a> has no sign-in to protect: whoever has the <a class="gl" href="/glossary/seed-phrase/" title="A list of usually 12 or 24 words that encodes the master secret from which all of a wallet's private keys are derived.">seed phrase</a> has the wallet, and ordinary 2FA does not apply. A passphrase or a multi-signature setup can add an extra layer. See <a href="/foundations/wallets-security/custodial-and-non-custodial-wallets/">custodial and non-custodial wallets</a>.</p>
+<div class="example"><p class="example-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.600-7 10-7 10 7 10 7-3.600 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>A hypothetical evening without signal</span><em>Hypothetical illustration</em></p>
+<p>Elena’s phone shows “No service” at seven in the evening. She assumes a network fault and goes to bed.</p>
+<p>During the night, someone who has had her number moved to their own SIM uses “forgot password” on her email account. The reset code arrives by text message, on their phone. From her mailbox they reset the password of her exchange account, which also uses SMS codes, and request a withdrawal.</p>
+<p>Change one detail. If the exchange account had used an authenticator app or a security key, control of the phone number would not have produced the second factor, and the sign-in would have stopped there.</p>
+<p>In both versions, the sudden loss of signal was the earliest visible sign.</p>
+</div>
+<section class="notmean" aria-labelledby="what-it-does-not-mean"><h2 id="what-it-does-not-mean"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg><span>What it does NOT mean</span></h2>
+<ul>
+<li><strong>2FA does not make an account unbreakable.</strong> It removes the simplest attacks and leaves <a class="gl" href="/glossary/phishing/" title="A scam in which an attacker poses as a trusted company, site or person to trick someone into revealing secrets or approving a harmful action.">phishing</a>, malware and recovery fraud.</li>
+<li><strong>All second factors are not equal.</strong> A text-message code and a hardware key resist very different things.</li>
+<li><strong>A code is not safe to share with “support”.</strong> Nobody but the service’s own sign-in page has any use for it. See <a href="/foundations/wallets-security/fake-support-and-impersonation/">fake support and impersonation</a>.</li>
+<li><strong>2FA does not protect a seed phrase.</strong> Self-held wallets have no ordinary second factor.</li>
+</ul>
+</section>
+<h2 id="common-mistakes">Common mistakes</h2>
+<div class="mistakes">
+<ol>
+<li><strong>Leaving SMS as the fallback.</strong> A stronger method does little if the account can still be recovered by text message.</li>
+<li><strong>Photographing the setup QR code.</strong> The image is a working copy of the authenticator.</li>
+<li><strong>Having no backup.</strong> A lost phone with no backup codes can mean a long lockout.</li>
+<li><strong>Protecting the exchange and neglecting the email.</strong> The email account can reset the exchange password.</li>
+</ol>
+</div>
+<h2 id="risks-and-limitations">Risks and limitations</h2>
+<ul>
+<li>Every method can lock out its owner. Stronger factors generally make recovery harder.</li>
+<li>Not every service supports security keys or passkeys, and options differ between exchanges.</li>
+<li>Malware on a signed-in device can act inside a session after the second factor has been passed.</li>
+<li>The strength of the whole setup is set by its weakest recovery path.</li>
+</ul>
+<div class="takeaway"><p class="takeaway-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg><span>Key takeaway</span></p>
+<p>Two-factor authentication adds a second proof to a password. Authenticator apps and hardware security keys are generally stronger than SMS codes, which are exposed to SIM-swap attacks, and no second factor protects a seed phrase.</p>
+</div>
+
+      <section class="sources" aria-labelledby="sources">
+        <h2 id="sources">Sources and further reading</h2>
+        <ul>
+          <li><a class="ext" href="https://consumer.ftc.gov/articles/use-two-factor-authentication-protect-your-accounts" rel="noopener noreferrer" target="_blank">FTC Consumer Advice: Use Two-Factor Authentication to Protect Your Accounts<span class="sr-only"> (opens in a new tab)</span></a>. U.S. Federal Trade Commission guidance on two-factor authentication, SIM swap attacks and security keys</li>
+          <li><a class="ext" href="https://csrc.nist.gov/pubs/sp/800/63/b/4/final" rel="noopener noreferrer" target="_blank">NIST Special Publication 800-63B-4, Digital Identity Guidelines: Authentication and Authenticator Management<span class="sr-only"> (opens in a new tab)</span></a>, National Institute of Standards and Technology (2025). Technical guidance on authenticator types, including the restricted status of codes sent over the telephone network</li>
+          <li><a class="ext" href="https://files.consumerfinance.gov/f/documents/cfpb_complaint-bulletin_crypto-assets_2022-11.pdf" rel="noopener noreferrer" target="_blank">Complaint Bulletin: An analysis of consumer complaints related to crypto-assets<span class="sr-only"> (opens in a new tab)</span></a>, Consumer Financial Protection Bureau (2022). Consumers reported SIM-swap hacks, where an attacker intercepts SMS messages to exploit two-factor authentication</li>
+        </ul>
+      </section>
+
+      <aside class="edu-note" aria-label="Educational notice">
+        <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+        <p><strong>Educational content only.</strong> This page explains a concept. It is not financial advice and not a recommendation to buy, sell or hold anything. <a href="/educational-disclaimer/">Full disclaimer</a>. Last updated <time datetime="2026-11-21">21 November 2026</time>.</p>
+      </aside>
+    </div>
+  </div>
+  <section class="related band" aria-labelledby="related">
+    <div class="wrap">
+      <h2 id="related">Related topics</h2>
+      <div class="card-grid">
+<a class="card topic-card" href="/foundations/wallets-security/exchange-account-security/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2l8 3v6c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V5z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Wallets &amp; Security</span>
+    <span class="card-title">Exchange Account Security</span>
+    <span class="card-text">Exchange account security is the set of protections around a custodial account: a unique password, a strong second factor, a secured email address and, where offered, withdrawal allow-lists and anti-phishing codes.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card accent-bear" href="/foundations/wallets-security/phishing/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v11a4 4 0 0 1-8 0v-2"/><path d="M4 12l-2 2M4 12l2 2"/><circle cx="12" cy="3" r="1"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Wallets &amp; Security</span>
+    <span class="card-title">Phishing</span>
+    <span class="card-text">Phishing is an attack that imitates a trusted service to trick a person into giving up a secret or signing a harmful request. In crypto the target is usually a seed phrase, a login or a signature.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card accent-bear" href="/foundations/wallets-security/fake-support-and-impersonation/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Wallets &amp; Security</span>
+    <span class="card-title">Fake Support &amp; Impersonation</span>
+    <span class="card-text">Fake support is a scam in which someone poses as a help desk, company employee, official or public figure to obtain a seed phrase, a login code, remote access to a device or a payment.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/wallets-security/custodial-and-non-custodial-wallets/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 10l9-6 9 6"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8"/><path d="M3 21h18"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Wallets &amp; Security</span>
+    <span class="card-title">Custodial &amp; Non-Custodial Wallets</span>
+    <span class="card-text">In a custodial wallet a company holds the private keys for its customers. In a non-custodial wallet the user holds them. The difference decides who can move, freeze or lose the funds.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/exchanges-dex-defi/centralized-exchanges/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 10l9-6 9 6"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8"/><path d="M3 21h18"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Exchanges, DEX &amp; DeFi</span>
+    <span class="card-title">Centralized Exchanges (CEX)</span>
+    <span class="card-text">A centralized exchange is a company that runs a crypto market: it holds customers&#39; funds, records their balances in its own ledger and matches their buy and sell orders.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/wallets-security/security-checklist/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8L16.5 9.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Wallets &amp; Security</span>
+    <span class="card-title">Security Checklist</span>
+    <span class="card-text">A practical checklist of security habits for wallets and exchange accounts: protecting the seed phrase, checking addresses, reading what is signed and recognising the common scams.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager wrap" aria-label="More in this shelf"><a class="pager-link pager-prev" href="/foundations/wallets-security/pump-and-dump/"><span><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg>Previous</span><strong>Pump and Dump</strong></a>
+    <a class="pager-up" href="/foundations/wallets-security/">Back to Wallets &amp; Security</a><a class="pager-link pager-next" href="/foundations/wallets-security/exchange-account-security/"><span>Next<svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span><strong>Exchange Account Security</strong></a>
+  </nav>
+</article>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Two-Factor Authentication","description":"Two-factor authentication (2FA) adds a second proof of identity to a password when signing in. Authenticator apps and hardware security keys are generally stronger second factors than SMS codes.","inLanguage":"en","dateModified":"2026-11-21","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"edgeTR Academy"}}]}
+</script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR" loading="lazy">
+        <p>Learn the market. Understand the tools. Make your own decisions.</p>
+        <p class="footer-family">Part of <strong>Ethos Empire</strong></p>
+        <ul class="trust" aria-label="What edgeTR Academy is"><li>Free to read</li><li>No login</li><li>No paywall</li><li>Educational reference</li>
+        </ul>
+      </div>
+      <nav aria-label="Learn and browse">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="/learn/">Learn: Chapters 1-10</a></li>
+          <li><a href="/library/">Library</a></li>
+          <li><a href="/patterns/">Pattern gallery</a></li>
+          <li><a href="/foundations/">Foundations</a></li>
+          <li><a href="/compare/">Compare</a></li>
+          <li><a href="/glossary/">A-Z Glossary</a></li>
+          <li><a href="/watch/">Watch in 60 Seconds</a></li>
+          <li><a href="/search/">Search</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Library shelves">
+        <h2>Library</h2>
+        <ul>
+          <li><a href="/library/candlesticks/">Candlesticks</a></li>
+          <li><a href="/library/chart-patterns/">Chart Patterns</a></li>
+          <li><a href="/library/indicators/">Indicators</a></li>
+          <li><a href="/library/market-structure/">Market Structure</a></li>
+          <li><a href="/library/support-resistance/">Support &amp; Resistance</a></li>
+          <li><a href="/library/bull-bear-long-short/">Bull, Bear, Long &amp; Short</a></li>
+          <li><a href="/library/trading-mechanics/">Trading Mechanics</a></li>
+          <li><a href="/library/">All shelves</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Foundations shelves">
+        <h2>Foundations</h2>
+        <ul>
+          <li><a href="/foundations/markets-finance/">Markets &amp; Finance</a></li>
+          <li><a href="/foundations/crypto/">Crypto Basics</a></li>
+          <li><a href="/foundations/bitcoin/">Bitcoin Knowledge Center</a></li>
+          <li><a href="/foundations/blockchain/">Blockchain</a></li>
+          <li><a href="/foundations/wallets-security/">Wallets &amp; Security</a></li>
+          <li><a href="/foundations/exchanges-dex-defi/">Exchanges, DEX &amp; DeFi</a></li>
+          <li><a href="/foundations/derivatives-perpetuals/">Derivatives &amp; Perpetuals</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="About">
+        <h2>About</h2>
+        <ul>
+          <li><a href="/about/">About edgeTR Academy</a></li>
+          <li><a href="/educational-disclaimer/">Educational disclaimer</a></li>
+          <li><a href="/terms/">Terms of use</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/contact/">Contact and support</a></li>
+          <li><a href="/about/#editorial-standards">Editorial standards</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-disclaimer"><strong>Educational only.</strong> edgeTR Academy provides educational information only. It does not provide financial, investment, legal or tax advice, does not recommend specific assets or trades, and does not guarantee outcomes. Users are responsible for their own research and decisions. <a href="/educational-disclaimer/">Read the full disclaimer</a>.</p>
+    <p class="footer-legal">&copy; 2026 edgeTR Academy, part of Ethos Empire. Free to read. No account needed. <a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/contact/">Contact</a></p>
+  </div>
+</footer>
+<script src="/js/search-core.js" defer></script>
+<script src="/js/site.js" defer></script>
+</body>
+</html>

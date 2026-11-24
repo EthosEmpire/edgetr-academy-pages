@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en" data-base="/">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blocks &amp; Hashes | edgeTR Academy</title>
+<meta name="description" content="A block is a batch of transactions plus the hash of the previous block. A cryptographic hash is a fixed-length fingerprint of data, in which any change to the input changes the output.">
+<meta name="theme-color" content="#070b12">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://edgetr.com/foundations/blockchain/blocks-and-hashes/">
+<meta property="og:url" content="https://edgetr.com/foundations/blockchain/blocks-and-hashes/">
+<meta property="og:image" content="https://edgetr.com/img/brand/og-default.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="edgeTR Academy">
+<meta property="og:title" content="Blocks &amp; Hashes">
+<meta property="og:description" content="A block is a batch of transactions plus the hash of the previous block. A cryptographic hash is a fixed-length fingerprint of data, in which any change to the input changes the output.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.edgetrSearch)document.documentElement.classList.remove("js")},3000)</script>
+</head>
+<body class="page-article">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="edgeTR Academy home">
+      <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR">
+      <span class="brand-sub">Academy</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="/learn/">Learn</a></li>
+        <li><a href="/library/">Library</a></li>
+        <li><a href="/foundations/" aria-current="true">Foundations</a></li>
+        <li><a href="/compare/">Compare</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+        <li class="nav-search-link"><a href="/search/">Search</a></li>
+      </ul>
+    </nav>
+    <form class="header-search" action="/search/" method="get" role="search" aria-label="Site search" data-suggest>
+      <label class="sr-only" for="hq">Search the Academy</label>
+      <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="hq" name="q" type="search" placeholder="Search: RSI, doji, wallet..." autocomplete="off" spellcheck="false" aria-controls="hq-list" aria-expanded="false" aria-autocomplete="list" role="combobox">
+      <kbd aria-hidden="true">/</kbd>
+      <div class="suggest" id="hq-list" role="listbox" aria-label="Search suggestions" hidden></div>
+    </form>
+    <a class="header-search-btn" href="/search/" aria-label="Search"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false">
+      <span class="sr-only">Menu</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<article class="article">
+  <header class="article-hero">
+    <div class="wrap">
+      
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/foundations/">Foundations</a></li>
+    <li><a href="/foundations/blockchain/">Blockchain</a></li>
+    <li><span aria-current="page">Blocks &amp; Hashes</span></li>
+  </ol>
+</nav>
+
+      <p class="eyebrow">Foundations · Blockchain</p>
+      <h1>Blocks &amp; Hashes</h1>
+      <p class="lede">A block is a batch of transactions plus the hash of the previous block. A cryptographic hash is a fixed-length fingerprint of data, in which any change to the input changes the output.</p>
+      <ul class="meta-chips"><li><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></li>
+        <li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>5 min read</span></li><li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Updated <time datetime="2026-11-21">21 November 2026</time></span></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="wrap article-grid">
+    <aside class="toc" aria-label="On this page">
+      <details open>
+        <summary>On this page</summary>
+        <ol>
+          <li><a href="#why-it-matters">Why it matters</a></li>
+          <li><a href="#what-a-hash-is">What a hash is</a></li>
+          <li><a href="#what-a-block-is">What a block is</a></li>
+          <li><a href="#why-chaining-makes-tampering-visible">Why chaining makes tampering visible</a></li>
+          <li><a href="#going-deeper">Going deeper</a></li>
+          <li><a href="#what-it-does-not-mean">What it does NOT mean</a></li>
+          <li><a href="#common-misunderstandings">Common misunderstandings</a></li>
+          <li><a href="#risks-and-limits">Risks and limits</a></li>
+        </ol>
+      </details>
+    </aside>
+
+    <div class="prose">
+
+      <h2 id="why-it-matters">Why it matters</h2>
+<p>“Block” and “hash” are the two words inside “<a class="gl" href="/glossary/blockchain/" title="A shared record of transactions grouped into blocks, where each block is cryptographically linked to the one before it.">blockchain</a>”, and the whole security of the structure comes from how they combine. Hashes also appear everywhere else in crypto: in addresses, transaction IDs and mining. A clear picture of both removes much of the mystery.</p>
+<h2 id="what-a-hash-is">What a hash is</h2>
+<figure class="viz viz--compare" data-animate><div class="viz-title">A small change in, a completely different hash out</div><div class="viz-canvas"><div class="dg-compare" tabindex="0" role="region" aria-label="Comparison of Input and Hash (shortened, made up); scrolls sideways on small screens"><table><thead><tr><th scope="col"><span class="sr-only">Aspect</span></th><th scope="col" class="t-neutral">Input</th><th scope="col" class="t-info">Hash (shortened, made up)</th></tr></thead><tbody><tr><th scope="row">Original</th><td>Pay Ana 10</td><td>3f9a...c21e</td></tr><tr><th scope="row">One digit changed</th><td>Pay Ana 11</td><td>b07d...48a2</td></tr><tr><th scope="row">One capital letter changed</th><td>pay Ana 10</td><td>e654...0b9f</td></tr><tr><th scope="row">A far longer input</th><td>The full text of a long book</td><td>91c2...7d03</td></tr></tbody></table></div></div><figcaption>Illustrative values. Real hashes behave the same way: one character changed gives an unrelated result, and the output length never varies.</figcaption></figure>
+<p>A <strong>cryptographic hash function</strong> takes any data and returns a short, fixed-length string of characters called a <strong>hash</strong>. It acts as a fingerprint of the data.</p>
+<figure class="viz viz--stack" data-animate><div class="viz-title">What a cryptographic hash function provides</div><div class="viz-canvas"><div class="dg-stack"><div class="dg-layer t-neutral" style="--i:0"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8L16.5 9.5"/></svg></span><div><strong>Deterministic</strong><span>The same input always gives the same output.</span></div></div><div class="dg-layer t-neutral" style="--i:1"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v18M7 21h10M5 7h14"/><path d="M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/></svg></span><div><strong>Fixed length</strong><span>A word or a library gives an output of the same size.</span></div></div><div class="dg-layer t-info" style="--i:2"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg></span><div><strong>One-way</strong><span>The output cannot be run backwards to find the input.</span></div></div><div class="dg-layer t-warn" style="--i:3"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><div><strong>Sensitive</strong><span>The slightest change to the input changes the output completely.</span></div></div><div class="dg-layer t-info" style="--i:4"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2l8 3v6c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V5z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg></span><div><strong>Collision-resistant</strong><span>Finding two inputs with the same output is not practical.</span></div></div></div></div></figure>
+<p>Bitcoin uses a function called SHA-256. Its output is always 256 bits, usually written as 64 hexadecimal characters. Ethereum uses a different function, Keccak-256, with the same output size. The number of possible outputs is so large that two different inputs producing the same hash by chance is not a practical concern.</p>
+<p>A hash does not hide or lock data, and it is not encryption. Nothing can be “decrypted” from it. Its use is comparison: if two pieces of data have the same hash, they are the same data, and if a stored hash no longer matches, something has been altered.</p>
+<div class="callout callout--beginner"><p class="callout-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 8.500l5.500 3.500-5.500 3.500z"/></svg><span>In plain words</span></p>
+<p>A hash is like a wax seal pressed over the flap of an envelope. The seal tells you nothing about the letter inside. But if anyone opens the envelope and changes the letter, the seal breaks, and you can see that at a glance.</p>
+</div>
+<h2 id="what-a-block-is">What a block is</h2>
+<figure class="viz viz--stack" data-animate><div class="viz-title">Inside one block</div><div class="viz-canvas"><div class="dg-stack"><div class="dg-layer t-info" style="--i:0"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg></span><div><strong>Previous block hash</strong><span>The fingerprint of the block before. This is the link in the chain.</span></div></div><div class="dg-layer t-neutral" style="--i:1"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12.5l9 5 9-5M3 17l9 5 9-5"/></svg></span><div><strong>Transaction summary</strong><span>One hash that stands for every transaction in the block.</span></div></div><div class="dg-layer t-neutral" style="--i:2"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span><div><strong>Timestamp and consensus data</strong><span>When the block was made, and proof that it was allowed.</span></div></div><div class="dg-layer t-neutral" style="--i:3"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 4L3 8l4 4"/><path d="M3 8h14"/><path d="M17 12l4 4-4 4"/><path d="M21 16H7"/></svg></span><div><strong>Transactions</strong><span>The batch of transfers and contract calls themselves.</span></div></div></div></div><figcaption>The first three items form the block header. Hashing the header gives the block's own hash.</figcaption></figure>
+<p>A <strong>block</strong> is a batch of <a href="/foundations/blockchain/transactions/">transactions</a> with a small <strong>header</strong> on top. Exact fields differ between blockchains, but a header typically holds:</p>
+<div class="table-wrap" data-scroll-label="Table"><table><thead>
+<tr>
+<th>Field</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Previous block hash</td>
+<td>Links this block to the one before it</td>
+</tr>
+<tr>
+<td>Transaction summary</td>
+<td>A single hash representing all transactions in the block</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>Roughly when the block was produced</td>
+</tr>
+<tr>
+<td>Consensus data</td>
+<td>Evidence that the block was validly produced, such as a <a class="gl" href="/glossary/proof-of-work/" title="A consensus method in which miners compete to solve a computational puzzle, and the winner adds the next block.">proof-of-work</a> value</td>
+</tr>
+</tbody>
+</table></div><p>The block’s own hash is the hash of its header. Because the header contains the previous block’s hash, each block’s fingerprint depends on the block before it, and so on back to the first block, known as the <strong>genesis block</strong>. Bitcoin’s is described in <a href="/foundations/bitcoin/genesis-block-and-early-history/">genesis block and early history</a>.</p>
+<p>A block’s position in the chain is its <strong>height</strong>: the genesis block is height 0, the next is height 1, and so on.</p>
+<h2 id="why-chaining-makes-tampering-visible">Why chaining makes tampering visible</h2>
+<figure class="viz viz--flow" data-animate><div class="viz-title">A chain of blocks</div><div class="viz-canvas"><ol class="dg-flow dg-flow--row" style="--n:3"><li class="dg-step t-neutral" style="--i:0"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="8" width="5.5" height="8" rx="1.2"/><rect x="9.25" y="8" width="5.5" height="8" rx="1.2"/><rect x="16" y="8" width="5.5" height="8" rx="1.2"/><path d="M8 12h1.25M14.75 12H16"/></svg></span><span class="dg-step-body"><strong>Block 100</strong><span>Transactions + fingerprint of block 99</span></span></li><li class="dg-step t-neutral" style="--i:1"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="8" width="5.5" height="8" rx="1.2"/><rect x="9.25" y="8" width="5.5" height="8" rx="1.2"/><rect x="16" y="8" width="5.5" height="8" rx="1.2"/><path d="M8 12h1.25M14.75 12H16"/></svg></span><span class="dg-step-body"><strong>Block 101</strong><span>Transactions + fingerprint of block 100</span></span></li><li class="dg-step t-info" style="--i:2"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="8" width="5.5" height="8" rx="1.2"/><rect x="9.25" y="8" width="5.5" height="8" rx="1.2"/><rect x="16" y="8" width="5.5" height="8" rx="1.2"/><path d="M8 12h1.25M14.75 12H16"/></svg></span><span class="dg-step-body"><strong>Block 102</strong><span>Transactions + fingerprint of block 101</span></span></li></ol></div><figcaption>Each block stores the hash of the block before it. Changing an old block changes its hash and breaks every link that follows.</figcaption></figure>
+<p>Suppose someone edits a transaction in an old block. The transaction summary changes, so the header changes, so the block’s hash changes. The next block still holds the old hash, so the link no longer matches. Repairing it means rebuilding that block too, and then the one after it, all the way to the newest.</p>
+<p>On its own, re-hashing is quick for a computer. What makes the rebuild expensive is the consensus rule attached to each block. Under <a href="/foundations/blockchain/proof-of-work/">proof of work</a>, every rebuilt block needs a fresh, costly computation. Under <a class="gl" href="/glossary/proof-of-stake/" title="A consensus method in which validators lock up coins as stake and are chosen to propose and confirm blocks.">proof of stake</a>, it needs signatures from validators who would be penalised for signing two histories. The hash chain makes tampering detectable. <a href="/foundations/blockchain/consensus/">Consensus</a> makes it costly.</p>
+<h2 id="going-deeper">Going deeper</h2>
+<p><strong>The transaction summary.</strong> Transactions in a block are hashed in pairs, the results are hashed in pairs again, and so on until one hash remains. The structure is a <strong>Merkle tree</strong> and the final hash is the <strong>Merkle root</strong>. It lets a device prove that one transaction is in a block by checking a handful of hashes instead of downloading the whole block. Ethereum uses related tree structures for transactions and for account data.</p>
+<div class="example"><p class="example-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.600-7 10-7 10 7 10 7-3.600 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>Following a change through three blocks</span><em>Hypothetical illustration</em></p>
+<p>A hypothetical chain, with hashes shortened to four characters for illustration.</p>
+<ul>
+<li>Block 10: hash A1F3.</li>
+<li>Block 11: previous hash A1F3, own hash 7C09.</li>
+<li>Block 12: previous hash 7C09, own hash E2B8.</li>
+</ul>
+<p>Someone changes “Pay Ana 10” to “Pay Ana 11” inside Block 11.</p>
+<ul>
+<li>Block 11’s transaction summary changes, so its header changes, so its hash changes. Call the new hash 51DD.</li>
+<li>Block 12 still records “previous hash: 7C09”. It no longer points to any block that exists.</li>
+<li>To repair the chain, Block 12 must be rebuilt with “previous hash: 51DD”, which changes Block 12’s own hash, which breaks Block 13, and so on.</li>
+</ul>
+<p>Every honest node holds the original chain and compares hashes automatically. The altered version does not match and is rejected.</p>
+</div>
+<section class="notmean" aria-labelledby="what-it-does-not-mean"><h2 id="what-it-does-not-mean"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg><span>What it does NOT mean</span></h2>
+<ul>
+<li><strong>A hash is not encryption.</strong> It cannot be reversed to reveal the data, and it does not keep data secret.</li>
+<li><strong>A matching hash does not mean the data is true.</strong> It means the data is unchanged since the hash was made.</li>
+<li><strong>A hash chain does not prevent changes by itself.</strong> It exposes them. Resistance comes from the consensus rules and the spread of copies.</li>
+<li><strong>A block is not a file that someone approves by hand.</strong> Blocks are assembled and checked by software following fixed rules.</li>
+<li><strong>Being in a block does not mean being final immediately.</strong> Recent blocks can occasionally be replaced before the network settles.</li>
+</ul>
+</section>
+<h2 id="common-misunderstandings">Common misunderstandings</h2>
+<div class="mistakes">
+<ol>
+<li><strong>Thinking hashes can be “cracked” to recover data.</strong> The function discards information. There is nothing to decode.</li>
+<li><strong>Confusing a block hash with a transaction hash.</strong> One identifies a block, the other a single transaction inside it.</li>
+<li><strong>Believing old data is deleted.</strong> Blocks are added, never removed, so the ledger only grows.</li>
+</ol>
+</div>
+<h2 id="risks-and-limits">Risks and limits</h2>
+<ul>
+<li>Hash functions are trusted because no practical weakness has been found, not because safety is proven for all time.</li>
+<li>Anything written into a block is permanent and public on an open chain.</li>
+<li>The ledger grows without end, which raises the cost of running a full node over time.</li>
+<li>A hash chain kept by a single party offers little protection, since that party can rebuild it at will.</li>
+</ul>
+<div class="takeaway"><p class="takeaway-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg><span>Key takeaway</span></p>
+<p>A hash is a fixed-length fingerprint that changes completely when its input changes. A block is a batch of transactions that carries the previous block’s hash, so altering any old record breaks every link after it.</p>
+</div>
+
+      <section class="sources" aria-labelledby="sources">
+        <h2 id="sources">Sources and further reading</h2>
+        <ul>
+          <li><cite>Mastering Bitcoin</cite>, Andreas M. Antonopoulos. Chapters on the blockchain, block headers and Merkle trees</li>
+          <li><a class="ext" href="https://bitcoin.org/bitcoin.pdf" rel="noopener noreferrer" target="_blank">Bitcoin: A Peer-to-Peer Electronic Cash System<span class="sr-only"> (opens in a new tab)</span></a>, Satoshi Nakamoto (2008). Sections on the timestamp server and on reclaiming disk space</li>
+          <li><a class="ext" href="https://ethereum.org/en/developers/docs/blocks/" rel="noopener noreferrer" target="_blank">Blocks<span class="sr-only"> (opens in a new tab)</span></a>, ethereum.org. Blocks are batches of transactions that include the hash of the previous block, which links them into a chain</li>
+        </ul>
+      </section>
+
+      <aside class="edu-note" aria-label="Educational notice">
+        <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+        <p><strong>Educational content only.</strong> This page explains a concept. It is not financial advice and not a recommendation to buy, sell or hold anything. <a href="/educational-disclaimer/">Full disclaimer</a>. Last updated <time datetime="2026-11-21">21 November 2026</time>.</p>
+      </aside>
+    </div>
+  </div>
+  <section class="related band" aria-labelledby="related">
+    <div class="wrap">
+      <h2 id="related">Related topics</h2>
+      <div class="card-grid">
+<a class="card topic-card" href="/foundations/blockchain/what-is-a-blockchain/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="8" width="5.5" height="8" rx="1.2"/><rect x="9.25" y="8" width="5.5" height="8" rx="1.2"/><rect x="16" y="8" width="5.5" height="8" rx="1.2"/><path d="M8 12h1.25M14.75 12H16"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Blockchain</span>
+    <span class="card-title">What Is a Blockchain?</span>
+    <span class="card-text">A blockchain is a shared ledger in which records are grouped into blocks, each block is linked to the one before it by a cryptographic hash, and many independent computers hold a copy.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/blockchain/transactions/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 4L3 8l4 4"/><path d="M3 8h14"/><path d="M17 12l4 4-4 4"/><path d="M21 16H7"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Blockchain</span>
+    <span class="card-title">Transactions</span>
+    <span class="card-text">A blockchain transaction is a signed instruction, such as a transfer of value, that is broadcast to the network, checked by nodes and recorded in the ledger once it is in a block, and increasingly hard to reverse.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/blockchain/proof-of-work/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Blockchain</span>
+    <span class="card-title">Proof of Work</span>
+    <span class="card-text">Proof of work secures a blockchain by making block production cost computation and energy: miners compete to find a block hash below a target, and rewriting history means redoing that work.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/blockchain/consensus/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.5"/><path d="M2 21a7 7 0 0 1 14 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.5a7 7 0 0 1 4 6.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Blockchain</span>
+    <span class="card-title">Consensus</span>
+    <span class="card-text">Consensus is the process by which the independent computers of a blockchain network agree on a single history of transactions without relying on a central authority.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/bitcoin/genesis-block-and-early-history/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="8" width="5.5" height="8" rx="1.2"/><rect x="9.25" y="8" width="5.5" height="8" rx="1.2"/><rect x="16" y="8" width="5.5" height="8" rx="1.2"/><path d="M8 12h1.25M14.75 12H16"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Bitcoin Knowledge Center</span>
+    <span class="card-title">Genesis Block &amp; Early History</span>
+    <span class="card-text">The genesis block is the first block of the Bitcoin blockchain, dated 3 January 2009. This page follows the network from that block through its first few years.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/blockchain/finality-and-throughput/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Blockchain</span>
+    <span class="card-title">Finality &amp; Throughput</span>
+    <span class="card-text">Finality is the point after which a transaction is practically irreversible. Throughput is how many transactions a chain processes per second. Both trade off against decentralisation and security.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--advanced"><i aria-hidden="true"></i>Advanced</span></span>
+  </span>
+</a>
+
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager wrap" aria-label="More in this shelf"><a class="pager-link pager-prev" href="/foundations/blockchain/what-is-a-blockchain/"><span><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg>Previous</span><strong>What Is a Blockchain?</strong></a>
+    <a class="pager-up" href="/foundations/blockchain/">Back to Blockchain</a><a class="pager-link pager-next" href="/foundations/blockchain/transactions/"><span>Next<svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span><strong>Transactions</strong></a>
+  </nav>
+</article>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Blocks & Hashes","description":"A block is a batch of transactions plus the hash of the previous block. A cryptographic hash is a fixed-length fingerprint of data, in which any change to the input changes the output.","inLanguage":"en","dateModified":"2026-11-21","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"edgeTR Academy"}}]}
+</script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR" loading="lazy">
+        <p>Learn the market. Understand the tools. Make your own decisions.</p>
+        <p class="footer-family">Part of <strong>Ethos Empire</strong></p>
+        <ul class="trust" aria-label="What edgeTR Academy is"><li>Free to read</li><li>No login</li><li>No paywall</li><li>Educational reference</li>
+        </ul>
+      </div>
+      <nav aria-label="Learn and browse">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="/learn/">Learn: Chapters 1-10</a></li>
+          <li><a href="/library/">Library</a></li>
+          <li><a href="/patterns/">Pattern gallery</a></li>
+          <li><a href="/foundations/">Foundations</a></li>
+          <li><a href="/compare/">Compare</a></li>
+          <li><a href="/glossary/">A-Z Glossary</a></li>
+          <li><a href="/watch/">Watch in 60 Seconds</a></li>
+          <li><a href="/search/">Search</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Library shelves">
+        <h2>Library</h2>
+        <ul>
+          <li><a href="/library/candlesticks/">Candlesticks</a></li>
+          <li><a href="/library/chart-patterns/">Chart Patterns</a></li>
+          <li><a href="/library/indicators/">Indicators</a></li>
+          <li><a href="/library/market-structure/">Market Structure</a></li>
+          <li><a href="/library/support-resistance/">Support &amp; Resistance</a></li>
+          <li><a href="/library/bull-bear-long-short/">Bull, Bear, Long &amp; Short</a></li>
+          <li><a href="/library/trading-mechanics/">Trading Mechanics</a></li>
+          <li><a href="/library/">All shelves</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Foundations shelves">
+        <h2>Foundations</h2>
+        <ul>
+          <li><a href="/foundations/markets-finance/">Markets &amp; Finance</a></li>
+          <li><a href="/foundations/crypto/">Crypto Basics</a></li>
+          <li><a href="/foundations/bitcoin/">Bitcoin Knowledge Center</a></li>
+          <li><a href="/foundations/blockchain/">Blockchain</a></li>
+          <li><a href="/foundations/wallets-security/">Wallets &amp; Security</a></li>
+          <li><a href="/foundations/exchanges-dex-defi/">Exchanges, DEX &amp; DeFi</a></li>
+          <li><a href="/foundations/derivatives-perpetuals/">Derivatives &amp; Perpetuals</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="About">
+        <h2>About</h2>
+        <ul>
+          <li><a href="/about/">About edgeTR Academy</a></li>
+          <li><a href="/educational-disclaimer/">Educational disclaimer</a></li>
+          <li><a href="/terms/">Terms of use</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/contact/">Contact and support</a></li>
+          <li><a href="/about/#editorial-standards">Editorial standards</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-disclaimer"><strong>Educational only.</strong> edgeTR Academy provides educational information only. It does not provide financial, investment, legal or tax advice, does not recommend specific assets or trades, and does not guarantee outcomes. Users are responsible for their own research and decisions. <a href="/educational-disclaimer/">Read the full disclaimer</a>.</p>
+    <p class="footer-legal">&copy; 2026 edgeTR Academy, part of Ethos Empire. Free to read. No account needed. <a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/contact/">Contact</a></p>
+  </div>
+</footer>
+<script src="/js/search-core.js" defer></script>
+<script src="/js/site.js" defer></script>
+</body>
+</html>

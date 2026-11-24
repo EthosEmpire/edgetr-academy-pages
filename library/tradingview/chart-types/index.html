@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en" data-base="/">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chart Types: Line, Bar, Candle &amp; More | edgeTR Academy</title>
+<meta name="description" content="Chart types are different ways of drawing the same price data. Line, bar, candlestick, Heikin Ashi, area and Renko charts each keep some information and leave some out.">
+<meta name="theme-color" content="#070b12">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://edgetr.com/library/tradingview/chart-types/">
+<meta property="og:url" content="https://edgetr.com/library/tradingview/chart-types/">
+<meta property="og:image" content="https://edgetr.com/img/brand/og-default.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="edgeTR Academy">
+<meta property="og:title" content="Chart Types: Line, Bar, Candle &amp; More">
+<meta property="og:description" content="Chart types are different ways of drawing the same price data. Line, bar, candlestick, Heikin Ashi, area and Renko charts each keep some information and leave some out.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.edgetrSearch)document.documentElement.classList.remove("js")},3000)</script>
+</head>
+<body class="page-article">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="edgeTR Academy home">
+      <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR">
+      <span class="brand-sub">Academy</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="/learn/">Learn</a></li>
+        <li><a href="/library/" aria-current="true">Library</a></li>
+        <li><a href="/foundations/">Foundations</a></li>
+        <li><a href="/compare/">Compare</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+        <li class="nav-search-link"><a href="/search/">Search</a></li>
+      </ul>
+    </nav>
+    <form class="header-search" action="/search/" method="get" role="search" aria-label="Site search" data-suggest>
+      <label class="sr-only" for="hq">Search the Academy</label>
+      <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="hq" name="q" type="search" placeholder="Search: RSI, doji, wallet..." autocomplete="off" spellcheck="false" aria-controls="hq-list" aria-expanded="false" aria-autocomplete="list" role="combobox">
+      <kbd aria-hidden="true">/</kbd>
+      <div class="suggest" id="hq-list" role="listbox" aria-label="Search suggestions" hidden></div>
+    </form>
+    <a class="header-search-btn" href="/search/" aria-label="Search"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false">
+      <span class="sr-only">Menu</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<article class="article">
+  <header class="article-hero">
+    <div class="wrap">
+      
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/library/">Library</a></li>
+    <li><a href="/library/tradingview/">TradingView &amp; Chart Tools</a></li>
+    <li><span aria-current="page">Chart Types: Line, Bar, Candle &amp; More</span></li>
+  </ol>
+</nav>
+
+      <p class="eyebrow">Library · TradingView &amp; Chart Tools</p>
+      <h1>Chart Types: Line, Bar, Candle &amp; More</h1>
+      <p class="lede">Chart types are different ways of drawing the same price data. Line, bar, candlestick, Heikin Ashi, area and Renko charts each keep some information and leave some out.</p>
+      <ul class="meta-chips"><li><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></li>
+        <li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>5 min read</span></li><li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Updated <time datetime="2026-11-21">21 November 2026</time></span></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="wrap article-grid">
+    <aside class="toc" aria-label="On this page">
+      <details open>
+        <summary>On this page</summary>
+        <ol>
+          <li><a href="#why-it-matters">Why it matters</a></li>
+          <li><a href="#what-it-looks-like">What it looks like</a></li>
+          <li><a href="#how-to-read-it">How to read it</a></li>
+          <li><a href="#going-deeper">Going deeper</a></li>
+          <li><a href="#what-it-does-not-mean">What it does NOT mean</a></li>
+          <li><a href="#common-mistakes">Common mistakes</a></li>
+          <li><a href="#risks-and-limitations">Risks and limitations</a></li>
+        </ol>
+      </details>
+    </aside>
+
+    <div class="prose">
+
+      <h2 id="why-it-matters">Why it matters</h2>
+<p>Before any analysis happens, a choice has already been made: how the price data is drawn. Most platforms open on candlesticks, and offer several other <strong>chart types</strong> from a single menu.</p>
+<p>Each type is a different drawing of the same trades. Some show every detail of a period, some show one number, and some transform the data before drawing it. Knowing what each one leaves out prevents reading something into a chart that is only an effect of the drawing.</p>
+<div class="callout callout--note"><p class="callout-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span>About the platform named here</span></p>
+<p>TradingView is used as the familiar example. edgeTR Academy is not affiliated with TradingView, and the same ideas apply to other charting tools.</p>
+</div>
+<h2 id="what-it-looks-like">What it looks like</h2>
+<figure class="viz viz--bars" data-animate><div class="viz-title">Prices drawn for each period</div><div class="viz-canvas"><div class="dg-bars" role="list"><div class="dg-bar t-info" role="listitem" style="--i:0"><div class="dg-bar-head"><span class="dg-bar-label">Line</span><span class="dg-bar-value">1: the close</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:25%"></span></div></div><div class="dg-bar t-info" role="listitem" style="--i:1"><div class="dg-bar-head"><span class="dg-bar-label">Area</span><span class="dg-bar-value">1: the close</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:25%"></span></div></div><div class="dg-bar t-neutral" role="listitem" style="--i:2"><div class="dg-bar-head"><span class="dg-bar-label">Bar (OHLC)</span><span class="dg-bar-value">4: open, high, low, close</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:100%"></span></div></div><div class="dg-bar t-neutral" role="listitem" style="--i:3"><div class="dg-bar-head"><span class="dg-bar-label">Candlestick</span><span class="dg-bar-value">4: open, high, low, close</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:100%"></span></div></div><div class="dg-bar t-warn" role="listitem" style="--i:4"><div class="dg-bar-head"><span class="dg-bar-label">Heikin Ashi</span><span class="dg-bar-value">4 calculated averages</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:100%"></span></div><p class="dg-bar-note">The values drawn are not the prices that traded.</p></div></div></div><figcaption>Renko is not listed because it does not draw one shape per period at all.</figcaption></figure>
+<div class="table-wrap" data-scroll-label="Table"><table><thead>
+<tr>
+<th>Type</th>
+<th>What is drawn</th>
+<th>What is left out</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Line</td>
+<td>One price per period, usually the close, joined by a line</td>
+<td>Open, high and low</td>
+</tr>
+<tr>
+<td>Bar (OHLC)</td>
+<td>A vertical line from low to high, a tick on the left for the open and on the right for the close</td>
+<td>Nothing</td>
+</tr>
+<tr>
+<td>Candlestick</td>
+<td>The same four prices, with a filled body between open and close</td>
+<td>Nothing</td>
+</tr>
+<tr>
+<td>Heikin Ashi</td>
+<td>Candles built from averaged values</td>
+<td>The actual open, high, low and close</td>
+</tr>
+<tr>
+<td>Renko</td>
+<td>Bricks of a fixed price size</td>
+<td>Time, and any move smaller than one brick</td>
+</tr>
+</tbody>
+</table></div><div class="callout callout--beginner"><p class="callout-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 8.500l5.500 3.500-5.500 3.500z"/></svg><span>In plain words</span></p>
+<p>A journey can be recorded as a list of arrival times, as a full logbook, or as a smoothed route on a map. All three describe the same trip. The list is quick to read and hides the detours. The smoothed route is pleasant to look at and no longer shows the exact road taken.</p>
+</div>
+<h2 id="how-to-read-it">How to read it</h2>
+<h3 id="line-and-area">Line and area</h3>
+<p>A line chart joins closing prices. It is the cleanest view of general direction. It hides everything that happened inside each period, including the <a href="/library/candlesticks/wicks-and-rejection/">wicks</a> that show how far price travelled before closing. An area chart is a line chart with shading and carries the same information.</p>
+<h3 id="bars-and-candlesticks">Bars and candlesticks</h3>
+<figure class="viz viz--anatomy" data-animate><div class="viz-title">Anatomy of a candle</div><div class="viz-canvas"><div class="dg-anatomy"><div class="dg-side t-bull"><p class="dg-side-title">Bullish candle</p><p>Closed higher than it opened.</p><svg class="vz vz-anatomy" viewBox="0 0 330 300" role="img" aria-label="Bullish candle anatomy: high, close, body, open and low."><g class="vz-c vz-up vz-glow" style="--i:0"><line x1="96" x2="96" y1="34" y2="268" stroke-width="5"/><rect x="66" y="92" width="60" height="120" rx="4"/></g><g class="vz-fade" style="--i:2"><line x1="104" x2="168" y1="34" y2="34" stroke="var(--bull)" stroke-dasharray="3 5" stroke-opacity=".9"/><circle cx="168" cy="34" r="4" fill="var(--bull)"/><text class="vz-t-strong" x="180" y="33" fill="var(--text)">High</text><text class="vz-t-sub" x="180" y="49">top of the upper wick</text></g><g class="vz-fade" style="--i:3"><line x1="132" x2="168" y1="92" y2="92" stroke="var(--bull)" stroke-dasharray="3 5" stroke-opacity=".9"/><circle cx="168" cy="92" r="4" fill="var(--bull)"/><text class="vz-t-strong" x="180" y="91" fill="var(--text)">Close</text><text class="vz-t-sub" x="180" y="107">where the period ended</text></g><g class="vz-fade" style="--i:4"><path d="M134,100 h8 v104 h-8" fill="none" stroke="var(--bull)" stroke-opacity=".8"/><line x1="142" x2="168" y1="152" y2="152" stroke="var(--bull)" stroke-opacity=".8"/><text class="vz-t-strong" x="180" y="151" fill="var(--text)">Body</text><text class="vz-t-sub" x="180" y="167">open-to-close range</text></g><g class="vz-fade" style="--i:5"><line x1="132" x2="168" y1="212" y2="212" stroke="var(--bull)" stroke-dasharray="3 5" stroke-opacity=".9"/><circle cx="168" cy="212" r="4" fill="var(--bull)"/><text class="vz-t-strong" x="180" y="211" fill="var(--text)">Open</text><text class="vz-t-sub" x="180" y="227">where the period began</text></g><g class="vz-fade" style="--i:6"><line x1="104" x2="168" y1="268" y2="268" stroke="var(--bull)" stroke-dasharray="3 5" stroke-opacity=".9"/><circle cx="168" cy="268" r="4" fill="var(--bull)"/><text class="vz-t-strong" x="180" y="267" fill="var(--text)">Low</text><text class="vz-t-sub" x="180" y="283">bottom of the lower wick</text></g></svg></div><div class="dg-side t-bear"><p class="dg-side-title">Bearish candle</p><p>Closed lower than it opened.</p><svg class="vz vz-anatomy" viewBox="0 0 330 300" role="img" aria-label="Bearish candle anatomy: high, open, body, close and low."><g class="vz-c vz-down vz-glow" style="--i:0"><line x1="96" x2="96" y1="34" y2="268" stroke-width="5"/><rect x="66" y="92" width="60" height="120" rx="4"/></g><g class="vz-fade" style="--i:2"><line x1="104" x2="168" y1="34" y2="34" stroke="var(--bear)" stroke-dasharray="3 5" stroke-opacity=".9"/><circle cx="168" cy="34" r="4" fill="var(--bear)"/><text class="vz-t-strong" x="180" y="33" fill="var(--text)">High</text><text class="vz-t-sub" x="180" y="49">top of the upper wick</text></g><g class="vz-fade" style="--i:3"><line x1="132" x2="168" y1="92" y2="92" stroke="var(--bear)" stroke-dasharray="3 5" stroke-opacity=".9"/><circle cx="168" cy="92" r="4" fill="var(--bear)"/><text class="vz-t-strong" x="180" y="91" fill="var(--text)">Open</text><text class="vz-t-sub" x="180" y="107">where the period began</text></g><g class="vz-fade" style="--i:4"><path d="M134,100 h8 v104 h-8" fill="none" stroke="var(--bear)" stroke-opacity=".8"/><line x1="142" x2="168" y1="152" y2="152" stroke="var(--bear)" stroke-opacity=".8"/><text class="vz-t-strong" x="180" y="151" fill="var(--text)">Body</text><text class="vz-t-sub" x="180" y="167">open-to-close range</text></g><g class="vz-fade" style="--i:5"><line x1="132" x2="168" y1="212" y2="212" stroke="var(--bear)" stroke-dasharray="3 5" stroke-opacity=".9"/><circle cx="168" cy="212" r="4" fill="var(--bear)"/><text class="vz-t-strong" x="180" y="211" fill="var(--text)">Close</text><text class="vz-t-sub" x="180" y="227">where the period ended</text></g><g class="vz-fade" style="--i:6"><line x1="104" x2="168" y1="268" y2="268" stroke="var(--bear)" stroke-dasharray="3 5" stroke-opacity=".9"/><circle cx="168" cy="268" r="4" fill="var(--bear)"/><text class="vz-t-strong" x="180" y="267" fill="var(--text)">Low</text><text class="vz-t-sub" x="180" y="283">bottom of the lower wick</text></g></svg></div></div></div><figcaption>Every candle records four prices for one time period: open, high, low and close. Colour shows whether the close was above or below the open.</figcaption></figure>
+<p>An <strong>OHLC bar</strong> and a candlestick show the same four numbers: open, high, low and close. The candlestick adds a coloured body, which makes the direction of each period and the relation between open and close visible at a glance. The parts are explained in <a href="/library/candlesticks/candle-anatomy/">Candle Anatomy</a>.</p>
+<h3 id="heikin-ashi">Heikin Ashi</h3>
+<figure class="viz viz--flow" data-animate><div class="viz-title">How one Heikin Ashi candle is calculated</div><div class="viz-canvas"><ol class="dg-flow dg-flow--row" style="--n:4"><li class="dg-step t-neutral" style="--i:0"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 5L5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></span><span class="dg-step-body"><strong>Close</strong><span>Average of the real open, high, low and close.</span></span></li><li class="dg-step t-neutral" style="--i:1"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 8.500l5.500 3.500-5.500 3.500z"/></svg></span><span class="dg-step-body"><strong>Open</strong><span>Midpoint of the previous Heikin Ashi open and close.</span></span></li><li class="dg-step t-bull" style="--i:2"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20V5"/><path d="M5 12l7-7 7 7"/></svg></span><span class="dg-step-body"><strong>High</strong><span>Highest of the real high and the new open and close.</span></span></li><li class="dg-step t-bear" style="--i:3"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4v15"/><path d="M5 12l7 7 7-7"/></svg></span><span class="dg-step-body"><strong>Low</strong><span>Lowest of the real low and the new open and close.</span></span></li></ol></div><figcaption>Every Heikin Ashi candle depends on the one before it, which is where the smoothing comes from.</figcaption></figure>
+<p><strong>Heikin Ashi</strong> is a Japanese name usually translated as “average bar”. The candles look like ordinary candlesticks and are built from formulas:</p>
+<ul>
+<li>HA close = (open + high + low + close) / 4</li>
+<li>HA open = (previous HA open + previous HA close) / 2</li>
+<li>HA high = the highest of the real high, HA open and HA close</li>
+<li>HA low = the lowest of the real low, HA open and HA close</li>
+</ul>
+<p>Because each candle is tied to the one before, trends appear as long runs of one colour with few interruptions. That smoothing has a price. The open and close shown are averages, so they are not prices at which anything traded. Price <a href="/library/candlesticks/gaps/">gaps</a> disappear. The last value on the chart can differ from the current market price.</p>
+<h3 id="renko">Renko</h3>
+<p>A <strong>Renko</strong> chart ignores time. A new brick is drawn only when price has moved by a set amount, the brick size, from the previous brick. During a quiet week the chart may add nothing. During a violent hour it may add many bricks. The horizontal axis is therefore uneven in time.</p>
+<p>Renko removes small fluctuations by construction. It also removes the information of how long a move took, and the picture changes with the brick size chosen. Point and figure charts, an older method, follow the same time-independent idea.</p>
+<h2 id="going-deeper">Going deeper</h2>
+<p><strong>The data is the same.</strong> Switching chart type changes what is drawn. It does not change what happened. If two types seem to tell different stories, the difference comes from what each one omits or averages.</p>
+<p><strong>Indicators may follow the chart type.</strong> On some platforms, an indicator added to a Heikin Ashi or Renko chart is calculated from the transformed values, so its output differs from the same indicator on a standard chart.</p>
+<p><strong>Candlestick patterns need real candles.</strong> Named patterns such as the hammer are defined on actual open, high, low and close values.</p>
+<div class="example"><p class="example-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.600-7 10-7 10 7 10 7-3.600 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>One hypothetical period, drawn two ways</span><em>Hypothetical illustration</em></p>
+<p>The previous Heikin Ashi candle had an open of 100 and a close of 102. The current real candle, as a standard chart shows it, is: open 103, high 106, low 101, close 105.</p>
+<ul>
+<li>HA close = (103 + 106 + 101 + 105) / 4 = 415 / 4 = 103.75</li>
+<li>HA open = (100 + 102) / 2 = 101</li>
+<li>HA high = highest of 106, 101 and 103.75 = 106</li>
+<li>HA low = lowest of 101, 101 and 103.75 = 101</li>
+</ul>
+<p>The real candle runs from an open of 103 to a close of 105. The Heikin Ashi candle runs from 101 to 103.75. Both are bullish. The market’s last traded price is 105, and the Heikin Ashi chart shows 103.75 as its close.</p>
+</div>
+<section class="notmean" aria-labelledby="what-it-does-not-mean"><h2 id="what-it-does-not-mean"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg><span>What it does NOT mean</span></h2>
+<ul>
+<li><strong>A smoother chart is not a more accurate chart.</strong> Smoothing removes detail. It does not add information.</li>
+<li><strong>A run of same-coloured Heikin Ashi candles is not a forecast.</strong> It describes averaged past prices.</li>
+<li><strong>A line chart is not the full record.</strong> Highs and lows inside each period are absent.</li>
+<li><strong>No chart type is the correct one.</strong> Each is a view chosen for a purpose.</li>
+</ul>
+</section>
+<h2 id="common-mistakes">Common mistakes</h2>
+<div class="mistakes">
+<ol>
+<li><strong>Reading exact prices from Heikin Ashi candles.</strong> Their open and close are calculated, not traded.</li>
+<li><strong>Forgetting that a line chart hides wicks.</strong> A level that looks untouched on a line chart may have been crossed within a period.</li>
+<li><strong>Treating Renko brick size as neutral.</strong> A different size produces a different chart.</li>
+</ol>
+</div>
+<h2 id="risks-and-limitations">Risks and limitations</h2>
+<ul>
+<li>Averaged and time-independent charts can show a price that differs from the live market.</li>
+<li>Exact calculation details for transformed charts can differ between platforms.</li>
+<li>A cleaner picture can encourage more confidence than the data supports.</li>
+</ul>
+<div class="takeaway"><p class="takeaway-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg><span>Key takeaway</span></p>
+<p>Line, area, bar, candlestick, Heikin Ashi and Renko charts are different drawings of the same trades. Candlesticks and bars show every period’s four prices, while the others simplify, average or drop time, so it helps to know what a chart type hides before reading it.</p>
+</div>
+
+      <section class="sources" aria-labelledby="sources">
+        <h2 id="sources">Sources and further reading</h2>
+        <ul>
+          <li><cite>Technical Analysis of the Financial Markets</cite>, John J. Murphy (1999). Chart construction: line, bar, candlestick and point and figure charts</li>
+          <li><cite>Japanese Candlestick Charting Techniques</cite>, Steve Nison (2001). Construction of candlestick charts</li>
+          <li><a class="ext" href="https://www.tradingview.com/support/solutions/43000619436-understanding-heikin-ashi-charts/" rel="noopener noreferrer" target="_blank">Understanding Heikin Ashi charts<span class="sr-only"> (opens in a new tab)</span></a>, TradingView. Heikin Ashi candles show average prices, not actual prices; gives the open and close formulas</li>
+          <li><a class="ext" href="https://www.tradingview.com/support/solutions/43000502284-understanding-renko-charts/" rel="noopener noreferrer" target="_blank">Understanding Renko charts<span class="sr-only"> (opens in a new tab)</span></a>, TradingView. Renko charts measure only price movement; a new brick forms once price moves more than the brick size</li>
+        </ul>
+      </section>
+
+      <aside class="edu-note" aria-label="Educational notice">
+        <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+        <p><strong>Educational content only.</strong> This page explains a concept. It is not financial advice and not a recommendation to buy, sell or hold anything. <a href="/educational-disclaimer/">Full disclaimer</a>. Last updated <time datetime="2026-11-21">21 November 2026</time>.</p>
+      </aside>
+    </div>
+  </div>
+  <section class="related band" aria-labelledby="related">
+    <div class="wrap">
+      <h2 id="related">Related topics</h2>
+      <div class="card-grid">
+<a class="card topic-card" href="/library/tradingview/chart-interface-basics/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M7 13l3-3 2.5 2.5L17 8"/><path d="M8 21h8M12 17v4"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">TradingView &amp; Chart Tools</span>
+    <span class="card-title">Chart Interface Basics</span>
+    <span class="card-text">A charting screen is built from a few standard parts: a price pane, a time axis, a price axis, symbol and timeframe selectors, drawing tools, indicator panes and a watchlist.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/library/tradingview/timeframes-on-a-chart/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">TradingView &amp; Chart Tools</span>
+    <span class="card-title">Timeframes on a Chart</span>
+    <span class="card-text">A chart&#39;s timeframe sets how much time each candle covers. Changing it regroups the same trades into different candles, which changes the picture and every indicator value.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/library/candlesticks/candle-anatomy/">
+  <span class="card-thumb" aria-hidden="true"><svg class="vz vz-mini" viewBox="0 0 160 96" aria-hidden="true" focusable="false"><g class="vz-c vz-up" style="--i:0"><line x1="80" x2="80" y1="13.5" y2="82.5"/><rect x="73.2" y="25" width="13.5" height="46" rx="2"/></g></svg></span>
+  <span class="card-body"><span class="card-eyebrow">Candlesticks</span>
+    <span class="card-title">Candle Anatomy</span>
+    <span class="card-text">A candle packs four prices from one period, the open, high, low and close, into a single shape made of a body and two wicks.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/library/candlesticks/wicks-and-rejection/">
+  <span class="card-thumb" aria-hidden="true"><svg class="vz vz-mini" viewBox="0 0 160 96" aria-hidden="true" focusable="false"><g class="vz-c vz-down" style="--i:0"><line x1="80" x2="80" y1="13.5" y2="82.5"/><rect x="73.2" y="20.8" width="13.5" height="5.4" rx="2"/></g></svg></span>
+  <span class="card-body"><span class="card-eyebrow">Candlesticks</span>
+    <span class="card-title">Wicks &amp; Rejection</span>
+    <span class="card-text">A wick shows prices that traded during a period but did not hold until the close. A long wick is often described as the market rejecting those prices.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/library/candlesticks/gaps/">
+  <span class="card-thumb" aria-hidden="true"><svg class="vz vz-mini" viewBox="0 0 320 192" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet"><g class="vz-fade"><rect x="122.9" y="83.3" width="74.3" height="34.7" fill="var(--info-soft)" rx="3"/><line x1="122.9" x2="197.1" y1="83.3" y2="83.3" stroke="var(--info)" stroke-opacity=".55"/><line x1="122.9" x2="197.1" y1="118.1" y2="118.1" stroke="var(--info)" stroke-opacity=".55"/></g><g class="vz-c vz-up" style="--i:0"><line x1="11.4" x2="11.4" y1="157.5" y2="175.3"/><rect x="6.8" y="164" width="9.2" height="5.6" rx="2"/></g><g class="vz-c vz-up" style="--i:1"><line x1="26.3" x2="26.3" y1="146.2" y2="169.7"/><rect x="21.7" y="152.8" width="9.2" height="11.3" rx="2"/></g><g class="vz-c vz-down" style="--i:2"><line x1="41.1" x2="41.1" y1="146.2" y2="164"/><rect x="36.5" y="152.8" width="9.2" height="5.6" rx="2"/></g><g class="vz-c vz-up" style="--i:3"><line x1="56" x2="56" y1="138.7" y2="164"/><rect x="51.4" y="145.3" width="9.2" height="13.1" rx="2"/></g><g class="vz-c vz-down" style="--i:4"><line x1="70.9" x2="70.9" y1="138.7" y2="156.5"/><rect x="66.3" y="145.3" width="9.2" height="5.6" rx="2"/></g><g class="vz-c vz-up" style="--i:5"><line x1="85.7" x2="85.7" y1="131.2" y2="156.5"/><rect x="81.1" y="137.8" width="9.2" height="13.1" rx="2"/></g><g class="vz-c vz-down" style="--i:6"><line x1="100.6" x2="100.6" y1="131.2" y2="149"/><rect x="96" y="137.8" width="9.2" height="5.6" rx="2"/></g><g class="vz-c vz-up" style="--i:7"><line x1="115.4" x2="115.4" y1="124.6" y2="149"/><rect x="110.8" y="131.2" width="9.2" height="12.2" rx="2"/></g><g class="vz-c vz-down" style="--i:8"><line x1="130.3" x2="130.3" y1="124.6" y2="141.5"/><rect x="125.7" y="131.2" width="9.2" height="4.7" rx="2"/></g><g class="vz-c vz-up" style="--i:9"><line x1="145.1" x2="145.1" y1="118.1" y2="141.5"/><rect x="140.5" y="124.6" width="9.2" height="11.3" rx="2"/></g><g class="vz-c vz-up" style="--i:10"><line x1="160" x2="160" y1="63.6" y2="83.3"/><rect x="155.4" y="70.2" width="9.2" height="7.5" rx="2"/></g><g class="vz-c vz-up" style="--i:11"><line x1="174.9" x2="174.9" y1="50.5" y2="75.8"/><rect x="170.3" y="57" width="9.2" height="13.1" rx="2"/></g><g class="vz-c vz-down" style="--i:12"><line x1="189.7" x2="189.7" y1="50.5" y2="70.2"/><rect x="185.1" y="57" width="9.2" height="7.5" rx="2"/></g><g class="vz-c vz-up" style="--i:13"><line x1="204.6" x2="204.6" y1="44.8" y2="70.2"/><rect x="200" y="51.4" width="9.2" height="13.1" rx="2"/></g><g class="vz-c vz-down" style="--i:14"><line x1="219.4" x2="219.4" y1="44.8" y2="64.6"/><rect x="214.8" y="51.4" width="9.2" height="7.5" rx="2"/></g><g class="vz-c vz-up" style="--i:15"><line x1="234.3" x2="234.3" y1="39.2" y2="64.6"/><rect x="229.7" y="45.8" width="9.2" height="13.1" rx="2"/></g><g class="vz-c vz-up" style="--i:16"><line x1="249.1" x2="249.1" y1="31.7" y2="51.4"/><rect x="244.5" y="38.3" width="9.2" height="7.5" rx="2"/></g><g class="vz-c vz-down" style="--i:17"><line x1="264" x2="264" y1="31.7" y2="49.5"/><rect x="259.4" y="38.3" width="9.2" height="5.6" rx="2"/></g><g class="vz-c vz-up" style="--i:18"><line x1="278.9" x2="278.9" y1="24.2" y2="49.5"/><rect x="274.3" y="30.8" width="9.2" height="13.1" rx="2"/></g><g class="vz-c vz-down" style="--i:19"><line x1="293.7" x2="293.7" y1="24.2" y2="42"/><rect x="289.1" y="30.8" width="9.2" height="5.6" rx="2"/></g><g class="vz-c vz-up" style="--i:20"><line x1="308.6" x2="308.6" y1="16.7" y2="42"/><rect x="304" y="23.3" width="9.2" height="13.1" rx="2"/></g></svg></span>
+  <span class="card-body"><span class="card-eyebrow">Candlesticks</span>
+    <span class="card-title">Gaps</span>
+    <span class="card-text">A gap is an empty space on a chart where no trades took place, because price jumped from one level to another between two candles. Gaps are common in stocks and rare in 24-hour crypto markets.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/learn/chapter-02-charts-timeframes/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Chapter 2</span>
+    <span class="card-title">Charts &amp; Timeframes</span>
+    <span class="card-text">How a chart compresses trading into open, high, low and close, how the main chart types differ, and why the chosen timeframe changes what you see.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager wrap" aria-label="More in this shelf"><a class="pager-link pager-prev" href="/library/tradingview/chart-interface-basics/"><span><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg>Previous</span><strong>Chart Interface Basics</strong></a>
+    <a class="pager-up" href="/library/tradingview/">Back to TradingView &amp; Chart Tools</a><a class="pager-link pager-next" href="/library/tradingview/timeframes-on-a-chart/"><span>Next<svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span><strong>Timeframes on a Chart</strong></a>
+  </nav>
+</article>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Chart Types: Line, Bar, Candle & More","description":"Chart types are different ways of drawing the same price data. Line, bar, candlestick, Heikin Ashi, area and Renko charts each keep some information and leave some out.","inLanguage":"en","dateModified":"2026-11-21","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"edgeTR Academy"}}]}
+</script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR" loading="lazy">
+        <p>Learn the market. Understand the tools. Make your own decisions.</p>
+        <p class="footer-family">Part of <strong>Ethos Empire</strong></p>
+        <ul class="trust" aria-label="What edgeTR Academy is"><li>Free to read</li><li>No login</li><li>No paywall</li><li>Educational reference</li>
+        </ul>
+      </div>
+      <nav aria-label="Learn and browse">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="/learn/">Learn: Chapters 1-10</a></li>
+          <li><a href="/library/">Library</a></li>
+          <li><a href="/patterns/">Pattern gallery</a></li>
+          <li><a href="/foundations/">Foundations</a></li>
+          <li><a href="/compare/">Compare</a></li>
+          <li><a href="/glossary/">A-Z Glossary</a></li>
+          <li><a href="/watch/">Watch in 60 Seconds</a></li>
+          <li><a href="/search/">Search</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Library shelves">
+        <h2>Library</h2>
+        <ul>
+          <li><a href="/library/candlesticks/">Candlesticks</a></li>
+          <li><a href="/library/chart-patterns/">Chart Patterns</a></li>
+          <li><a href="/library/indicators/">Indicators</a></li>
+          <li><a href="/library/market-structure/">Market Structure</a></li>
+          <li><a href="/library/support-resistance/">Support &amp; Resistance</a></li>
+          <li><a href="/library/bull-bear-long-short/">Bull, Bear, Long &amp; Short</a></li>
+          <li><a href="/library/trading-mechanics/">Trading Mechanics</a></li>
+          <li><a href="/library/">All shelves</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Foundations shelves">
+        <h2>Foundations</h2>
+        <ul>
+          <li><a href="/foundations/markets-finance/">Markets &amp; Finance</a></li>
+          <li><a href="/foundations/crypto/">Crypto Basics</a></li>
+          <li><a href="/foundations/bitcoin/">Bitcoin Knowledge Center</a></li>
+          <li><a href="/foundations/blockchain/">Blockchain</a></li>
+          <li><a href="/foundations/wallets-security/">Wallets &amp; Security</a></li>
+          <li><a href="/foundations/exchanges-dex-defi/">Exchanges, DEX &amp; DeFi</a></li>
+          <li><a href="/foundations/derivatives-perpetuals/">Derivatives &amp; Perpetuals</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="About">
+        <h2>About</h2>
+        <ul>
+          <li><a href="/about/">About edgeTR Academy</a></li>
+          <li><a href="/educational-disclaimer/">Educational disclaimer</a></li>
+          <li><a href="/terms/">Terms of use</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/contact/">Contact and support</a></li>
+          <li><a href="/about/#editorial-standards">Editorial standards</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-disclaimer"><strong>Educational only.</strong> edgeTR Academy provides educational information only. It does not provide financial, investment, legal or tax advice, does not recommend specific assets or trades, and does not guarantee outcomes. Users are responsible for their own research and decisions. <a href="/educational-disclaimer/">Read the full disclaimer</a>.</p>
+    <p class="footer-legal">&copy; 2026 edgeTR Academy, part of Ethos Empire. Free to read. No account needed. <a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/contact/">Contact</a></p>
+  </div>
+</footer>
+<script src="/js/search-core.js" defer></script>
+<script src="/js/site.js" defer></script>
+</body>
+</html>

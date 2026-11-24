@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en" data-base="/">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hedging Basics | edgeTR Academy</title>
+<meta name="description" content="Hedging means reducing exposure to a price move by holding an offsetting position. It lowers both losses and gains, and it has costs and risks of its own, so it is not free protection.">
+<meta name="theme-color" content="#070b12">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://edgetr.com/library/bull-bear-long-short/hedging-basics/">
+<meta property="og:url" content="https://edgetr.com/library/bull-bear-long-short/hedging-basics/">
+<meta property="og:image" content="https://edgetr.com/img/brand/og-default.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="edgeTR Academy">
+<meta property="og:title" content="Hedging Basics">
+<meta property="og:description" content="Hedging means reducing exposure to a price move by holding an offsetting position. It lowers both losses and gains, and it has costs and risks of its own, so it is not free protection.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.edgetrSearch)document.documentElement.classList.remove("js")},3000)</script>
+</head>
+<body class="page-article">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="edgeTR Academy home">
+      <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR">
+      <span class="brand-sub">Academy</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="/learn/">Learn</a></li>
+        <li><a href="/library/" aria-current="true">Library</a></li>
+        <li><a href="/foundations/">Foundations</a></li>
+        <li><a href="/compare/">Compare</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+        <li class="nav-search-link"><a href="/search/">Search</a></li>
+      </ul>
+    </nav>
+    <form class="header-search" action="/search/" method="get" role="search" aria-label="Site search" data-suggest>
+      <label class="sr-only" for="hq">Search the Academy</label>
+      <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="hq" name="q" type="search" placeholder="Search: RSI, doji, wallet..." autocomplete="off" spellcheck="false" aria-controls="hq-list" aria-expanded="false" aria-autocomplete="list" role="combobox">
+      <kbd aria-hidden="true">/</kbd>
+      <div class="suggest" id="hq-list" role="listbox" aria-label="Search suggestions" hidden></div>
+    </form>
+    <a class="header-search-btn" href="/search/" aria-label="Search"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false">
+      <span class="sr-only">Menu</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<article class="article">
+  <header class="article-hero">
+    <div class="wrap">
+      
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/library/">Library</a></li>
+    <li><a href="/library/bull-bear-long-short/">Bull, Bear, Long &amp; Short</a></li>
+    <li><span aria-current="page">Hedging Basics</span></li>
+  </ol>
+</nav>
+
+      <p class="eyebrow">Library · Bull, Bear, Long &amp; Short</p>
+      <h1>Hedging Basics</h1>
+      <p class="lede">Hedging means reducing exposure to a price move by holding an offsetting position. It lowers both losses and gains, and it has costs and risks of its own, so it is not free protection.</p>
+      <ul class="meta-chips"><li><span class="chip chip--diff chip--advanced"><i aria-hidden="true"></i>Advanced</span></li>
+        <li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>5 min read</span></li><li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Updated <time datetime="2026-11-21">21 November 2026</time></span></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="wrap article-grid">
+    <aside class="toc" aria-label="On this page">
+      <details open>
+        <summary>On this page</summary>
+        <ol>
+          <li><a href="#why-it-matters">Why it matters</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#how-to-read-it-the-vocabulary">How to read it: the vocabulary</a></li>
+          <li><a href="#going-deeper-why-it-is-not-free">Going deeper: why it is not free</a></li>
+          <li><a href="#what-it-does-not-mean">What it does NOT mean</a></li>
+          <li><a href="#common-mistakes">Common mistakes</a></li>
+          <li><a href="#risks-and-limitations">Risks and limitations</a></li>
+        </ol>
+      </details>
+    </aside>
+
+    <div class="prose">
+
+      <h2 id="why-it-matters">Why it matters</h2>
+<p>A <strong>hedge</strong> is a position opened to reduce the effect of a price move on something already held. The word is often used as if it meant “protection”, with the suggestion that risk has been removed.</p>
+<p>It has not. A hedge exchanges one set of risks and costs for another.</p>
+<h2 id="how-it-works">How it works</h2>
+<figure class="viz viz--compare" data-animate><div class="viz-title">Holding 2 units bought at 100, with three sizes of short hedge</div><div class="viz-canvas"><div class="dg-compare" tabindex="0" role="region" aria-label="Comparison of Price falls 20% to 80 and Price rises 20% to 120; scrolls sideways on small screens"><table><thead><tr><th scope="col"><span class="sr-only">Aspect</span></th><th scope="col" class="t-bear">Price falls 20% to 80</th><th scope="col" class="t-bull">Price rises 20% to 120</th></tr></thead><tbody><tr><th scope="row">No hedge</th><td>-40</td><td>+40</td></tr><tr><th scope="row">Short 1 unit (half hedge)</th><td>-20</td><td>+20</td></tr><tr><th scope="row">Short 2 units (full hedge)</th><td>0</td><td>0</td></tr></tbody></table></div></div><figcaption>Hypothetical figures before fees and funding. A hedge narrows the range of outcomes in both directions.</figcaption></figure>
+<p>The idea is to hold two positions whose results move in opposite directions. The most common form combines a <a href="/library/bull-bear-long-short/long-position/">long position</a> in an asset with a <a href="/library/bull-bear-long-short/short-position/">short position</a> in the same asset or a closely related contract.</p>
+<p>If price falls, the holding loses and the short gains. If price rises, the holding gains and the short loses. The combined result moves less than the holding alone would.</p>
+<div class="callout callout--beginner"><p class="callout-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 8.500l5.500 3.500-5.500 3.500z"/></svg><span>In plain words</span></p>
+<p>Home insurance is a familiar hedge. The premium is paid every year whether or not anything goes wrong. In a good year it is simply a cost. The buyer has accepted a certain small expense in exchange for a smaller worst case.</p>
+</div>
+<h2 id="how-to-read-it-the-vocabulary">How to read it: the vocabulary</h2>
+<p><strong>Exposure.</strong> How much a portfolio’s value changes when the price changes. Holding 2 units is an exposure of 2 units.</p>
+<p><strong>Hedge ratio.</strong> The size of the hedge divided by the size of the holding. Short 1 unit against 2 held is a ratio of 0.5, a partial hedge. A ratio of 1 is a full hedge.</p>
+<p><strong>Net exposure.</strong> What remains after the hedge: holding minus short. With a full hedge the net exposure to price is about zero, a state often called <strong>delta neutral</strong>.</p>
+<p><strong>Basis risk.</strong> The risk that the hedge and the holding do not move together exactly. A <a class="gl" href="/glossary/perpetual-futures/" title="A futures contract with no expiry date, kept close to the spot price by regular funding payments between longs and shorts.">perpetual contract</a> can trade slightly above or below the spot price, and a hedge using a different but related asset can drift much further. See <a href="/foundations/derivatives-perpetuals/basis-and-contango/">Basis, Contango &amp; Backwardation</a>.</p>
+<h3 id="common-instruments">Common instruments</h3>
+<div class="table-wrap" data-scroll-label="Table"><table><thead>
+<tr>
+<th>Instrument</th>
+<th>How it hedges a holding</th>
+<th>Main cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Short perpetual or <a class="gl" href="/glossary/futures/" title="A standardised agreement to buy or sell an asset at a set price on a set future date.">futures contract</a></td>
+<td>Gains as price falls</td>
+<td>Funding or basis, margin, <a class="gl" href="/glossary/liquidation/" title="The forced closing of a leveraged position by the exchange or protocol when its margin no longer covers its losses.">liquidation</a> risk</td>
+</tr>
+<tr>
+<td><a class="gl" href="/glossary/put-option/" title="An option that gives its buyer the right to sell the underlying asset at the strike price.">Put option</a></td>
+<td>Gains value below a chosen price</td>
+<td>A premium paid in advance</td>
+</tr>
+<tr>
+<td>Selling part of the holding</td>
+<td>Reduces exposure directly</td>
+<td>Fees, and possibly tax</td>
+</tr>
+</tbody>
+</table></div><p>Options are introduced in <a href="/foundations/derivatives-perpetuals/options-basics/">Options Basics</a>. Selling part of a holding is not usually called a hedge, though it reduces exposure most directly.</p>
+<h2 id="going-deeper-why-it-is-not-free">Going deeper: why it is not free</h2>
+<figure class="viz viz--stack" data-animate><div class="viz-title">What a hedge costs</div><div class="viz-canvas"><div class="dg-stack"><div class="dg-layer t-warn" style="--i:0"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v18M7 21h10M5 7h14"/><path d="M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/></svg></span><div><strong>Given-up gains</strong><span>If price rises, the hedge loses what the holding gains.</span></div></div><div class="dg-layer t-warn" style="--i:1"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><ellipse cx="9" cy="7" rx="6" ry="3"/><path d="M3 7v5c0 1.7 2.7 3 6 3s6-1.3 6-3V7"/><path d="M9 15v2c0 1.7 2.7 3 6 3s6-1.3 6-3v-5c0-1.2-1.4-2.2-3.4-2.7"/></svg></span><div><strong>Fees and funding</strong><span>Trading fees to open and close, plus funding, interest or an option premium.</span></div></div><div class="dg-layer t-bear" style="--i:2"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></svg></span><div><strong>Margin and liquidation</strong><span>A short hedge needs collateral and can be closed by force if price rises far enough.</span></div></div><div class="dg-layer t-neutral" style="--i:3"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 4L3 8l4 4"/><path d="M3 8h14"/><path d="M17 12l4 4-4 4"/><path d="M21 16H7"/></svg></span><div><strong>Imperfect match</strong><span>The hedge and the holding may not move by the same amount.</span></div></div><div class="dg-layer t-neutral" style="--i:4"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 10l9-6 9 6"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8"/><path d="M3 21h18"/></svg></span><div><strong>Platform dependence</strong><span>The hedge is only as dependable as the venue that holds it.</span></div></div></div></div><figcaption>Each layer is present in some form in every hedge.</figcaption></figure>
+<p><strong>Gains are given up.</strong> A full hedge removes the loss from a fall and removes the gain from a rise. The cost of protection in one direction is the benefit in the other.</p>
+<p><strong>Carrying costs accumulate.</strong> On <a href="/foundations/derivatives-perpetuals/perpetual-futures/">perpetual futures</a>, the short side pays <a href="/foundations/derivatives-perpetuals/funding-rate/">funding</a> when the rate is negative and receives it when the rate is positive. The rate changes, so the cost of holding a hedge is not known in advance.</p>
+<p><strong>The hedge can be liquidated.</strong> A short perpetual is backed by its own margin. If price rises sharply, the short can be liquidated even though the spot holding has gained by as much or more. After that, the holding is unhedged again and the margin is gone. Keeping a hedge alive in a strong rise can require adding collateral.</p>
+<p><strong>It adds another venue.</strong> A hedge held on an exchange introduces <a href="/foundations/exchanges-dex-defi/counterparty-risk/">counterparty risk</a>.</p>
+<p>Hedging is also different from <a href="/library/risk-management/diversification-and-correlation/">diversification</a>, which spreads exposure across assets that may not move together.</p>
+<div class="example"><p class="example-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.600-7 10-7 10 7 10 7-3.600 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>A hypothetical half hedge</span><em>Hypothetical illustration</em></p>
+<p>Someone holds 2 units of a made-up asset bought at 100, worth 200. They open a short of 1 unit on a perpetual contract at 100, posting 25 as margin. The hedge ratio is 0.5.</p>
+<p><strong>Price falls to 80.</strong> The holding loses 40. The short gains 20. Net result: -20, where the unhedged result would be -40.</p>
+<p><strong>Price rises to 120.</strong> The holding gains 40. The short loses 20. Net result: +20, where the unhedged result would be +40. The short’s margin has fallen from 25 to 5, close to liquidation. A further rise to about 124 or 125 (the exact point depends on the exchange’s <a class="gl" href="/glossary/maintenance-margin/" title="The minimum collateral that must remain in a leveraged position to keep it open.">maintenance margin</a>) would trigger it unless margin is added.</p>
+<p><strong>Funding.</strong> If funding averages -0.01% per interval for 90 intervals, the short pays about 100 x 0.0001 x 90 = 0.90.</p>
+<p>The hedge halved the swing in both directions and added a funding cost, a margin requirement and a liquidation risk.</p>
+</div>
+<section class="notmean" aria-labelledby="what-it-does-not-mean"><h2 id="what-it-does-not-mean"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg><span>What it does NOT mean</span></h2>
+<ul>
+<li><strong>A hedge is not free protection.</strong> It is paid for through given-up gains, fees, funding or premiums.</li>
+<li><strong>Hedged does not mean risk-free.</strong> Basis risk, liquidation risk and platform risk remain.</li>
+<li><strong>A hedge is not a profit strategy.</strong> Its purpose is to narrow outcomes. A full hedge earns nothing from price moves.</li>
+<li><strong>A short used as a hedge is not a bearish opinion.</strong> It can be held by someone who expects prices to rise and wants a smaller swing meanwhile.</li>
+</ul>
+</section>
+<h2 id="common-mistakes">Common mistakes</h2>
+<div class="mistakes">
+<ol>
+<li><strong>Counting only the downside case.</strong> The hedge’s cost appears when price rises.</li>
+<li><strong>Ignoring the hedge’s own margin.</strong> The protective leg can be the one that gets liquidated.</li>
+<li><strong>Hedging with a loosely related asset.</strong> Two assets that usually move together can separate in a crisis.</li>
+<li><strong>Adding complexity where a smaller position would do.</strong> Reducing the holding and hedging it have similar effects on exposure, with very different moving parts.</li>
+</ol>
+</div>
+<h2 id="risks-and-limitations">Risks and limitations</h2>
+<ul>
+<li>A short hedge held with leverage can be liquidated, and it needs monitoring.</li>
+<li><a class="gl" href="/glossary/funding-rate/" title="A periodic payment exchanged between long and short holders of a perpetual futures contract to keep its price near the spot price.">Funding rates</a>, option premiums and basis vary with market conditions and can turn sharply against a hedge.</li>
+<li>Margin rules, available instruments and tax treatment differ between exchanges and jurisdictions.</li>
+</ul>
+<div class="takeaway"><p class="takeaway-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg><span>Key takeaway</span></p>
+<p>A hedge reduces exposure by pairing a holding with an offsetting position, which narrows both losses and gains. It always costs something, in given-up upside, fees, funding or premiums, and it brings margin, liquidation and basis risks of its own.</p>
+</div>
+
+      <section class="sources" aria-labelledby="sources">
+        <h2 id="sources">Sources and further reading</h2>
+        <ul>
+          <li><cite>Options, Futures, and Other Derivatives</cite>, John C. Hull. Standard textbook treatment of hedging with futures and options, hedge ratios and basis risk</li>
+          <li><a class="ext" href="https://www.finra.org/investors/insights/key-terms-tough-times-vocabulary-stressed-markets" rel="noopener noreferrer" target="_blank">Key Terms for Tough Times: The Vocabulary of Stressed Markets<span class="sr-only"> (opens in a new tab)</span></a>, FINRA. Defines hedging as investments intended to offset possible losses, that is, to mitigate risk</li>
+        </ul>
+      </section>
+
+      <aside class="edu-note" aria-label="Educational notice">
+        <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+        <p><strong>Educational content only.</strong> This page explains a concept. It is not financial advice and not a recommendation to buy, sell or hold anything. <a href="/educational-disclaimer/">Full disclaimer</a>. Last updated <time datetime="2026-11-21">21 November 2026</time>.</p>
+      </aside>
+    </div>
+  </div>
+  <section class="related band" aria-labelledby="related">
+    <div class="wrap">
+      <h2 id="related">Related topics</h2>
+      <div class="card-grid">
+<a class="card topic-card accent-bear" href="/library/bull-bear-long-short/short-position/">
+  <span class="card-thumb" aria-hidden="true"><svg class="vz vz-mini" viewBox="0 0 320 192" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet"><g class="vz-c vz-up" style="--i:0"><line x1="6.6" x2="6.6" y1="94.5" y2="101.9"/><rect x="5" y="95.5" width="3.2" height="4.7" rx="1"/></g><g class="vz-c vz-up" style="--i:1"><line x1="11.8" x2="11.8" y1="82.3" y2="96.1"/><rect x="10.2" y="83.8" width="3.2" height="11.7" rx="1"/></g><g class="vz-c vz-up" style="--i:2"><line x1="17" x2="17" y1="76.2" y2="84.7"/><rect x="15.4" y="77.3" width="3.2" height="6.5" rx="1"/></g><g class="vz-c vz-up" style="--i:3"><line x1="22.2" x2="22.2" y1="67.9" y2="77.4"/><rect x="20.6" y="70.9" width="3.2" height="6.3" rx="1"/></g><g class="vz-c vz-up" style="--i:4"><line x1="27.4" x2="27.4" y1="62.3" y2="72.3"/><rect x="25.8" y="65" width="3.2" height="6" rx="1"/></g><g class="vz-c vz-up" style="--i:5"><line x1="32.6" x2="32.6" y1="55.8" y2="65.9"/><rect x="31" y="58.2" width="3.2" height="6.8" rx="1"/></g><g class="vz-c vz-up" style="--i:6"><line x1="37.8" x2="37.8" y1="50.5" y2="61.3"/><rect x="36.2" y="52.2" width="3.2" height="5.9" rx="1"/></g><g class="vz-c vz-up" style="--i:7"><line x1="43" x2="43" y1="39.5" y2="53.3"/><rect x="41.4" y="42.7" width="3.2" height="9.6" rx="1"/></g><g class="vz-c vz-up" style="--i:8"><line x1="48.2" x2="48.2" y1="37.1" y2="42.8"/><rect x="46.6" y="38.8" width="3.2" height="3.8" rx="1"/></g><g class="vz-c vz-up" style="--i:9"><line x1="53.4" x2="53.4" y1="32.6" y2="40.8"/><rect x="51.8" y="33.9" width="3.2" height="4.9" rx="1"/></g><g class="vz-c vz-up" style="--i:10"><line x1="58.6" x2="58.6" y1="26.2" y2="34.1"/><rect x="57" y="28.6" width="3.2" height="5.3" rx="1"/></g><g class="vz-c vz-up" style="--i:11"><line x1="63.8" x2="63.8" y1="18.4" y2="31.1"/><rect x="62.2" y="21.1" width="3.2" height="7.5" rx="1"/></g><g class="vz-c vz-down" style="--i:12"><line x1="69" x2="69" y1="21" y2="29.8"/><rect x="67.4" y="21.1" width="3.2" height="6.1" rx="1"/></g><g class="vz-c vz-down" style="--i:13"><line x1="74.2" x2="74.2" y1="26.6" y2="30.3"/><rect x="72.6" y="27.3" width="3.2" height="2.9" rx="1"/></g><g class="vz-c vz-up" style="--i:14"><line x1="79.4" x2="79.4" y1="28.8" y2="30.9"/><rect x="77.8" y="29.2" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:15"><line x1="84.6" x2="84.6" y1="28.4" y2="32.2"/><rect x="83" y="29.2" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:16"><line x1="89.8" x2="89.8" y1="28.8" y2="41"/><rect x="88.2" y="30.7" width="3.2" height="7.3" rx="1"/></g><g class="vz-c vz-down" style="--i:17"><line x1="95" x2="95" y1="36.9" y2="40.1"/><rect x="93.4" y="38" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:18"><line x1="100.2" x2="100.2" y1="36.7" y2="47.2"/><rect x="98.6" y="38.7" width="3.2" height="5.6" rx="1"/></g><g class="vz-c vz-down" style="--i:19"><line x1="105.4" x2="105.4" y1="43.9" y2="51.7"/><rect x="103.8" y="44.3" width="3.2" height="4.2" rx="1"/></g><g class="vz-c vz-down" style="--i:20"><line x1="110.6" x2="110.6" y1="48.1" y2="55.5"/><rect x="109" y="48.5" width="3.2" height="5.8" rx="1"/></g><g class="vz-c vz-down" style="--i:21"><line x1="115.8" x2="115.8" y1="52.9" y2="58.4"/><rect x="114.2" y="54.3" width="3.2" height="3.7" rx="1"/></g><g class="vz-c vz-down" style="--i:22"><line x1="121" x2="121" y1="57.6" y2="62.6"/><rect x="119.4" y="58" width="3.2" height="3.1" rx="1"/></g><g class="vz-c vz-down" style="--i:23"><line x1="126.2" x2="126.2" y1="58.7" y2="69.3"/><rect x="124.6" y="61.1" width="3.2" height="6.1" rx="1"/></g><g class="vz-c vz-down" style="--i:24"><line x1="131.4" x2="131.4" y1="66.1" y2="71.2"/><rect x="129.8" y="67.2" width="3.2" height="2.7" rx="1"/></g><g class="vz-c vz-down" style="--i:25"><line x1="136.6" x2="136.6" y1="68.1" y2="72.9"/><rect x="135" y="69.8" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:26"><line x1="141.8" x2="141.8" y1="67.8" y2="72"/><rect x="140.2" y="67.9" width="3.2" height="2.9" rx="1"/></g><g class="vz-c vz-up" style="--i:27"><line x1="147" x2="147" y1="60.8" y2="70.6"/><rect x="145.4" y="62" width="3.2" height="5.8" rx="1"/></g><g class="vz-c vz-up" style="--i:28"><line x1="152.2" x2="152.2" y1="60.1" y2="64.5"/><rect x="150.6" y="60.8" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:29"><line x1="157.4" x2="157.4" y1="52.8" y2="62.2"/><rect x="155.8" y="55.3" width="3.2" height="5.5" rx="1"/></g><g class="vz-c vz-down" style="--i:30"><line x1="162.6" x2="162.6" y1="53.1" y2="65.2"/><rect x="161" y="55.3" width="3.2" height="9.3" rx="1"/></g><g class="vz-c vz-down" style="--i:31"><line x1="167.8" x2="167.8" y1="62.2" y2="72"/><rect x="166.2" y="64.7" width="3.2" height="6.7" rx="1"/></g><g class="vz-c vz-down" style="--i:32"><line x1="173" x2="173" y1="70.6" y2="80.7"/><rect x="171.4" y="71.4" width="3.2" height="7.1" rx="1"/></g><g class="vz-c vz-down" style="--i:33"><line x1="178.2" x2="178.2" y1="76.4" y2="87.6"/><rect x="176.6" y="78.4" width="3.2" height="7.9" rx="1"/></g><g class="vz-c vz-down" style="--i:34"><line x1="183.4" x2="183.4" y1="83.2" y2="96.9"/><rect x="181.8" y="86.3" width="3.2" height="8.5" rx="1"/></g><g class="vz-c vz-down" style="--i:35"><line x1="188.6" x2="188.6" y1="91.8" y2="100.4"/><rect x="187" y="94.9" width="3.2" height="4.7" rx="1"/></g><g class="vz-c vz-down" style="--i:36"><line x1="193.8" x2="193.8" y1="98.1" y2="109"/><rect x="192.2" y="99.6" width="3.2" height="9.3" rx="1"/></g><g class="vz-c vz-down" style="--i:37"><line x1="199" x2="199" y1="107.7" y2="116.3"/><rect x="197.4" y="108.9" width="3.2" height="7" rx="1"/></g><g class="vz-c vz-up" style="--i:38"><line x1="204.2" x2="204.2" y1="112.7" y2="117.6"/><rect x="202.6" y="115.1" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:39"><line x1="209.4" x2="209.4" y1="108.6" y2="118"/><rect x="207.8" y="109.8" width="3.2" height="5.3" rx="1"/></g><g class="vz-c vz-up" style="--i:40"><line x1="214.6" x2="214.6" y1="104.5" y2="111.6"/><rect x="213" y="107" width="3.2" height="2.9" rx="1"/></g><g class="vz-c vz-down" style="--i:41"><line x1="219.8" x2="219.8" y1="104.8" y2="108.5"/><rect x="218.2" y="107" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:42"><line x1="225" x2="225" y1="104.7" y2="108.7"/><rect x="223.4" y="106.1" width="3.2" height="1.7" rx="1"/></g><g class="vz-c vz-up" style="--i:43"><line x1="230.2" x2="230.2" y1="100.2" y2="106.3"/><rect x="228.6" y="101" width="3.2" height="5.1" rx="1"/></g><g class="vz-c vz-down" style="--i:44"><line x1="235.4" x2="235.4" y1="99.1" y2="106.2"/><rect x="233.8" y="101" width="3.2" height="4.7" rx="1"/></g><g class="vz-c vz-down" style="--i:45"><line x1="240.6" x2="240.6" y1="103.8" y2="113.5"/><rect x="239" y="105.7" width="3.2" height="7" rx="1"/></g><g class="vz-c vz-down" style="--i:46"><line x1="245.8" x2="245.8" y1="111.9" y2="122.5"/><rect x="244.2" y="112.7" width="3.2" height="8.8" rx="1"/></g><g class="vz-c vz-down" style="--i:47"><line x1="251" x2="251" y1="120.6" y2="129.7"/><rect x="249.4" y="121.5" width="3.2" height="7.5" rx="1"/></g><g class="vz-c vz-down" style="--i:48"><line x1="256.2" x2="256.2" y1="127.4" y2="136.9"/><rect x="254.6" y="129" width="3.2" height="6.3" rx="1"/></g><g class="vz-c vz-down" style="--i:49"><line x1="261.4" x2="261.4" y1="134.1" y2="149"/><rect x="259.8" y="135.3" width="3.2" height="11.7" rx="1"/></g><g class="vz-c vz-down" style="--i:50"><line x1="266.6" x2="266.6" y1="144.2" y2="151.7"/><rect x="265" y="146.9" width="3.2" height="4" rx="1"/></g><g class="vz-c vz-down" style="--i:51"><line x1="271.8" x2="271.8" y1="149.3" y2="165.1"/><rect x="270.2" y="150.9" width="3.2" height="11.2" rx="1"/></g><g class="vz-c vz-down" style="--i:52"><line x1="277" x2="277" y1="159.1" y2="170.3"/><rect x="275.4" y="162.1" width="3.2" height="5.8" rx="1"/></g><g class="vz-c vz-up" style="--i:53"><line x1="282.2" x2="282.2" y1="159.3" y2="169.7"/><rect x="280.6" y="162.1" width="3.2" height="5.8" rx="1"/></g><g class="vz-c vz-down" style="--i:54"><line x1="287.4" x2="287.4" y1="159" y2="165.7"/><rect x="285.8" y="162.1" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:55"><line x1="292.6" x2="292.6" y1="157.5" y2="163.5"/><rect x="291" y="159.1" width="3.2" height="4" rx="1"/></g><g class="vz-c vz-up" style="--i:56"><line x1="297.8" x2="297.8" y1="154.1" y2="160"/><rect x="296.2" y="156" width="3.2" height="3.1" rx="1"/></g><g class="vz-c vz-down" style="--i:57"><line x1="303" x2="303" y1="153.4" y2="157.4"/><rect x="301.4" y="156" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:58"><line x1="308.2" x2="308.2" y1="152.3" y2="159.9"/><rect x="306.6" y="153.6" width="3.2" height="3.8" rx="1"/></g><g class="vz-c vz-up" style="--i:59"><line x1="313.4" x2="313.4" y1="146.5" y2="154.2"/><rect x="311.8" y="149.5" width="3.2" height="4.1" rx="1"/></g></svg></span>
+  <span class="card-body"><span class="card-eyebrow">Bull, Bear, Long &amp; Short</span>
+    <span class="card-title">Short Position</span>
+    <span class="card-text">A short position is one that gains value if the price falls and loses value if it rises. It relies on borrowing or on a derivative contract, and its possible loss is not capped.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span><span class="chip chip--bear"><span aria-hidden="true">&#9660;</span> Bearish context</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/library/bull-bear-long-short/long-position/">
+  <span class="card-thumb" aria-hidden="true"><svg class="vz vz-mini" viewBox="0 0 320 192" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet"><g class="vz-c vz-down" style="--i:0"><line x1="6.6" x2="6.6" y1="105.9" y2="118.8"/><rect x="5" y="108.5" width="3.2" height="8.4" rx="1"/></g><g class="vz-c vz-down" style="--i:1"><line x1="11.8" x2="11.8" y1="116.8" y2="120.6"/><rect x="10.2" y="116.9" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:2"><line x1="17" x2="17" y1="116.4" y2="124.1"/><rect x="15.4" y="118" width="3.2" height="4.7" rx="1"/></g><g class="vz-c vz-down" style="--i:3"><line x1="22.2" x2="22.2" y1="121" y2="134"/><rect x="20.6" y="122.7" width="3.2" height="9.7" rx="1"/></g><g class="vz-c vz-down" style="--i:4"><line x1="27.4" x2="27.4" y1="132.1" y2="139.7"/><rect x="25.8" y="132.4" width="3.2" height="6.8" rx="1"/></g><g class="vz-c vz-down" style="--i:5"><line x1="32.6" x2="32.6" y1="138" y2="142.8"/><rect x="31" y="139.1" width="3.2" height="3.4" rx="1"/></g><g class="vz-c vz-down" style="--i:6"><line x1="37.8" x2="37.8" y1="140.3" y2="150.2"/><rect x="36.2" y="142.6" width="3.2" height="4.6" rx="1"/></g><g class="vz-c vz-down" style="--i:7"><line x1="43" x2="43" y1="145.7" y2="151.3"/><rect x="41.4" y="147.2" width="3.2" height="3.2" rx="1"/></g><g class="vz-c vz-down" style="--i:8"><line x1="48.2" x2="48.2" y1="147.3" y2="159"/><rect x="46.6" y="150.4" width="3.2" height="6.7" rx="1"/></g><g class="vz-c vz-down" style="--i:9"><line x1="53.4" x2="53.4" y1="155.7" y2="165.2"/><rect x="51.8" y="157.1" width="3.2" height="4.9" rx="1"/></g><g class="vz-c vz-down" style="--i:10"><line x1="58.6" x2="58.6" y1="160.3" y2="164.5"/><rect x="57" y="162" width="3.2" height="2.3" rx="1"/></g><g class="vz-c vz-down" style="--i:11"><line x1="63.8" x2="63.8" y1="164.3" y2="170.7"/><rect x="62.2" y="164.3" width="3.2" height="5.7" rx="1"/></g><g class="vz-c vz-up" style="--i:12"><line x1="69" x2="69" y1="166.2" y2="170.6"/><rect x="67.4" y="166.6" width="3.2" height="3.5" rx="1"/></g><g class="vz-c vz-up" style="--i:13"><line x1="74.2" x2="74.2" y1="161.7" y2="169.4"/><rect x="72.6" y="162.5" width="3.2" height="4.1" rx="1"/></g><g class="vz-c vz-up" style="--i:14"><line x1="79.4" x2="79.4" y1="156.8" y2="164.5"/><rect x="77.8" y="159.6" width="3.2" height="2.9" rx="1"/></g><g class="vz-c vz-up" style="--i:15"><line x1="84.6" x2="84.6" y1="155.1" y2="160.2"/><rect x="83" y="156.7" width="3.2" height="2.9" rx="1"/></g><g class="vz-c vz-down" style="--i:16"><line x1="89.8" x2="89.8" y1="156.2" y2="160.3"/><rect x="88.2" y="156.7" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:17"><line x1="95" x2="95" y1="150.9" y2="159"/><rect x="93.4" y="151.9" width="3.2" height="6.1" rx="1"/></g><g class="vz-c vz-up" style="--i:18"><line x1="100.2" x2="100.2" y1="145.7" y2="154.1"/><rect x="98.6" y="145.8" width="3.2" height="6.2" rx="1"/></g><g class="vz-c vz-up" style="--i:19"><line x1="105.4" x2="105.4" y1="142.4" y2="147"/><rect x="103.8" y="143.1" width="3.2" height="2.7" rx="1"/></g><g class="vz-c vz-up" style="--i:20"><line x1="110.6" x2="110.6" y1="137.1" y2="144.9"/><rect x="109" y="137.6" width="3.2" height="5.5" rx="1"/></g><g class="vz-c vz-up" style="--i:21"><line x1="115.8" x2="115.8" y1="129.9" y2="139"/><rect x="114.2" y="132.8" width="3.2" height="4.8" rx="1"/></g><g class="vz-c vz-down" style="--i:22"><line x1="121" x2="121" y1="131.1" y2="134.5"/><rect x="119.4" y="132.8" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:23"><line x1="126.2" x2="126.2" y1="124.1" y2="134.5"/><rect x="124.6" y="124.9" width="3.2" height="8.4" rx="1"/></g><g class="vz-c vz-up" style="--i:24"><line x1="131.4" x2="131.4" y1="119.4" y2="125.3"/><rect x="129.8" y="120" width="3.2" height="5" rx="1"/></g><g class="vz-c vz-down" style="--i:25"><line x1="136.6" x2="136.6" y1="119.2" y2="124.2"/><rect x="135" y="120" width="3.2" height="3" rx="1"/></g><g class="vz-c vz-down" style="--i:26"><line x1="141.8" x2="141.8" y1="120.1" y2="128.5"/><rect x="140.2" y="123" width="3.2" height="5.2" rx="1"/></g><g class="vz-c vz-down" style="--i:27"><line x1="147" x2="147" y1="126.4" y2="131.3"/><rect x="145.4" y="128.2" width="3.2" height="2.4" rx="1"/></g><g class="vz-c vz-down" style="--i:28"><line x1="152.2" x2="152.2" y1="128.4" y2="134.1"/><rect x="150.6" y="130.6" width="3.2" height="3.5" rx="1"/></g><g class="vz-c vz-down" style="--i:29"><line x1="157.4" x2="157.4" y1="133.1" y2="137.5"/><rect x="155.8" y="134.1" width="3.2" height="3.2" rx="1"/></g><g class="vz-c vz-up" style="--i:30"><line x1="162.6" x2="162.6" y1="124.9" y2="139.7"/><rect x="161" y="126.6" width="3.2" height="10.7" rx="1"/></g><g class="vz-c vz-up" style="--i:31"><line x1="167.8" x2="167.8" y1="117.5" y2="129.2"/><rect x="166.2" y="120.4" width="3.2" height="6.2" rx="1"/></g><g class="vz-c vz-up" style="--i:32"><line x1="173" x2="173" y1="113.4" y2="123.5"/><rect x="171.4" y="115.5" width="3.2" height="4.9" rx="1"/></g><g class="vz-c vz-up" style="--i:33"><line x1="178.2" x2="178.2" y1="106.1" y2="118.5"/><rect x="176.6" y="108.8" width="3.2" height="6.7" rx="1"/></g><g class="vz-c vz-up" style="--i:34"><line x1="183.4" x2="183.4" y1="96.7" y2="109.4"/><rect x="181.8" y="98" width="3.2" height="10.8" rx="1"/></g><g class="vz-c vz-up" style="--i:35"><line x1="188.6" x2="188.6" y1="91.6" y2="98.9"/><rect x="187" y="91.7" width="3.2" height="6.3" rx="1"/></g><g class="vz-c vz-up" style="--i:36"><line x1="193.8" x2="193.8" y1="87" y2="93.9"/><rect x="192.2" y="87.8" width="3.2" height="3.9" rx="1"/></g><g class="vz-c vz-up" style="--i:37"><line x1="199" x2="199" y1="75.9" y2="88.2"/><rect x="197.4" y="76.4" width="3.2" height="11.4" rx="1"/></g><g class="vz-c vz-down" style="--i:38"><line x1="204.2" x2="204.2" y1="74.5" y2="80.1"/><rect x="202.6" y="76.4" width="3.2" height="1.9" rx="1"/></g><g class="vz-c vz-down" style="--i:39"><line x1="209.4" x2="209.4" y1="75.8" y2="82.2"/><rect x="207.8" y="78.3" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:40"><line x1="214.6" x2="214.6" y1="77.8" y2="84.4"/><rect x="213" y="79.8" width="3.2" height="3.4" rx="1"/></g><g class="vz-c vz-down" style="--i:41"><line x1="219.8" x2="219.8" y1="80.8" y2="84.7"/><rect x="218.2" y="83.1" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:42"><line x1="225" x2="225" y1="83.2" y2="90.6"/><rect x="223.4" y="84.6" width="3.2" height="3.2" rx="1"/></g><g class="vz-c vz-down" style="--i:43"><line x1="230.2" x2="230.2" y1="85.1" y2="91.5"/><rect x="228.6" y="87.8" width="3.2" height="2.5" rx="1"/></g><g class="vz-c vz-up" style="--i:44"><line x1="235.4" x2="235.4" y1="86.4" y2="90.7"/><rect x="233.8" y="86.5" width="3.2" height="3.8" rx="1"/></g><g class="vz-c vz-up" style="--i:45"><line x1="240.6" x2="240.6" y1="79.2" y2="87.6"/><rect x="239" y="79.6" width="3.2" height="6.8" rx="1"/></g><g class="vz-c vz-up" style="--i:46"><line x1="245.8" x2="245.8" y1="68.8" y2="81.6"/><rect x="244.2" y="71" width="3.2" height="8.7" rx="1"/></g><g class="vz-c vz-up" style="--i:47"><line x1="251" x2="251" y1="60" y2="73.6"/><rect x="249.4" y="63.1" width="3.2" height="7.9" rx="1"/></g><g class="vz-c vz-up" style="--i:48"><line x1="256.2" x2="256.2" y1="53.5" y2="66.2"/><rect x="254.6" y="55.9" width="3.2" height="7.2" rx="1"/></g><g class="vz-c vz-up" style="--i:49"><line x1="261.4" x2="261.4" y1="44.7" y2="57.7"/><rect x="259.8" y="44.8" width="3.2" height="11.1" rx="1"/></g><g class="vz-c vz-up" style="--i:50"><line x1="266.6" x2="266.6" y1="36.9" y2="45.1"/><rect x="265" y="38.6" width="3.2" height="6.3" rx="1"/></g><g class="vz-c vz-up" style="--i:51"><line x1="271.8" x2="271.8" y1="28.9" y2="39"/><rect x="270.2" y="29.8" width="3.2" height="8.7" rx="1"/></g><g class="vz-c vz-up" style="--i:52"><line x1="277" x2="277" y1="22.7" y2="32.2"/><rect x="275.4" y="23.1" width="3.2" height="6.7" rx="1"/></g><g class="vz-c vz-down" style="--i:53"><line x1="282.2" x2="282.2" y1="21.8" y2="29.8"/><rect x="280.6" y="23.1" width="3.2" height="4.9" rx="1"/></g><g class="vz-c vz-down" style="--i:54"><line x1="287.4" x2="287.4" y1="27.6" y2="32.8"/><rect x="285.8" y="28" width="3.2" height="4.5" rx="1"/></g><g class="vz-c vz-up" style="--i:55"><line x1="292.6" x2="292.6" y1="31.4" y2="32.9"/><rect x="291" y="31.7" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:56"><line x1="297.8" x2="297.8" y1="29.6" y2="38.3"/><rect x="296.2" y="31.7" width="3.2" height="3.7" rx="1"/></g><g class="vz-c vz-down" style="--i:57"><line x1="303" x2="303" y1="32.8" y2="38.7"/><rect x="301.4" y="35.4" width="3.2" height="3.1" rx="1"/></g><g class="vz-c vz-down" style="--i:58"><line x1="308.2" x2="308.2" y1="36" y2="44.4"/><rect x="306.6" y="38.5" width="3.2" height="3.1" rx="1"/></g><g class="vz-c vz-up" style="--i:59"><line x1="313.4" x2="313.4" y1="37.7" y2="43.3"/><rect x="311.8" y="40.8" width="3.2" height="1.5" rx="1"/></g></svg></span>
+  <span class="card-body"><span class="card-eyebrow">Bull, Bear, Long &amp; Short</span>
+    <span class="card-title">Long Position</span>
+    <span class="card-text">A long position is one that gains value if the price rises and loses value if it falls. It can be as simple as owning an asset, or it can be a leveraged contract with very different risks.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span><span class="chip chip--bull"><span aria-hidden="true">&#9650;</span> Bullish context</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/derivatives-perpetuals/perpetual-futures/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Derivatives &amp; Perpetuals</span>
+    <span class="card-title">Perpetual Futures</span>
+    <span class="card-text">A perpetual future is a futures contract with no expiry date that uses funding payments between longs and shorts to keep its price close to the spot index.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/derivatives-perpetuals/funding-rate/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 5L5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Derivatives &amp; Perpetuals</span>
+    <span class="card-title">Funding Rate</span>
+    <span class="card-text">The funding rate is a periodic payment exchanged between long and short holders of a perpetual future that pulls the contract price toward the spot index.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/derivatives-perpetuals/options-basics/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Derivatives &amp; Perpetuals</span>
+    <span class="card-title">Options Basics</span>
+    <span class="card-text">An option is a contract that gives its buyer the right, but not the obligation, to buy (call) or sell (put) an asset at a set strike price by a set date.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--advanced"><i aria-hidden="true"></i>Advanced</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/library/risk-management/diversification-and-correlation/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12.5l9 5 9-5M3 17l9 5 9-5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Risk Management</span>
+    <span class="card-title">Diversification &amp; Correlation</span>
+    <span class="card-text">Diversification spreads capital across holdings that do not all move together. Correlation, from -1 to +1, measures how closely two of them have moved together.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager wrap" aria-label="More in this shelf"><a class="pager-link pager-prev" href="/library/bull-bear-long-short/short-squeeze/"><span><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg>Previous</span><strong>Short Squeeze</strong></a>
+    <a class="pager-up" href="/library/bull-bear-long-short/">Back to Bull, Bear, Long &amp; Short</a><span></span>
+  </nav>
+</article>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Hedging Basics","description":"Hedging means reducing exposure to a price move by holding an offsetting position. It lowers both losses and gains, and it has costs and risks of its own, so it is not free protection.","inLanguage":"en","dateModified":"2026-11-21","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"edgeTR Academy"}}]}
+</script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR" loading="lazy">
+        <p>Learn the market. Understand the tools. Make your own decisions.</p>
+        <p class="footer-family">Part of <strong>Ethos Empire</strong></p>
+        <ul class="trust" aria-label="What edgeTR Academy is"><li>Free to read</li><li>No login</li><li>No paywall</li><li>Educational reference</li>
+        </ul>
+      </div>
+      <nav aria-label="Learn and browse">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="/learn/">Learn: Chapters 1-10</a></li>
+          <li><a href="/library/">Library</a></li>
+          <li><a href="/patterns/">Pattern gallery</a></li>
+          <li><a href="/foundations/">Foundations</a></li>
+          <li><a href="/compare/">Compare</a></li>
+          <li><a href="/glossary/">A-Z Glossary</a></li>
+          <li><a href="/watch/">Watch in 60 Seconds</a></li>
+          <li><a href="/search/">Search</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Library shelves">
+        <h2>Library</h2>
+        <ul>
+          <li><a href="/library/candlesticks/">Candlesticks</a></li>
+          <li><a href="/library/chart-patterns/">Chart Patterns</a></li>
+          <li><a href="/library/indicators/">Indicators</a></li>
+          <li><a href="/library/market-structure/">Market Structure</a></li>
+          <li><a href="/library/support-resistance/">Support &amp; Resistance</a></li>
+          <li><a href="/library/bull-bear-long-short/">Bull, Bear, Long &amp; Short</a></li>
+          <li><a href="/library/trading-mechanics/">Trading Mechanics</a></li>
+          <li><a href="/library/">All shelves</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Foundations shelves">
+        <h2>Foundations</h2>
+        <ul>
+          <li><a href="/foundations/markets-finance/">Markets &amp; Finance</a></li>
+          <li><a href="/foundations/crypto/">Crypto Basics</a></li>
+          <li><a href="/foundations/bitcoin/">Bitcoin Knowledge Center</a></li>
+          <li><a href="/foundations/blockchain/">Blockchain</a></li>
+          <li><a href="/foundations/wallets-security/">Wallets &amp; Security</a></li>
+          <li><a href="/foundations/exchanges-dex-defi/">Exchanges, DEX &amp; DeFi</a></li>
+          <li><a href="/foundations/derivatives-perpetuals/">Derivatives &amp; Perpetuals</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="About">
+        <h2>About</h2>
+        <ul>
+          <li><a href="/about/">About edgeTR Academy</a></li>
+          <li><a href="/educational-disclaimer/">Educational disclaimer</a></li>
+          <li><a href="/terms/">Terms of use</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/contact/">Contact and support</a></li>
+          <li><a href="/about/#editorial-standards">Editorial standards</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-disclaimer"><strong>Educational only.</strong> edgeTR Academy provides educational information only. It does not provide financial, investment, legal or tax advice, does not recommend specific assets or trades, and does not guarantee outcomes. Users are responsible for their own research and decisions. <a href="/educational-disclaimer/">Read the full disclaimer</a>.</p>
+    <p class="footer-legal">&copy; 2026 edgeTR Academy, part of Ethos Empire. Free to read. No account needed. <a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/contact/">Contact</a></p>
+  </div>
+</footer>
+<script src="/js/search-core.js" defer></script>
+<script src="/js/site.js" defer></script>
+</body>
+</html>

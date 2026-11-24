@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en" data-base="/">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Margin on Derivatives | edgeTR Academy</title>
+<meta name="description" content="Margin on derivatives is the collateral posted to open and keep a position: initial margin opens it, and maintenance margin is the minimum needed to keep it open.">
+<meta name="theme-color" content="#070b12">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://edgetr.com/foundations/derivatives-perpetuals/margin-on-derivatives/">
+<meta property="og:url" content="https://edgetr.com/foundations/derivatives-perpetuals/margin-on-derivatives/">
+<meta property="og:image" content="https://edgetr.com/img/brand/og-default.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="edgeTR Academy">
+<meta property="og:title" content="Margin on Derivatives">
+<meta property="og:description" content="Margin on derivatives is the collateral posted to open and keep a position: initial margin opens it, and maintenance margin is the minimum needed to keep it open.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.edgetrSearch)document.documentElement.classList.remove("js")},3000)</script>
+</head>
+<body class="page-article">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="edgeTR Academy home">
+      <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR">
+      <span class="brand-sub">Academy</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="/learn/">Learn</a></li>
+        <li><a href="/library/">Library</a></li>
+        <li><a href="/foundations/" aria-current="true">Foundations</a></li>
+        <li><a href="/compare/">Compare</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+        <li class="nav-search-link"><a href="/search/">Search</a></li>
+      </ul>
+    </nav>
+    <form class="header-search" action="/search/" method="get" role="search" aria-label="Site search" data-suggest>
+      <label class="sr-only" for="hq">Search the Academy</label>
+      <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="hq" name="q" type="search" placeholder="Search: RSI, doji, wallet..." autocomplete="off" spellcheck="false" aria-controls="hq-list" aria-expanded="false" aria-autocomplete="list" role="combobox">
+      <kbd aria-hidden="true">/</kbd>
+      <div class="suggest" id="hq-list" role="listbox" aria-label="Search suggestions" hidden></div>
+    </form>
+    <a class="header-search-btn" href="/search/" aria-label="Search"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false">
+      <span class="sr-only">Menu</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<article class="article">
+  <header class="article-hero">
+    <div class="wrap">
+      
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/foundations/">Foundations</a></li>
+    <li><a href="/foundations/derivatives-perpetuals/">Derivatives &amp; Perpetuals</a></li>
+    <li><span aria-current="page">Margin on Derivatives</span></li>
+  </ol>
+</nav>
+
+      <p class="eyebrow">Foundations · Derivatives &amp; Perpetuals</p>
+      <h1>Margin on Derivatives</h1>
+      <p class="lede">Margin on derivatives is the collateral posted to open and keep a position: initial margin opens it, and maintenance margin is the minimum needed to keep it open.</p>
+      <ul class="meta-chips"><li><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></li>
+        <li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>5 min read</span></li><li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Updated <time datetime="2026-11-21">21 November 2026</time></span></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="wrap article-grid">
+    <aside class="toc" aria-label="On this page">
+      <details open>
+        <summary>On this page</summary>
+        <ol>
+          <li><a href="#why-it-matters">Why it matters</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#how-the-numbers-relate">How the numbers relate</a></li>
+          <li><a href="#margin-tiers">Margin tiers</a></li>
+          <li><a href="#going-deeper">Going deeper</a></li>
+          <li><a href="#what-it-does-not-mean">What it does NOT mean</a></li>
+          <li><a href="#common-mistakes">Common mistakes</a></li>
+          <li><a href="#risks-and-limitations">Risks and limitations</a></li>
+        </ol>
+      </details>
+    </aside>
+
+    <div class="prose">
+
+      <h2 id="why-it-matters">Why it matters</h2>
+<p>Margin decides how large a position can be, how far price can move against it and when the exchange steps in. The general idea is covered in <a href="/library/trading-mechanics/margin-and-collateral/">margin and collateral</a>. This page covers the layer that is specific to <a class="gl" href="/glossary/futures/" title="A standardised agreement to buy or sell an asset at a set price on a set future date.">futures</a> and <a class="gl" href="/glossary/perpetual-futures/" title="A futures contract with no expiry date, kept close to the spot price by regular funding payments between longs and shorts.">perpetuals</a>: two margin levels, a balance that changes every moment and rules set by each exchange.</p>
+<div class="callout callout--risk"><p class="callout-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></svg><span>Risk</span></p>
+<p>Margin is what stands behind a leveraged derivative, and all of it can be lost quickly: a move of a few percent against a highly leveraged position is enough. Regulators’ investor-education pages warn that leveraged trading amplifies losses and that traders may lose more than their initial investment.</p>
+</div>
+<h2 id="how-it-works">How it works</h2>
+<figure class="viz viz--ladder" data-animate><div class="viz-title">Margin on a hypothetical long worth 1,000 at 10x</div><div class="viz-canvas"><ol class="dg-ladder"><li class="dg-level t-info" style="--i:0"><span class="dg-level-line" aria-hidden="true"></span><span class="dg-level-body"><strong>Initial margin</strong><em>100</em><span>Posted to open: 10% of the position value.</span></span></li><li class="dg-level t-warn" style="--i:1"><span class="dg-level-line" aria-hidden="true"></span><span class="dg-level-body"><strong>Margin balance after a 3% fall</strong><em>70</em><span>The 30 unrealized loss has been taken from it.</span></span></li><li class="dg-level t-bear" style="--i:2"><span class="dg-level-line" aria-hidden="true"></span><span class="dg-level-body"><strong>Maintenance margin</strong><em>5</em><span>0.5% of the position value. Liquidation starts if the balance falls to this.</span></span></li></ol></div><figcaption>The margin balance moves with every change in the mark price. The maintenance margin is the floor.</figcaption></figure>
+<p>In spot margin trading, margin backs a loan. On a derivative nothing is borrowed. Margin is a deposit that shows the holder can cover losses on the contract.</p>
+<p><strong>Initial margin</strong> is the collateral required to open a position. It is the position value divided by the <a href="/library/trading-mechanics/leverage/">leverage</a>: a position worth 1,000 at 10x needs 100.</p>
+<p><strong>Maintenance margin</strong> is the minimum that must remain behind the position to keep it open. It is lower than the initial margin and is usually set as a percentage of the position value, called the maintenance margin rate.</p>
+<p>The <strong>margin balance</strong> is what currently stands behind the position. It starts at the margin posted and then moves with unrealized gains and losses, which are measured at the <a href="/foundations/derivatives-perpetuals/mark-price-and-index-price/">mark price</a>.</p>
+<div class="callout callout--beginner"><p class="callout-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 8.500l5.500 3.500-5.500 3.500z"/></svg><span>In plain words</span></p>
+<p>Think of the deposit paid when hiring a car. The deposit is not the price of the car. It is what the owner holds against damage. If the estimated damage creeps up toward the size of the deposit, the owner takes the car back before the deposit is used up. Initial margin is the deposit, and maintenance margin is the point where the owner steps in.</p>
+</div>
+<h2 id="how-the-numbers-relate">How the numbers relate</h2>
+<div class="formula"><code>Margin balance = margin posted + unrealized P&L - funding and fees paid</code><span>When the margin balance falls to the maintenance margin, liquidation begins. Exact definitions differ between exchanges.</span></div>
+<p>In traditional futures markets, a balance that drops below the maintenance level leads to a <strong><a class="gl" href="/glossary/margin-call/" title="A notice that an account's margin has fallen too low and that more funds must be added or positions reduced.">margin call</a></strong>: a demand to add funds. On most crypto perpetual venues there is no call. The position is handed straight to the <a class="gl" href="/glossary/liquidation/" title="The forced closing of a leveraged position by the exchange or protocol when its margin no longer covers its losses.">liquidation</a> engine, as described in <a href="/foundations/derivatives-perpetuals/liquidation-on-perpetuals/">liquidation on perpetuals</a>.</p>
+<figure class="viz viz--bars" data-animate><div class="viz-title">The same 1% price move at different leverage</div><div class="viz-canvas"><div class="dg-bars" role="list"><div class="dg-bar t-neutral" role="listitem" style="--i:0"><div class="dg-bar-head"><span class="dg-bar-label">1x (no leverage)</span><span class="dg-bar-value">1%</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:5%"></span></div><p class="dg-bar-note">Position value changes 1% of your capital.</p></div><div class="dg-bar t-warn" role="listitem" style="--i:1"><div class="dg-bar-head"><span class="dg-bar-label">5x</span><span class="dg-bar-value">5%</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:25%"></span></div><p class="dg-bar-note">About 5% of your margin, up or down.</p></div><div class="dg-bar t-warn" role="listitem" style="--i:2"><div class="dg-bar-head"><span class="dg-bar-label">10x</span><span class="dg-bar-value">10%</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:50%"></span></div><p class="dg-bar-note">About 10% of your margin, up or down.</p></div><div class="dg-bar t-bear" role="listitem" style="--i:3"><div class="dg-bar-head"><span class="dg-bar-label">20x</span><span class="dg-bar-value">20%</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:100%"></span></div><p class="dg-bar-note">About 20% of your margin, up or down.</p></div></div></div><figcaption>Leverage multiplies gains and losses equally. It does not change the market; it changes how hard each move hits your margin. <span class="viz-note">Simplified: ignores fees and funding.</span></figcaption></figure>
+<h2 id="margin-tiers">Margin tiers</h2>
+<figure class="viz viz--bars" data-animate><div class="viz-title">Hypothetical maintenance margin tiers</div><div class="viz-canvas"><div class="dg-bars" role="list"><div class="dg-bar t-neutral" role="listitem" style="--i:0"><div class="dg-bar-head"><span class="dg-bar-label">Position up to 50,000</span><span class="dg-bar-value">0.5%</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:20%"></span></div><p class="dg-bar-note">Highest leverage allowed.</p></div><div class="dg-bar t-warn" role="listitem" style="--i:1"><div class="dg-bar-head"><span class="dg-bar-label">Up to 250,000</span><span class="dg-bar-value">1%</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:40%"></span></div></div><div class="dg-bar t-bear" role="listitem" style="--i:2"><div class="dg-bar-head"><span class="dg-bar-label">Up to 1,000,000</span><span class="dg-bar-value">2.5%</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:100%"></span></div><p class="dg-bar-note">Lowest leverage allowed.</p></div></div></div><figcaption>Larger positions are harder to close without moving the market, so exchanges demand more margin for them. <span class="viz-note">Made-up tiers. Every exchange publishes its own table.</span></figcaption></figure>
+<p>Most exchanges raise the maintenance margin rate, and lower the maximum leverage, as a position gets larger. The numbers above are invented to show the shape. Real tables differ between exchanges and between contracts.</p>
+<h2 id="going-deeper">Going deeper</h2>
+<h3 id="isolated-and-cross">Isolated and cross</h3>
+<p>With <strong>isolated</strong> margin, a fixed amount is assigned to one position. With <strong>cross</strong> margin, the whole account balance stands behind all positions. The trade-offs are covered in <a href="/library/trading-mechanics/isolated-and-cross-margin/">isolated and cross margin</a>.</p>
+<h3 id="the-currency-of-the-collateral">The currency of the collateral</h3>
+<p>Some contracts take a <a class="gl" href="/glossary/stablecoin/" title="A crypto token designed to hold a steady value, usually one US dollar.">stablecoin</a> as margin. Others take the underlying coin itself. With coin margin, the collateral loses value at the same time as a long position loses money, so a falling price hurts twice. Some venues accept several assets as collateral and count volatile ones at less than their market value.</p>
+<h3 id="unrealized-gains-as-margin">Unrealized gains as margin</h3>
+<p>In <a class="gl" href="/glossary/cross-margin/" title="A margin mode in which the whole account balance is shared as margin across all open positions.">cross margin</a>, unrealized gains on one position can support others. Those gains are not locked in. They can disappear with the next price move and take the support with them.</p>
+<div class="example"><p class="example-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.600-7 10-7 10 7 10 7-3.600 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>Following one margin balance</span><em>Hypothetical illustration</em></p>
+<p>Hypothetical numbers. A trader opens a long of 10 contracts at 100, a position worth 1,000, at 10x. Initial margin is 100. The maintenance margin rate is 0.5%, so maintenance margin is 5. To keep things simple, it stays at 5 as price moves.</p>
+<div class="table-wrap" data-scroll-label="Table"><table><thead>
+<tr>
+<th>Event</th>
+<th>Change</th>
+<th>Margin balance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Position opened</td>
+<td></td>
+<td>100.00</td>
+</tr>
+<tr>
+<td><a class="gl" href="/glossary/mark-price/" title="A reference price calculated by a derivatives exchange and used to value open positions and decide liquidations.">Mark price</a> falls to 97</td>
+<td>-30.00</td>
+<td>70.00</td>
+</tr>
+<tr>
+<td>Funding paid over one day</td>
+<td>-0.30</td>
+<td>69.70</td>
+</tr>
+<tr>
+<td>Mark price falls to 91</td>
+<td>-60.00</td>
+<td>9.70</td>
+</tr>
+<tr>
+<td>Mark price falls to 90.53</td>
+<td>-4.70</td>
+<td>5.00</td>
+</tr>
+</tbody>
+</table></div><p>At about 90.5 the balance equals the maintenance margin and liquidation begins. That is a fall of roughly 9.5%, not the 10% that “10x” might suggest, and funding brought the point slightly closer.</p>
+</div>
+<section class="notmean" aria-labelledby="what-it-does-not-mean"><h2 id="what-it-does-not-mean"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg><span>What it does NOT mean</span></h2>
+<ul>
+<li><strong>Margin is not a fee.</strong> It is collateral, and whatever is not lost remains the holder’s.</li>
+<li><strong>Margin is not the size of the position.</strong> Gains and losses are calculated on the full position value.</li>
+<li><strong>Reaching maintenance margin does not mean a polite request for more funds.</strong> On most crypto venues it starts an automatic liquidation.</li>
+<li><strong>The leverage setting does not change what a price move is worth.</strong> A 1% move on a 1,000 position is 10 at any leverage. The setting changes how much margin stands behind it.</li>
+<li><strong>Margin requirements are not the same everywhere.</strong> They vary by exchange, by contract and by <a class="gl" href="/glossary/position-sizing/" title="Deciding how large a position to open, usually from the amount of money that would be lost if the stop loss is hit.">position size</a>.</li>
+</ul>
+</section>
+<h2 id="common-mistakes">Common mistakes</h2>
+<div class="mistakes">
+<ol>
+<li><strong>Looking at the margin instead of the position value.</strong> The exposure is the full position.</li>
+<li><strong>Forgetting that funding and fees come out of the margin balance.</strong> They bring the liquidation point closer over time.</li>
+<li><strong>Assuming liquidation needs a move of 100 divided by the leverage.</strong> Maintenance margin makes the real distance shorter.</li>
+<li><strong>Overlooking the collateral currency.</strong> Coin-margined collateral shrinks as price falls.</li>
+<li><strong>Counting unrealized gains as secure collateral.</strong> They can reverse.</li>
+</ol>
+</div>
+<h2 id="risks-and-limitations">Risks and limitations</h2>
+<ul>
+<li>The full margin behind a position can be lost. See <a href="/library/risk-management/leverage-risk/">leverage risk</a>.</li>
+<li>In cross margin, one losing position can draw on the balance that supports every other position.</li>
+<li>Exchanges can change margin tiers and leverage limits, sometimes at short notice.</li>
+<li>In some futures markets, losses can exceed the margin posted. Rules vary by venue and jurisdiction.</li>
+</ul>
+<div class="takeaway"><p class="takeaway-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg><span>Key takeaway</span></p>
+<p>Initial margin opens a derivative position and maintenance margin is the floor that keeps it open. The margin balance between them moves with every price change, and when it reaches the floor the exchange takes over.</p>
+</div>
+
+      <section class="sources" aria-labelledby="sources">
+        <h2 id="sources">Sources and further reading</h2>
+        <ul>
+          <li><cite>Options, Futures, and Other Derivatives</cite>, John C. Hull. Explains initial margin, maintenance margin and daily settlement in futures markets</li>
+          <li><a class="ext" href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/CFTCGlossary/index.htm" rel="noopener noreferrer" target="_blank">Futures Glossary<span class="sr-only"> (opens in a new tab)</span></a>, U.S. Commodity Futures Trading Commission. Regulator definitions of margin (also called performance bond) and margin call (entries: Margin, Margin Call)</li>
+          <li><a class="ext" href="https://www.cftc.gov/LearnAndProtect/EducationCenter/economicpurpose" rel="noopener noreferrer" target="_blank">The Economic Purpose of Futures Contracts<span class="sr-only"> (opens in a new tab)</span></a>, U.S. Commodity Futures Trading Commission. Futures margin as a performance bond, typically two to 10 percent of contract value</li>
+          <li><a class="ext" href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/understand_risks_of_virtual_currency.html" rel="noopener noreferrer" target="_blank">CFTC Customer Advisory: Understand the Risks of Virtual Currency Trading<span class="sr-only"> (opens in a new tab)</span></a>, U.S. Commodity Futures Trading Commission. Advisory stating that customers may lose more than their initial investment</li>
+        </ul>
+      </section>
+
+      <aside class="edu-note" aria-label="Educational notice">
+        <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+        <p><strong>Educational content only.</strong> This page explains a concept. It is not financial advice and not a recommendation to buy, sell or hold anything. <a href="/educational-disclaimer/">Full disclaimer</a>. Last updated <time datetime="2026-11-21">21 November 2026</time>.</p>
+      </aside>
+    </div>
+  </div>
+  <section class="related band" aria-labelledby="related">
+    <div class="wrap">
+      <h2 id="related">Related topics</h2>
+      <div class="card-grid">
+<a class="card topic-card" href="/library/trading-mechanics/margin-and-collateral/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Trading Mechanics</span>
+    <span class="card-title">Margin &amp; Collateral</span>
+    <span class="card-text">Margin is the collateral posted to open and keep a leveraged position; it absorbs the position&#39;s losses, and if it falls below the maintenance requirement the position is liquidated.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/library/trading-mechanics/isolated-and-cross-margin/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12.5l9 5 9-5M3 17l9 5 9-5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Trading Mechanics</span>
+    <span class="card-title">Isolated &amp; Cross Margin</span>
+    <span class="card-text">Isolated margin normally confines a position&#39;s loss to the margin assigned to it, while cross margin lets positions draw on the whole account balance as shared collateral.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/library/trading-mechanics/leverage/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Trading Mechanics</span>
+    <span class="card-title">Leverage</span>
+    <span class="card-text">Leverage is the ratio of a position&#39;s size to the margin backing it; it multiplies the effect of every price move on that margin, for losses exactly as much as for gains.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card accent-bear" href="/foundations/derivatives-perpetuals/liquidation-on-perpetuals/">
+  <span class="card-thumb" aria-hidden="true"><svg class="vz vz-mini" viewBox="0 0 320 192" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet"><line class="vz-fade" x1="4" x2="178.7" y1="81.8" y2="81.8" stroke="var(--viz-neutral)" stroke-width="1.6"/><line class="vz-fade" x1="4" x2="316" y1="165.1" y2="165.1" stroke="var(--bear)" stroke-width="1.6" stroke-dasharray="6 5"/><g class="vz-c vz-up" style="--i:0"><line x1="6.6" x2="6.6" y1="88.5" y2="97.2"/><rect x="5" y="90.6" width="3.2" height="5.8" rx="1"/></g><g class="vz-c vz-up" style="--i:1"><line x1="11.8" x2="11.8" y1="87.2" y2="91.6"/><rect x="10.2" y="89.3" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:2"><line x1="17" x2="17" y1="83.6" y2="90"/><rect x="15.4" y="84.5" width="3.2" height="4.8" rx="1"/></g><g class="vz-c vz-up" style="--i:3"><line x1="22.2" x2="22.2" y1="82.4" y2="87.6"/><rect x="20.6" y="83" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:4"><line x1="27.4" x2="27.4" y1="79.5" y2="85.8"/><rect x="25.8" y="79.7" width="3.2" height="3.4" rx="1"/></g><g class="vz-c vz-up" style="--i:5"><line x1="32.6" x2="32.6" y1="73.1" y2="81.1"/><rect x="31" y="75.5" width="3.2" height="4.1" rx="1"/></g><g class="vz-c vz-up" style="--i:6"><line x1="37.8" x2="37.8" y1="73.1" y2="76"/><rect x="36.2" y="74.2" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:7"><line x1="43" x2="43" y1="70.6" y2="77.6"/><rect x="41.4" y="72.3" width="3.2" height="1.9" rx="1"/></g><g class="vz-c vz-down" style="--i:8"><line x1="48.2" x2="48.2" y1="71.2" y2="75.1"/><rect x="46.6" y="72.3" width="3.2" height="2.4" rx="1"/></g><g class="vz-c vz-down" style="--i:9"><line x1="53.4" x2="53.4" y1="72.2" y2="78.4"/><rect x="51.8" y="74.7" width="3.2" height="2" rx="1"/></g><g class="vz-c vz-up" style="--i:10"><line x1="58.6" x2="58.6" y1="73.6" y2="78"/><rect x="57" y="75.5" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:11"><line x1="63.8" x2="63.8" y1="73.1" y2="79.5"/><rect x="62.2" y="75.5" width="3.2" height="3" rx="1"/></g><g class="vz-c vz-down" style="--i:12"><line x1="69" x2="69" y1="76.2" y2="81"/><rect x="67.4" y="78.5" width="3.2" height="2.3" rx="1"/></g><g class="vz-c vz-down" style="--i:13"><line x1="74.2" x2="74.2" y1="77.4" y2="86"/><rect x="72.6" y="80.8" width="3.2" height="3.4" rx="1"/></g><g class="vz-c vz-up" style="--i:14"><line x1="79.4" x2="79.4" y1="81.4" y2="87.1"/><rect x="77.8" y="81.9" width="3.2" height="2.2" rx="1"/></g><g class="vz-c vz-down" style="--i:15"><line x1="84.6" x2="84.6" y1="79.5" y2="89.9"/><rect x="83" y="81.9" width="3.2" height="7.6" rx="1"/></g><g class="vz-c vz-down" style="--i:16"><line x1="89.8" x2="89.8" y1="89.5" y2="94.7"/><rect x="88.2" y="89.5" width="3.2" height="2.9" rx="1"/></g><g class="vz-c vz-down" style="--i:17"><line x1="95" x2="95" y1="90.6" y2="96.5"/><rect x="93.4" y="92.4" width="3.2" height="2.6" rx="1"/></g><g class="vz-c vz-down" style="--i:18"><line x1="100.2" x2="100.2" y1="94.5" y2="104.1"/><rect x="98.6" y="95" width="3.2" height="7.7" rx="1"/></g><g class="vz-c vz-down" style="--i:19"><line x1="105.4" x2="105.4" y1="100.2" y2="107.7"/><rect x="103.8" y="102.7" width="3.2" height="2.8" rx="1"/></g><g class="vz-c vz-down" style="--i:20"><line x1="110.6" x2="110.6" y1="102.5" y2="114.5"/><rect x="109" y="105.5" width="3.2" height="6" rx="1"/></g><g class="vz-c vz-down" style="--i:21"><line x1="115.8" x2="115.8" y1="108.6" y2="116"/><rect x="114.2" y="111.5" width="3.2" height="3" rx="1"/></g><g class="vz-c vz-down" style="--i:22"><line x1="121" x2="121" y1="112.7" y2="120.4"/><rect x="119.4" y="114.6" width="3.2" height="5" rx="1"/></g><g class="vz-c vz-down" style="--i:23"><line x1="126.2" x2="126.2" y1="117.9" y2="127.2"/><rect x="124.6" y="119.5" width="3.2" height="4.6" rx="1"/></g><g class="vz-c vz-down" style="--i:24"><line x1="131.4" x2="131.4" y1="121.2" y2="132.4"/><rect x="129.8" y="124.2" width="3.2" height="4.9" rx="1"/></g><g class="vz-c vz-down" style="--i:25"><line x1="136.6" x2="136.6" y1="127.9" y2="132.8"/><rect x="135" y="129.1" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:26"><line x1="141.8" x2="141.8" y1="130.3" y2="136.1"/><rect x="140.2" y="130.4" width="3.2" height="5.3" rx="1"/></g><g class="vz-c vz-down" style="--i:27"><line x1="147" x2="147" y1="133.5" y2="145.1"/><rect x="145.4" y="135.7" width="3.2" height="8.4" rx="1"/></g><g class="vz-c vz-down" style="--i:28"><line x1="152.2" x2="152.2" y1="142.3" y2="148.2"/><rect x="150.6" y="144.1" width="3.2" height="2.6" rx="1"/></g><g class="vz-c vz-down" style="--i:29"><line x1="157.4" x2="157.4" y1="145.5" y2="158.5"/><rect x="155.8" y="146.7" width="3.2" height="9.3" rx="1"/></g><g class="vz-c vz-down" style="--i:30"><line x1="162.6" x2="162.6" y1="155.2" y2="161.7"/><rect x="161" y="156" width="3.2" height="4.1" rx="1"/></g><g class="vz-c vz-down" style="--i:31"><line x1="167.8" x2="167.8" y1="156.8" y2="173.3"/><rect x="166.2" y="160.1" width="3.2" height="12.4" rx="1"/></g><g class="vz-c vz-up" style="--i:32"><line x1="173" x2="173" y1="164" y2="172.5"/><rect x="171.4" y="166.8" width="3.2" height="5.6" rx="1"/></g><g class="vz-c vz-up" style="--i:33"><line x1="178.2" x2="178.2" y1="162" y2="169.7"/><rect x="176.6" y="162.5" width="3.2" height="4.3" rx="1"/></g><g class="vz-c vz-up" style="--i:34"><line x1="183.4" x2="183.4" y1="160.4" y2="165.8"/><rect x="181.8" y="160.4" width="3.2" height="2.1" rx="1"/></g><g class="vz-c vz-up" style="--i:35"><line x1="188.6" x2="188.6" y1="149.8" y2="161.7"/><rect x="187" y="152.4" width="3.2" height="8" rx="1"/></g><g class="vz-c vz-up" style="--i:36"><line x1="193.8" x2="193.8" y1="151.3" y2="153.2"/><rect x="192.2" y="151.5" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:37"><line x1="199" x2="199" y1="136.9" y2="152.6"/><rect x="197.4" y="139.3" width="3.2" height="12.2" rx="1"/></g><g class="vz-c vz-up" style="--i:38"><line x1="204.2" x2="204.2" y1="133.3" y2="141.8"/><rect x="202.6" y="135.2" width="3.2" height="4.1" rx="1"/></g><g class="vz-c vz-up" style="--i:39"><line x1="209.4" x2="209.4" y1="127.3" y2="137.7"/><rect x="207.8" y="129.7" width="3.2" height="5.4" rx="1"/></g><g class="vz-c vz-up" style="--i:40"><line x1="214.6" x2="214.6" y1="120.3" y2="130.5"/><rect x="213" y="122.4" width="3.2" height="7.3" rx="1"/></g><g class="vz-c vz-up" style="--i:41"><line x1="219.8" x2="219.8" y1="113.6" y2="124"/><rect x="218.2" y="114.3" width="3.2" height="8.1" rx="1"/></g><g class="vz-c vz-up" style="--i:42"><line x1="225" x2="225" y1="106.9" y2="115.7"/><rect x="223.4" y="107.6" width="3.2" height="6.7" rx="1"/></g><g class="vz-c vz-up" style="--i:43"><line x1="230.2" x2="230.2" y1="98.5" y2="109"/><rect x="228.6" y="99.3" width="3.2" height="8.3" rx="1"/></g><g class="vz-c vz-up" style="--i:44"><line x1="235.4" x2="235.4" y1="94.1" y2="100.5"/><rect x="233.8" y="94.8" width="3.2" height="4.5" rx="1"/></g><g class="vz-c vz-up" style="--i:45"><line x1="240.6" x2="240.6" y1="86.5" y2="95.6"/><rect x="239" y="87.2" width="3.2" height="7.6" rx="1"/></g><g class="vz-c vz-up" style="--i:46"><line x1="245.8" x2="245.8" y1="78.4" y2="89.1"/><rect x="244.2" y="79.7" width="3.2" height="7.5" rx="1"/></g><g class="vz-c vz-up" style="--i:47"><line x1="251" x2="251" y1="77.1" y2="82"/><rect x="249.4" y="77.4" width="3.2" height="2.2" rx="1"/></g><g class="vz-c vz-up" style="--i:48"><line x1="256.2" x2="256.2" y1="64.5" y2="79.6"/><rect x="254.6" y="66.7" width="3.2" height="10.7" rx="1"/></g><g class="vz-c vz-up" style="--i:49"><line x1="261.4" x2="261.4" y1="62.8" y2="68.3"/><rect x="259.8" y="63.4" width="3.2" height="3.3" rx="1"/></g><g class="vz-c vz-up" style="--i:50"><line x1="266.6" x2="266.6" y1="52.2" y2="63.8"/><rect x="265" y="53.6" width="3.2" height="9.9" rx="1"/></g><g class="vz-c vz-up" style="--i:51"><line x1="271.8" x2="271.8" y1="47.7" y2="55.3"/><rect x="270.2" y="50.5" width="3.2" height="3.1" rx="1"/></g><g class="vz-c vz-up" style="--i:52"><line x1="277" x2="277" y1="43.1" y2="51.4"/><rect x="275.4" y="46.3" width="3.2" height="4.2" rx="1"/></g><g class="vz-c vz-up" style="--i:53"><line x1="282.2" x2="282.2" y1="35.5" y2="46.9"/><rect x="280.6" y="36.1" width="3.2" height="10.2" rx="1"/></g><g class="vz-c vz-up" style="--i:54"><line x1="287.4" x2="287.4" y1="32.3" y2="38.1"/><rect x="285.8" y="32.7" width="3.2" height="3.3" rx="1"/></g><g class="vz-c vz-up" style="--i:55"><line x1="292.6" x2="292.6" y1="28.1" y2="34.8"/><rect x="291" y="31.5" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:56"><line x1="297.8" x2="297.8" y1="21.7" y2="34.2"/><rect x="296.2" y="24.5" width="3.2" height="7" rx="1"/></g><g class="vz-c vz-up" style="--i:57"><line x1="303" x2="303" y1="21.7" y2="24.9"/><rect x="301.4" y="23.4" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:58"><line x1="308.2" x2="308.2" y1="16.7" y2="25"/><rect x="306.6" y="18.6" width="3.2" height="4.7" rx="1"/></g><g class="vz-c vz-down" style="--i:59"><line x1="313.4" x2="313.4" y1="17.2" y2="22.4"/><rect x="311.8" y="18.6" width="3.2" height="1.5" rx="1"/></g></svg></span>
+  <span class="card-body"><span class="card-eyebrow">Derivatives &amp; Perpetuals</span>
+    <span class="card-title">Liquidation on Perpetuals</span>
+    <span class="card-text">Liquidation on perpetuals is the forced closing of a leveraged position by the exchange when its margin balance, measured at the mark price, falls to the maintenance margin.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/derivatives-perpetuals/mark-price-and-index-price/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Derivatives &amp; Perpetuals</span>
+    <span class="card-title">Mark Price &amp; Index Price</span>
+    <span class="card-text">The index price is an average of spot prices across several exchanges, and the mark price is the reference price built from it that is used for unrealized P&amp;L and liquidation.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/compare/isolated-vs-cross-margin/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v18"/><path d="M5 7h5M14 7h5M5 12h5M14 12h5M5 17h5M14 17h5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Compare</span>
+    <span class="card-title">Isolated vs Cross Margin</span>
+    <span class="card-text">Isolated margin normally limits the loss on a position to the margin assigned to it. Cross margin backs every position with the shared account balance, so one position can draw on all of it.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager wrap" aria-label="More in this shelf"><a class="pager-link pager-prev" href="/foundations/derivatives-perpetuals/mark-price-and-index-price/"><span><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg>Previous</span><strong>Mark Price &amp; Index Price</strong></a>
+    <a class="pager-up" href="/foundations/derivatives-perpetuals/">Back to Derivatives &amp; Perpetuals</a><a class="pager-link pager-next" href="/foundations/derivatives-perpetuals/liquidation-on-perpetuals/"><span>Next<svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span><strong>Liquidation on Perpetuals</strong></a>
+  </nav>
+</article>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Margin on Derivatives","description":"Margin on derivatives is the collateral posted to open and keep a position: initial margin opens it, and maintenance margin is the minimum needed to keep it open.","inLanguage":"en","dateModified":"2026-11-21","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"edgeTR Academy"}}]}
+</script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR" loading="lazy">
+        <p>Learn the market. Understand the tools. Make your own decisions.</p>
+        <p class="footer-family">Part of <strong>Ethos Empire</strong></p>
+        <ul class="trust" aria-label="What edgeTR Academy is"><li>Free to read</li><li>No login</li><li>No paywall</li><li>Educational reference</li>
+        </ul>
+      </div>
+      <nav aria-label="Learn and browse">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="/learn/">Learn: Chapters 1-10</a></li>
+          <li><a href="/library/">Library</a></li>
+          <li><a href="/patterns/">Pattern gallery</a></li>
+          <li><a href="/foundations/">Foundations</a></li>
+          <li><a href="/compare/">Compare</a></li>
+          <li><a href="/glossary/">A-Z Glossary</a></li>
+          <li><a href="/watch/">Watch in 60 Seconds</a></li>
+          <li><a href="/search/">Search</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Library shelves">
+        <h2>Library</h2>
+        <ul>
+          <li><a href="/library/candlesticks/">Candlesticks</a></li>
+          <li><a href="/library/chart-patterns/">Chart Patterns</a></li>
+          <li><a href="/library/indicators/">Indicators</a></li>
+          <li><a href="/library/market-structure/">Market Structure</a></li>
+          <li><a href="/library/support-resistance/">Support &amp; Resistance</a></li>
+          <li><a href="/library/bull-bear-long-short/">Bull, Bear, Long &amp; Short</a></li>
+          <li><a href="/library/trading-mechanics/">Trading Mechanics</a></li>
+          <li><a href="/library/">All shelves</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Foundations shelves">
+        <h2>Foundations</h2>
+        <ul>
+          <li><a href="/foundations/markets-finance/">Markets &amp; Finance</a></li>
+          <li><a href="/foundations/crypto/">Crypto Basics</a></li>
+          <li><a href="/foundations/bitcoin/">Bitcoin Knowledge Center</a></li>
+          <li><a href="/foundations/blockchain/">Blockchain</a></li>
+          <li><a href="/foundations/wallets-security/">Wallets &amp; Security</a></li>
+          <li><a href="/foundations/exchanges-dex-defi/">Exchanges, DEX &amp; DeFi</a></li>
+          <li><a href="/foundations/derivatives-perpetuals/">Derivatives &amp; Perpetuals</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="About">
+        <h2>About</h2>
+        <ul>
+          <li><a href="/about/">About edgeTR Academy</a></li>
+          <li><a href="/educational-disclaimer/">Educational disclaimer</a></li>
+          <li><a href="/terms/">Terms of use</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/contact/">Contact and support</a></li>
+          <li><a href="/about/#editorial-standards">Editorial standards</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-disclaimer"><strong>Educational only.</strong> edgeTR Academy provides educational information only. It does not provide financial, investment, legal or tax advice, does not recommend specific assets or trades, and does not guarantee outcomes. Users are responsible for their own research and decisions. <a href="/educational-disclaimer/">Read the full disclaimer</a>.</p>
+    <p class="footer-legal">&copy; 2026 edgeTR Academy, part of Ethos Empire. Free to read. No account needed. <a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/contact/">Contact</a></p>
+  </div>
+</footer>
+<script src="/js/search-core.js" defer></script>
+<script src="/js/site.js" defer></script>
+</body>
+</html>

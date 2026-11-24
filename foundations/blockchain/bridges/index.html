@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en" data-base="/">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bridges | edgeTR Academy</title>
+<meta name="description" content="A blockchain bridge moves value between two chains, usually by locking an asset on one and issuing a matching token on the other. Bridges have been frequent targets of large exploits.">
+<meta name="theme-color" content="#070b12">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://edgetr.com/foundations/blockchain/bridges/">
+<meta property="og:url" content="https://edgetr.com/foundations/blockchain/bridges/">
+<meta property="og:image" content="https://edgetr.com/img/brand/og-default.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="edgeTR Academy">
+<meta property="og:title" content="Bridges">
+<meta property="og:description" content="A blockchain bridge moves value between two chains, usually by locking an asset on one and issuing a matching token on the other. Bridges have been frequent targets of large exploits.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.edgetrSearch)document.documentElement.classList.remove("js")},3000)</script>
+</head>
+<body class="page-article">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="edgeTR Academy home">
+      <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR">
+      <span class="brand-sub">Academy</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="/learn/">Learn</a></li>
+        <li><a href="/library/">Library</a></li>
+        <li><a href="/foundations/" aria-current="true">Foundations</a></li>
+        <li><a href="/compare/">Compare</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+        <li class="nav-search-link"><a href="/search/">Search</a></li>
+      </ul>
+    </nav>
+    <form class="header-search" action="/search/" method="get" role="search" aria-label="Site search" data-suggest>
+      <label class="sr-only" for="hq">Search the Academy</label>
+      <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="hq" name="q" type="search" placeholder="Search: RSI, doji, wallet..." autocomplete="off" spellcheck="false" aria-controls="hq-list" aria-expanded="false" aria-autocomplete="list" role="combobox">
+      <kbd aria-hidden="true">/</kbd>
+      <div class="suggest" id="hq-list" role="listbox" aria-label="Search suggestions" hidden></div>
+    </form>
+    <a class="header-search-btn" href="/search/" aria-label="Search"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false">
+      <span class="sr-only">Menu</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<article class="article">
+  <header class="article-hero">
+    <div class="wrap">
+      
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/foundations/">Foundations</a></li>
+    <li><a href="/foundations/blockchain/">Blockchain</a></li>
+    <li><span aria-current="page">Bridges</span></li>
+  </ol>
+</nav>
+
+      <p class="eyebrow">Foundations · Blockchain</p>
+      <h1>Bridges</h1>
+      <p class="lede">A blockchain bridge moves value between two chains, usually by locking an asset on one and issuing a matching token on the other. Bridges have been frequent targets of large exploits.</p>
+      <ul class="meta-chips"><li><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></li>
+        <li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>5 min read</span></li><li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Updated <time datetime="2026-11-21">21 November 2026</time></span></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="wrap article-grid">
+    <aside class="toc" aria-label="On this page">
+      <details open>
+        <summary>On this page</summary>
+        <ol>
+          <li><a href="#why-it-matters">Why it matters</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#other-designs">Other designs</a></li>
+          <li><a href="#the-trust-question">The trust question</a></li>
+          <li><a href="#going-deeper">Going deeper</a></li>
+          <li><a href="#what-it-does-not-mean">What it does NOT mean</a></li>
+          <li><a href="#common-misunderstandings">Common misunderstandings</a></li>
+          <li><a href="#risks-and-limits">Risks and limits</a></li>
+        </ol>
+      </details>
+    </aside>
+
+    <div class="prose">
+
+      <h2 id="why-it-matters">Why it matters</h2>
+<p>There are many <a class="gl" href="/glossary/blockchain/" title="A shared record of transactions grouped into blocks, where each block is cryptographically linked to the one before it.">blockchains</a>, and they cannot read each other. An asset on one chain does not exist on another. Bridges are the tools that connect them, and they are used whenever someone moves funds to a <a class="gl" href="/glossary/layer-2/" title="A network built on top of a base blockchain that processes transactions off the main chain while relying on it for security.">Layer 2</a> or to a different network. They also hold large pools of locked assets behind complex code, which has made them one of the most heavily attacked parts of crypto.</p>
+<h2 id="how-it-works">How it works</h2>
+<p>A blockchain only knows its own ledger. Chain B has no built-in way to see that something happened on Chain A. A <strong>bridge</strong> is a system that carries that information across and acts on it.</p>
+<p>No coin physically travels. The most common design is <strong>lock and mint</strong>.</p>
+<figure class="viz viz--flow" data-animate><div class="viz-title">Lock and mint: moving 10 coins from Chain A to Chain B</div><div class="viz-canvas"><ol class="dg-flow dg-flow--row" style="--n:4"><li class="dg-step t-neutral" style="--i:0"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><span class="dg-step-body"><strong>Deposit</strong><span>The user sends 10 coins to the bridge contract on Chain A.</span></span></li><li class="dg-step t-warn" style="--i:1"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg></span><span class="dg-step-body"><strong>Lock</strong><span>The contract holds the 10 coins.</span></span></li><li class="dg-step t-info" style="--i:2"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.600-7 10-7 10 7 10 7-3.600 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><span class="dg-step-body"><strong>Verify</strong><span>The bridge's verifiers confirm the deposit to Chain B.</span></span></li><li class="dg-step t-bull" style="--i:3"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><ellipse cx="9" cy="7" rx="6" ry="3"/><path d="M3 7v5c0 1.7 2.7 3 6 3s6-1.3 6-3V7"/><path d="M9 15v2c0 1.7 2.7 3 6 3s6-1.3 6-3v-5c0-1.2-1.4-2.2-3.4-2.7"/></svg></span><span class="dg-step-body"><strong>Mint</strong><span>A contract on Chain B issues 10 wrapped tokens.</span></span></li></ol></div><figcaption>The original coins never leave Chain A. The reverse trip burns the wrapped tokens and releases the locked coins.</figcaption></figure>
+<ol>
+<li>The user deposits an asset into a <a href="/foundations/blockchain/smart-contracts/">smart contract</a> on the source chain, where it is locked.</li>
+<li>The bridge’s verifiers observe the deposit and report it to the destination chain.</li>
+<li>A contract on the destination chain creates, or mints, an equal amount of a <strong>wrapped token</strong>.</li>
+</ol>
+<p>The wrapped token is a <a href="/foundations/crypto/coins-and-tokens/">token</a> that represents the locked original. To go back, the user returns the wrapped tokens, which are destroyed (burned), and the bridge releases the originals.</p>
+<div class="callout callout--beginner"><p class="callout-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 8.500l5.500 3.500-5.500 3.500z"/></svg><span>In plain words</span></p>
+<p>A cloakroom takes your coat and hands you a numbered ticket. You can pass the ticket to a friend, and whoever holds it can collect the coat. The ticket is useful only while the coat is still hanging there and the attendant honours it. A wrapped token is the ticket. The bridge is the cloakroom.</p>
+</div>
+<h2 id="other-designs">Other designs</h2>
+<ul>
+<li><strong>Liquidity networks.</strong> Providers hold pools of the asset on each chain. The user pays in on one chain and is paid out from the pool on the other, for a fee. No wrapped token is created, but the size of the pools limits how much can move.</li>
+<li><strong>Native Layer 2 bridges.</strong> A <a class="gl" href="/glossary/rollup/" title="A type of layer 2 that executes transactions off the main chain and posts compressed data or proofs back to it in batches.">rollup</a>’s official bridge to its base chain, tied to the rollup’s own proofs. See <a href="/foundations/blockchain/layer-1-and-layer-2/">Layer 1 and Layer 2</a>.</li>
+</ul>
+<h2 id="the-trust-question">The trust question</h2>
+<figure class="viz viz--stack" data-animate><div class="viz-title">Who confirms that a deposit happened?</div><div class="viz-canvas"><div class="dg-stack"><div class="dg-layer t-warn" style="--i:0"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 10l9-6 9 6"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8"/><path d="M3 21h18"/></svg></span><div><strong>A single custodian</strong><span>One company holds the assets and issues the tokens. Trust: that company.</span></div></div><div class="dg-layer t-warn" style="--i:1"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.5"/><path d="M2 21a7 7 0 0 1 14 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.5a7 7 0 0 1 4 6.5"/></svg></span><div><strong>A committee of signers</strong><span>A set number of key-holders must agree. Trust: that most of them are honest and their keys are safe.</span></div></div><div class="dg-layer t-info" style="--i:2"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h5"/></svg></span><div><strong>An on-chain light client</strong><span>A contract checks the other chain's consensus directly. Trust: the code and both chains.</span></div></div><div class="dg-layer t-info" style="--i:3"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12.5l9 5 9-5M3 17l9 5 9-5"/></svg></span><div><strong>A rollup's own bridge</strong><span>Secured by the proofs the Layer 2 posts to its Layer 1. Trust: the proof system and its upgrade keys.</span></div></div></div></div><figcaption>Designs differ mainly in what a user has to trust. Listed roughly from most to least reliance on people.</figcaption></figure>
+<p>Every bridge must answer one question: who is believed when they say a deposit happened on the other chain. If that party can be fooled, corrupted or hacked, the bridge can be made to release or mint assets that nobody deposited.</p>
+<p>This is why bridges are harder to secure than applications that live on one chain. A bridge depends on the security of both chains, on its own contracts on each, and on whatever stands in between.</p>
+<h2 id="going-deeper">Going deeper</h2>
+<p><strong>Why bridges attract attackers.</strong> A bridge concentrates value. All the assets that users have moved across sit in one or a few contracts. Bridges have been among the largest sources of losses in crypto, with single incidents reported in the hundreds of millions of dollars. Causes have included bugs in contract code, flaws in how messages are verified, and theft of the keys held by a committee of signers.</p>
+<p><strong>What a wrapped token is worth.</strong> A wrapped token’s value comes from the ability to redeem it for the original. If the locked assets are stolen, the wrapped tokens on the other chain are left partly or wholly unbacked. Holders are affected even if they never used the bridge themselves and simply received the wrapped token later.</p>
+<figure class="viz viz--bars" data-animate><div class="viz-title">Backing of 1,000 hypothetical wrapped tokens</div><div class="viz-canvas"><div class="dg-bars" role="list"><div class="dg-bar t-bull" role="listitem" style="--i:0"><div class="dg-bar-head"><span class="dg-bar-label">Before: 1,000 coins locked</span><span class="dg-bar-value">100%</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:100%"></span></div></div><div class="dg-bar t-bear" role="listitem" style="--i:1"><div class="dg-bar-head"><span class="dg-bar-label">After an exploit removes 600</span><span class="dg-bar-value">40%</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:40%"></span></div><p class="dg-bar-note">400 locked coins behind 1,000 wrapped tokens.</p></div></div></div><figcaption>A wrapped token is a claim on the locked asset. If the locked asset goes, the claim remains and the backing does not.</figcaption></figure>
+<p><strong>Several versions of “the same” asset.</strong> Different bridges issue different wrapped tokens for the same original. They share a name and are not interchangeable: each is a claim on a different pool of locked assets.</p>
+<p><strong>Timing.</strong> A bridge has to wait until the deposit is unlikely to be reversed on the source chain, so transfer times depend on <a href="/foundations/blockchain/finality-and-throughput/">finality</a>.</p>
+<p><strong>Approvals and fake sites.</strong> Using a bridge normally requires granting it a <a href="/foundations/wallets-security/token-approvals/">token approval</a>. Fraudulent sites that imitate well-known bridges are a common way of obtaining such approvals.</p>
+<div class="example"><p class="example-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.600-7 10-7 10 7 10 7-3.600 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>A wrapped token after an exploit</span><em>Hypothetical illustration</em></p>
+<p>Hypothetical numbers. A bridge holds 1,000 coins locked on Chain A. Against them, 1,000 wrapped tokens circulate on Chain B.</p>
+<ul>
+<li>Backing before: 1,000 / 1,000 = 100%.</li>
+</ul>
+<p>An attacker finds a flaw in the bridge’s verification and withdraws 600 of the locked coins without returning any wrapped tokens.</p>
+<ul>
+<li>Locked coins remaining: 1,000 minus 600 = 400.</li>
+<li>Wrapped tokens still circulating: 1,000.</li>
+<li>Backing after: 400 / 1,000 = 40%.</li>
+</ul>
+<p>If redemptions were shared evenly, each wrapped token would now redeem for 0.4 of a coin. In practice a bridge in this state is usually paused, or the first 400 tokens returned receive a full coin each and the remaining 600 receive nothing. A person who holds 50 wrapped tokens on Chain B, bought on an exchange and never bridged, holds a claim with the same shortfall.</p>
+</div>
+<div class="callout callout--risk"><p class="callout-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></svg><span>A bridge adds a layer of risk to every asset that crosses it</span></p>
+<p>A bridged asset depends on the original chain, the destination chain and the bridge. A failure in any of the three can leave the wrapped token worth less than the original, or nothing. Past bridge exploits have been large and the stolen assets have often not been recovered.</p>
+</div>
+<section class="notmean" aria-labelledby="what-it-does-not-mean"><h2 id="what-it-does-not-mean"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg><span>What it does NOT mean</span></h2>
+<ul>
+<li><strong>Bridging does not move a coin from one chain to another.</strong> It locks or destroys value in one place and issues a representation in another.</li>
+<li><strong>A wrapped token is not the original asset.</strong> It is a claim that depends on the bridge.</li>
+<li><strong>The same name does not mean the same token.</strong> Wrapped versions from different bridges are separate assets.</li>
+<li><strong>A widely used bridge is not a safe one.</strong> Large, well-known bridges have been exploited.</li>
+<li><strong>Fast does not mean final.</strong> A quick transfer may rely on a third party fronting the funds.</li>
+</ul>
+</section>
+<h2 id="common-misunderstandings">Common misunderstandings</h2>
+<div class="mistakes">
+<ol>
+<li><strong>Treating a bridged asset as identical to the native one.</strong> It carries an extra dependency for as long as it is held.</li>
+<li><strong>Ignoring which bridge issued a token.</strong> Two wrapped versions of one asset can have very different backing.</li>
+<li><strong>Following a link to a bridge.</strong> Imitation sites are common, and a signed approval cannot be recalled after it has been used.</li>
+<li><strong>Forgetting the fee asset on the other side.</strong> Arriving on a new chain with no native coin leaves tokens that cannot be moved.</li>
+</ol>
+</div>
+<h2 id="risks-and-limits">Risks and limits</h2>
+<ul>
+<li>Contract bugs or verification flaws can let an attacker drain locked assets.</li>
+<li>Keys held by a bridge’s signers can be stolen or misused.</li>
+<li>Wrapped tokens can lose their backing through no action of the holder.</li>
+<li>Bridges can be paused, leaving assets temporarily stuck.</li>
+<li>Transfers are irreversible, and mistakes in network or address are usually permanent.</li>
+</ul>
+<div class="takeaway"><p class="takeaway-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg><span>Key takeaway</span></p>
+<p>A bridge lets value appear on another chain by locking it in one place and issuing a claim on it elsewhere. That claim is only as sound as the bridge that stands behind it, and bridges have a long record of costly failures.</p>
+</div>
+
+      <section class="sources" aria-labelledby="sources">
+        <h2 id="sources">Sources and further reading</h2>
+        <ul>
+          <li><a class="ext" href="https://ethereum.org/en/developers/docs/bridges/" rel="noopener noreferrer" target="_blank">Bridges<span class="sr-only"> (opens in a new tab)</span></a>, ethereum.org. Explains trusted and trustless bridges and their risks, including that bridges account for the top three biggest hacks in DeFi</li>
+          <li><cite>Mastering Ethereum</cite>, Andreas M. Antonopoulos and Gavin Wood. Chapters on tokens and smart-contract security</li>
+          <li><a class="ext" href="https://home.treasury.gov/system/files/136/DeFi-Risk-Full-Review.pdf" rel="noopener noreferrer" target="_blank">Illicit Finance Risk Assessment of Decentralized Finance<span class="sr-only"> (opens in a new tab)</span></a>, U.S. Department of the Treasury (2023). Defines cross-chain bridges and notes that they are attractive targets for hackers because they often hold funds in one central place</li>
+        </ul>
+      </section>
+
+      <aside class="edu-note" aria-label="Educational notice">
+        <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+        <p><strong>Educational content only.</strong> This page explains a concept. It is not financial advice and not a recommendation to buy, sell or hold anything. <a href="/educational-disclaimer/">Full disclaimer</a>. Last updated <time datetime="2026-11-21">21 November 2026</time>.</p>
+      </aside>
+    </div>
+  </div>
+  <section class="related band" aria-labelledby="related">
+    <div class="wrap">
+      <h2 id="related">Related topics</h2>
+      <div class="card-grid">
+<a class="card topic-card" href="/foundations/blockchain/layer-1-and-layer-2/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12.5l9 5 9-5M3 17l9 5 9-5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Blockchain</span>
+    <span class="card-title">Layer 1 &amp; Layer 2</span>
+    <span class="card-text">A Layer 1 is a base blockchain that secures and settles transactions itself. A Layer 2 processes transactions off that base chain and settles the results to it, to increase capacity.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/exchanges-dex-defi/smart-contract-risk/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Exchanges, DEX &amp; DeFi</span>
+    <span class="card-title">Smart Contract Risk</span>
+    <span class="card-text">Smart contract risk is the chance that the code holding funds in a blockchain application fails, is exploited or is changed, causing a loss that usually cannot be reversed.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/exchanges-dex-defi/counterparty-risk/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Exchanges, DEX &amp; DeFi</span>
+    <span class="card-title">Counterparty Risk</span>
+    <span class="card-text">Counterparty risk is the risk that the other party to an arrangement, such as an exchange, a lender or a token issuer, cannot or will not do what it promised.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/crypto/coins-and-tokens/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><ellipse cx="9" cy="7" rx="6" ry="3"/><path d="M3 7v5c0 1.7 2.7 3 6 3s6-1.3 6-3V7"/><path d="M9 15v2c0 1.7 2.7 3 6 3s6-1.3 6-3v-5c0-1.2-1.4-2.2-3.4-2.7"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Crypto Basics</span>
+    <span class="card-title">Coins &amp; Tokens</span>
+    <span class="card-text">A coin is the native asset of its own blockchain, while a token is issued by a smart contract that runs on an existing blockchain and relies on that chain&#39;s coin for fees.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/blockchain/finality-and-throughput/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Blockchain</span>
+    <span class="card-title">Finality &amp; Throughput</span>
+    <span class="card-text">Finality is the point after which a transaction is practically irreversible. Throughput is how many transactions a chain processes per second. Both trade off against decentralisation and security.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--advanced"><i aria-hidden="true"></i>Advanced</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/wallets-security/token-approvals/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Wallets &amp; Security</span>
+    <span class="card-title">Token Approvals</span>
+    <span class="card-text">A token approval gives a smart contract standing permission to spend a specific token from a wallet, often an unlimited amount, and it stays in force until it is revoked.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager wrap" aria-label="More in this shelf"><a class="pager-link pager-prev" href="/foundations/blockchain/layer-1-and-layer-2/"><span><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg>Previous</span><strong>Layer 1 &amp; Layer 2</strong></a>
+    <a class="pager-up" href="/foundations/blockchain/">Back to Blockchain</a><a class="pager-link pager-next" href="/foundations/blockchain/finality-and-throughput/"><span>Next<svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span><strong>Finality &amp; Throughput</strong></a>
+  </nav>
+</article>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Bridges","description":"A blockchain bridge moves value between two chains, usually by locking an asset on one and issuing a matching token on the other. Bridges have been frequent targets of large exploits.","inLanguage":"en","dateModified":"2026-11-21","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"edgeTR Academy"}}]}
+</script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR" loading="lazy">
+        <p>Learn the market. Understand the tools. Make your own decisions.</p>
+        <p class="footer-family">Part of <strong>Ethos Empire</strong></p>
+        <ul class="trust" aria-label="What edgeTR Academy is"><li>Free to read</li><li>No login</li><li>No paywall</li><li>Educational reference</li>
+        </ul>
+      </div>
+      <nav aria-label="Learn and browse">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="/learn/">Learn: Chapters 1-10</a></li>
+          <li><a href="/library/">Library</a></li>
+          <li><a href="/patterns/">Pattern gallery</a></li>
+          <li><a href="/foundations/">Foundations</a></li>
+          <li><a href="/compare/">Compare</a></li>
+          <li><a href="/glossary/">A-Z Glossary</a></li>
+          <li><a href="/watch/">Watch in 60 Seconds</a></li>
+          <li><a href="/search/">Search</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Library shelves">
+        <h2>Library</h2>
+        <ul>
+          <li><a href="/library/candlesticks/">Candlesticks</a></li>
+          <li><a href="/library/chart-patterns/">Chart Patterns</a></li>
+          <li><a href="/library/indicators/">Indicators</a></li>
+          <li><a href="/library/market-structure/">Market Structure</a></li>
+          <li><a href="/library/support-resistance/">Support &amp; Resistance</a></li>
+          <li><a href="/library/bull-bear-long-short/">Bull, Bear, Long &amp; Short</a></li>
+          <li><a href="/library/trading-mechanics/">Trading Mechanics</a></li>
+          <li><a href="/library/">All shelves</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Foundations shelves">
+        <h2>Foundations</h2>
+        <ul>
+          <li><a href="/foundations/markets-finance/">Markets &amp; Finance</a></li>
+          <li><a href="/foundations/crypto/">Crypto Basics</a></li>
+          <li><a href="/foundations/bitcoin/">Bitcoin Knowledge Center</a></li>
+          <li><a href="/foundations/blockchain/">Blockchain</a></li>
+          <li><a href="/foundations/wallets-security/">Wallets &amp; Security</a></li>
+          <li><a href="/foundations/exchanges-dex-defi/">Exchanges, DEX &amp; DeFi</a></li>
+          <li><a href="/foundations/derivatives-perpetuals/">Derivatives &amp; Perpetuals</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="About">
+        <h2>About</h2>
+        <ul>
+          <li><a href="/about/">About edgeTR Academy</a></li>
+          <li><a href="/educational-disclaimer/">Educational disclaimer</a></li>
+          <li><a href="/terms/">Terms of use</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/contact/">Contact and support</a></li>
+          <li><a href="/about/#editorial-standards">Editorial standards</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-disclaimer"><strong>Educational only.</strong> edgeTR Academy provides educational information only. It does not provide financial, investment, legal or tax advice, does not recommend specific assets or trades, and does not guarantee outcomes. Users are responsible for their own research and decisions. <a href="/educational-disclaimer/">Read the full disclaimer</a>.</p>
+    <p class="footer-legal">&copy; 2026 edgeTR Academy, part of Ethos Empire. Free to read. No account needed. <a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/contact/">Contact</a></p>
+  </div>
+</footer>
+<script src="/js/search-core.js" defer></script>
+<script src="/js/site.js" defer></script>
+</body>
+</html>

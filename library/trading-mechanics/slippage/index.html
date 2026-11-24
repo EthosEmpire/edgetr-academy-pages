@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en" data-base="/">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slippage | edgeTR Academy</title>
+<meta name="description" content="Slippage is the difference between the price a trader expected when sending an order and the price at which the order was actually filled.">
+<meta name="theme-color" content="#070b12">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://edgetr.com/library/trading-mechanics/slippage/">
+<meta property="og:url" content="https://edgetr.com/library/trading-mechanics/slippage/">
+<meta property="og:image" content="https://edgetr.com/img/brand/og-default.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="edgeTR Academy">
+<meta property="og:title" content="Slippage">
+<meta property="og:description" content="Slippage is the difference between the price a trader expected when sending an order and the price at which the order was actually filled.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.edgetrSearch)document.documentElement.classList.remove("js")},3000)</script>
+</head>
+<body class="page-article">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="edgeTR Academy home">
+      <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR">
+      <span class="brand-sub">Academy</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="/learn/">Learn</a></li>
+        <li><a href="/library/" aria-current="true">Library</a></li>
+        <li><a href="/foundations/">Foundations</a></li>
+        <li><a href="/compare/">Compare</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+        <li class="nav-search-link"><a href="/search/">Search</a></li>
+      </ul>
+    </nav>
+    <form class="header-search" action="/search/" method="get" role="search" aria-label="Site search" data-suggest>
+      <label class="sr-only" for="hq">Search the Academy</label>
+      <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="hq" name="q" type="search" placeholder="Search: RSI, doji, wallet..." autocomplete="off" spellcheck="false" aria-controls="hq-list" aria-expanded="false" aria-autocomplete="list" role="combobox">
+      <kbd aria-hidden="true">/</kbd>
+      <div class="suggest" id="hq-list" role="listbox" aria-label="Search suggestions" hidden></div>
+    </form>
+    <a class="header-search-btn" href="/search/" aria-label="Search"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false">
+      <span class="sr-only">Menu</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<article class="article">
+  <header class="article-hero">
+    <div class="wrap">
+      
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/library/">Library</a></li>
+    <li><a href="/library/trading-mechanics/">Trading Mechanics</a></li>
+    <li><span aria-current="page">Slippage</span></li>
+  </ol>
+</nav>
+
+      <p class="eyebrow">Library · Trading Mechanics</p>
+      <h1>Slippage</h1>
+      <p class="lede">Slippage is the difference between the price a trader expected when sending an order and the price at which the order was actually filled.</p>
+      <ul class="meta-chips"><li><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></li>
+        <li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>4 min read</span></li><li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Updated <time datetime="2026-11-21">21 November 2026</time></span></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="wrap article-grid">
+    <aside class="toc" aria-label="On this page">
+      <details open>
+        <summary>On this page</summary>
+        <ol>
+          <li><a href="#why-it-matters">Why it matters</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#where-it-comes-from">Where it comes from</a></li>
+          <li><a href="#going-deeper">Going deeper</a></li>
+          <li><a href="#what-it-does-not-mean">What it does NOT mean</a></li>
+          <li><a href="#common-mistakes">Common mistakes</a></li>
+          <li><a href="#risks-and-limitations">Risks and limitations</a></li>
+        </ol>
+      </details>
+    </aside>
+
+    <div class="prose">
+
+      <h2 id="why-it-matters">Why it matters</h2>
+<p>The price on screen when an order is sent is an expectation. The price in the trade confirmation is the result. Slippage is the gap between them, and it is a real cost that never appears on a fee schedule.</p>
+<p>It matters most at the moments traders care most about: large orders, fast markets and <a class="gl" href="/glossary/stop-order/" title="An order that stays inactive until price reaches a chosen trigger level, then becomes a market or limit order.">stop orders</a> being triggered.</p>
+<h2 id="how-it-works">How it works</h2>
+<figure class="viz viz--bars" data-animate><div class="viz-title">Hypothetical slippage on the same order in three markets</div><div class="viz-canvas"><div class="dg-bars" role="list"><div class="dg-bar t-info" role="listitem" style="--i:0"><div class="dg-bar-head"><span class="dg-bar-label">Deep market</span><span class="dg-bar-value">0.05%</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:2%"></span></div><p class="dg-bar-note">Plenty of orders waiting near the price.</p></div><div class="dg-bar t-warn" role="listitem" style="--i:1"><div class="dg-bar-head"><span class="dg-bar-label">Thin market</span><span class="dg-bar-value">0.6%</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:24%"></span></div><p class="dg-bar-note">The order reaches several price levels.</p></div><div class="dg-bar t-bear" role="listitem" style="--i:2"><div class="dg-bar-head"><span class="dg-bar-label">Thin market during news</span><span class="dg-bar-value">2.5%</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:100%"></span></div><p class="dg-bar-note">Orders have been pulled and price is moving while the order travels.</p></div></div></div><figcaption>The order is identical in each row. Only the market it meets is different.</figcaption></figure>
+<p>Slippage arises with any order that accepts the market’s price instead of naming its own. That means <a href="/library/trading-mechanics/market-orders/">market orders</a> and anything that turns into one, including a triggered <a href="/library/trading-mechanics/stop-orders/">stop order</a> and a forced <a class="gl" href="/glossary/liquidation/" title="The forced closing of a leveraged position by the exchange or protocol when its margin no longer covers its losses.">liquidation</a>.</p>
+<div class="formula"><code>Slippage = fill price - expected price          Slippage % = slippage / expected price x 100</code><span>For a buy, a higher fill is unfavourable. For a sell, a lower fill is unfavourable.</span></div>
+<div class="callout callout--beginner"><p class="callout-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 8.500l5.500 3.500-5.500 3.500z"/></svg><span>In plain words</span></p>
+<p>You see fuel advertised at one price from the motorway and take the exit. By the time you reach the pump, the cheap pump has a queue and the free one charges more. You still fill the tank, at a slightly different price from the one that made you turn off.</p>
+</div>
+<h2 id="where-it-comes-from">Where it comes from</h2>
+<figure class="viz viz--stack" data-animate><div class="viz-title">Three sources of slippage</div><div class="viz-canvas"><div class="dg-stack"><div class="dg-layer t-info" style="--i:0"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12.5l9 5 9-5M3 17l9 5 9-5"/></svg></span><div><strong>Size against depth</strong><span>The order is larger than the quantity waiting at the best price, so it fills across several levels.</span></div></div><div class="dg-layer t-warn" style="--i:1"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span><div><strong>Movement while the order travels</strong><span>The book changes between the moment of the click and the moment of matching.</span></div></div><div class="dg-layer t-bear" style="--i:2"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><div><strong>Jumps</strong><span>Price leaps over a level with no trading in between, as in a gap.</span></div></div></div></div></figure>
+<p><strong>Size against depth.</strong> An <a href="/library/trading-mechanics/order-book/">order book</a> holds a limited quantity at each price. An order bigger than the quantity at the best price continues into the next levels, and its average fill is worse than the first price. The part of slippage caused by the order itself is often called <strong><a class="gl" href="/glossary/price-impact/" title="The change in a market's or pool's price caused by a trade itself, which grows with the size of the trade relative to available liquidity.">price impact</a></strong>.</p>
+<p><strong>Movement while the order travels.</strong> Other traders’ orders reach the exchange in the same instant. The best price can be taken or cancelled before a new order arrives.</p>
+<p><strong>Jumps.</strong> When price moves from one level to another with no trades in between, an order that triggers in the jump fills on the far side of it.</p>
+<div class="table-wrap" data-scroll-label="Table"><table><thead>
+<tr>
+<th>Condition</th>
+<th>Typical effect on slippage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>High <a href="/foundations/markets-finance/liquidity/">liquidity</a>, small order</td>
+<td>Very small</td>
+</tr>
+<tr>
+<td>Large order relative to depth</td>
+<td>Larger, even in a calm market</td>
+</tr>
+<tr>
+<td>High <a href="/foundations/markets-finance/volatility/">volatility</a>, news</td>
+<td>Larger, and less predictable</td>
+</tr>
+<tr>
+<td>Quiet hours, small or new markets</td>
+<td>Larger</td>
+</tr>
+</tbody>
+</table></div><h2 id="going-deeper">Going deeper</h2>
+<h3 id="slippage-and-the-spread-are-different-costs">Slippage and the spread are different costs</h3>
+<p>The <a href="/library/trading-mechanics/bid-ask-spread/">spread</a> is the known gap between the best bid and best ask before the order is sent. Slippage is whatever happens beyond that. A market buy expected at the best ask of 100.10 that fills at 100.10 paid the spread and had no slippage.</p>
+<h3 id="it-can-go-either-way">It can go either way</h3>
+<p>Slippage is usually discussed as a cost, but a fill can also be better than expected. This is called <strong>positive slippage</strong> or price improvement.</p>
+<h3 id="limit-orders-trade-slippage-for-something-else">Limit orders trade slippage for something else</h3>
+<p>A <a href="/library/trading-mechanics/limit-orders/">limit order</a> cannot fill at a worse price than its limit, so it has no unfavourable slippage. The cost is moved, not removed: the order may not fill, and the market may leave it behind.</p>
+<h3 id="slippage-tolerance-on-decentralized-exchanges">Slippage tolerance on decentralized exchanges</h3>
+<p>On a <a class="gl" href="/glossary/dex/" title="A decentralized exchange: a set of smart contracts that lets users trade tokens directly from their own wallets.">decentralized exchange</a> there is usually no <a class="gl" href="/glossary/order-book/" title="The live list of all open buy and sell orders for a market, arranged by price.">order book</a>. A swap is priced by a <a class="gl" href="/glossary/liquidity-pool/" title="A smart contract holding reserves of two or more tokens that traders swap against on a decentralized exchange.">liquidity pool</a>, and the price can change between signing a transaction and its confirmation. Wallets therefore ask for a <strong>slippage tolerance</strong>: the largest unfavourable change the trader accepts. If the price moves further than that, the swap fails instead of executing. See <a href="/foundations/exchanges-dex-defi/swaps-and-routing/">swaps and routing</a>.</p>
+<div class="example"><p class="example-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.600-7 10-7 10 7 10 7-3.600 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>Two hypothetical cases of slippage</span><em>Hypothetical illustration</em></p>
+<p><strong>A large market buy.</strong> The best ask is 100.10 with 180 units waiting. Behind it are 260 units at 100.20 and 420 at 100.30. A trader sends a market buy for 500 units expecting about 100.10.</p>
+<p>The fill is 180 at 100.10, 260 at 100.20 and 60 at 100.30. The average is 100.176. Slippage is 0.076 per unit, about 0.08%.</p>
+<p><strong>A stop in a fast market.</strong> A sell stop has its trigger at 95. Price drops quickly, the stop triggers, and the resulting <a class="gl" href="/glossary/market-order/" title="An order to buy or sell immediately at the best prices currently available.">market order</a> fills at 94.50. Slippage is 0.50 per unit, about 0.53% of the trigger price.</p>
+<p>Neither case involved an error. Both orders did what their type specifies.</p>
+</div>
+<section class="notmean" aria-labelledby="what-it-does-not-mean"><h2 id="what-it-does-not-mean"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg><span>What it does NOT mean</span></h2>
+<ul>
+<li><strong>Slippage does not mean the exchange cheated.</strong> It is the ordinary result of a market-type order meeting a limited quantity of waiting orders.</li>
+<li><strong>Zero slippage on small orders does not carry over to large ones.</strong> Slippage grows with size relative to depth.</li>
+<li><strong>A slippage tolerance setting is not a fee.</strong> It is a limit on how far the price may move before a swap is cancelled.</li>
+<li><strong>Past slippage in a market is not a measure of future slippage.</strong> Depth can disappear within seconds when conditions change.</li>
+</ul>
+</section>
+<h2 id="common-mistakes">Common mistakes</h2>
+<div class="mistakes">
+<ol>
+<li><strong>Planning with the screen price.</strong> Entry and exit calculations based on the last price leave out the spread and slippage on both legs.</li>
+<li><strong>Assuming a stop fills at its trigger.</strong> Stops release market orders at the moments when slippage is largest.</li>
+<li><strong>Setting a very wide tolerance on a swap.</strong> A wide tolerance accepts a correspondingly poor price if the market moves, or if another party exploits the allowance.</li>
+</ol>
+</div>
+<h2 id="risks-and-limitations">Risks and limitations</h2>
+<ul>
+<li>Slippage is largest in volatile, illiquid and news-driven conditions, which is when forced exits usually happen.</li>
+<li>It compounds with leverage: a small percentage of the position can be a large percentage of the margin behind it.</li>
+<li>It cannot be known in advance. Estimates shown before an order is sent are based on a book that may change.</li>
+<li>Avoiding it with <a class="gl" href="/glossary/limit-order/" title="An order to buy or sell at a specified price or better, which waits in the order book until it can be filled.">limit orders</a> introduces the separate risk of not being filled.</li>
+</ul>
+<div class="takeaway"><p class="takeaway-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg><span>Key takeaway</span></p>
+<p>Slippage is the difference between the expected price and the actual fill. It comes from order size, speed and jumps, and it is greatest when the market is thin or moving fast.</p>
+</div>
+
+      <section class="sources" aria-labelledby="sources">
+        <h2 id="sources">Sources and further reading</h2>
+        <ul>
+          <li><cite>Trading and Exchanges: Market Microstructure for Practitioners</cite>, Larry Harris (2003). Transaction costs, price impact and liquidity</li>
+          <li><a class="ext" href="https://www.finra.org/investors/investing/investment-products/stocks/order-types" rel="noopener noreferrer" target="_blank">Order Types<span class="sr-only"> (opens in a new tab)</span></a>, FINRA. The price quoted may not match the price paid, especially in fast-moving markets</li>
+        </ul>
+      </section>
+
+      <aside class="edu-note" aria-label="Educational notice">
+        <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+        <p><strong>Educational content only.</strong> This page explains a concept. It is not financial advice and not a recommendation to buy, sell or hold anything. <a href="/educational-disclaimer/">Full disclaimer</a>. Last updated <time datetime="2026-11-21">21 November 2026</time>.</p>
+      </aside>
+    </div>
+  </div>
+  <section class="related band" aria-labelledby="related">
+    <div class="wrap">
+      <h2 id="related">Related topics</h2>
+      <div class="card-grid">
+<a class="card topic-card" href="/library/trading-mechanics/order-book/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.5M7 16.5h.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Trading Mechanics</span>
+    <span class="card-title">Order Book</span>
+    <span class="card-text">An order book is the live list of all waiting buy and sell orders for one market, sorted by price, from which the exchange matches trades.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/library/trading-mechanics/market-orders/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Trading Mechanics</span>
+    <span class="card-title">Market Orders</span>
+    <span class="card-text">A market order is an instruction to buy or sell immediately at the best prices currently available, accepting whatever those prices turn out to be.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/library/trading-mechanics/stop-orders/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Trading Mechanics</span>
+    <span class="card-title">Stop Orders</span>
+    <span class="card-text">A stop order stays dormant until the market reaches a trigger price, then becomes a market order (stop-market) or a limit order (stop-limit).</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/library/trading-mechanics/bid-ask-spread/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 4L3 8l4 4"/><path d="M3 8h14"/><path d="M17 12l4 4-4 4"/><path d="M21 16H7"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Trading Mechanics</span>
+    <span class="card-title">Bid, Ask &amp; Spread</span>
+    <span class="card-text">The bid is the highest price a buyer is offering, the ask is the lowest price a seller will accept, and the spread is the gap between the two.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/markets-finance/liquidity/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 16c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 20c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Markets &amp; Finance</span>
+    <span class="card-title">Liquidity</span>
+    <span class="card-text">Liquidity is how easily an asset can be bought or sold, in the size you want, without the trade itself moving the price.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/exchanges-dex-defi/swaps-and-routing/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 4L3 8l4 4"/><path d="M3 8h14"/><path d="M17 12l4 4-4 4"/><path d="M21 16H7"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Exchanges, DEX &amp; DeFi</span>
+    <span class="card-title">Swaps &amp; Routing</span>
+    <span class="card-text">A swap exchanges one token for another through liquidity pools. Routing chooses which pools to use, and slippage tolerance sets the worst result the trader accepts before the swap reverts.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager wrap" aria-label="More in this shelf"><a class="pager-link pager-prev" href="/library/trading-mechanics/stop-orders/"><span><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg>Previous</span><strong>Stop Orders</strong></a>
+    <a class="pager-up" href="/library/trading-mechanics/">Back to Trading Mechanics</a><a class="pager-link pager-next" href="/library/trading-mechanics/trading-fees/"><span>Next<svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span><strong>Trading Fees: Maker &amp; Taker</strong></a>
+  </nav>
+</article>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Slippage","description":"Slippage is the difference between the price a trader expected when sending an order and the price at which the order was actually filled.","inLanguage":"en","dateModified":"2026-11-21","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"edgeTR Academy"}}]}
+</script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR" loading="lazy">
+        <p>Learn the market. Understand the tools. Make your own decisions.</p>
+        <p class="footer-family">Part of <strong>Ethos Empire</strong></p>
+        <ul class="trust" aria-label="What edgeTR Academy is"><li>Free to read</li><li>No login</li><li>No paywall</li><li>Educational reference</li>
+        </ul>
+      </div>
+      <nav aria-label="Learn and browse">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="/learn/">Learn: Chapters 1-10</a></li>
+          <li><a href="/library/">Library</a></li>
+          <li><a href="/patterns/">Pattern gallery</a></li>
+          <li><a href="/foundations/">Foundations</a></li>
+          <li><a href="/compare/">Compare</a></li>
+          <li><a href="/glossary/">A-Z Glossary</a></li>
+          <li><a href="/watch/">Watch in 60 Seconds</a></li>
+          <li><a href="/search/">Search</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Library shelves">
+        <h2>Library</h2>
+        <ul>
+          <li><a href="/library/candlesticks/">Candlesticks</a></li>
+          <li><a href="/library/chart-patterns/">Chart Patterns</a></li>
+          <li><a href="/library/indicators/">Indicators</a></li>
+          <li><a href="/library/market-structure/">Market Structure</a></li>
+          <li><a href="/library/support-resistance/">Support &amp; Resistance</a></li>
+          <li><a href="/library/bull-bear-long-short/">Bull, Bear, Long &amp; Short</a></li>
+          <li><a href="/library/trading-mechanics/">Trading Mechanics</a></li>
+          <li><a href="/library/">All shelves</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Foundations shelves">
+        <h2>Foundations</h2>
+        <ul>
+          <li><a href="/foundations/markets-finance/">Markets &amp; Finance</a></li>
+          <li><a href="/foundations/crypto/">Crypto Basics</a></li>
+          <li><a href="/foundations/bitcoin/">Bitcoin Knowledge Center</a></li>
+          <li><a href="/foundations/blockchain/">Blockchain</a></li>
+          <li><a href="/foundations/wallets-security/">Wallets &amp; Security</a></li>
+          <li><a href="/foundations/exchanges-dex-defi/">Exchanges, DEX &amp; DeFi</a></li>
+          <li><a href="/foundations/derivatives-perpetuals/">Derivatives &amp; Perpetuals</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="About">
+        <h2>About</h2>
+        <ul>
+          <li><a href="/about/">About edgeTR Academy</a></li>
+          <li><a href="/educational-disclaimer/">Educational disclaimer</a></li>
+          <li><a href="/terms/">Terms of use</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/contact/">Contact and support</a></li>
+          <li><a href="/about/#editorial-standards">Editorial standards</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-disclaimer"><strong>Educational only.</strong> edgeTR Academy provides educational information only. It does not provide financial, investment, legal or tax advice, does not recommend specific assets or trades, and does not guarantee outcomes. Users are responsible for their own research and decisions. <a href="/educational-disclaimer/">Read the full disclaimer</a>.</p>
+    <p class="footer-legal">&copy; 2026 edgeTR Academy, part of Ethos Empire. Free to read. No account needed. <a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/contact/">Contact</a></p>
+  </div>
+</footer>
+<script src="/js/search-core.js" defer></script>
+<script src="/js/site.js" defer></script>
+</body>
+</html>

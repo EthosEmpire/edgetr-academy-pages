@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en" data-base="/">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Price Scales: Log vs Linear | edgeTR Academy</title>
+<meta name="description" content="A linear price scale gives equal space to equal price changes, while a logarithmic scale gives equal space to equal percentage changes. The same data can look very different on each.">
+<meta name="theme-color" content="#070b12">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://edgetr.com/library/tradingview/price-scales-log-vs-linear/">
+<meta property="og:url" content="https://edgetr.com/library/tradingview/price-scales-log-vs-linear/">
+<meta property="og:image" content="https://edgetr.com/img/brand/og-default.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="edgeTR Academy">
+<meta property="og:title" content="Price Scales: Log vs Linear">
+<meta property="og:description" content="A linear price scale gives equal space to equal price changes, while a logarithmic scale gives equal space to equal percentage changes. The same data can look very different on each.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.edgetrSearch)document.documentElement.classList.remove("js")},3000)</script>
+</head>
+<body class="page-article">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="edgeTR Academy home">
+      <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR">
+      <span class="brand-sub">Academy</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="/learn/">Learn</a></li>
+        <li><a href="/library/" aria-current="true">Library</a></li>
+        <li><a href="/foundations/">Foundations</a></li>
+        <li><a href="/compare/">Compare</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+        <li class="nav-search-link"><a href="/search/">Search</a></li>
+      </ul>
+    </nav>
+    <form class="header-search" action="/search/" method="get" role="search" aria-label="Site search" data-suggest>
+      <label class="sr-only" for="hq">Search the Academy</label>
+      <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="hq" name="q" type="search" placeholder="Search: RSI, doji, wallet..." autocomplete="off" spellcheck="false" aria-controls="hq-list" aria-expanded="false" aria-autocomplete="list" role="combobox">
+      <kbd aria-hidden="true">/</kbd>
+      <div class="suggest" id="hq-list" role="listbox" aria-label="Search suggestions" hidden></div>
+    </form>
+    <a class="header-search-btn" href="/search/" aria-label="Search"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false">
+      <span class="sr-only">Menu</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<article class="article">
+  <header class="article-hero">
+    <div class="wrap">
+      
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/library/">Library</a></li>
+    <li><a href="/library/tradingview/">TradingView &amp; Chart Tools</a></li>
+    <li><span aria-current="page">Price Scales: Log vs Linear</span></li>
+  </ol>
+</nav>
+
+      <p class="eyebrow">Library · TradingView &amp; Chart Tools</p>
+      <h1>Price Scales: Log vs Linear</h1>
+      <p class="lede">A linear price scale gives equal space to equal price changes, while a logarithmic scale gives equal space to equal percentage changes. The same data can look very different on each.</p>
+      <ul class="meta-chips"><li><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></li>
+        <li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>5 min read</span></li><li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Updated <time datetime="2026-11-21">21 November 2026</time></span></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="wrap article-grid">
+    <aside class="toc" aria-label="On this page">
+      <details open>
+        <summary>On this page</summary>
+        <ol>
+          <li><a href="#why-it-matters">Why it matters</a></li>
+          <li><a href="#what-it-looks-like">What it looks like</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#how-to-read-it">How to read it</a></li>
+          <li><a href="#going-deeper">Going deeper</a></li>
+          <li><a href="#what-it-does-not-mean">What it does NOT mean</a></li>
+          <li><a href="#common-mistakes">Common mistakes</a></li>
+          <li><a href="#risks-and-limitations">Risks and limitations</a></li>
+        </ol>
+      </details>
+    </aside>
+
+    <div class="prose">
+
+      <h2 id="why-it-matters">Why it matters</h2>
+<p>The price axis looks like a neutral ruler. It is a setting, and it has two common modes. Switching between them can turn a chart that looks like a vertical wall into a steady slope, with no change to the data.</p>
+<p>This matters most for assets whose price has changed by large multiples, which is common in crypto. On such charts, the choice of scale decides which part of the history is visible at all, and where a drawn line sits.</p>
+<div class="callout callout--note"><p class="callout-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span>About the platform named here</span></p>
+<p>TradingView is used as the familiar example. edgeTR Academy is not affiliated with TradingView, and the same ideas apply to other charting tools.</p>
+</div>
+<h2 id="what-it-looks-like">What it looks like</h2>
+<figure class="viz viz--curve viz--wide" data-animate><div class="viz-title">A price that doubles every period, on a linear scale</div><div class="viz-scroll" data-scroll-label="A price that doubles every period, on a linear scale"><div class="viz-canvas"><svg class="vz vz-curve" viewBox="0 0 720 340" role="img" aria-label="Line chart on a linear axis: price goes 10, 20, 40, 80, 160, 320 over five periods. The line is almost flat at first and then bends steeply upward."><line class="vz-grid" x1="58" x2="698" y1="294" y2="294"/><text class="vz-t-axis" x="50" y="298" text-anchor="end">0</text><line class="vz-grid" x1="58" x2="698" y1="213.2" y2="213.2"/><text class="vz-t-axis" x="50" y="217.2" text-anchor="end">100</text><line class="vz-grid" x1="58" x2="698" y1="132.4" y2="132.4"/><text class="vz-t-axis" x="50" y="136.4" text-anchor="end">200</text><line class="vz-grid" x1="58" x2="698" y1="51.7" y2="51.7"/><text class="vz-t-axis" x="50" y="55.7" text-anchor="end">300</text><text class="vz-t-axis" x="58" y="312" text-anchor="middle">0</text><text class="vz-t-axis" x="186" y="312" text-anchor="middle">1</text><text class="vz-t-axis" x="314" y="312" text-anchor="middle">2</text><text class="vz-t-axis" x="442" y="312" text-anchor="middle">3</text><text class="vz-t-axis" x="570" y="312" text-anchor="middle">4</text><text class="vz-t-axis" x="698" y="312" text-anchor="middle">5</text><line x1="58" x2="698" y1="294" y2="294" stroke="var(--viz-border)"/><line x1="58" x2="58" y1="20" y2="294" stroke="var(--viz-border)"/><path class="vz-draw" pathLength="1" d="M58,285.9 L186,277.8 L314,261.7 L442,229.4 L570,164.8 L698,35.5" fill="none" stroke="var(--info)" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round"/><g class="vz-fade vz-late" style="--i:0"><circle cx="186" cy="277.8" r="5" fill="var(--viz-label-bg)" stroke="var(--info)" stroke-width="2.2"/><rect x="196" y="251.8" width="122.5" height="22" rx="6" fill="var(--viz-label-bg)" stroke="var(--viz-border)"/><text class="vz-t-sub" x="204" y="266.8" fill="var(--text)">10 to 20: +100%</text></g><g class="vz-fade vz-late" style="--i:1"><circle cx="698" cy="35.5" r="5" fill="var(--viz-label-bg)" stroke="var(--info)" stroke-width="2.2"/><rect x="551.3" y="20" width="136.7" height="22" rx="6" fill="var(--viz-label-bg)" stroke="var(--viz-border)"/><text class="vz-t-sub" x="559.3" y="35" fill="var(--text)">160 to 320: +100%</text></g><text class="vz-t-axis" x="378" y="332" text-anchor="middle">Period</text><text class="vz-t-axis" transform="translate(14 157) rotate(-90)" text-anchor="middle">Price (linear scale)</text></svg></div></div><figcaption>Hypothetical points. Every step is the same percentage gain, and the later steps take up almost all of the height.</figcaption></figure>
+<figure class="viz viz--curve viz--wide" data-animate><div class="viz-title">The same series on a logarithmic scale</div><div class="viz-scroll" data-scroll-label="The same series on a logarithmic scale"><div class="viz-canvas"><svg class="vz vz-curve" viewBox="0 0 720 340" role="img" aria-label="Line chart on a logarithmic axis: the same prices 10, 20, 40, 80, 160, 320 form a straight line, with equal vertical steps between each doubling."><line class="vz-grid" x1="58" x2="698" y1="294" y2="294"/><line class="vz-grid" x1="58" x2="698" y1="190.6" y2="190.6"/><line class="vz-grid" x1="58" x2="698" y1="87.2" y2="87.2"/><line x1="58" x2="698" y1="294" y2="294" stroke="var(--viz-border)"/><line x1="58" x2="58" y1="20" y2="294" stroke="var(--viz-border)"/><path class="vz-draw" pathLength="1" d="M58,294 L186,242.3 L314,190.6 L442,138.9 L570,87.2 L698,35.5" fill="none" stroke="var(--violet)" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round"/><g class="vz-fade vz-late" style="--i:0"><circle cx="58" cy="294" r="5" fill="var(--viz-label-bg)" stroke="var(--violet)" stroke-width="2.2"/><rect x="68" y="268" width="30.2" height="22" rx="6" fill="var(--viz-label-bg)" stroke="var(--viz-border)"/><text class="vz-t-sub" x="76" y="283" fill="var(--text)">10</text></g><g class="vz-fade vz-late" style="--i:1"><circle cx="186" cy="242.3" r="5" fill="var(--viz-label-bg)" stroke="var(--violet)" stroke-width="2.2"/><rect x="196" y="216.3" width="30.2" height="22" rx="6" fill="var(--viz-label-bg)" stroke="var(--viz-border)"/><text class="vz-t-sub" x="204" y="231.3" fill="var(--text)">20</text></g><g class="vz-fade vz-late" style="--i:2"><circle cx="314" cy="190.6" r="5" fill="var(--viz-label-bg)" stroke="var(--violet)" stroke-width="2.2"/><rect x="324" y="164.6" width="30.2" height="22" rx="6" fill="var(--viz-label-bg)" stroke="var(--viz-border)"/><text class="vz-t-sub" x="332" y="179.6" fill="var(--text)">40</text></g><g class="vz-fade vz-late" style="--i:3"><circle cx="442" cy="138.9" r="5" fill="var(--viz-label-bg)" stroke="var(--violet)" stroke-width="2.2"/><rect x="452" y="112.9" width="30.2" height="22" rx="6" fill="var(--viz-label-bg)" stroke="var(--viz-border)"/><text class="vz-t-sub" x="460" y="127.9" fill="var(--text)">80</text></g><g class="vz-fade vz-late" style="--i:4"><circle cx="570" cy="87.2" r="5" fill="var(--viz-label-bg)" stroke="var(--violet)" stroke-width="2.2"/><rect x="580" y="61.2" width="37.3" height="22" rx="6" fill="var(--viz-label-bg)" stroke="var(--viz-border)"/><text class="vz-t-sub" x="588" y="76.2" fill="var(--text)">160</text></g><g class="vz-fade vz-late" style="--i:5"><circle cx="698" cy="35.5" r="5" fill="var(--viz-label-bg)" stroke="var(--violet)" stroke-width="2.2"/><rect x="650.7" y="20" width="37.3" height="22" rx="6" fill="var(--viz-label-bg)" stroke="var(--viz-border)"/><text class="vz-t-sub" x="658.7" y="35" fill="var(--text)">320</text></g><text class="vz-t-axis" x="378" y="332" text-anchor="middle">Period</text><text class="vz-t-axis" transform="translate(14 157) rotate(-90)" text-anchor="middle">Price (log scale)</text></svg></div></div><figcaption>Hypothetical points. Each doubling takes the same vertical space, so a constant percentage rate of change appears as a straight line.</figcaption></figure>
+<p>Both figures plot the same six made-up prices. On the <strong>linear scale</strong>, also called arithmetic, the distance from 10 to 20 is a thirty-second of the distance from 0 to 320, so the early doublings are squashed flat. On the <strong>logarithmic scale</strong>, usually shortened to log, each doubling takes the same height.</p>
+<h2 id="how-it-works">How it works</h2>
+<figure class="viz viz--compare" data-animate><div class="viz-title">What equal spacing on the axis means</div><div class="viz-canvas"><div class="dg-compare" tabindex="0" role="region" aria-label="Comparison of Linear scale and Log scale; scrolls sideways on small screens"><table><thead><tr><th scope="col"><span class="sr-only">Aspect</span></th><th scope="col" class="t-info">Linear scale</th><th scope="col" class="t-warn">Log scale</th></tr></thead><tbody><tr><th scope="row">Equal space shows</th><td>Equal price change</td><td>Equal percentage change</td></tr><tr><th scope="row">Example axis labels</th><td>100, 200, 300, 400</td><td>100, 200, 400, 800</td></tr><tr><th scope="row">10 to 20 compared with 100 to 110</th><td>Same height</td><td>The first is about 7 times taller</td></tr><tr><th scope="row">A straight rising line means</th><td>The same price gain each period</td><td>The same percentage gain each period</td></tr><tr><th scope="row">Can show zero or negative values</th><td>Yes</td><td>No</td></tr></tbody></table></div></div><figcaption>Neither is the correct scale. They answer different questions about the same data.</figcaption></figure>
+<p>A linear axis places prices by their difference. Moving from 100 to 110 covers the same distance as moving from 10 to 20, because both are a change of 10.</p>
+<p>A log axis places prices by their ratio. Moving from 10 to 20 covers the same distance as moving from 100 to 200, because both are a doubling.</p>
+<div class="formula"><code>Height on a log scale is proportional to log(end price / start price)</code><span>Equal ratios give equal heights, whatever the price level.</span></div>
+<div class="callout callout--beginner"><p class="callout-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 8.500l5.500 3.500-5.500 3.500z"/></svg><span>In plain words</span></p>
+<p>A child who grows from 50 cm to 100 cm and a tree that grows from 10 m to 10.5 m have both gained 50 cm. On a ruler they grew the same amount. In proportion, the child doubled and the tree barely changed. A linear scale is the ruler. A log scale shows the proportion.</p>
+</div>
+<h2 id="how-to-read-it">How to read it</h2>
+<p><strong>When the two look alike.</strong> Over a narrow range, the scales are almost indistinguishable. If the visible prices run from 95 to 105, switching makes little difference.</p>
+<p><strong>When they diverge.</strong> Over a wide range the difference is large. On a linear chart of an asset that went from 1 to 1,000, everything below 100 is pressed into the bottom tenth of the screen. Early moves of several hundred percent look like a flat line. A log chart gives those early moves the same space as later moves of the same percentage size.</p>
+<p><strong>Why log is common on long charts.</strong> A position’s gain or loss follows the percentage change in price, which is why long-term charts of fast-growing assets are often viewed on a log scale. The arithmetic of percentages is covered in <a href="/library/risk-management/drawdown/">Drawdown</a>.</p>
+<h2 id="going-deeper">Going deeper</h2>
+<h3 id="drawn-lines-move">Drawn lines move</h3>
+<p>A straight line means different things on each scale. On a linear chart, a straight rising line is a constant price gain per period. On a log chart, it is a constant percentage gain per period.</p>
+<p>When the scale is switched, a platform keeps a line’s two anchor points and redraws the straight line between them. In between and beyond the anchors, the line now passes through different prices. A <a href="/library/market-structure/trendlines/">trend line</a> that price respected on one scale can appear broken on the other. See <a href="/library/tradingview/drawing-trend-lines/">Drawing Trend Lines</a>.</p>
+<h3 id="limits-of-the-log-scale">Limits of the log scale</h3>
+<p>A logarithm is not defined for zero or negative numbers, so a log axis cannot show them. Prices are positive, so price panes are unaffected. Indicator panes with values that cross zero, such as <a class="gl" href="/glossary/macd/" title="A momentum indicator built from the difference between two exponential moving averages of price, usually 12 and 26 periods.">MACD</a>, use a linear scale.</p>
+<div class="example"><p class="example-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.600-7 10-7 10 7 10 7-3.600 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>Two hypothetical moves and one line</span><em>Hypothetical illustration</em></p>
+<p><strong>Two moves.</strong> A made-up asset rises from 10 to 20, and much later from 100 to 110.</p>
+<ul>
+<li>On a linear scale both moves are 10 units tall.</li>
+<li>On a log scale the heights follow the ratios: log(2) is about 0.693 and log(1.1) is about 0.095. The first move is about 0.693 / 0.095 = 7.3 times taller.</li>
+</ul>
+<p>Equal in price on one scale, a 100% gain against a 10% gain on the other: both readings are true.</p>
+<p><strong>One line.</strong> A line is anchored at 100 on candle 0 and at 400 on candle 20.</p>
+<ul>
+<li>On a linear scale, the line passes through 250 at candle 10, halfway between 100 and 400.</li>
+<li>On a log scale, the line passes through 200 at candle 10, because 100 to 200 and 200 to 400 are both doublings.</li>
+</ul>
+<p>A candle low of 220 at candle 10 is below the line on one scale and above it on the other.</p>
+</div>
+<section class="notmean" aria-labelledby="what-it-does-not-mean"><h2 id="what-it-does-not-mean"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg><span>What it does NOT mean</span></h2>
+<ul>
+<li><strong>A log scale is not the more correct scale.</strong> It answers a question about proportion. A linear scale answers one about price difference.</li>
+<li><strong>A steep curve on a linear chart does not mean growth is accelerating in percentage terms.</strong> A constant percentage rate looks like a steepening curve on a linear axis.</li>
+<li><strong>A line break on one scale is not a break on the other.</strong> The line itself is in a different place.</li>
+<li><strong>Switching the scale does not change the data.</strong> It changes only the spacing of the axis.</li>
+</ul>
+</section>
+<h2 id="common-mistakes">Common mistakes</h2>
+<div class="mistakes">
+<ol>
+<li><strong>Not checking which scale is active.</strong> The setting is easy to change by accident and easy to miss in a screenshot.</li>
+<li><strong>Drawing a line on one scale and reading it on the other.</strong> Its position between the anchors changes.</li>
+<li><strong>Choosing the scale that makes a chart support a view.</strong> Either scale can be used to make a move look dramatic or mild.</li>
+</ol>
+</div>
+<h2 id="risks-and-limitations">Risks and limitations</h2>
+<ul>
+<li>The scale affects every sloped drawing, so analysis built on <a class="gl" href="/glossary/trend-line/" title="A straight line drawn on a chart connecting successive swing lows in an uptrend or swing highs in a downtrend.">trend lines</a> and channels depends on it.</li>
+<li>On a log scale, a fall that is large in currency terms at high prices takes up less of the screen than it does on a linear scale.</li>
+</ul>
+<div class="takeaway"><p class="takeaway-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg><span>Key takeaway</span></p>
+<p>A linear scale spaces prices by equal amounts and a log scale spaces them by equal percentages. Over wide price ranges the two show the same data very differently, and sloped lines sit in different places, so the active scale is always part of what a chart says.</p>
+</div>
+
+      <section class="sources" aria-labelledby="sources">
+        <h2 id="sources">Sources and further reading</h2>
+        <ul>
+          <li><cite>Technical Analysis of the Financial Markets</cite>, John J. Murphy (1999). Arithmetic versus logarithmic price scales in chart construction</li>
+          <li><a class="ext" href="https://www.tradingview.com/support/solutions/43000748166-how-to-configure-your-supercharts/" rel="noopener noreferrer" target="_blank">How to configure your Supercharts<span class="sr-only"> (opens in a new tab)</span></a>, TradingView. Describes the price scale modes: the logarithmic scale plots percentage changes in price, and the percent scale</li>
+        </ul>
+      </section>
+
+      <aside class="edu-note" aria-label="Educational notice">
+        <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+        <p><strong>Educational content only.</strong> This page explains a concept. It is not financial advice and not a recommendation to buy, sell or hold anything. <a href="/educational-disclaimer/">Full disclaimer</a>. Last updated <time datetime="2026-11-21">21 November 2026</time>.</p>
+      </aside>
+    </div>
+  </div>
+  <section class="related band" aria-labelledby="related">
+    <div class="wrap">
+      <h2 id="related">Related topics</h2>
+      <div class="card-grid">
+<a class="card topic-card" href="/library/tradingview/chart-interface-basics/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M7 13l3-3 2.5 2.5L17 8"/><path d="M8 21h8M12 17v4"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">TradingView &amp; Chart Tools</span>
+    <span class="card-title">Chart Interface Basics</span>
+    <span class="card-text">A charting screen is built from a few standard parts: a price pane, a time axis, a price axis, symbol and timeframe selectors, drawing tools, indicator panes and a watchlist.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/library/tradingview/drawing-trend-lines/">
+  <span class="card-thumb" aria-hidden="true"><svg class="vz vz-mini" viewBox="0 0 320 192" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet"><g class="vz-c vz-up" style="--i:0"><line x1="6.6" x2="6.6" y1="153.7" y2="164"/><rect x="5" y="154.8" width="3.2" height="7.7" rx="1"/></g><g class="vz-c vz-up" style="--i:1"><line x1="11.8" x2="11.8" y1="149" y2="155.1"/><rect x="10.2" y="151.4" width="3.2" height="3.4" rx="1"/></g><g class="vz-c vz-up" style="--i:2"><line x1="17" x2="17" y1="143.4" y2="154"/><rect x="15.4" y="145.3" width="3.2" height="6.1" rx="1"/></g><g class="vz-c vz-up" style="--i:3"><line x1="22.2" x2="22.2" y1="135.4" y2="145.5"/><rect x="20.6" y="137.4" width="3.2" height="7.9" rx="1"/></g><g class="vz-c vz-up" style="--i:4"><line x1="27.4" x2="27.4" y1="130.8" y2="138.2"/><rect x="25.8" y="131.2" width="3.2" height="6.2" rx="1"/></g><g class="vz-c vz-up" style="--i:5"><line x1="32.6" x2="32.6" y1="121.5" y2="131.6"/><rect x="31" y="124.4" width="3.2" height="6.9" rx="1"/></g><g class="vz-c vz-up" style="--i:6"><line x1="37.8" x2="37.8" y1="118.4" y2="124.8"/><rect x="36.2" y="119.1" width="3.2" height="5.2" rx="1"/></g><g class="vz-c vz-down" style="--i:7"><line x1="43" x2="43" y1="116.9" y2="122"/><rect x="41.4" y="119.1" width="3.2" height="2.6" rx="1"/></g><g class="vz-c vz-down" style="--i:8"><line x1="48.2" x2="48.2" y1="119.7" y2="128"/><rect x="46.6" y="121.7" width="3.2" height="5" rx="1"/></g><g class="vz-c vz-down" style="--i:9"><line x1="53.4" x2="53.4" y1="125.9" y2="133.2"/><rect x="51.8" y="126.7" width="3.2" height="4.3" rx="1"/></g><g class="vz-c vz-down" style="--i:10"><line x1="58.6" x2="58.6" y1="130.6" y2="134.8"/><rect x="57" y="131" width="3.2" height="3.1" rx="1"/></g><g class="vz-c vz-down" style="--i:11"><line x1="63.8" x2="63.8" y1="132.5" y2="139.6"/><rect x="62.2" y="134.2" width="3.2" height="3" rx="1"/></g><g class="vz-c vz-down" style="--i:12"><line x1="69" x2="69" y1="136.4" y2="142.8"/><rect x="67.4" y="137.2" width="3.2" height="2.9" rx="1"/></g><g class="vz-c vz-down" style="--i:13"><line x1="74.2" x2="74.2" y1="138.1" y2="145.5"/><rect x="72.6" y="140.2" width="3.2" height="3.9" rx="1"/></g><g class="vz-c vz-up" style="--i:14"><line x1="79.4" x2="79.4" y1="139.6" y2="146.3"/><rect x="77.8" y="140.2" width="3.2" height="3.8" rx="1"/></g><g class="vz-c vz-up" style="--i:15"><line x1="84.6" x2="84.6" y1="131.3" y2="141.5"/><rect x="83" y="132.6" width="3.2" height="7.6" rx="1"/></g><g class="vz-c vz-up" style="--i:16"><line x1="89.8" x2="89.8" y1="126.7" y2="132.8"/><rect x="88.2" y="127.2" width="3.2" height="5.4" rx="1"/></g><g class="vz-c vz-up" style="--i:17"><line x1="95" x2="95" y1="119.2" y2="130"/><rect x="93.4" y="121" width="3.2" height="6.2" rx="1"/></g><g class="vz-c vz-up" style="--i:18"><line x1="100.2" x2="100.2" y1="114.1" y2="123.8"/><rect x="98.6" y="116.2" width="3.2" height="4.8" rx="1"/></g><g class="vz-c vz-up" style="--i:19"><line x1="105.4" x2="105.4" y1="105.9" y2="116.9"/><rect x="103.8" y="107.3" width="3.2" height="8.9" rx="1"/></g><g class="vz-c vz-up" style="--i:20"><line x1="110.6" x2="110.6" y1="99.2" y2="108.3"/><rect x="109" y="99.4" width="3.2" height="7.9" rx="1"/></g><g class="vz-c vz-up" style="--i:21"><line x1="115.8" x2="115.8" y1="92.1" y2="101.5"/><rect x="114.2" y="92.3" width="3.2" height="7.1" rx="1"/></g><g class="vz-c vz-up" style="--i:22"><line x1="121" x2="121" y1="87.5" y2="94.6"/><rect x="119.4" y="88.6" width="3.2" height="3.7" rx="1"/></g><g class="vz-c vz-down" style="--i:23"><line x1="126.2" x2="126.2" y1="86.1" y2="96.2"/><rect x="124.6" y="88.6" width="3.2" height="5.1" rx="1"/></g><g class="vz-c vz-down" style="--i:24"><line x1="131.4" x2="131.4" y1="91.4" y2="97.5"/><rect x="129.8" y="93.7" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:25"><line x1="136.6" x2="136.6" y1="92.4" y2="104.5"/><rect x="135" y="95.1" width="3.2" height="7.3" rx="1"/></g><g class="vz-c vz-down" style="--i:26"><line x1="141.8" x2="141.8" y1="102" y2="104.1"/><rect x="140.2" y="102.4" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:27"><line x1="147" x2="147" y1="102.8" y2="109.3"/><rect x="145.4" y="103.1" width="3.2" height="6.1" rx="1"/></g><g class="vz-c vz-down" style="--i:28"><line x1="152.2" x2="152.2" y1="106.3" y2="113.7"/><rect x="150.6" y="109.2" width="3.2" height="1.9" rx="1"/></g><g class="vz-c vz-down" style="--i:29"><line x1="157.4" x2="157.4" y1="108.9" y2="118.6"/><rect x="155.8" y="111.1" width="3.2" height="5.3" rx="1"/></g><g class="vz-c vz-up" style="--i:30"><line x1="162.6" x2="162.6" y1="104.2" y2="117.1"/><rect x="161" y="106.4" width="3.2" height="9.9" rx="1"/></g><g class="vz-c vz-up" style="--i:31"><line x1="167.8" x2="167.8" y1="99.7" y2="108.6"/><rect x="166.2" y="101.2" width="3.2" height="5.2" rx="1"/></g><g class="vz-c vz-up" style="--i:32"><line x1="173" x2="173" y1="95.7" y2="102.4"/><rect x="171.4" y="97.9" width="3.2" height="3.3" rx="1"/></g><g class="vz-c vz-up" style="--i:33"><line x1="178.2" x2="178.2" y1="88.3" y2="98.8"/><rect x="176.6" y="89.1" width="3.2" height="8.8" rx="1"/></g><g class="vz-c vz-up" style="--i:34"><line x1="183.4" x2="183.4" y1="83.1" y2="89.8"/><rect x="181.8" y="83.9" width="3.2" height="5.2" rx="1"/></g><g class="vz-c vz-up" style="--i:35"><line x1="188.6" x2="188.6" y1="73.9" y2="85.1"/><rect x="187" y="75.5" width="3.2" height="8.4" rx="1"/></g><g class="vz-c vz-up" style="--i:36"><line x1="193.8" x2="193.8" y1="71.8" y2="76.9"/><rect x="192.2" y="72.1" width="3.2" height="3.4" rx="1"/></g><g class="vz-c vz-up" style="--i:37"><line x1="199" x2="199" y1="64.2" y2="75"/><rect x="197.4" y="65.5" width="3.2" height="6.7" rx="1"/></g><g class="vz-c vz-up" style="--i:38"><line x1="204.2" x2="204.2" y1="60.3" y2="68"/><rect x="202.6" y="63.1" width="3.2" height="2.3" rx="1"/></g><g class="vz-c vz-down" style="--i:39"><line x1="209.4" x2="209.4" y1="60.4" y2="64.8"/><rect x="207.8" y="63.1" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:40"><line x1="214.6" x2="214.6" y1="63.6" y2="68.6"/><rect x="213" y="63.7" width="3.2" height="3.9" rx="1"/></g><g class="vz-c vz-down" style="--i:41"><line x1="219.8" x2="219.8" y1="66.4" y2="77.6"/><rect x="218.2" y="67.6" width="3.2" height="7.7" rx="1"/></g><g class="vz-c vz-down" style="--i:42"><line x1="225" x2="225" y1="74.1" y2="79.8"/><rect x="223.4" y="75.2" width="3.2" height="2.4" rx="1"/></g><g class="vz-c vz-down" style="--i:43"><line x1="230.2" x2="230.2" y1="76.2" y2="80.1"/><rect x="228.6" y="77.6" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:44"><line x1="235.4" x2="235.4" y1="78.9" y2="82.2"/><rect x="233.8" y="78.9" width="3.2" height="3.1" rx="1"/></g><g class="vz-c vz-down" style="--i:45"><line x1="240.6" x2="240.6" y1="81.5" y2="84.9"/><rect x="239" y="82" width="3.2" height="1.7" rx="1"/></g><g class="vz-c vz-up" style="--i:46"><line x1="245.8" x2="245.8" y1="75" y2="84.2"/><rect x="244.2" y="75.5" width="3.2" height="8.1" rx="1"/></g><g class="vz-c vz-up" style="--i:47"><line x1="251" x2="251" y1="66.8" y2="75.8"/><rect x="249.4" y="68.1" width="3.2" height="7.5" rx="1"/></g><g class="vz-c vz-up" style="--i:48"><line x1="256.2" x2="256.2" y1="64" y2="70.6"/><rect x="254.6" y="64.4" width="3.2" height="3.6" rx="1"/></g><g class="vz-c vz-up" style="--i:49"><line x1="261.4" x2="261.4" y1="56.3" y2="67.2"/><rect x="259.8" y="57.3" width="3.2" height="7.1" rx="1"/></g><g class="vz-c vz-up" style="--i:50"><line x1="266.6" x2="266.6" y1="48.4" y2="59.6"/><rect x="265" y="50" width="3.2" height="7.3" rx="1"/></g><g class="vz-c vz-up" style="--i:51"><line x1="271.8" x2="271.8" y1="45.6" y2="52.3"/><rect x="270.2" y="45.8" width="3.2" height="4.2" rx="1"/></g><g class="vz-c vz-up" style="--i:52"><line x1="277" x2="277" y1="35.9" y2="46.4"/><rect x="275.4" y="38.5" width="3.2" height="7.2" rx="1"/></g><g class="vz-c vz-up" style="--i:53"><line x1="282.2" x2="282.2" y1="28.5" y2="40.4"/><rect x="280.6" y="29" width="3.2" height="9.5" rx="1"/></g><g class="vz-c vz-down" style="--i:54"><line x1="287.4" x2="287.4" y1="26.2" y2="33.8"/><rect x="285.8" y="29" width="3.2" height="2.7" rx="1"/></g><g class="vz-c vz-down" style="--i:55"><line x1="292.6" x2="292.6" y1="30.3" y2="39.9"/><rect x="291" y="31.7" width="3.2" height="5.7" rx="1"/></g><g class="vz-c vz-down" style="--i:56"><line x1="297.8" x2="297.8" y1="37.2" y2="39.8"/><rect x="296.2" y="37.4" width="3.2" height="2.1" rx="1"/></g><g class="vz-c vz-down" style="--i:57"><line x1="303" x2="303" y1="37.9" y2="45.3"/><rect x="301.4" y="39.5" width="3.2" height="5.2" rx="1"/></g><g class="vz-c vz-up" style="--i:58"><line x1="308.2" x2="308.2" y1="43.9" y2="47.1"/><rect x="306.6" y="43.9" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:59"><line x1="313.4" x2="313.4" y1="43.6" y2="53.2"/><rect x="311.8" y="43.9" width="3.2" height="7.2" rx="1"/></g><path class="vz-draw" pathLength="1" d="M7.6,140.7 L313.4,16.7" fill="none" stroke="var(--viz-neutral)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path class="vz-draw" pathLength="1" d="M7.6,175.3 L313.4,51.3" fill="none" stroke="var(--viz-neutral)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+  <span class="card-body"><span class="card-eyebrow">TradingView &amp; Chart Tools</span>
+    <span class="card-title">Drawing Trend Lines</span>
+    <span class="card-text">A trend line tool draws a straight line through two points chosen by the user. The tool is simple, and the judgment about which points to use is where the difficulty lies.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/library/tradingview/measuring-tools/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v18M7 21h10M5 7h14"/><path d="M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">TradingView &amp; Chart Tools</span>
+    <span class="card-title">Measuring Tools</span>
+    <span class="card-text">A measuring tool reports the distance between two points on a chart as a price change, a percentage change, a number of bars and an amount of time. It measures the past and nothing more.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/library/market-structure/trendlines/">
+  <span class="card-thumb" aria-hidden="true"><svg class="vz vz-mini" viewBox="0 0 320 192" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet"><g class="vz-c vz-up" style="--i:0"><line x1="6.6" x2="6.6" y1="153.7" y2="164"/><rect x="5" y="154.8" width="3.2" height="7.7" rx="1"/></g><g class="vz-c vz-up" style="--i:1"><line x1="11.8" x2="11.8" y1="149" y2="155.1"/><rect x="10.2" y="151.4" width="3.2" height="3.4" rx="1"/></g><g class="vz-c vz-up" style="--i:2"><line x1="17" x2="17" y1="143.4" y2="154"/><rect x="15.4" y="145.3" width="3.2" height="6.1" rx="1"/></g><g class="vz-c vz-up" style="--i:3"><line x1="22.2" x2="22.2" y1="135.4" y2="145.5"/><rect x="20.6" y="137.4" width="3.2" height="7.9" rx="1"/></g><g class="vz-c vz-up" style="--i:4"><line x1="27.4" x2="27.4" y1="130.8" y2="138.2"/><rect x="25.8" y="131.2" width="3.2" height="6.2" rx="1"/></g><g class="vz-c vz-up" style="--i:5"><line x1="32.6" x2="32.6" y1="121.5" y2="131.6"/><rect x="31" y="124.4" width="3.2" height="6.9" rx="1"/></g><g class="vz-c vz-up" style="--i:6"><line x1="37.8" x2="37.8" y1="118.4" y2="124.8"/><rect x="36.2" y="119.1" width="3.2" height="5.2" rx="1"/></g><g class="vz-c vz-down" style="--i:7"><line x1="43" x2="43" y1="116.9" y2="122"/><rect x="41.4" y="119.1" width="3.2" height="2.6" rx="1"/></g><g class="vz-c vz-down" style="--i:8"><line x1="48.2" x2="48.2" y1="119.7" y2="128"/><rect x="46.6" y="121.7" width="3.2" height="5" rx="1"/></g><g class="vz-c vz-down" style="--i:9"><line x1="53.4" x2="53.4" y1="125.9" y2="133.2"/><rect x="51.8" y="126.7" width="3.2" height="4.3" rx="1"/></g><g class="vz-c vz-down" style="--i:10"><line x1="58.6" x2="58.6" y1="130.6" y2="134.8"/><rect x="57" y="131" width="3.2" height="3.1" rx="1"/></g><g class="vz-c vz-down" style="--i:11"><line x1="63.8" x2="63.8" y1="132.5" y2="139.6"/><rect x="62.2" y="134.2" width="3.2" height="3" rx="1"/></g><g class="vz-c vz-down" style="--i:12"><line x1="69" x2="69" y1="136.4" y2="142.8"/><rect x="67.4" y="137.2" width="3.2" height="2.9" rx="1"/></g><g class="vz-c vz-down" style="--i:13"><line x1="74.2" x2="74.2" y1="138.1" y2="145.5"/><rect x="72.6" y="140.2" width="3.2" height="3.9" rx="1"/></g><g class="vz-c vz-up" style="--i:14"><line x1="79.4" x2="79.4" y1="139.6" y2="146.3"/><rect x="77.8" y="140.2" width="3.2" height="3.8" rx="1"/></g><g class="vz-c vz-up" style="--i:15"><line x1="84.6" x2="84.6" y1="131.3" y2="141.5"/><rect x="83" y="132.6" width="3.2" height="7.6" rx="1"/></g><g class="vz-c vz-up" style="--i:16"><line x1="89.8" x2="89.8" y1="126.7" y2="132.8"/><rect x="88.2" y="127.2" width="3.2" height="5.4" rx="1"/></g><g class="vz-c vz-up" style="--i:17"><line x1="95" x2="95" y1="119.2" y2="130"/><rect x="93.4" y="121" width="3.2" height="6.2" rx="1"/></g><g class="vz-c vz-up" style="--i:18"><line x1="100.2" x2="100.2" y1="114.1" y2="123.8"/><rect x="98.6" y="116.2" width="3.2" height="4.8" rx="1"/></g><g class="vz-c vz-up" style="--i:19"><line x1="105.4" x2="105.4" y1="105.9" y2="116.9"/><rect x="103.8" y="107.3" width="3.2" height="8.9" rx="1"/></g><g class="vz-c vz-up" style="--i:20"><line x1="110.6" x2="110.6" y1="99.2" y2="108.3"/><rect x="109" y="99.4" width="3.2" height="7.9" rx="1"/></g><g class="vz-c vz-up" style="--i:21"><line x1="115.8" x2="115.8" y1="92.1" y2="101.5"/><rect x="114.2" y="92.3" width="3.2" height="7.1" rx="1"/></g><g class="vz-c vz-up" style="--i:22"><line x1="121" x2="121" y1="87.5" y2="94.6"/><rect x="119.4" y="88.6" width="3.2" height="3.7" rx="1"/></g><g class="vz-c vz-down" style="--i:23"><line x1="126.2" x2="126.2" y1="86.1" y2="96.2"/><rect x="124.6" y="88.6" width="3.2" height="5.1" rx="1"/></g><g class="vz-c vz-down" style="--i:24"><line x1="131.4" x2="131.4" y1="91.4" y2="97.5"/><rect x="129.8" y="93.7" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:25"><line x1="136.6" x2="136.6" y1="92.4" y2="104.5"/><rect x="135" y="95.1" width="3.2" height="7.3" rx="1"/></g><g class="vz-c vz-down" style="--i:26"><line x1="141.8" x2="141.8" y1="102" y2="104.1"/><rect x="140.2" y="102.4" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:27"><line x1="147" x2="147" y1="102.8" y2="109.3"/><rect x="145.4" y="103.1" width="3.2" height="6.1" rx="1"/></g><g class="vz-c vz-down" style="--i:28"><line x1="152.2" x2="152.2" y1="106.3" y2="113.7"/><rect x="150.6" y="109.2" width="3.2" height="1.9" rx="1"/></g><g class="vz-c vz-down" style="--i:29"><line x1="157.4" x2="157.4" y1="108.9" y2="118.6"/><rect x="155.8" y="111.1" width="3.2" height="5.3" rx="1"/></g><g class="vz-c vz-up" style="--i:30"><line x1="162.6" x2="162.6" y1="104.2" y2="117.1"/><rect x="161" y="106.4" width="3.2" height="9.9" rx="1"/></g><g class="vz-c vz-up" style="--i:31"><line x1="167.8" x2="167.8" y1="99.7" y2="108.6"/><rect x="166.2" y="101.2" width="3.2" height="5.2" rx="1"/></g><g class="vz-c vz-up" style="--i:32"><line x1="173" x2="173" y1="95.7" y2="102.4"/><rect x="171.4" y="97.9" width="3.2" height="3.3" rx="1"/></g><g class="vz-c vz-up" style="--i:33"><line x1="178.2" x2="178.2" y1="88.3" y2="98.8"/><rect x="176.6" y="89.1" width="3.2" height="8.8" rx="1"/></g><g class="vz-c vz-up" style="--i:34"><line x1="183.4" x2="183.4" y1="83.1" y2="89.8"/><rect x="181.8" y="83.9" width="3.2" height="5.2" rx="1"/></g><g class="vz-c vz-up" style="--i:35"><line x1="188.6" x2="188.6" y1="73.9" y2="85.1"/><rect x="187" y="75.5" width="3.2" height="8.4" rx="1"/></g><g class="vz-c vz-up" style="--i:36"><line x1="193.8" x2="193.8" y1="71.8" y2="76.9"/><rect x="192.2" y="72.1" width="3.2" height="3.4" rx="1"/></g><g class="vz-c vz-up" style="--i:37"><line x1="199" x2="199" y1="64.2" y2="75"/><rect x="197.4" y="65.5" width="3.2" height="6.7" rx="1"/></g><g class="vz-c vz-up" style="--i:38"><line x1="204.2" x2="204.2" y1="60.3" y2="68"/><rect x="202.6" y="63.1" width="3.2" height="2.3" rx="1"/></g><g class="vz-c vz-down" style="--i:39"><line x1="209.4" x2="209.4" y1="60.4" y2="64.8"/><rect x="207.8" y="63.1" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:40"><line x1="214.6" x2="214.6" y1="63.6" y2="68.6"/><rect x="213" y="63.7" width="3.2" height="3.9" rx="1"/></g><g class="vz-c vz-down" style="--i:41"><line x1="219.8" x2="219.8" y1="66.4" y2="77.6"/><rect x="218.2" y="67.6" width="3.2" height="7.7" rx="1"/></g><g class="vz-c vz-down" style="--i:42"><line x1="225" x2="225" y1="74.1" y2="79.8"/><rect x="223.4" y="75.2" width="3.2" height="2.4" rx="1"/></g><g class="vz-c vz-down" style="--i:43"><line x1="230.2" x2="230.2" y1="76.2" y2="80.1"/><rect x="228.6" y="77.6" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:44"><line x1="235.4" x2="235.4" y1="78.9" y2="82.2"/><rect x="233.8" y="78.9" width="3.2" height="3.1" rx="1"/></g><g class="vz-c vz-down" style="--i:45"><line x1="240.6" x2="240.6" y1="81.5" y2="84.9"/><rect x="239" y="82" width="3.2" height="1.7" rx="1"/></g><g class="vz-c vz-up" style="--i:46"><line x1="245.8" x2="245.8" y1="75" y2="84.2"/><rect x="244.2" y="75.5" width="3.2" height="8.1" rx="1"/></g><g class="vz-c vz-up" style="--i:47"><line x1="251" x2="251" y1="66.8" y2="75.8"/><rect x="249.4" y="68.1" width="3.2" height="7.5" rx="1"/></g><g class="vz-c vz-up" style="--i:48"><line x1="256.2" x2="256.2" y1="64" y2="70.6"/><rect x="254.6" y="64.4" width="3.2" height="3.6" rx="1"/></g><g class="vz-c vz-up" style="--i:49"><line x1="261.4" x2="261.4" y1="56.3" y2="67.2"/><rect x="259.8" y="57.3" width="3.2" height="7.1" rx="1"/></g><g class="vz-c vz-up" style="--i:50"><line x1="266.6" x2="266.6" y1="48.4" y2="59.6"/><rect x="265" y="50" width="3.2" height="7.3" rx="1"/></g><g class="vz-c vz-up" style="--i:51"><line x1="271.8" x2="271.8" y1="45.6" y2="52.3"/><rect x="270.2" y="45.8" width="3.2" height="4.2" rx="1"/></g><g class="vz-c vz-up" style="--i:52"><line x1="277" x2="277" y1="35.9" y2="46.4"/><rect x="275.4" y="38.5" width="3.2" height="7.2" rx="1"/></g><g class="vz-c vz-up" style="--i:53"><line x1="282.2" x2="282.2" y1="28.5" y2="40.4"/><rect x="280.6" y="29" width="3.2" height="9.5" rx="1"/></g><g class="vz-c vz-down" style="--i:54"><line x1="287.4" x2="287.4" y1="26.2" y2="33.8"/><rect x="285.8" y="29" width="3.2" height="2.7" rx="1"/></g><g class="vz-c vz-down" style="--i:55"><line x1="292.6" x2="292.6" y1="30.3" y2="39.9"/><rect x="291" y="31.7" width="3.2" height="5.7" rx="1"/></g><g class="vz-c vz-down" style="--i:56"><line x1="297.8" x2="297.8" y1="37.2" y2="39.8"/><rect x="296.2" y="37.4" width="3.2" height="2.1" rx="1"/></g><g class="vz-c vz-down" style="--i:57"><line x1="303" x2="303" y1="37.9" y2="45.3"/><rect x="301.4" y="39.5" width="3.2" height="5.2" rx="1"/></g><g class="vz-c vz-up" style="--i:58"><line x1="308.2" x2="308.2" y1="43.9" y2="47.1"/><rect x="306.6" y="43.9" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:59"><line x1="313.4" x2="313.4" y1="43.6" y2="53.2"/><rect x="311.8" y="43.9" width="3.2" height="7.2" rx="1"/></g><path class="vz-draw" pathLength="1" d="M7.6,140.7 L313.4,16.7" fill="none" stroke="var(--viz-neutral)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path class="vz-draw" pathLength="1" d="M7.6,175.3 L313.4,51.3" fill="none" stroke="var(--viz-neutral)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+  <span class="card-body"><span class="card-eyebrow">Market Structure</span>
+    <span class="card-title">Trend Lines</span>
+    <span class="card-text">A trend line is a straight line drawn through successive swing lows in an uptrend or swing highs in a downtrend. It summarises the slope of a trend and marks a moving area that traders watch.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card accent-bear" href="/library/risk-management/drawdown/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4v15"/><path d="M5 12l7 7 7-7"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Risk Management</span>
+    <span class="card-title">Drawdown</span>
+    <span class="card-text">A drawdown is the decline of an account or an asset from a peak to a later low, measured as a percentage of the peak.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/markets-finance/volatility/">
+  <span class="card-thumb" aria-hidden="true"><svg class="vz vz-mini" viewBox="0 0 320 192" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet"><g class="vz-c vz-down" style="--i:0"><line x1="6.6" x2="6.6" y1="76.7" y2="79.7"/><rect x="5" y="79.1" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:1"><line x1="11.8" x2="11.8" y1="78.9" y2="82.3"/><rect x="10.2" y="79.6" width="3.2" height="2.1" rx="1"/></g><g class="vz-c vz-down" style="--i:2"><line x1="17" x2="17" y1="79.4" y2="83.2"/><rect x="15.4" y="81.7" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:3"><line x1="22.2" x2="22.2" y1="76.5" y2="83.4"/><rect x="20.6" y="79.3" width="3.2" height="2.9" rx="1"/></g><g class="vz-c vz-down" style="--i:4"><line x1="27.4" x2="27.4" y1="77.9" y2="81.6"/><rect x="25.8" y="79.3" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:5"><line x1="32.6" x2="32.6" y1="76.7" y2="81.6"/><rect x="31" y="77.2" width="3.2" height="2.4" rx="1"/></g><g class="vz-c vz-down" style="--i:6"><line x1="37.8" x2="37.8" y1="76.9" y2="79.9"/><rect x="36.2" y="77.2" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:7"><line x1="43" x2="43" y1="75.9" y2="80.7"/><rect x="41.4" y="77.5" width="3.2" height="2.8" rx="1"/></g><g class="vz-c vz-up" style="--i:8"><line x1="48.2" x2="48.2" y1="75.5" y2="81.9"/><rect x="46.6" y="77.1" width="3.2" height="3.2" rx="1"/></g><g class="vz-c vz-up" style="--i:9"><line x1="53.4" x2="53.4" y1="74.6" y2="78.3"/><rect x="51.8" y="76.7" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:10"><line x1="58.6" x2="58.6" y1="75.3" y2="78.6"/><rect x="57" y="76.7" width="3.2" height="1.8" rx="1"/></g><g class="vz-c vz-down" style="--i:11"><line x1="63.8" x2="63.8" y1="78" y2="82.9"/><rect x="62.2" y="78.5" width="3.2" height="2.1" rx="1"/></g><g class="vz-c vz-up" style="--i:12"><line x1="69" x2="69" y1="77.3" y2="82.6"/><rect x="67.4" y="78.2" width="3.2" height="2.3" rx="1"/></g><g class="vz-c vz-down" style="--i:13"><line x1="74.2" x2="74.2" y1="75.8" y2="83.7"/><rect x="72.6" y="78.2" width="3.2" height="3.4" rx="1"/></g><g class="vz-c vz-up" style="--i:14"><line x1="79.4" x2="79.4" y1="78.4" y2="83"/><rect x="77.8" y="79.9" width="3.2" height="1.8" rx="1"/></g><g class="vz-c vz-down" style="--i:15"><line x1="84.6" x2="84.6" y1="77.6" y2="82.8"/><rect x="83" y="79.9" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:16"><line x1="89.8" x2="89.8" y1="75.7" y2="80.5"/><rect x="88.2" y="78.1" width="3.2" height="2.3" rx="1"/></g><g class="vz-c vz-down" style="--i:17"><line x1="95" x2="95" y1="77.2" y2="81.5"/><rect x="93.4" y="78.1" width="3.2" height="2" rx="1"/></g><g class="vz-c vz-down" style="--i:18"><line x1="100.2" x2="100.2" y1="78.6" y2="82.7"/><rect x="98.6" y="80.1" width="3.2" height="2.2" rx="1"/></g><g class="vz-c vz-up" style="--i:19"><line x1="105.4" x2="105.4" y1="78.2" y2="82.8"/><rect x="103.8" y="80.8" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:20"><line x1="110.6" x2="110.6" y1="79.2" y2="81.7"/><rect x="109" y="79.3" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:21"><line x1="115.8" x2="115.8" y1="75.7" y2="79.5"/><rect x="114.2" y="78.5" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:22"><line x1="121" x2="121" y1="74.1" y2="79.9"/><rect x="119.4" y="76.7" width="3.2" height="1.7" rx="1"/></g><g class="vz-c vz-up" style="--i:23"><line x1="126.2" x2="126.2" y1="70.7" y2="78"/><rect x="124.6" y="73.3" width="3.2" height="3.4" rx="1"/></g><g class="vz-c vz-down" style="--i:24"><line x1="131.4" x2="131.4" y1="70.5" y2="75.7"/><rect x="129.8" y="73.3" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:25"><line x1="136.6" x2="136.6" y1="74.3" y2="77"/><rect x="135" y="74.8" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:26"><line x1="141.8" x2="141.8" y1="70.6" y2="76"/><rect x="140.2" y="71.9" width="3.2" height="3.9" rx="1"/></g><g class="vz-c vz-down" style="--i:27"><line x1="147" x2="147" y1="71.4" y2="75.5"/><rect x="145.4" y="71.9" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:28"><line x1="152.2" x2="152.2" y1="73" y2="77.6"/><rect x="150.6" y="73.5" width="3.2" height="3.4" rx="1"/></g><g class="vz-c vz-up" style="--i:29"><line x1="157.4" x2="157.4" y1="74.5" y2="77.7"/><rect x="155.8" y="75.5" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:30"><line x1="162.6" x2="162.6" y1="73.5" y2="103.6"/><rect x="161" y="75.5" width="3.2" height="16.7" rx="1"/></g><g class="vz-c vz-up" style="--i:31"><line x1="167.8" x2="167.8" y1="78.2" y2="104.5"/><rect x="166.2" y="78.5" width="3.2" height="13.7" rx="1"/></g><g class="vz-c vz-up" style="--i:32"><line x1="173" x2="173" y1="58" y2="94.4"/><rect x="171.4" y="67.4" width="3.2" height="11.2" rx="1"/></g><g class="vz-c vz-up" style="--i:33"><line x1="178.2" x2="178.2" y1="43.9" y2="79.4"/><rect x="176.6" y="59" width="3.2" height="8.4" rx="1"/></g><g class="vz-c vz-up" style="--i:34"><line x1="183.4" x2="183.4" y1="45.5" y2="67.8"/><rect x="181.8" y="49.3" width="3.2" height="9.8" rx="1"/></g><g class="vz-c vz-up" style="--i:35"><line x1="188.6" x2="188.6" y1="29.9" y2="61.1"/><rect x="187" y="35.3" width="3.2" height="14" rx="1"/></g><g class="vz-c vz-down" style="--i:36"><line x1="193.8" x2="193.8" y1="20.5" y2="65.2"/><rect x="192.2" y="35.3" width="3.2" height="24.7" rx="1"/></g><g class="vz-c vz-up" style="--i:37"><line x1="199" x2="199" y1="49" y2="63.2"/><rect x="197.4" y="51.6" width="3.2" height="8.4" rx="1"/></g><g class="vz-c vz-up" style="--i:38"><line x1="204.2" x2="204.2" y1="19.9" y2="67.6"/><rect x="202.6" y="35.6" width="3.2" height="16" rx="1"/></g><g class="vz-c vz-down" style="--i:39"><line x1="209.4" x2="209.4" y1="22.2" y2="46.4"/><rect x="207.8" y="35.6" width="3.2" height="4.8" rx="1"/></g><g class="vz-c vz-up" style="--i:40"><line x1="214.6" x2="214.6" y1="23.8" y2="40.8"/><rect x="213" y="28" width="3.2" height="12.5" rx="1"/></g><g class="vz-c vz-down" style="--i:41"><line x1="219.8" x2="219.8" y1="16.7" y2="56.3"/><rect x="218.2" y="28" width="3.2" height="13.7" rx="1"/></g><g class="vz-c vz-down" style="--i:42"><line x1="225" x2="225" y1="40.2" y2="44.3"/><rect x="223.4" y="41.6" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:43"><line x1="230.2" x2="230.2" y1="28.9" y2="50.2"/><rect x="228.6" y="42.1" width="3.2" height="7.6" rx="1"/></g><g class="vz-c vz-up" style="--i:44"><line x1="235.4" x2="235.4" y1="22.5" y2="53.6"/><rect x="233.8" y="24.5" width="3.2" height="25.2" rx="1"/></g><g class="vz-c vz-down" style="--i:45"><line x1="240.6" x2="240.6" y1="24" y2="56.3"/><rect x="239" y="24.5" width="3.2" height="16.4" rx="1"/></g><g class="vz-c vz-down" style="--i:46"><line x1="245.8" x2="245.8" y1="29.2" y2="68.6"/><rect x="244.2" y="40.8" width="3.2" height="16.4" rx="1"/></g><g class="vz-c vz-down" style="--i:47"><line x1="251" x2="251" y1="53.5" y2="78.5"/><rect x="249.4" y="57.2" width="3.2" height="17.3" rx="1"/></g><g class="vz-c vz-down" style="--i:48"><line x1="256.2" x2="256.2" y1="72.6" y2="95.1"/><rect x="254.6" y="74.5" width="3.2" height="13.6" rx="1"/></g><g class="vz-c vz-down" style="--i:49"><line x1="261.4" x2="261.4" y1="81.6" y2="90.3"/><rect x="259.8" y="88.2" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:50"><line x1="266.6" x2="266.6" y1="62.5" y2="96.3"/><rect x="265" y="76.8" width="3.2" height="11.7" rx="1"/></g><g class="vz-c vz-down" style="--i:51"><line x1="271.8" x2="271.8" y1="62.2" y2="109.4"/><rect x="270.2" y="76.8" width="3.2" height="19.2" rx="1"/></g><g class="vz-c vz-down" style="--i:52"><line x1="277" x2="277" y1="83.6" y2="101.3"/><rect x="275.4" y="96" width="3.2" height="2.3" rx="1"/></g><g class="vz-c vz-down" style="--i:53"><line x1="282.2" x2="282.2" y1="95.8" y2="129.7"/><rect x="280.6" y="98.4" width="3.2" height="22.5" rx="1"/></g><g class="vz-c vz-down" style="--i:54"><line x1="287.4" x2="287.4" y1="120.8" y2="134.6"/><rect x="285.8" y="120.9" width="3.2" height="5.7" rx="1"/></g><g class="vz-c vz-down" style="--i:55"><line x1="292.6" x2="292.6" y1="124.3" y2="152.9"/><rect x="291" y="126.6" width="3.2" height="20.6" rx="1"/></g><g class="vz-c vz-down" style="--i:56"><line x1="297.8" x2="297.8" y1="135.4" y2="154.6"/><rect x="296.2" y="147.1" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:57"><line x1="303" x2="303" y1="131.9" y2="161.2"/><rect x="301.4" y="147.8" width="3.2" height="1.7" rx="1"/></g><g class="vz-c vz-down" style="--i:58"><line x1="308.2" x2="308.2" y1="142.1" y2="175.3"/><rect x="306.6" y="149.5" width="3.2" height="16.8" rx="1"/></g><g class="vz-c vz-down" style="--i:59"><line x1="313.4" x2="313.4" y1="158.1" y2="174.4"/><rect x="311.8" y="166.3" width="3.2" height="6.5" rx="1"/></g></svg></span>
+  <span class="card-body"><span class="card-eyebrow">Markets &amp; Finance</span>
+    <span class="card-title">Volatility</span>
+    <span class="card-text">Volatility is a measure of how large an asset&#39;s price moves are over a period. It describes the size of the swings, not their direction.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager wrap" aria-label="More in this shelf"><a class="pager-link pager-prev" href="/library/tradingview/timeframes-on-a-chart/"><span><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg>Previous</span><strong>Timeframes on a Chart</strong></a>
+    <a class="pager-up" href="/library/tradingview/">Back to TradingView &amp; Chart Tools</a><a class="pager-link pager-next" href="/library/tradingview/drawing-trend-lines/"><span>Next<svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span><strong>Drawing Trend Lines</strong></a>
+  </nav>
+</article>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Price Scales: Log vs Linear","description":"A linear price scale gives equal space to equal price changes, while a logarithmic scale gives equal space to equal percentage changes. The same data can look very different on each.","inLanguage":"en","dateModified":"2026-11-21","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"edgeTR Academy"}}]}
+</script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR" loading="lazy">
+        <p>Learn the market. Understand the tools. Make your own decisions.</p>
+        <p class="footer-family">Part of <strong>Ethos Empire</strong></p>
+        <ul class="trust" aria-label="What edgeTR Academy is"><li>Free to read</li><li>No login</li><li>No paywall</li><li>Educational reference</li>
+        </ul>
+      </div>
+      <nav aria-label="Learn and browse">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="/learn/">Learn: Chapters 1-10</a></li>
+          <li><a href="/library/">Library</a></li>
+          <li><a href="/patterns/">Pattern gallery</a></li>
+          <li><a href="/foundations/">Foundations</a></li>
+          <li><a href="/compare/">Compare</a></li>
+          <li><a href="/glossary/">A-Z Glossary</a></li>
+          <li><a href="/watch/">Watch in 60 Seconds</a></li>
+          <li><a href="/search/">Search</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Library shelves">
+        <h2>Library</h2>
+        <ul>
+          <li><a href="/library/candlesticks/">Candlesticks</a></li>
+          <li><a href="/library/chart-patterns/">Chart Patterns</a></li>
+          <li><a href="/library/indicators/">Indicators</a></li>
+          <li><a href="/library/market-structure/">Market Structure</a></li>
+          <li><a href="/library/support-resistance/">Support &amp; Resistance</a></li>
+          <li><a href="/library/bull-bear-long-short/">Bull, Bear, Long &amp; Short</a></li>
+          <li><a href="/library/trading-mechanics/">Trading Mechanics</a></li>
+          <li><a href="/library/">All shelves</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Foundations shelves">
+        <h2>Foundations</h2>
+        <ul>
+          <li><a href="/foundations/markets-finance/">Markets &amp; Finance</a></li>
+          <li><a href="/foundations/crypto/">Crypto Basics</a></li>
+          <li><a href="/foundations/bitcoin/">Bitcoin Knowledge Center</a></li>
+          <li><a href="/foundations/blockchain/">Blockchain</a></li>
+          <li><a href="/foundations/wallets-security/">Wallets &amp; Security</a></li>
+          <li><a href="/foundations/exchanges-dex-defi/">Exchanges, DEX &amp; DeFi</a></li>
+          <li><a href="/foundations/derivatives-perpetuals/">Derivatives &amp; Perpetuals</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="About">
+        <h2>About</h2>
+        <ul>
+          <li><a href="/about/">About edgeTR Academy</a></li>
+          <li><a href="/educational-disclaimer/">Educational disclaimer</a></li>
+          <li><a href="/terms/">Terms of use</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/contact/">Contact and support</a></li>
+          <li><a href="/about/#editorial-standards">Editorial standards</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-disclaimer"><strong>Educational only.</strong> edgeTR Academy provides educational information only. It does not provide financial, investment, legal or tax advice, does not recommend specific assets or trades, and does not guarantee outcomes. Users are responsible for their own research and decisions. <a href="/educational-disclaimer/">Read the full disclaimer</a>.</p>
+    <p class="footer-legal">&copy; 2026 edgeTR Academy, part of Ethos Empire. Free to read. No account needed. <a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/contact/">Contact</a></p>
+  </div>
+</footer>
+<script src="/js/search-core.js" defer></script>
+<script src="/js/site.js" defer></script>
+</body>
+</html>

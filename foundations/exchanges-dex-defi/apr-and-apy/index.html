@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en" data-base="/">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>APR &amp; APY | edgeTR Academy</title>
+<meta name="description" content="APR is a yearly rate that leaves compounding out, and APY is a yearly rate that includes it, so the same underlying rate gives a higher APY than APR.">
+<meta name="theme-color" content="#070b12">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://edgetr.com/foundations/exchanges-dex-defi/apr-and-apy/">
+<meta property="og:url" content="https://edgetr.com/foundations/exchanges-dex-defi/apr-and-apy/">
+<meta property="og:image" content="https://edgetr.com/img/brand/og-default.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="edgeTR Academy">
+<meta property="og:title" content="APR &amp; APY">
+<meta property="og:description" content="APR is a yearly rate that leaves compounding out, and APY is a yearly rate that includes it, so the same underlying rate gives a higher APY than APR.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.edgetrSearch)document.documentElement.classList.remove("js")},3000)</script>
+</head>
+<body class="page-article">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="edgeTR Academy home">
+      <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR">
+      <span class="brand-sub">Academy</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="/learn/">Learn</a></li>
+        <li><a href="/library/">Library</a></li>
+        <li><a href="/foundations/" aria-current="true">Foundations</a></li>
+        <li><a href="/compare/">Compare</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+        <li class="nav-search-link"><a href="/search/">Search</a></li>
+      </ul>
+    </nav>
+    <form class="header-search" action="/search/" method="get" role="search" aria-label="Site search" data-suggest>
+      <label class="sr-only" for="hq">Search the Academy</label>
+      <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="hq" name="q" type="search" placeholder="Search: RSI, doji, wallet..." autocomplete="off" spellcheck="false" aria-controls="hq-list" aria-expanded="false" aria-autocomplete="list" role="combobox">
+      <kbd aria-hidden="true">/</kbd>
+      <div class="suggest" id="hq-list" role="listbox" aria-label="Search suggestions" hidden></div>
+    </form>
+    <a class="header-search-btn" href="/search/" aria-label="Search"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false">
+      <span class="sr-only">Menu</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<article class="article">
+  <header class="article-hero">
+    <div class="wrap">
+      
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/foundations/">Foundations</a></li>
+    <li><a href="/foundations/exchanges-dex-defi/">Exchanges, DEX &amp; DeFi</a></li>
+    <li><span aria-current="page">APR &amp; APY</span></li>
+  </ol>
+</nav>
+
+      <p class="eyebrow">Foundations · Exchanges, DEX &amp; DeFi</p>
+      <h1>APR &amp; APY</h1>
+      <p class="lede">APR is a yearly rate that leaves compounding out, and APY is a yearly rate that includes it, so the same underlying rate gives a higher APY than APR.</p>
+      <ul class="meta-chips"><li><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></li>
+        <li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>5 min read</span></li><li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Updated <time datetime="2026-11-21">21 November 2026</time></span></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="wrap article-grid">
+    <aside class="toc" aria-label="On this page">
+      <details open>
+        <summary>On this page</summary>
+        <ol>
+          <li><a href="#why-it-matters">Why it matters</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#how-it-is-calculated">How it is calculated</a></li>
+          <li><a href="#going-deeper">Going deeper</a></li>
+          <li><a href="#what-it-does-not-mean">What it does NOT mean</a></li>
+          <li><a href="#common-misunderstandings">Common misunderstandings</a></li>
+          <li><a href="#risks-and-limits">Risks and limits</a></li>
+        </ol>
+      </details>
+    </aside>
+
+    <div class="prose">
+
+      <h2 id="why-it-matters">Why it matters</h2>
+<p>Almost every <a class="gl" href="/glossary/staking/" title="Locking up coins in a proof-of-stake network to help validate transactions, in return for rewards.">staking</a>, lending and liquidity product is advertised with a yearly percentage. Some quote APR and some quote APY, and the two are not interchangeable. A product can look better than another simply because it uses the label that produces the bigger number.</p>
+<p>Both figures also share a deeper limit: they describe a rate, not a result.</p>
+<h2 id="how-it-works">How it works</h2>
+<figure class="viz viz--bars" data-animate><div class="viz-title">A 12% APR at different compounding frequencies</div><div class="viz-canvas"><div class="dg-bars" role="list"><div class="dg-bar t-neutral" role="listitem" style="--i:0"><div class="dg-bar-head"><span class="dg-bar-label">No compounding</span><span class="dg-bar-value">12.00% APY</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:85.7%"></span></div></div><div class="dg-bar t-neutral" role="listitem" style="--i:1"><div class="dg-bar-head"><span class="dg-bar-label">Quarterly (4 times a year)</span><span class="dg-bar-value">12.55% APY</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:89.6%"></span></div></div><div class="dg-bar t-info" role="listitem" style="--i:2"><div class="dg-bar-head"><span class="dg-bar-label">Monthly (12 times)</span><span class="dg-bar-value">12.68% APY</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:90.6%"></span></div></div><div class="dg-bar t-info" role="listitem" style="--i:3"><div class="dg-bar-head"><span class="dg-bar-label">Daily (365 times)</span><span class="dg-bar-value">12.75% APY</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:91.1%"></span></div></div></div></div><figcaption>At a modest rate, compounding changes the figure only slightly. The gap widens quickly as the rate rises. <span class="viz-note">Assumes the rate stays at 12% all year.</span></figcaption></figure>
+<p><strong>APR</strong>, the <strong>annual percentage rate</strong>, is a yearly rate with no compounding. At 12% APR, 1,000 earns 120 over a year, and that is all.</p>
+<p><strong>APY</strong>, the <strong>annual percentage yield</strong>, includes <strong>compounding</strong>: each payment is added to the balance, so later payments are calculated on a larger amount. At 12% APR paid monthly, the first month pays 1% of 1,000, the second pays 1% of 1,010, and so on.</p>
+<div class="callout callout--beginner"><p class="callout-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 8.500l5.500 3.500-5.500 3.500z"/></svg><span>In plain words</span></p>
+<p>APR is like being paid the same wage every month. APY is like getting a small raise every month, where each raise is worked out from the wage you had just reached. The more often the raise is applied, the more it adds up to, though with diminishing effect.</p>
+</div>
+<h2 id="how-it-is-calculated">How it is calculated</h2>
+<div class="formula"><code>APY = (1 + r / n)^n - 1</code><span>r is the APR written as a decimal. n is the number of compounding periods in a year.</span></div>
+<p>For a 12% APR compounded monthly: (1 + 0.12 / 12)^12 - 1 = 1.01^12 - 1 = 0.1268, or about 12.68%.</p>
+<div class="table-wrap" data-scroll-label="Table"><table><thead>
+<tr>
+<th>APR</th>
+<th>APY with daily compounding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5%</td>
+<td>about 5.13%</td>
+</tr>
+<tr>
+<td>12%</td>
+<td>about 12.75%</td>
+</tr>
+<tr>
+<td>50%</td>
+<td>about 64.8%</td>
+</tr>
+<tr>
+<td>100%</td>
+<td>about 171.5%</td>
+</tr>
+</tbody>
+</table></div><p>The conversion runs both ways. A product quoting 100% APY with daily compounding is paying an APR of about 69.4%. Comparing a figure in APR with another in APY is comparing different units.</p>
+<h2 id="going-deeper">Going deeper</h2>
+<h3 id="how-a-quoted-rate-is-produced">How a quoted rate is produced</h3>
+<p>Crypto rates are rarely contractual. Most are <strong>annualized</strong> from a short window: the rewards of the last day or week, scaled up to a year. If a pool paid 0.1% yesterday, an interface may show 36.5% APR (0.1% x 365), or about 44% APY if it assumes daily compounding. Both figures assume that yesterday repeats 365 times.</p>
+<div class="callout callout--risk"><p class="callout-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></svg><span>A quoted rate is not a promise</span></p>
+<p>Quoted APR and APY figures are variable and are not guaranteed. They can change within hours as deposits, trading volume or reward programs change. They are often paid in a token whose price can fall, so a positive rate can go together with a loss in ordinary money. And every rate comes with the risks of the mechanism producing it: <a href="/foundations/exchanges-dex-defi/staking/">staking</a>, <a href="/foundations/exchanges-dex-defi/defi-lending-and-borrowing/">lending</a> or <a href="/foundations/exchanges-dex-defi/liquidity-providers/">liquidity provision</a>.</p>
+</div>
+<h3 id="compounding-is-not-always-automatic">Compounding is not always automatic</h3>
+<p>An APY figure assumes rewards are reinvested at the stated frequency. In many protocols that takes a transaction each time, with a <a class="gl" href="/glossary/gas-fee/" title="The fee paid to a blockchain network to process a transaction, normally charged in the network's native coin.">network fee</a>. For a small balance, the fees of compounding daily can exceed what compounding adds. Other protocols compound automatically inside the contract.</p>
+<h3 id="the-unit-problem">The unit problem</h3>
+<figure class="viz viz--bars" data-animate><div class="viz-title">1,000 tokens after a year at 12.68% APY, at three token prices</div><div class="viz-canvas"><div class="dg-bars" role="list"><div class="dg-bar t-bear" role="listitem" style="--i:0"><div class="dg-bar-head"><span class="dg-bar-label">Token price falls from 1.00 to 0.70</span><span class="dg-bar-value">788.78</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:53.8%"></span></div><p class="dg-bar-note">1,126.83 tokens x 0.70. Down about 21% from the starting 1,000.</p></div><div class="dg-bar t-neutral" role="listitem" style="--i:1"><div class="dg-bar-head"><span class="dg-bar-label">Token price stays at 1.00</span><span class="dg-bar-value">1,126.83</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:76.9%"></span></div><p class="dg-bar-note">1,126.83 tokens x 1.00.</p></div><div class="dg-bar t-bull" role="listitem" style="--i:2"><div class="dg-bar-head"><span class="dg-bar-label">Token price rises from 1.00 to 1.30</span><span class="dg-bar-value">1,464.88</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:100%"></span></div><p class="dg-bar-note">1,126.83 tokens x 1.30.</p></div></div></div><figcaption>The percentage describes the number of tokens. The token's price decides the value. <span class="viz-note">Hypothetical: assumes the rate never changes.</span></figcaption></figure>
+<p>A rate is expressed in the asset being paid. A 12.68% APY in a token means 12.68% more tokens. If the token loses 30% of its price, the position is worth less than at the start, as the figure shows. Rewards funded by issuing new tokens add to supply, which is one source of that price pressure. See <a href="/foundations/crypto/token-unlocks-and-emissions/">token unlocks and emissions</a>.</p>
+<h3 id="what-the-rate-leaves-out">What the rate leaves out</h3>
+<p>The headline figure does not subtract <a href="/foundations/exchanges-dex-defi/impermanent-loss/">impermanent loss</a>, network fees, validator commissions or slashing. It also takes no account of <a href="/foundations/markets-finance/interest-rates-and-inflation/">inflation</a> in the currency used to measure it.</p>
+<h3 id="borrowing">Borrowing</h3>
+<p>The same arithmetic applies to debt. A borrowing rate quoted as APR understates the cost if interest is added to the debt and itself accrues interest. In consumer lending, many jurisdictions regulate how APR must be calculated. In crypto there is no common standard, so the method belongs to whoever displays the number.</p>
+<div class="example"><p class="example-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.600-7 10-7 10 7 10 7-3.600 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>The same hypothetical rate, quoted two ways</span><em>Hypothetical illustration</em></p>
+<p>Made-up numbers. 1,000 is deposited at a rate of 12% a year that, for simplicity, never changes.</p>
+<p><strong>As APR, with no compounding.</strong></p>
+<ul>
+<li>Interest for the year: 1,000 x 0.12 = 120.</li>
+<li>Balance: 1,120.</li>
+</ul>
+<p><strong>Compounded monthly.</strong></p>
+<ul>
+<li>Month 1: 1% of 1,000 = 10.00. Balance 1,010.00.</li>
+<li>Month 2: 1% of 1,010 = 10.10. Balance 1,020.10.</li>
+<li>After 12 months: 1,000 x 1.01^12 = 1,126.83.</li>
+</ul>
+<p>Compounding added 6.83 over the year. An interface could truthfully describe this product as “12% APR” or as “12.68% APY”.</p>
+<p>Now suppose the balance is held in a token that started at a price of 1.00 and ended the year at 0.70. The 1,126.83 tokens are worth 1,126.83 x 0.70 = 788.78, which is about 21% less than the 1,000 at the start.</p>
+</div>
+<section class="notmean" aria-labelledby="what-it-does-not-mean"><h2 id="what-it-does-not-mean"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg><span>What it does NOT mean</span></h2>
+<ul>
+<li><strong>A high APY does not mean a high return.</strong> It is a rate in tokens, before price changes, costs and losses.</li>
+<li><strong>APY is not a better deal than APR.</strong> It is the same rate expressed with compounding included.</li>
+<li><strong>A quoted rate is not fixed.</strong> In crypto it is usually a snapshot of recent activity.</li>
+<li><strong>A rate is not earned by doing nothing.</strong> It is payment for carrying the risks of the product behind it.</li>
+<li><strong>A very large percentage is not generosity.</strong> It usually reflects a small pool, a new token being issued in volume, or a short window scaled up to a year.</li>
+</ul>
+</section>
+<h2 id="common-misunderstandings">Common misunderstandings</h2>
+<div class="mistakes">
+<ol>
+<li><strong>Comparing an APR with an APY.</strong> Both figures need converting to the same basis first. See <a href="/compare/apr-vs-apy/">APR vs APY</a>.</li>
+<li><strong>Reading a snapshot as a forecast.</strong> The annualized figure assumes conditions that rarely last a week, let alone a year.</li>
+<li><strong>Forgetting what the rate is paid in.</strong> The value of the reward depends on the token’s price when it is received.</li>
+<li><strong>Ignoring compounding costs.</strong> Each manual reinvestment costs a network fee.</li>
+<li><strong>Leaving out the losses.</strong> A rate does not include <a class="gl" href="/glossary/impermanent-loss/" title="The shortfall a liquidity provider has compared with simply holding the same tokens, caused by the pooled tokens' prices moving relative to each other.">impermanent loss</a>, slashing, <a class="gl" href="/glossary/liquidation/" title="The forced closing of a leveraged position by the exchange or protocol when its margin no longer covers its losses.">liquidation</a> or contract failure.</li>
+</ol>
+</div>
+<h2 id="risks-and-limits">Risks and limits</h2>
+<ul>
+<li>Displayed rates differ between interfaces, because each uses its own window and method.</li>
+<li>Rates on new or small pools are the least stable and the most flattering.</li>
+<li>Reward tokens can lose value faster than they are paid out.</li>
+<li>Neither figure measures the chance of losing the deposit itself.</li>
+</ul>
+<div class="takeaway"><p class="takeaway-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg><span>Key takeaway</span></p>
+<p>APR is a yearly rate without compounding and APY is the same rate with compounding: 12% APR compounded monthly is about 12.68% APY. Both are variable estimates in tokens, and neither says what a position will be worth.</p>
+</div>
+
+      <section class="sources" aria-labelledby="sources">
+        <h2 id="sources">Sources and further reading</h2>
+        <ul>
+          <li><a class="ext" href="https://www.consumerfinance.gov/rules-policy/regulations/1030/a/" rel="noopener noreferrer" target="_blank">Appendix A to Part 1030: Annual Percentage Yield Calculation<span class="sr-only"> (opens in a new tab)</span></a>, Consumer Financial Protection Bureau. Defines annual percentage yield as the interest paid on an account based on the rate and the frequency of compounding</li>
+          <li><cite>Options, Futures, and Other Derivatives</cite>, John C. Hull. Standard treatment of interest rates and compounding frequency</li>
+        </ul>
+      </section>
+
+      <aside class="edu-note" aria-label="Educational notice">
+        <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+        <p><strong>Educational content only.</strong> This page explains a concept. It is not financial advice and not a recommendation to buy, sell or hold anything. <a href="/educational-disclaimer/">Full disclaimer</a>. Last updated <time datetime="2026-11-21">21 November 2026</time>.</p>
+      </aside>
+    </div>
+  </div>
+  <section class="related band" aria-labelledby="related">
+    <div class="wrap">
+      <h2 id="related">Related topics</h2>
+      <div class="card-grid">
+<a class="card topic-card" href="/foundations/exchanges-dex-defi/staking/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Exchanges, DEX &amp; DeFi</span>
+    <span class="card-title">Staking</span>
+    <span class="card-text">Staking means locking tokens to help secure a proof-of-stake blockchain in exchange for rewards, while accepting lock-up periods, slashing risk and changes in the token&#39;s price.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/exchanges-dex-defi/defi-lending-and-borrowing/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 10l9-6 9 6"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8"/><path d="M3 21h18"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Exchanges, DEX &amp; DeFi</span>
+    <span class="card-title">DeFi Lending &amp; Borrowing</span>
+    <span class="card-text">DeFi lending protocols pool tokens from suppliers and lend them to borrowers who post more collateral than they borrow. If the collateral&#39;s value falls too far, the loan is liquidated.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/exchanges-dex-defi/liquidity-providers/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 16c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 20c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Exchanges, DEX &amp; DeFi</span>
+    <span class="card-title">Liquidity Providers</span>
+    <span class="card-text">Liquidity providers deposit both tokens of a pair into a liquidity pool so that others can trade against it, and receive a share of the swap fees while carrying the pool&#39;s risks.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/exchanges-dex-defi/impermanent-loss/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 5L5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Exchanges, DEX &amp; DeFi</span>
+    <span class="card-title">Impermanent Loss</span>
+    <span class="card-text">Impermanent loss is the gap between the value of tokens held in a liquidity pool and the value of simply holding them, which opens whenever their relative price changes.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--advanced"><i aria-hidden="true"></i>Advanced</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/markets-finance/interest-rates-and-inflation/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 5L5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Markets &amp; Finance</span>
+    <span class="card-title">Interest Rates &amp; Inflation</span>
+    <span class="card-text">Inflation is a general rise in prices that reduces what money can buy. Interest rates are the price of borrowing money, and central banks adjust their policy rates largely in response to inflation.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/crypto/token-unlocks-and-emissions/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Crypto Basics</span>
+    <span class="card-title">Token Unlocks &amp; Emissions</span>
+    <span class="card-text">A token unlock releases existing locked tokens to their owners on a schedule, while emissions create new tokens over time as rewards. Both increase the supply that can be traded.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager wrap" aria-label="More in this shelf"><a class="pager-link pager-prev" href="/foundations/exchanges-dex-defi/staking/"><span><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg>Previous</span><strong>Staking</strong></a>
+    <a class="pager-up" href="/foundations/exchanges-dex-defi/">Back to Exchanges, DEX &amp; DeFi</a><a class="pager-link pager-next" href="/foundations/exchanges-dex-defi/smart-contract-risk/"><span>Next<svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span><strong>Smart Contract Risk</strong></a>
+  </nav>
+</article>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"APR & APY","description":"APR is a yearly rate that leaves compounding out, and APY is a yearly rate that includes it, so the same underlying rate gives a higher APY than APR.","inLanguage":"en","dateModified":"2026-11-21","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"edgeTR Academy"}}]}
+</script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR" loading="lazy">
+        <p>Learn the market. Understand the tools. Make your own decisions.</p>
+        <p class="footer-family">Part of <strong>Ethos Empire</strong></p>
+        <ul class="trust" aria-label="What edgeTR Academy is"><li>Free to read</li><li>No login</li><li>No paywall</li><li>Educational reference</li>
+        </ul>
+      </div>
+      <nav aria-label="Learn and browse">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="/learn/">Learn: Chapters 1-10</a></li>
+          <li><a href="/library/">Library</a></li>
+          <li><a href="/patterns/">Pattern gallery</a></li>
+          <li><a href="/foundations/">Foundations</a></li>
+          <li><a href="/compare/">Compare</a></li>
+          <li><a href="/glossary/">A-Z Glossary</a></li>
+          <li><a href="/watch/">Watch in 60 Seconds</a></li>
+          <li><a href="/search/">Search</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Library shelves">
+        <h2>Library</h2>
+        <ul>
+          <li><a href="/library/candlesticks/">Candlesticks</a></li>
+          <li><a href="/library/chart-patterns/">Chart Patterns</a></li>
+          <li><a href="/library/indicators/">Indicators</a></li>
+          <li><a href="/library/market-structure/">Market Structure</a></li>
+          <li><a href="/library/support-resistance/">Support &amp; Resistance</a></li>
+          <li><a href="/library/bull-bear-long-short/">Bull, Bear, Long &amp; Short</a></li>
+          <li><a href="/library/trading-mechanics/">Trading Mechanics</a></li>
+          <li><a href="/library/">All shelves</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Foundations shelves">
+        <h2>Foundations</h2>
+        <ul>
+          <li><a href="/foundations/markets-finance/">Markets &amp; Finance</a></li>
+          <li><a href="/foundations/crypto/">Crypto Basics</a></li>
+          <li><a href="/foundations/bitcoin/">Bitcoin Knowledge Center</a></li>
+          <li><a href="/foundations/blockchain/">Blockchain</a></li>
+          <li><a href="/foundations/wallets-security/">Wallets &amp; Security</a></li>
+          <li><a href="/foundations/exchanges-dex-defi/">Exchanges, DEX &amp; DeFi</a></li>
+          <li><a href="/foundations/derivatives-perpetuals/">Derivatives &amp; Perpetuals</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="About">
+        <h2>About</h2>
+        <ul>
+          <li><a href="/about/">About edgeTR Academy</a></li>
+          <li><a href="/educational-disclaimer/">Educational disclaimer</a></li>
+          <li><a href="/terms/">Terms of use</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/contact/">Contact and support</a></li>
+          <li><a href="/about/#editorial-standards">Editorial standards</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-disclaimer"><strong>Educational only.</strong> edgeTR Academy provides educational information only. It does not provide financial, investment, legal or tax advice, does not recommend specific assets or trades, and does not guarantee outcomes. Users are responsible for their own research and decisions. <a href="/educational-disclaimer/">Read the full disclaimer</a>.</p>
+    <p class="footer-legal">&copy; 2026 edgeTR Academy, part of Ethos Empire. Free to read. No account needed. <a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/contact/">Contact</a></p>
+  </div>
+</footer>
+<script src="/js/search-core.js" defer></script>
+<script src="/js/site.js" defer></script>
+</body>
+</html>

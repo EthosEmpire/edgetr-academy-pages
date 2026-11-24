@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en" data-base="/">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order Book | edgeTR Academy</title>
+<meta name="description" content="An order book is the live list of all waiting buy and sell orders for one market, sorted by price, from which the exchange matches trades.">
+<meta name="theme-color" content="#070b12">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://edgetr.com/library/trading-mechanics/order-book/">
+<meta property="og:url" content="https://edgetr.com/library/trading-mechanics/order-book/">
+<meta property="og:image" content="https://edgetr.com/img/brand/og-default.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="edgeTR Academy">
+<meta property="og:title" content="Order Book">
+<meta property="og:description" content="An order book is the live list of all waiting buy and sell orders for one market, sorted by price, from which the exchange matches trades.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.edgetrSearch)document.documentElement.classList.remove("js")},3000)</script>
+</head>
+<body class="page-article">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="edgeTR Academy home">
+      <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR">
+      <span class="brand-sub">Academy</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="/learn/">Learn</a></li>
+        <li><a href="/library/" aria-current="true">Library</a></li>
+        <li><a href="/foundations/">Foundations</a></li>
+        <li><a href="/compare/">Compare</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+        <li class="nav-search-link"><a href="/search/">Search</a></li>
+      </ul>
+    </nav>
+    <form class="header-search" action="/search/" method="get" role="search" aria-label="Site search" data-suggest>
+      <label class="sr-only" for="hq">Search the Academy</label>
+      <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="hq" name="q" type="search" placeholder="Search: RSI, doji, wallet..." autocomplete="off" spellcheck="false" aria-controls="hq-list" aria-expanded="false" aria-autocomplete="list" role="combobox">
+      <kbd aria-hidden="true">/</kbd>
+      <div class="suggest" id="hq-list" role="listbox" aria-label="Search suggestions" hidden></div>
+    </form>
+    <a class="header-search-btn" href="/search/" aria-label="Search"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false">
+      <span class="sr-only">Menu</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<article class="article">
+  <header class="article-hero">
+    <div class="wrap">
+      
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/library/">Library</a></li>
+    <li><a href="/library/trading-mechanics/">Trading Mechanics</a></li>
+    <li><span aria-current="page">Order Book</span></li>
+  </ol>
+</nav>
+
+      <p class="eyebrow">Library · Trading Mechanics</p>
+      <h1>Order Book</h1>
+      <p class="lede">An order book is the live list of all waiting buy and sell orders for one market, sorted by price, from which the exchange matches trades.</p>
+      <ul class="meta-chips"><li><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></li>
+        <li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>4 min read</span></li><li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Updated <time datetime="2026-11-21">21 November 2026</time></span></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="wrap article-grid">
+    <aside class="toc" aria-label="On this page">
+      <details open>
+        <summary>On this page</summary>
+        <ol>
+          <li><a href="#why-it-matters">Why it matters</a></li>
+          <li><a href="#what-it-looks-like">What it looks like</a></li>
+          <li><a href="#how-to-read-it">How to read it</a></li>
+          <li><a href="#how-orders-change-the-book">How orders change the book</a></li>
+          <li><a href="#going-deeper">Going deeper</a></li>
+          <li><a href="#what-it-does-not-mean">What it does NOT mean</a></li>
+          <li><a href="#common-mistakes">Common mistakes</a></li>
+          <li><a href="#risks-and-limitations">Risks and limitations</a></li>
+        </ol>
+      </details>
+    </aside>
+
+    <div class="prose">
+
+      <h2 id="why-it-matters">Why it matters</h2>
+<p>A price on a chart looks like a single number. Behind it stand two queues: people willing to buy at lower prices and people willing to sell at higher ones. The order book is those queues made visible.</p>
+<p>It explains things a chart cannot: why a large order moves the price, why the price on screen is not always the price received, and where the <a href="/library/trading-mechanics/bid-ask-spread/">bid-ask spread</a> comes from.</p>
+<h2 id="what-it-looks-like">What it looks like</h2>
+<figure class="viz viz--orderbook" data-animate><div class="viz-title">A simple order book</div><div class="viz-canvas"><div class="dg-orderbook"><table><caption class="sr-only">Hypothetical order book: asks above the spread, bids below it.</caption><thead><tr><th scope="col">Price</th><th scope="col">Size</th><th scope="col">Depth</th></tr></thead><tbody><tr class="ob-head ob-ask-head"><th colspan="3" scope="rowgroup">Asks: sellers waiting (lowest ask at the bottom)</th></tr><tr class="ob-ask"><td class="ob-price">100.30</td><td class="ob-size">420</td><td class="ob-depth"><span style="--w:82.4%"></span></td></tr><tr class="ob-ask"><td class="ob-price">100.20</td><td class="ob-size">260</td><td class="ob-depth"><span style="--w:51%"></span></td></tr><tr class="ob-ask"><td class="ob-price">100.10</td><td class="ob-size">180</td><td class="ob-depth"><span style="--w:35.3%"></span></td></tr><tr class="ob-spread"><td colspan="3">Spread: 0.10 between best bid (100.00) and best ask (100.10)</td></tr><tr class="ob-bid"><td class="ob-price">100.00</td><td class="ob-size">210</td><td class="ob-depth"><span style="--w:41.2%"></span></td></tr><tr class="ob-bid"><td class="ob-price">99.90</td><td class="ob-size">340</td><td class="ob-depth"><span style="--w:66.7%"></span></td></tr><tr class="ob-bid"><td class="ob-price">99.80</td><td class="ob-size">510</td><td class="ob-depth"><span style="--w:100%"></span></td></tr><tr class="ob-head ob-bid-head"><th colspan="3" scope="rowgroup">Bids: buyers waiting (highest bid at the top)</th></tr></tbody></table></div></div><figcaption>Limit orders wait in the book. A market order trades immediately against the best waiting price on the other side. <span class="viz-note">Hypothetical numbers.</span></figcaption></figure>
+<p>The book has two halves. <strong>Bids</strong> are buy orders waiting to be filled, with the highest bid nearest the middle. <strong>Asks</strong> (also called offers) are sell orders waiting to be filled, with the lowest ask nearest the middle. The gap between the two halves is the spread.</p>
+<div class="callout callout--beginner"><p class="callout-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 8.500l5.500 3.500-5.500 3.500z"/></svg><span>In plain words</span></p>
+<p>Picture a noticeboard at a market. Buyers pin notes saying “I will pay 100.00 for up to 210 units”. Sellers pin notes saying “I will sell 180 units at 100.10”. Nothing trades while the notes merely hang there. A trade happens when someone walks up and accepts a note, or pins a new one that overlaps with the other side.</p>
+</div>
+<h2 id="how-to-read-it">How to read it</h2>
+<div class="table-wrap" data-scroll-label="Table"><table><thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+<th>In the figure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bid</td>
+<td>A price a buyer is waiting to pay</td>
+<td>100.00, 99.90, 99.80</td>
+</tr>
+<tr>
+<td>Ask</td>
+<td>A price a seller is waiting to accept</td>
+<td>100.10, 100.20, 100.30</td>
+</tr>
+<tr>
+<td>Best bid and best ask</td>
+<td>The highest bid and the lowest ask, together called the top of the book</td>
+<td>100.00 and 100.10</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>The quantity waiting at one price level</td>
+<td>210 units at 100.00</td>
+</tr>
+<tr>
+<td>Depth</td>
+<td>The total quantity waiting across levels</td>
+<td>1,060 on the bid side, 860 on the ask side</td>
+</tr>
+</tbody>
+</table></div><p>Every row is a <strong>price level</strong>. It can contain one order or thousands of separate orders added together.</p>
+<h2 id="how-orders-change-the-book">How orders change the book</h2>
+<p>Three actions change the book all day long:</p>
+<ul>
+<li>A <a href="/library/trading-mechanics/limit-orders/">limit order</a> that does not trade immediately <strong>joins</strong> the book and waits. It adds liquidity.</li>
+<li>A <a href="/library/trading-mechanics/market-orders/">market order</a> trades against the waiting orders and <strong>removes</strong> them. It takes liquidity.</li>
+<li>A <strong>cancellation</strong> removes a waiting order before it trades.</li>
+</ul>
+<figure class="viz viz--flow" data-animate><div class="viz-title">A market buy for 500 units walks up the book</div><div class="viz-canvas"><ol class="dg-flow dg-flow--row" style="--n:4"><li class="dg-step t-neutral" style="--i:0"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><span class="dg-step-body"><strong>180 at 100.10</strong><span>Takes everything at the best ask.</span></span></li><li class="dg-step t-neutral" style="--i:1"><span class="dg-step-n" aria-hidden="true">2</span><span class="dg-step-body"><strong>260 at 100.20</strong><span>Moves up to the next level.</span></span></li><li class="dg-step t-neutral" style="--i:2"><span class="dg-step-n" aria-hidden="true">3</span><span class="dg-step-body"><strong>60 at 100.30</strong><span>Takes part of the third level.</span></span></li><li class="dg-step t-warn" style="--i:3"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 5L5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></span><span class="dg-step-body"><strong>Average: 100.18</strong><span>About 0.08% above the best ask.</span></span></li></ol></div><figcaption>One large order consumes several price levels. Afterwards the best ask is 100.30, so the spread has widened from 0.10 to 0.30.</figcaption></figure>
+<p>Most order books match by <strong>price-time priority</strong>: the best price trades first, and among orders at the same price the earliest one trades first. Exact matching rules differ between exchanges.</p>
+<h2 id="going-deeper">Going deeper</h2>
+<h3 id="depth-and-liquidity">Depth and liquidity</h3>
+<p>A book with large sizes close to the current price is called <strong>deep</strong>. It can absorb big orders with little price change. A book with small sizes and wide gaps between levels is <strong>thin</strong>, and the same order moves the price much further. This is the practical meaning of <a href="/foundations/markets-finance/liquidity/">liquidity</a>, and it is the source of <a href="/library/trading-mechanics/slippage/">slippage</a>.</p>
+<h3 id="what-the-book-does-not-show">What the book does not show</h3>
+<p>The book lists only resting <a class="gl" href="/glossary/limit-order/" title="An order to buy or sell at a specified price or better, which waits in the order book until it can be filled.">limit orders</a>. It does not show <a class="gl" href="/glossary/market-order/" title="An order to buy or sell immediately at the best prices currently available.">market orders</a> that are about to arrive, and <a class="gl" href="/glossary/stop-order/" title="An order that stays inactive until price reaches a chosen trigger level, then becomes a market or limit order.">stop orders</a> are normally not displayed until they trigger. Some exchanges also allow hidden or “iceberg” orders, which show only part of their true size.</p>
+<p>Displayed orders are not promises either. They can be cancelled in a fraction of a second. Placing large orders with no intention of letting them trade is known as <strong>spoofing</strong>, which is prohibited in regulated markets.</p>
+<h3 id="not-every-market-has-one">Not every market has one</h3>
+<p>Each exchange keeps its own book for each market, so the same asset has many books at once. <a class="gl" href="/glossary/dex/" title="A decentralized exchange: a set of smart contracts that lets users trade tokens directly from their own wallets.">Decentralized exchanges</a> often have no book at all and use <a href="/foundations/exchanges-dex-defi/amms-and-liquidity-pools/">liquidity pools</a> instead. Much of the size in a typical book comes from <a href="/foundations/markets-finance/market-makers/">market makers</a>, firms that continuously quote both sides.</p>
+<div class="example"><p class="example-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.600-7 10-7 10 7 10 7-3.600 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>One hypothetical order, three price levels</span><em>Hypothetical illustration</em></p>
+<p>Using the book in the first figure, a trader sends a market buy order for 500 units. The best ask is 100.10, but only 180 units are waiting there.</p>
+<ul>
+<li>180 units fill at 100.10</li>
+<li>260 units fill at 100.20</li>
+<li>60 units fill at 100.30</li>
+</ul>
+<p>The average fill price is (180 x 100.10 + 260 x 100.20 + 60 x 100.30) / 500 = 100.176. That is about 0.08% above the best ask the trader saw before sending the order.</p>
+<p>An order for 100 units would have filled entirely at 100.10. The size of the order relative to the depth of the book made the difference.</p>
+</div>
+<section class="notmean" aria-labelledby="what-it-does-not-mean"><h2 id="what-it-does-not-mean"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg><span>What it does NOT mean</span></h2>
+<ul>
+<li><strong>A large bid does not mean price cannot go lower.</strong> A “wall” of orders can be cancelled, or simply filled, in moments.</li>
+<li><strong>The book does not reveal what traders intend.</strong> It shows resting limit orders only, not stops, not market orders and not people who are still deciding.</li>
+<li><strong>More bids than asks is not a forecast.</strong> The balance of displayed orders changes constantly and can be shaped by orders that never trade.</li>
+<li><strong>The last traded price is not an offer.</strong> What can be bought or sold next is set by the best ask and the best bid.</li>
+</ul>
+</section>
+<h2 id="common-mistakes">Common mistakes</h2>
+<div class="mistakes">
+<ol>
+<li><strong>Reading only the top line.</strong> The best bid and ask may hold very little size. A larger order reaches deeper levels.</li>
+<li><strong>Treating displayed size as fixed.</strong> Orders appear and vanish faster than a person can read them.</li>
+<li><strong>Assuming one book is the whole market.</strong> Other exchanges have their own books and slightly different prices.</li>
+</ol>
+</div>
+<h2 id="risks-and-limitations">Risks and limitations</h2>
+<ul>
+<li>In thin books a modest order can move the price sharply.</li>
+<li>During fast markets <a class="gl" href="/glossary/liquidity-provider/" title="Someone who deposits tokens into a liquidity pool so that others can trade against them, in return for a share of trading fees.">liquidity providers</a> often withdraw orders, so depth can vanish exactly when many traders need it.</li>
+<li>Hidden orders and off-exchange trading mean the visible book is always incomplete.</li>
+</ul>
+<div class="takeaway"><p class="takeaway-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg><span>Key takeaway</span></p>
+<p>The order book is the queue of waiting buyers and sellers at each price. It shows what can trade right now, and how far the price would move for a given size.</p>
+</div>
+
+      <section class="sources" aria-labelledby="sources">
+        <h2 id="sources">Sources and further reading</h2>
+        <ul>
+          <li><cite>Trading and Exchanges: Market Microstructure for Practitioners</cite>, Larry Harris (2003). Covers order-driven markets, order precedence rules and liquidity</li>
+          <li><a class="ext" href="https://www.sec.gov/answers/market.htm" rel="noopener noreferrer" target="_blank">Market Centers: Buying and Selling Stock<span class="sr-only"> (opens in a new tab)</span></a>, U.S. Securities and Exchange Commission. Electronic networks and market makers that automatically match buy and sell orders at specified prices</li>
+        </ul>
+      </section>
+
+      <aside class="edu-note" aria-label="Educational notice">
+        <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+        <p><strong>Educational content only.</strong> This page explains a concept. It is not financial advice and not a recommendation to buy, sell or hold anything. <a href="/educational-disclaimer/">Full disclaimer</a>. Last updated <time datetime="2026-11-21">21 November 2026</time>.</p>
+      </aside>
+    </div>
+  </div>
+  <section class="related band" aria-labelledby="related">
+    <div class="wrap">
+      <h2 id="related">Related topics</h2>
+      <div class="card-grid">
+<a class="card topic-card" href="/library/trading-mechanics/bid-ask-spread/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 4L3 8l4 4"/><path d="M3 8h14"/><path d="M17 12l4 4-4 4"/><path d="M21 16H7"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Trading Mechanics</span>
+    <span class="card-title">Bid, Ask &amp; Spread</span>
+    <span class="card-text">The bid is the highest price a buyer is offering, the ask is the lowest price a seller will accept, and the spread is the gap between the two.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/library/trading-mechanics/market-orders/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Trading Mechanics</span>
+    <span class="card-title">Market Orders</span>
+    <span class="card-text">A market order is an instruction to buy or sell immediately at the best prices currently available, accepting whatever those prices turn out to be.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/library/trading-mechanics/limit-orders/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Trading Mechanics</span>
+    <span class="card-title">Limit Orders</span>
+    <span class="card-text">A limit order is an instruction to buy or sell only at a stated price or better, which fixes the worst acceptable price but leaves the fill uncertain.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/library/trading-mechanics/slippage/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 5L5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Trading Mechanics</span>
+    <span class="card-title">Slippage</span>
+    <span class="card-text">Slippage is the difference between the price a trader expected when sending an order and the price at which the order was actually filled.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/markets-finance/liquidity/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 16c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 20c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Markets &amp; Finance</span>
+    <span class="card-title">Liquidity</span>
+    <span class="card-text">Liquidity is how easily an asset can be bought or sold, in the size you want, without the trade itself moving the price.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/markets-finance/market-makers/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.5M7 16.5h.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Markets &amp; Finance</span>
+    <span class="card-title">Market Makers &amp; Liquidity Providers</span>
+    <span class="card-text">A market maker continuously quotes a price to buy and a price to sell an asset, earning the spread between them in exchange for carrying the risk of holding inventory.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager wrap" aria-label="More in this shelf"><a class="pager-link pager-prev" href="/library/trading-mechanics/how-a-trade-works/"><span><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg>Previous</span><strong>How a Trade Works</strong></a>
+    <a class="pager-up" href="/library/trading-mechanics/">Back to Trading Mechanics</a><a class="pager-link pager-next" href="/library/trading-mechanics/bid-ask-spread/"><span>Next<svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span><strong>Bid, Ask &amp; Spread</strong></a>
+  </nav>
+</article>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Order Book","description":"An order book is the live list of all waiting buy and sell orders for one market, sorted by price, from which the exchange matches trades.","inLanguage":"en","dateModified":"2026-11-21","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"edgeTR Academy"}}]}
+</script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR" loading="lazy">
+        <p>Learn the market. Understand the tools. Make your own decisions.</p>
+        <p class="footer-family">Part of <strong>Ethos Empire</strong></p>
+        <ul class="trust" aria-label="What edgeTR Academy is"><li>Free to read</li><li>No login</li><li>No paywall</li><li>Educational reference</li>
+        </ul>
+      </div>
+      <nav aria-label="Learn and browse">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="/learn/">Learn: Chapters 1-10</a></li>
+          <li><a href="/library/">Library</a></li>
+          <li><a href="/patterns/">Pattern gallery</a></li>
+          <li><a href="/foundations/">Foundations</a></li>
+          <li><a href="/compare/">Compare</a></li>
+          <li><a href="/glossary/">A-Z Glossary</a></li>
+          <li><a href="/watch/">Watch in 60 Seconds</a></li>
+          <li><a href="/search/">Search</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Library shelves">
+        <h2>Library</h2>
+        <ul>
+          <li><a href="/library/candlesticks/">Candlesticks</a></li>
+          <li><a href="/library/chart-patterns/">Chart Patterns</a></li>
+          <li><a href="/library/indicators/">Indicators</a></li>
+          <li><a href="/library/market-structure/">Market Structure</a></li>
+          <li><a href="/library/support-resistance/">Support &amp; Resistance</a></li>
+          <li><a href="/library/bull-bear-long-short/">Bull, Bear, Long &amp; Short</a></li>
+          <li><a href="/library/trading-mechanics/">Trading Mechanics</a></li>
+          <li><a href="/library/">All shelves</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Foundations shelves">
+        <h2>Foundations</h2>
+        <ul>
+          <li><a href="/foundations/markets-finance/">Markets &amp; Finance</a></li>
+          <li><a href="/foundations/crypto/">Crypto Basics</a></li>
+          <li><a href="/foundations/bitcoin/">Bitcoin Knowledge Center</a></li>
+          <li><a href="/foundations/blockchain/">Blockchain</a></li>
+          <li><a href="/foundations/wallets-security/">Wallets &amp; Security</a></li>
+          <li><a href="/foundations/exchanges-dex-defi/">Exchanges, DEX &amp; DeFi</a></li>
+          <li><a href="/foundations/derivatives-perpetuals/">Derivatives &amp; Perpetuals</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="About">
+        <h2>About</h2>
+        <ul>
+          <li><a href="/about/">About edgeTR Academy</a></li>
+          <li><a href="/educational-disclaimer/">Educational disclaimer</a></li>
+          <li><a href="/terms/">Terms of use</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/contact/">Contact and support</a></li>
+          <li><a href="/about/#editorial-standards">Editorial standards</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-disclaimer"><strong>Educational only.</strong> edgeTR Academy provides educational information only. It does not provide financial, investment, legal or tax advice, does not recommend specific assets or trades, and does not guarantee outcomes. Users are responsible for their own research and decisions. <a href="/educational-disclaimer/">Read the full disclaimer</a>.</p>
+    <p class="footer-legal">&copy; 2026 edgeTR Academy, part of Ethos Empire. Free to read. No account needed. <a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/contact/">Contact</a></p>
+  </div>
+</footer>
+<script src="/js/search-core.js" defer></script>
+<script src="/js/site.js" defer></script>
+</body>
+</html>

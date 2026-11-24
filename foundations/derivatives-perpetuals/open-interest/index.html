@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en" data-base="/">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open Interest | edgeTR Academy</title>
+<meta name="description" content="Open interest is the total number, or value, of derivative contracts that are currently open and have not yet been closed or settled.">
+<meta name="theme-color" content="#070b12">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://edgetr.com/foundations/derivatives-perpetuals/open-interest/">
+<meta property="og:url" content="https://edgetr.com/foundations/derivatives-perpetuals/open-interest/">
+<meta property="og:image" content="https://edgetr.com/img/brand/og-default.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="edgeTR Academy">
+<meta property="og:title" content="Open Interest">
+<meta property="og:description" content="Open interest is the total number, or value, of derivative contracts that are currently open and have not yet been closed or settled.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.edgetrSearch)document.documentElement.classList.remove("js")},3000)</script>
+</head>
+<body class="page-article">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="edgeTR Academy home">
+      <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR">
+      <span class="brand-sub">Academy</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="/learn/">Learn</a></li>
+        <li><a href="/library/">Library</a></li>
+        <li><a href="/foundations/" aria-current="true">Foundations</a></li>
+        <li><a href="/compare/">Compare</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+        <li class="nav-search-link"><a href="/search/">Search</a></li>
+      </ul>
+    </nav>
+    <form class="header-search" action="/search/" method="get" role="search" aria-label="Site search" data-suggest>
+      <label class="sr-only" for="hq">Search the Academy</label>
+      <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="hq" name="q" type="search" placeholder="Search: RSI, doji, wallet..." autocomplete="off" spellcheck="false" aria-controls="hq-list" aria-expanded="false" aria-autocomplete="list" role="combobox">
+      <kbd aria-hidden="true">/</kbd>
+      <div class="suggest" id="hq-list" role="listbox" aria-label="Search suggestions" hidden></div>
+    </form>
+    <a class="header-search-btn" href="/search/" aria-label="Search"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false">
+      <span class="sr-only">Menu</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<article class="article">
+  <header class="article-hero">
+    <div class="wrap">
+      
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/foundations/">Foundations</a></li>
+    <li><a href="/foundations/derivatives-perpetuals/">Derivatives &amp; Perpetuals</a></li>
+    <li><span aria-current="page">Open Interest</span></li>
+  </ol>
+</nav>
+
+      <p class="eyebrow">Foundations · Derivatives &amp; Perpetuals</p>
+      <h1>Open Interest</h1>
+      <p class="lede">Open interest is the total number, or value, of derivative contracts that are currently open and have not yet been closed or settled.</p>
+      <ul class="meta-chips"><li><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></li>
+        <li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>4 min read</span></li><li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Updated <time datetime="2026-11-21">21 November 2026</time></span></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="wrap article-grid">
+    <aside class="toc" aria-label="On this page">
+      <details open>
+        <summary>On this page</summary>
+        <ol>
+          <li><a href="#why-it-matters">Why it matters</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#what-makes-it-rise-and-fall">What makes it rise and fall</a></li>
+          <li><a href="#open-interest-and-volume">Open interest and volume</a></li>
+          <li><a href="#how-it-is-commonly-interpreted">How it is commonly interpreted</a></li>
+          <li><a href="#going-deeper">Going deeper</a></li>
+          <li><a href="#what-it-does-not-mean">What it does NOT mean</a></li>
+          <li><a href="#common-mistakes">Common mistakes</a></li>
+          <li><a href="#risks-and-limitations">Risks and limitations</a></li>
+        </ol>
+      </details>
+    </aside>
+
+    <div class="prose">
+
+      <h2 id="why-it-matters">Why it matters</h2>
+<p>Open interest appears on almost every derivatives data page, usually next to price and volume. It answers a simple question that price cannot: how many contracts exist right now. It is also widely over-read, because a large number looks like it should mean something about direction.</p>
+<h2 id="how-it-works">How it works</h2>
+<figure class="viz viz--split" data-animate><div class="viz-title">One open contract always has two sides</div><div class="viz-canvas"><div class="dg-split"><div class="dg-side t-info"><div class="dg-side-head"><span class="dg-side-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><div><p class="dg-side-title">LONG SIDE</p><p>Holds 1 contract long.</p></div></div><ul><li>Gains if price rises</li><li>Loses if price falls</li></ul></div><div class="dg-side t-warn"><div class="dg-side-head"><span class="dg-side-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><div><p class="dg-side-title">SHORT SIDE</p><p>Holds 1 contract short.</p></div></div><ul><li>Gains if price falls</li><li>Loses if price rises</li></ul></div></div></div><figcaption>Open interest counts this as 1, not 2. For every contract held long there is exactly one held short.</figcaption></figure>
+<p><strong>Open interest</strong> (OI) is the number of derivative contracts that are open at a given moment: opened, and not yet closed, expired or <a class="gl" href="/glossary/liquidation/" title="The forced closing of a leveraged position by the exchange or protocol when its margin no longer covers its losses.">liquidated</a>. It applies to <a href="/foundations/derivatives-perpetuals/futures-contracts/">futures</a>, <a href="/foundations/derivatives-perpetuals/perpetual-futures/">perpetual futures</a> and options.</p>
+<p>Each contract is counted once, not once per side. Exchanges report the figure in contracts, in units of the underlying asset, or as a currency value. When it is shown as a currency value, it changes whenever the price changes, even if nobody opens or closes anything.</p>
+<div class="callout callout--beginner"><p class="callout-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 8.500l5.500 3.500-5.500 3.500z"/></svg><span>In plain words</span></p>
+<p>Think of a hall where people play chess. Open interest is the number of games in progress. It goes up when two people sit down to start a new game and down when a game ends. If a player hands their seat to someone else, the number of games stays the same. And the count tells you nothing about who is winning any of them.</p>
+</div>
+<h2 id="what-makes-it-rise-and-fall">What makes it rise and fall</h2>
+<figure class="viz viz--compare" data-animate><div class="viz-title">How one trade of 1 contract changes open interest</div><div class="viz-canvas"><div class="dg-compare" tabindex="0" role="region" aria-label="Comparison of What each side is doing and Open interest; scrolls sideways on small screens"><table><thead><tr><th scope="col"><span class="sr-only">Aspect</span></th><th scope="col" class="t-neutral">What each side is doing</th><th scope="col" class="t-info">Open interest</th></tr></thead><tbody><tr><th scope="row">New buyer, new seller</th><td>Both open a position</td><td>Rises by 1</td></tr><tr><th scope="row">New buyer, existing long sells</th><td>One opens, one closes</td><td>Unchanged</td></tr><tr><th scope="row">Existing short buys, new seller</th><td>One closes, one opens</td><td>Unchanged</td></tr><tr><th scope="row">Existing short buys, existing long sells</th><td>Both close a position</td><td>Falls by 1</td></tr></tbody></table></div></div></figure>
+<p>Open interest rises only when both sides of a trade are opening new positions. It falls only when both sides are closing. When a position simply passes from one holder to another, nothing changes. Liquidations and expiries also remove contracts.</p>
+<h2 id="open-interest-and-volume">Open interest and volume</h2>
+<figure class="viz viz--compare" data-animate><div class="viz-title">Volume vs open interest</div><div class="viz-canvas"><div class="dg-compare" tabindex="0" role="region" aria-label="Comparison of Volume and Open interest; scrolls sideways on small screens"><table><thead><tr><th scope="col"><span class="sr-only">Aspect</span></th><th scope="col" class="t-neutral">Volume</th><th scope="col" class="t-info">Open interest</th></tr></thead><tbody><tr><th scope="row">Counts</th><td>Contracts traded during a period</td><td>Contracts still open at one moment</td></tr><tr><th scope="row">Next period</th><td>Starts again from zero</td><td>Carries over</td></tr><tr><th scope="row">A trade always</th><td>Adds to it</td><td>May raise it, lower it or leave it unchanged</td></tr></tbody></table></div></div></figure>
+<p><a href="/foundations/markets-finance/volume-explained/">Volume</a> measures activity. Open interest measures what is left standing after that activity. A day can have very high volume and no change in open interest if traders mostly opened and closed within the day.</p>
+<h2 id="how-it-is-commonly-interpreted">How it is commonly interpreted</h2>
+<p>Traders often read a change in open interest together with the change in price:</p>
+<div class="table-wrap" data-scroll-label="Table"><table><thead>
+<tr>
+<th>Price</th>
+<th>Open interest</th>
+<th>Common reading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rising</td>
+<td>Rising</td>
+<td>New positions are being opened during the advance</td>
+</tr>
+<tr>
+<td>Rising</td>
+<td>Falling</td>
+<td>Positions are being closed during the advance, often shorts buying back</td>
+</tr>
+<tr>
+<td>Falling</td>
+<td>Rising</td>
+<td>New positions are being opened during the decline</td>
+</tr>
+<tr>
+<td>Falling</td>
+<td>Falling</td>
+<td>Positions are being closed during the decline, often longs selling or being liquidated</td>
+</tr>
+</tbody>
+</table></div><p>These readings are conventions. They describe what kind of activity accompanied a move that has already happened.</p>
+<h3 id="why-it-does-not-predict-direction">Why it does not predict direction</h3>
+<ul>
+<li><strong>Every open contract has one long and one short.</strong> Rising open interest means more longs and exactly as many more shorts. It cannot show which side is “winning”.</li>
+<li><strong>It does not show who started the trade.</strong> The data does not reveal whether buyers or sellers were the more urgent side.</li>
+<li><strong>It does not show intent.</strong> A hedger offsetting a spot holding and a speculator with no other position look identical.</li>
+<li><strong>It measures size, not direction.</strong> A high figure means a lot of leveraged exposure exists on both sides.</li>
+</ul>
+<h2 id="going-deeper">Going deeper</h2>
+<p>High open interest relative to a market’s <a href="/foundations/markets-finance/liquidity/">liquidity</a> means more positions could be forcibly closed if price moves sharply, which is one ingredient of a <a href="/foundations/derivatives-perpetuals/liquidation-cascades/">liquidation cascade</a>. It describes how much fuel is present, not whether, when or in which direction anything happens.</p>
+<p>Practitioners usually view open interest alongside the <a href="/foundations/derivatives-perpetuals/funding-rate/">funding rate</a>, which shows which side has been paying to hold. In <a class="gl" href="/glossary/futures/" title="A standardised agreement to buy or sell an asset at a set price on a set future date.">dated futures</a>, open interest in a contract typically shrinks as expiry approaches and positions are closed or rolled into later contracts.</p>
+<div class="example"><p class="example-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.600-7 10-7 10 7 10 7-3.600 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>Four trades, step by step</span><em>Hypothetical illustration</em></p>
+<p>Hypothetical market, starting with no open contracts.</p>
+<ol>
+<li>Ana buys 5 contracts from Ben. Both are new. <strong>OI = 5.</strong></li>
+<li>Cal buys 3 contracts from Dee. Both are new. <strong>OI = 8.</strong></li>
+<li>Ana sells 2 of her contracts to Eve. Ana is closing, Eve is new. <strong>OI = 8.</strong></li>
+<li>Ben buys back 3 contracts from Cal. Both are closing. <strong>OI = 5.</strong></li>
+</ol>
+<p>At the end, the longs are Ana 3 and Eve 2, and the shorts are Ben 2 and Dee 3: five on each side. Volume across the four trades was 5 + 3 + 2 + 3 = 13 contracts, while open interest finished at 5.</p>
+</div>
+<section class="notmean" aria-labelledby="what-it-does-not-mean"><h2 id="what-it-does-not-mean"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg><span>What it does NOT mean</span></h2>
+<ul>
+<li><strong>Rising open interest is not bullish, and it is not bearish.</strong> New longs and new shorts are created in equal numbers.</li>
+<li><strong>Open interest does not show which side is ahead.</strong> It counts contracts, not profits.</li>
+<li><strong>Open interest is not volume.</strong> One counts trades in a period; the other counts positions that remain.</li>
+<li><strong>A change in currency-valued open interest does not always mean trading.</strong> A price move alone changes the figure.</li>
+<li><strong>High open interest does not mean a cascade is coming.</strong> It describes exposure, not timing.</li>
+</ul>
+</section>
+<h2 id="common-mistakes">Common mistakes</h2>
+<div class="mistakes">
+<ol>
+<li><strong>Reading open interest alone as a direction.</strong> The figure has no direction in it.</li>
+<li><strong>Mixing units.</strong> Contracts, coins and currency value give different pictures of the same market.</li>
+<li><strong>Comparing exchanges without care.</strong> Contract sizes and reporting methods differ.</li>
+<li><strong>Treating the price and open interest table as rules.</strong> It lists common readings, each with frequent exceptions.</li>
+</ol>
+</div>
+<h2 id="risks-and-limitations">Risks and limitations</h2>
+<ul>
+<li>The data is reported by exchanges and cannot be verified from outside.</li>
+<li>Aggregated figures cover only the venues a data site tracks, and definitions differ between them.</li>
+<li>Open interest says nothing about who holds the positions or how much leverage each uses.</li>
+<li>Like every market statistic, it describes the present and the past, not the future.</li>
+</ul>
+<div class="takeaway"><p class="takeaway-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg><span>Key takeaway</span></p>
+<p>Open interest counts the contracts that are currently open. Because every contract has one long and one short, it measures how much exposure exists, not which way the market is leaning.</p>
+</div>
+
+      <section class="sources" aria-labelledby="sources">
+        <h2 id="sources">Sources and further reading</h2>
+        <ul>
+          <li><cite>Options, Futures, and Other Derivatives</cite>, John C. Hull. Defines open interest and explains how individual trades change it</li>
+          <li><a class="ext" href="https://www.cftc.gov/MarketReports/CommitmentsofTraders/ExplanatoryNotes/index.htm" rel="noopener noreferrer" target="_blank">Commitments of Traders: Explanatory Notes<span class="sr-only"> (opens in a new tab)</span></a>, U.S. Commodity Futures Trading Commission. Regulator definition of open interest and the statement that long and short open interest are equal</li>
+        </ul>
+      </section>
+
+      <aside class="edu-note" aria-label="Educational notice">
+        <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+        <p><strong>Educational content only.</strong> This page explains a concept. It is not financial advice and not a recommendation to buy, sell or hold anything. <a href="/educational-disclaimer/">Full disclaimer</a>. Last updated <time datetime="2026-11-21">21 November 2026</time>.</p>
+      </aside>
+    </div>
+  </div>
+  <section class="related band" aria-labelledby="related">
+    <div class="wrap">
+      <h2 id="related">Related topics</h2>
+      <div class="card-grid">
+<a class="card topic-card" href="/foundations/derivatives-perpetuals/funding-rate/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 5L5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Derivatives &amp; Perpetuals</span>
+    <span class="card-title">Funding Rate</span>
+    <span class="card-text">The funding rate is a periodic payment exchanged between long and short holders of a perpetual future that pulls the contract price toward the spot index.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/derivatives-perpetuals/long-short-ratio/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v18M7 21h10M5 7h14"/><path d="M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Derivatives &amp; Perpetuals</span>
+    <span class="card-title">Long/Short Ratio</span>
+    <span class="card-text">The long/short ratio compares long and short positioning in a derivatives market, usually by counting accounts, which is not the same as measuring position size.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--advanced"><i aria-hidden="true"></i>Advanced</span></span>
+  </span>
+</a>
+
+<a class="card topic-card accent-bear" href="/foundations/derivatives-perpetuals/liquidation-cascades/">
+  <span class="card-thumb" aria-hidden="true"><svg class="vz vz-mini" viewBox="0 0 320 192" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet"><g class="vz-fade"><rect x="4" y="76.4" width="205.9" height="11.3" fill="var(--bull-soft)" rx="3"/><line x1="4" x2="209.9" y1="76.4" y2="76.4" stroke="var(--bull)" stroke-opacity=".55"/><line x1="4" x2="209.9" y1="87.7" y2="87.7" stroke="var(--bull)" stroke-opacity=".55"/></g><g class="vz-c vz-down" style="--i:0"><line x1="6.6" x2="6.6" y1="16.7" y2="29.4"/><rect x="5" y="19.8" width="3.2" height="6.8" rx="1"/></g><g class="vz-c vz-down" style="--i:1"><line x1="11.8" x2="11.8" y1="25.2" y2="41.4"/><rect x="10.2" y="26.6" width="3.2" height="13" rx="1"/></g><g class="vz-c vz-down" style="--i:2"><line x1="17" x2="17" y1="36.9" y2="51.5"/><rect x="15.4" y="39.6" width="3.2" height="8.7" rx="1"/></g><g class="vz-c vz-down" style="--i:3"><line x1="22.2" x2="22.2" y1="48" y2="61.1"/><rect x="20.6" y="48.3" width="3.2" height="12.1" rx="1"/></g><g class="vz-c vz-down" style="--i:4"><line x1="27.4" x2="27.4" y1="57.3" y2="68.6"/><rect x="25.8" y="60.5" width="3.2" height="5" rx="1"/></g><g class="vz-c vz-down" style="--i:5"><line x1="32.6" x2="32.6" y1="63.6" y2="79.7"/><rect x="31" y="65.5" width="3.2" height="11.7" rx="1"/></g><g class="vz-c vz-up" style="--i:6"><line x1="37.8" x2="37.8" y1="65.7" y2="79.9"/><rect x="36.2" y="67.7" width="3.2" height="9.5" rx="1"/></g><g class="vz-c vz-up" style="--i:7"><line x1="43" x2="43" y1="61.4" y2="70.1"/><rect x="41.4" y="61.9" width="3.2" height="5.8" rx="1"/></g><g class="vz-c vz-up" style="--i:8"><line x1="48.2" x2="48.2" y1="48.2" y2="62.1"/><rect x="46.6" y="51.5" width="3.2" height="10.4" rx="1"/></g><g class="vz-c vz-up" style="--i:9"><line x1="53.4" x2="53.4" y1="41.9" y2="52"/><rect x="51.8" y="44.5" width="3.2" height="7" rx="1"/></g><g class="vz-c vz-up" style="--i:10"><line x1="58.6" x2="58.6" y1="37.5" y2="47.5"/><rect x="57" y="40.2" width="3.2" height="4.3" rx="1"/></g><g class="vz-c vz-up" style="--i:11"><line x1="63.8" x2="63.8" y1="27.5" y2="41.6"/><rect x="62.2" y="30.1" width="3.2" height="10.1" rx="1"/></g><g class="vz-c vz-down" style="--i:12"><line x1="69" x2="69" y1="27.2" y2="39.1"/><rect x="67.4" y="30.1" width="3.2" height="6.1" rx="1"/></g><g class="vz-c vz-down" style="--i:13"><line x1="74.2" x2="74.2" y1="33.8" y2="50.3"/><rect x="72.6" y="36.2" width="3.2" height="11.1" rx="1"/></g><g class="vz-c vz-down" style="--i:14"><line x1="79.4" x2="79.4" y1="44.7" y2="52.7"/><rect x="77.8" y="47.3" width="3.2" height="3" rx="1"/></g><g class="vz-c vz-down" style="--i:15"><line x1="84.6" x2="84.6" y1="47.8" y2="60.4"/><rect x="83" y="50.3" width="3.2" height="7.9" rx="1"/></g><g class="vz-c vz-down" style="--i:16"><line x1="89.8" x2="89.8" y1="56.3" y2="67.4"/><rect x="88.2" y="58.2" width="3.2" height="7.8" rx="1"/></g><g class="vz-c vz-down" style="--i:17"><line x1="95" x2="95" y1="64.7" y2="75.3"/><rect x="93.4" y="66.1" width="3.2" height="7.6" rx="1"/></g><g class="vz-c vz-down" style="--i:18"><line x1="100.2" x2="100.2" y1="70.6" y2="77.3"/><rect x="98.6" y="73.7" width="3.2" height="2.4" rx="1"/></g><g class="vz-c vz-up" style="--i:19"><line x1="105.4" x2="105.4" y1="73.7" y2="78.5"/><rect x="103.8" y="74.3" width="3.2" height="1.8" rx="1"/></g><g class="vz-c vz-up" style="--i:20"><line x1="110.6" x2="110.6" y1="64.5" y2="75.2"/><rect x="109" y="66.3" width="3.2" height="8" rx="1"/></g><g class="vz-c vz-up" style="--i:21"><line x1="115.8" x2="115.8" y1="56.8" y2="68.1"/><rect x="114.2" y="57.7" width="3.2" height="8.6" rx="1"/></g><g class="vz-c vz-up" style="--i:22"><line x1="121" x2="121" y1="48.5" y2="57.8"/><rect x="119.4" y="50.4" width="3.2" height="7.3" rx="1"/></g><g class="vz-c vz-up" style="--i:23"><line x1="126.2" x2="126.2" y1="41.6" y2="53"/><rect x="124.6" y="43.5" width="3.2" height="6.9" rx="1"/></g><g class="vz-c vz-up" style="--i:24"><line x1="131.4" x2="131.4" y1="35.9" y2="46.1"/><rect x="129.8" y="37.8" width="3.2" height="5.6" rx="1"/></g><g class="vz-c vz-down" style="--i:25"><line x1="136.6" x2="136.6" y1="37" y2="43.9"/><rect x="135" y="37.8" width="3.2" height="2.7" rx="1"/></g><g class="vz-c vz-down" style="--i:26"><line x1="141.8" x2="141.8" y1="38.6" y2="50.7"/><rect x="140.2" y="40.6" width="3.2" height="8.9" rx="1"/></g><g class="vz-c vz-down" style="--i:27"><line x1="147" x2="147" y1="46.4" y2="57.4"/><rect x="145.4" y="49.5" width="3.2" height="5.9" rx="1"/></g><g class="vz-c vz-down" style="--i:28"><line x1="152.2" x2="152.2" y1="55.2" y2="64.7"/><rect x="150.6" y="55.4" width="3.2" height="6" rx="1"/></g><g class="vz-c vz-down" style="--i:29"><line x1="157.4" x2="157.4" y1="59.2" y2="65.9"/><rect x="155.8" y="61.5" width="3.2" height="2.3" rx="1"/></g><g class="vz-c vz-down" style="--i:30"><line x1="162.6" x2="162.6" y1="61.2" y2="71.3"/><rect x="161" y="63.8" width="3.2" height="7.3" rx="1"/></g><g class="vz-c vz-down" style="--i:31"><line x1="167.8" x2="167.8" y1="68.5" y2="80.3"/><rect x="166.2" y="71.1" width="3.2" height="8.1" rx="1"/></g><g class="vz-c vz-up" style="--i:32"><line x1="173" x2="173" y1="75.5" y2="81.6"/><rect x="171.4" y="78.4" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:33"><line x1="178.2" x2="178.2" y1="66.5" y2="79.5"/><rect x="176.6" y="68.7" width="3.2" height="9.7" rx="1"/></g><g class="vz-c vz-up" style="--i:34"><line x1="183.4" x2="183.4" y1="66.4" y2="71.8"/><rect x="181.8" y="67.8" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-up" style="--i:35"><line x1="188.6" x2="188.6" y1="56.7" y2="70.2"/><rect x="187" y="57.8" width="3.2" height="10" rx="1"/></g><g class="vz-c vz-up" style="--i:36"><line x1="193.8" x2="193.8" y1="53.8" y2="59.8"/><rect x="192.2" y="56.9" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:37"><line x1="199" x2="199" y1="55.5" y2="65.2"/><rect x="197.4" y="56.9" width="3.2" height="5.1" rx="1"/></g><g class="vz-c vz-down" style="--i:38"><line x1="204.2" x2="204.2" y1="61.2" y2="78.6"/><rect x="202.6" y="62" width="3.2" height="13.6" rx="1"/></g><g class="vz-c vz-down" style="--i:39"><line x1="209.4" x2="209.4" y1="73.4" y2="88.1"/><rect x="207.8" y="75.7" width="3.2" height="9.5" rx="1"/></g><g class="vz-c vz-down" style="--i:40"><line x1="214.6" x2="214.6" y1="85" y2="93.6"/><rect x="213" y="85.2" width="3.2" height="8.1" rx="1"/></g><g class="vz-c vz-down" style="--i:41"><line x1="219.8" x2="219.8" y1="91.5" y2="110.3"/><rect x="218.2" y="93.3" width="3.2" height="14.1" rx="1"/></g><g class="vz-c vz-down" style="--i:42"><line x1="225" x2="225" y1="104.6" y2="110.1"/><rect x="223.4" y="107.4" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:43"><line x1="230.2" x2="230.2" y1="105.7" y2="116.8"/><rect x="228.6" y="108.9" width="3.2" height="5.9" rx="1"/></g><g class="vz-c vz-down" style="--i:44"><line x1="235.4" x2="235.4" y1="112.9" y2="122.4"/><rect x="233.8" y="114.8" width="3.2" height="6.3" rx="1"/></g><g class="vz-c vz-down" style="--i:45"><line x1="240.6" x2="240.6" y1="120.4" y2="125.9"/><rect x="239" y="121.1" width="3.2" height="1.6" rx="1"/></g><g class="vz-c vz-down" style="--i:46"><line x1="245.8" x2="245.8" y1="120.7" y2="128.3"/><rect x="244.2" y="122.7" width="3.2" height="3.9" rx="1"/></g><g class="vz-c vz-up" style="--i:47"><line x1="251" x2="251" y1="121.5" y2="126.8"/><rect x="249.4" y="124.3" width="3.2" height="2.3" rx="1"/></g><g class="vz-c vz-up" style="--i:48"><line x1="256.2" x2="256.2" y1="115.2" y2="125"/><rect x="254.6" y="116.6" width="3.2" height="7.6" rx="1"/></g><g class="vz-c vz-down" style="--i:49"><line x1="261.4" x2="261.4" y1="114.4" y2="121.7"/><rect x="259.8" y="116.6" width="3.2" height="2" rx="1"/></g><g class="vz-c vz-up" style="--i:50"><line x1="266.6" x2="266.6" y1="112.2" y2="120.5"/><rect x="265" y="113.1" width="3.2" height="5.6" rx="1"/></g><g class="vz-c vz-down" style="--i:51"><line x1="271.8" x2="271.8" y1="112" y2="114.9"/><rect x="270.2" y="113.1" width="3.2" height="1.5" rx="1"/></g><g class="vz-c vz-down" style="--i:52"><line x1="277" x2="277" y1="112.9" y2="125.6"/><rect x="275.4" y="114.6" width="3.2" height="8.8" rx="1"/></g><g class="vz-c vz-down" style="--i:53"><line x1="282.2" x2="282.2" y1="120.3" y2="130.5"/><rect x="280.6" y="123.4" width="3.2" height="5.1" rx="1"/></g><g class="vz-c vz-down" style="--i:54"><line x1="287.4" x2="287.4" y1="125.2" y2="140.4"/><rect x="285.8" y="128.5" width="3.2" height="9.6" rx="1"/></g><g class="vz-c vz-down" style="--i:55"><line x1="292.6" x2="292.6" y1="137" y2="145.6"/><rect x="291" y="138.1" width="3.2" height="6.3" rx="1"/></g><g class="vz-c vz-down" style="--i:56"><line x1="297.8" x2="297.8" y1="141.2" y2="155.8"/><rect x="296.2" y="144.4" width="3.2" height="8.5" rx="1"/></g><g class="vz-c vz-down" style="--i:57"><line x1="303" x2="303" y1="149.9" y2="155.3"/><rect x="301.4" y="152.9" width="3.2" height="2" rx="1"/></g><g class="vz-c vz-down" style="--i:58"><line x1="308.2" x2="308.2" y1="153.1" y2="163.4"/><rect x="306.6" y="154.9" width="3.2" height="7.8" rx="1"/></g><g class="vz-c vz-down" style="--i:59"><line x1="313.4" x2="313.4" y1="162.1" y2="175.3"/><rect x="311.8" y="162.7" width="3.2" height="10.7" rx="1"/></g><rect class="vz-vol vz-down" x="5" y="140.6" width="3.2" height="39.4"/><rect class="vz-vol vz-down" x="10.2" y="138.4" width="3.2" height="41.6"/><rect class="vz-vol vz-down" x="15.4" y="142.9" width="3.2" height="37.1"/><rect class="vz-vol vz-down" x="20.6" y="136.9" width="3.2" height="43.1"/><rect class="vz-vol vz-down" x="25.8" y="152.2" width="3.2" height="27.8"/><rect class="vz-vol vz-down" x="31" y="136.7" width="3.2" height="43.3"/><rect class="vz-vol vz-up" x="36.2" y="144.9" width="3.2" height="35.1"/><rect class="vz-vol vz-up" x="41.4" y="149.3" width="3.2" height="30.7"/><rect class="vz-vol vz-up" x="46.6" y="144.5" width="3.2" height="35.5"/><rect class="vz-vol vz-up" x="51.8" y="142.4" width="3.2" height="37.6"/><rect class="vz-vol vz-up" x="57" y="148.8" width="3.2" height="31.2"/><rect class="vz-vol vz-up" x="62.2" y="145.3" width="3.2" height="34.7"/><rect class="vz-vol vz-down" x="67.4" y="143.9" width="3.2" height="36.1"/><rect class="vz-vol vz-down" x="72.6" y="142.1" width="3.2" height="37.9"/><rect class="vz-vol vz-down" x="77.8" y="152.3" width="3.2" height="27.7"/><rect class="vz-vol vz-down" x="83" y="147.9" width="3.2" height="32.1"/><rect class="vz-vol vz-down" x="88.2" y="146.1" width="3.2" height="33.9"/><rect class="vz-vol vz-down" x="93.4" y="139.9" width="3.2" height="40.1"/><rect class="vz-vol vz-down" x="98.6" y="152.7" width="3.2" height="27.3"/><rect class="vz-vol vz-up" x="103.8" y="157.7" width="3.2" height="22.3"/><rect class="vz-vol vz-up" x="109" y="137.8" width="3.2" height="42.2"/><rect class="vz-vol vz-up" x="114.2" y="141.3" width="3.2" height="38.7"/><rect class="vz-vol vz-up" x="119.4" y="141.6" width="3.2" height="38.4"/><rect class="vz-vol vz-up" x="124.6" y="147.8" width="3.2" height="32.2"/><rect class="vz-vol vz-up" x="129.8" y="152.7" width="3.2" height="27.3"/><rect class="vz-vol vz-down" x="135" y="158.7" width="3.2" height="21.3"/><rect class="vz-vol vz-down" x="140.2" y="137.6" width="3.2" height="42.4"/><rect class="vz-vol vz-down" x="145.4" y="144.2" width="3.2" height="35.8"/><rect class="vz-vol vz-down" x="150.6" y="149.2" width="3.2" height="30.8"/><rect class="vz-vol vz-down" x="155.8" y="154.5" width="3.2" height="25.5"/><rect class="vz-vol vz-down" x="161" y="144.7" width="3.2" height="35.3"/><rect class="vz-vol vz-down" x="166.2" y="145.8" width="3.2" height="34.2"/><rect class="vz-vol vz-up" x="171.4" y="154.2" width="3.2" height="25.8"/><rect class="vz-vol vz-up" x="176.6" y="138.1" width="3.2" height="41.9"/><rect class="vz-vol vz-up" x="181.8" y="158" width="3.2" height="22"/><rect class="vz-vol vz-up" x="187" y="137.8" width="3.2" height="42.2"/><rect class="vz-vol vz-up" x="192.2" y="156.8" width="3.2" height="23.2"/><rect class="vz-vol vz-down" x="197.4" y="150.5" width="3.2" height="29.5"/><rect class="vz-vol vz-down" x="202.6" y="136" width="3.2" height="44"/><rect class="vz-vol vz-down" x="207.8" y="137.6" width="3.2" height="42.4"/><rect class="vz-vol vz-down" x="213" y="139.5" width="3.2" height="40.5"/><rect class="vz-vol vz-down" x="218.2" y="143.7" width="3.2" height="36.3"/><rect class="vz-vol vz-down" x="223.4" y="157" width="3.2" height="23"/><rect class="vz-vol vz-down" x="228.6" y="151.4" width="3.2" height="28.6"/><rect class="vz-vol vz-down" x="233.8" y="142.6" width="3.2" height="37.4"/><rect class="vz-vol vz-down" x="239" y="154" width="3.2" height="26"/><rect class="vz-vol vz-down" x="244.2" y="148.6" width="3.2" height="31.4"/><rect class="vz-vol vz-up" x="249.4" y="156.4" width="3.2" height="23.6"/><rect class="vz-vol vz-up" x="254.6" y="138.6" width="3.2" height="41.4"/><rect class="vz-vol vz-down" x="259.8" y="159.8" width="3.2" height="20.2"/><rect class="vz-vol vz-up" x="265" y="151" width="3.2" height="29"/><rect class="vz-vol vz-down" x="270.2" y="156.7" width="3.2" height="23.3"/><rect class="vz-vol vz-down" x="275.4" y="136.9" width="3.2" height="43.1"/><rect class="vz-vol vz-down" x="280.6" y="150.1" width="3.2" height="29.9"/><rect class="vz-vol vz-down" x="285.8" y="140.6" width="3.2" height="39.4"/><rect class="vz-vol vz-down" x="291" y="146.9" width="3.2" height="33.1"/><rect class="vz-vol vz-down" x="296.2" y="138.4" width="3.2" height="41.6"/><rect class="vz-vol vz-down" x="301.4" y="158.2" width="3.2" height="21.8"/><rect class="vz-vol vz-down" x="306.6" y="145.4" width="3.2" height="34.6"/><rect class="vz-vol vz-down" x="311.8" y="137.9" width="3.2" height="42.1"/><text class="vz-t-axis" x="8" y="136">Volume</text></svg></span>
+  <span class="card-body"><span class="card-eyebrow">Derivatives &amp; Perpetuals</span>
+    <span class="card-title">Liquidation Cascades</span>
+    <span class="card-text">A liquidation cascade is a chain reaction in which forced closures of leveraged positions push the price further, which triggers more forced closures.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--advanced"><i aria-hidden="true"></i>Advanced</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/derivatives-perpetuals/perpetual-futures/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Derivatives &amp; Perpetuals</span>
+    <span class="card-title">Perpetual Futures</span>
+    <span class="card-text">A perpetual future is a futures contract with no expiry date that uses funding payments between longs and shorts to keep its price close to the spot index.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/markets-finance/volume-explained/">
+  <span class="card-thumb" aria-hidden="true"><svg class="vz vz-mini" viewBox="0 0 160 96" aria-hidden="true" focusable="false"><path d="M6,30.1 L7.9,27.6 L9.8,24.5 L11.8,25.5 L13.7,30.2 L15.6,27.8 L17.5,30.4 L19.5,33.7 L21.4,37.9 L23.3,36 L25.2,41.9 L27.1,42.8 L29.1,44.4 L31,46 L32.9,48.7 L34.8,45.8 L36.8,41.7 L38.7,43.2 L40.6,37.7 L42.5,39.4 L44.4,36.1 L46.4,30.9 L48.3,30.7 L50.2,28.9 L52.1,27 L54.1,24.7 L56,20.7 L57.9,19.1 L59.8,15.7 L61.7,17 L63.7,14.8 L65.6,11.4 L67.5,10 L69.4,10.9 L71.4,15.8 L73.3,18.5 L75.2,22.6 L77.1,24.3 L79,29.7 L81,33.6 L82.9,32.4 L84.8,35.7 L86.7,40.6 L88.6,44.3 L90.6,47.2 L92.5,50.5 L94.4,54.6 L96.3,55.1 L98.3,57.3 L100.2,53.8 L102.1,50.1 L104,51.8 L105.9,49.6 L107.9,50.1 L109.8,48.7 L111.7,47.6 L113.6,43.6 L115.6,42.5 L117.5,39.5 L119.4,40.9 L121.3,37.9 L123.2,37.6 L125.2,34.4 L127.1,36.8 L129,43.2 L130.9,44.6 L132.9,48 L134.8,54.2 L136.7,56.2 L138.6,57.9 L140.5,63.9 L142.5,64.7 L144.4,68.3 L146.3,74 L148.2,78 L150.2,77.3 L152.1,82.9 L154,86" fill="none" stroke="var(--viz-neutral)" stroke-width="1.6" stroke-opacity=".7"/><path d="M6,48.8 L7.9,46.8 L9.8,44.7 L11.8,42.8 L13.7,41.6 L15.6,40.3 L17.5,39.4 L19.5,38.8 L21.4,38.8 L23.3,38.5 L25.2,38.8 L27.1,39.2 L29.1,39.7 L31,40.3 L32.9,41.1 L34.8,41.5 L36.8,41.6 L38.7,41.7 L40.6,41.3 L42.5,41.1 L44.4,40.7 L46.4,39.7 L48.3,38.9 L50.2,37.9 L52.1,36.9 L54.1,35.7 L56,34.3 L57.9,32.8 L59.8,31.2 L61.7,29.9 L63.7,28.4 L65.6,26.8 L67.5,25.2 L69.4,23.8 L71.4,23.1 L73.3,22.6 L75.2,22.6 L77.1,22.8 L79,23.4 L81,24.4 L82.9,25.2 L84.8,26.2 L86.7,27.5 L88.6,29.1 L90.6,30.9 L92.5,32.7 L94.4,34.8 L96.3,36.7 L98.3,38.7 L100.2,40.1 L102.1,41.1 L104,42.1 L105.9,42.8 L107.9,43.5 L109.8,44 L111.7,44.4 L113.6,44.3 L115.6,44.1 L117.5,43.7 L119.4,43.4 L121.3,42.9 L123.2,42.4 L125.2,41.6 L127.1,41.1 L129,41.3 L130.9,41.7 L132.9,42.3 L134.8,43.4 L136.7,44.6 L138.6,45.9 L140.5,47.6 L142.5,49.2 L144.4,51 L146.3,53.2 L148.2,55.6 L150.2,57.7 L152.1,60.1 L154,62.5" fill="none" stroke="var(--warn)" stroke-width="2.4" stroke-linecap="round"/></svg></span>
+  <span class="card-body"><span class="card-eyebrow">Markets &amp; Finance</span>
+    <span class="card-title">Trading Volume Explained</span>
+    <span class="card-text">Trading volume is the number of units of an asset that changed hands in a period. Every unit counted was bought by one party and sold by another.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/library/indicators/volume/">
+  <span class="card-thumb" aria-hidden="true"><svg class="vz vz-mini" viewBox="0 0 160 96" aria-hidden="true" focusable="false"><path d="M6,30.1 L7.9,27.6 L9.8,24.5 L11.8,25.5 L13.7,30.2 L15.6,27.8 L17.5,30.4 L19.5,33.7 L21.4,37.9 L23.3,36 L25.2,41.9 L27.1,42.8 L29.1,44.4 L31,46 L32.9,48.7 L34.8,45.8 L36.8,41.7 L38.7,43.2 L40.6,37.7 L42.5,39.4 L44.4,36.1 L46.4,30.9 L48.3,30.7 L50.2,28.9 L52.1,27 L54.1,24.7 L56,20.7 L57.9,19.1 L59.8,15.7 L61.7,17 L63.7,14.8 L65.6,11.4 L67.5,10 L69.4,10.9 L71.4,15.8 L73.3,18.5 L75.2,22.6 L77.1,24.3 L79,29.7 L81,33.6 L82.9,32.4 L84.8,35.7 L86.7,40.6 L88.6,44.3 L90.6,47.2 L92.5,50.5 L94.4,54.6 L96.3,55.1 L98.3,57.3 L100.2,53.8 L102.1,50.1 L104,51.8 L105.9,49.6 L107.9,50.1 L109.8,48.7 L111.7,47.6 L113.6,43.6 L115.6,42.5 L117.5,39.5 L119.4,40.9 L121.3,37.9 L123.2,37.6 L125.2,34.4 L127.1,36.8 L129,43.2 L130.9,44.6 L132.9,48 L134.8,54.2 L136.7,56.2 L138.6,57.9 L140.5,63.9 L142.5,64.7 L144.4,68.3 L146.3,74 L148.2,78 L150.2,77.3 L152.1,82.9 L154,86" fill="none" stroke="var(--viz-neutral)" stroke-width="1.6" stroke-opacity=".7"/><path d="M6,48.8 L7.9,46.8 L9.8,44.7 L11.8,42.8 L13.7,41.6 L15.6,40.3 L17.5,39.4 L19.5,38.8 L21.4,38.8 L23.3,38.5 L25.2,38.8 L27.1,39.2 L29.1,39.7 L31,40.3 L32.9,41.1 L34.8,41.5 L36.8,41.6 L38.7,41.7 L40.6,41.3 L42.5,41.1 L44.4,40.7 L46.4,39.7 L48.3,38.9 L50.2,37.9 L52.1,36.9 L54.1,35.7 L56,34.3 L57.9,32.8 L59.8,31.2 L61.7,29.9 L63.7,28.4 L65.6,26.8 L67.5,25.2 L69.4,23.8 L71.4,23.1 L73.3,22.6 L75.2,22.6 L77.1,22.8 L79,23.4 L81,24.4 L82.9,25.2 L84.8,26.2 L86.7,27.5 L88.6,29.1 L90.6,30.9 L92.5,32.7 L94.4,34.8 L96.3,36.7 L98.3,38.7 L100.2,40.1 L102.1,41.1 L104,42.1 L105.9,42.8 L107.9,43.5 L109.8,44 L111.7,44.4 L113.6,44.3 L115.6,44.1 L117.5,43.7 L119.4,43.4 L121.3,42.9 L123.2,42.4 L125.2,41.6 L127.1,41.1 L129,41.3 L130.9,41.7 L132.9,42.3 L134.8,43.4 L136.7,44.6 L138.6,45.9 L140.5,47.6 L142.5,49.2 L144.4,51 L146.3,53.2 L148.2,55.6 L150.2,57.7 L152.1,60.1 L154,62.5" fill="none" stroke="var(--warn)" stroke-width="2.4" stroke-linecap="round"/></svg></span>
+  <span class="card-body"><span class="card-eyebrow">Indicators</span>
+    <span class="card-title">Volume</span>
+    <span class="card-text">Volume is the amount of an asset traded during each candle, shown as bars beneath the price chart. It measures how much activity stood behind a price move.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager wrap" aria-label="More in this shelf"><a class="pager-link pager-prev" href="/foundations/derivatives-perpetuals/funding-rate/"><span><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg>Previous</span><strong>Funding Rate</strong></a>
+    <a class="pager-up" href="/foundations/derivatives-perpetuals/">Back to Derivatives &amp; Perpetuals</a><a class="pager-link pager-next" href="/foundations/derivatives-perpetuals/mark-price-and-index-price/"><span>Next<svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span><strong>Mark Price &amp; Index Price</strong></a>
+  </nav>
+</article>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Open Interest","description":"Open interest is the total number, or value, of derivative contracts that are currently open and have not yet been closed or settled.","inLanguage":"en","dateModified":"2026-11-21","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"edgeTR Academy"}}]}
+</script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR" loading="lazy">
+        <p>Learn the market. Understand the tools. Make your own decisions.</p>
+        <p class="footer-family">Part of <strong>Ethos Empire</strong></p>
+        <ul class="trust" aria-label="What edgeTR Academy is"><li>Free to read</li><li>No login</li><li>No paywall</li><li>Educational reference</li>
+        </ul>
+      </div>
+      <nav aria-label="Learn and browse">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="/learn/">Learn: Chapters 1-10</a></li>
+          <li><a href="/library/">Library</a></li>
+          <li><a href="/patterns/">Pattern gallery</a></li>
+          <li><a href="/foundations/">Foundations</a></li>
+          <li><a href="/compare/">Compare</a></li>
+          <li><a href="/glossary/">A-Z Glossary</a></li>
+          <li><a href="/watch/">Watch in 60 Seconds</a></li>
+          <li><a href="/search/">Search</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Library shelves">
+        <h2>Library</h2>
+        <ul>
+          <li><a href="/library/candlesticks/">Candlesticks</a></li>
+          <li><a href="/library/chart-patterns/">Chart Patterns</a></li>
+          <li><a href="/library/indicators/">Indicators</a></li>
+          <li><a href="/library/market-structure/">Market Structure</a></li>
+          <li><a href="/library/support-resistance/">Support &amp; Resistance</a></li>
+          <li><a href="/library/bull-bear-long-short/">Bull, Bear, Long &amp; Short</a></li>
+          <li><a href="/library/trading-mechanics/">Trading Mechanics</a></li>
+          <li><a href="/library/">All shelves</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Foundations shelves">
+        <h2>Foundations</h2>
+        <ul>
+          <li><a href="/foundations/markets-finance/">Markets &amp; Finance</a></li>
+          <li><a href="/foundations/crypto/">Crypto Basics</a></li>
+          <li><a href="/foundations/bitcoin/">Bitcoin Knowledge Center</a></li>
+          <li><a href="/foundations/blockchain/">Blockchain</a></li>
+          <li><a href="/foundations/wallets-security/">Wallets &amp; Security</a></li>
+          <li><a href="/foundations/exchanges-dex-defi/">Exchanges, DEX &amp; DeFi</a></li>
+          <li><a href="/foundations/derivatives-perpetuals/">Derivatives &amp; Perpetuals</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="About">
+        <h2>About</h2>
+        <ul>
+          <li><a href="/about/">About edgeTR Academy</a></li>
+          <li><a href="/educational-disclaimer/">Educational disclaimer</a></li>
+          <li><a href="/terms/">Terms of use</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/contact/">Contact and support</a></li>
+          <li><a href="/about/#editorial-standards">Editorial standards</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-disclaimer"><strong>Educational only.</strong> edgeTR Academy provides educational information only. It does not provide financial, investment, legal or tax advice, does not recommend specific assets or trades, and does not guarantee outcomes. Users are responsible for their own research and decisions. <a href="/educational-disclaimer/">Read the full disclaimer</a>.</p>
+    <p class="footer-legal">&copy; 2026 edgeTR Academy, part of Ethos Empire. Free to read. No account needed. <a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/contact/">Contact</a></p>
+  </div>
+</footer>
+<script src="/js/search-core.js" defer></script>
+<script src="/js/site.js" defer></script>
+</body>
+</html>

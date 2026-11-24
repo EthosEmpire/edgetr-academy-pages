@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en" data-base="/">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hardware Wallets | edgeTR Academy</title>
+<meta name="description" content="A hardware wallet is a small dedicated device that stores private keys offline and signs transactions on the device itself, so the keys never reach the computer or phone it is used with.">
+<meta name="theme-color" content="#070b12">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://edgetr.com/foundations/wallets-security/hardware-wallets/">
+<meta property="og:url" content="https://edgetr.com/foundations/wallets-security/hardware-wallets/">
+<meta property="og:image" content="https://edgetr.com/img/brand/og-default.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="edgeTR Academy">
+<meta property="og:title" content="Hardware Wallets">
+<meta property="og:description" content="A hardware wallet is a small dedicated device that stores private keys offline and signs transactions on the device itself, so the keys never reach the computer or phone it is used with.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.edgetrSearch)document.documentElement.classList.remove("js")},3000)</script>
+</head>
+<body class="page-article">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="edgeTR Academy home">
+      <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR">
+      <span class="brand-sub">Academy</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="/learn/">Learn</a></li>
+        <li><a href="/library/">Library</a></li>
+        <li><a href="/foundations/" aria-current="true">Foundations</a></li>
+        <li><a href="/compare/">Compare</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+        <li class="nav-search-link"><a href="/search/">Search</a></li>
+      </ul>
+    </nav>
+    <form class="header-search" action="/search/" method="get" role="search" aria-label="Site search" data-suggest>
+      <label class="sr-only" for="hq">Search the Academy</label>
+      <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="hq" name="q" type="search" placeholder="Search: RSI, doji, wallet..." autocomplete="off" spellcheck="false" aria-controls="hq-list" aria-expanded="false" aria-autocomplete="list" role="combobox">
+      <kbd aria-hidden="true">/</kbd>
+      <div class="suggest" id="hq-list" role="listbox" aria-label="Search suggestions" hidden></div>
+    </form>
+    <a class="header-search-btn" href="/search/" aria-label="Search"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false">
+      <span class="sr-only">Menu</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<article class="article">
+  <header class="article-hero">
+    <div class="wrap">
+      
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/foundations/">Foundations</a></li>
+    <li><a href="/foundations/wallets-security/">Wallets &amp; Security</a></li>
+    <li><span aria-current="page">Hardware Wallets</span></li>
+  </ol>
+</nav>
+
+      <p class="eyebrow">Foundations · Wallets &amp; Security</p>
+      <h1>Hardware Wallets</h1>
+      <p class="lede">A hardware wallet is a small dedicated device that stores private keys offline and signs transactions on the device itself, so the keys never reach the computer or phone it is used with.</p>
+      <ul class="meta-chips"><li><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></li>
+        <li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>5 min read</span></li><li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Updated <time datetime="2026-11-21">21 November 2026</time></span></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="wrap article-grid">
+    <aside class="toc" aria-label="On this page">
+      <details open>
+        <summary>On this page</summary>
+        <ol>
+          <li><a href="#why-it-matters">Why it matters</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#what-it-protects-and-what-it-does-not">What it protects, and what it does not</a></li>
+          <li><a href="#reading-the-device-screen">Reading the device screen</a></li>
+          <li><a href="#going-deeper">Going deeper</a></li>
+          <li><a href="#what-it-does-not-mean">What it does NOT mean</a></li>
+          <li><a href="#common-mistakes">Common mistakes</a></li>
+          <li><a href="#risks-and-limitations">Risks and limitations</a></li>
+        </ol>
+      </details>
+    </aside>
+
+    <div class="prose">
+
+      <h2 id="why-it-matters">Why it matters</h2>
+<p>A hardware wallet is the most common way to hold keys offline, and it is widely described as a strong protection for self-held funds. That reputation is deserved for one specific threat and misleading for others.</p>
+<p>Knowing where the protection starts and stops matters more than owning the device. People with hardware wallets lose funds regularly, most often by approving something harmful or by giving away the <a href="/foundations/wallets-security/seed-phrases/">seed phrase</a>.</p>
+<h2 id="how-it-works">How it works</h2>
+<figure class="viz viz--flow" data-animate><div class="viz-title">Signing with a hardware wallet</div><div class="viz-canvas"><ol class="dg-flow dg-flow--row dg-flow--long" style="--n:5"><li class="dg-step t-neutral" style="--i:0"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M7 13l3-3 2.5 2.5L17 8"/><path d="M8 21h8M12 17v4"/></svg></span><span class="dg-step-body"><strong>Prepare</strong><span>An app on the computer or phone builds the transaction.</span></span></li><li class="dg-step t-info" style="--i:1"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.600-7 10-7 10 7 10 7-3.600 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><span class="dg-step-body"><strong>Display</strong><span>The device shows the details on its own screen.</span></span></li><li class="dg-step t-warn" style="--i:2"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><span class="dg-step-body"><strong>Confirm</strong><span>The owner presses a physical button on the device.</span></span></li><li class="dg-step t-info" style="--i:3"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="15" r="4.5"/><path d="M11.3 11.7L20 3M16 7l3 3M13.5 9.5l2 2"/></svg></span><span class="dg-step-body"><strong>Sign</strong><span>The device signs inside. The key stays there.</span></span></li><li class="dg-step t-neutral" style="--i:4"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.800 0 18M12 3c-3 3.200-3 14.800 0 18"/></svg></span><span class="dg-step-body"><strong>Broadcast</strong><span>Only the signature goes back to the app and the network.</span></span></li></ol></div><figcaption>The computer never holds the key. It also cannot sign anything without a press on the device.</figcaption></figure>
+<p>A hardware wallet is a small device, often the size of a USB stick or a thin card, with its own screen and buttons. It generates and stores the <a href="/foundations/wallets-security/private-keys/">private keys</a> and is built so that they are not meant to be read out. Many models keep them in a tamper-resistant chip called a <strong>secure element</strong>.</p>
+<p>The device does not hold coins and usually cannot reach the internet by itself. It works with a companion app on a computer or phone, which shows balances, builds transactions and broadcasts them. The single job done inside the device is the one that needs the key: <a href="/foundations/wallets-security/signing-transactions/">signing</a>.</p>
+<div class="callout callout--beginner"><p class="callout-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 8.500l5.500 3.500-5.500 3.500z"/></svg><span>In plain words</span></p>
+<p>Think of a company seal locked in a small safe with a slot. Documents go in through the slot, the owner reads each one through a window and presses a lever, and the document comes out stamped. The seal never leaves the safe. If the owner stamps a bad contract, the stamp is still valid.</p>
+</div>
+<h2 id="what-it-protects-and-what-it-does-not">What it protects, and what it does not</h2>
+<figure class="viz viz--split" data-animate><div class="viz-title">What the device covers</div><div class="viz-canvas"><div class="dg-split"><div class="dg-side t-info"><div class="dg-side-head"><span class="dg-side-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2l8 3v6c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V5z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg></span><div><p class="dg-side-title">HELPS AGAINST</p><p>Attacks on the computer or phone.</p></div></div><ul><li>Malware searching the computer for keys</li><li>A stolen wallet file or password</li><li>Software changing an address, if the owner checks the device screen</li></ul></div><div class="dg-side t-bear"><div class="dg-side-head"><span class="dg-side-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></svg></span><div><p class="dg-side-title">DOES NOT HELP AGAINST</p><p>Decisions made by the owner.</p></div></div><ul><li>Approving a malicious transaction on the device</li><li>Typing the seed phrase into any site or app</li><li>Losing the written backup</li><li>A device that was tampered with before it arrived</li></ul></div></div></div><figcaption>The device protects the key. It cannot judge whether a request is honest.</figcaption></figure>
+<p>The device is aimed at one problem: a compromised computer or phone. Malware can search every file and record every keystroke and still find no key, because the key is not there. This is why a hardware wallet is generally considered much less exposed to remote theft than a <a href="/foundations/wallets-security/hot-and-cold-wallets/">hot wallet</a>.</p>
+<p>It offers no protection against the owner’s own approval. If a malicious website requests a harmful transaction and the owner confirms it on the device, the device signs it faithfully. A hardware wallet used to grant an unlimited <a href="/foundations/wallets-security/token-approvals/">token approval</a> to a malicious contract gives away exactly as much as a <a class="gl" href="/glossary/hot-wallet/" title="A crypto wallet whose private keys are kept on a device connected to the internet, such as a phone app or browser extension.">hot wallet</a> would.</p>
+<h2 id="reading-the-device-screen">Reading the device screen</h2>
+<p>The device’s own screen is the trusted display. The computer screen can be altered by malware. The device screen is much harder to alter.</p>
+<div class="table-wrap" data-scroll-label="Table"><table><thead>
+<tr>
+<th>What the device shows</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A recipient address and an amount</td>
+<td>A plain transfer. The address can be compared, character by character, with the intended one</td>
+</tr>
+<tr>
+<td>A named action, such as an approval, with a spender and an amount</td>
+<td>A contract interaction the device was able to decode</td>
+</tr>
+<tr>
+<td>Raw data or a long string of characters</td>
+<td>The device could not decode the request. Confirming it is <strong>blind signing</strong></td>
+</tr>
+</tbody>
+</table></div><p>Blind signing means approving something that cannot be read. Many wallet-draining attacks depend on it.</p>
+<h2 id="going-deeper">Going deeper</h2>
+<p><strong>PIN and reset.</strong> A PIN stops a casual thief from using a found device, and many devices erase themselves after several wrong attempts. The funds are then restored on a new device from the <a class="gl" href="/glossary/seed-phrase/" title="A list of usually 12 or 24 words that encodes the master secret from which all of a wallet's private keys are derived.">seed phrase</a>.</p>
+<p><strong>The backup is still paper.</strong> Setting up the device produces a seed phrase like any other wallet. Whoever has those words does not need the device at all.</p>
+<p><strong>Supply chain.</strong> A genuine device creates its seed phrase during first setup, on its own screen. A device that arrives with a phrase already printed on a card, or with instructions to use a supplied phrase, has been tampered with. Buy a hardware wallet directly from its maker or from a seller the maker lists as authorised. A device from a marketplace listing, a second-hand sale or an unknown seller may have been tampered with. Whatever the source, never use a recovery phrase that came with the device or from someone else, and set the device up yourself.</p>
+<p><strong>Updates.</strong> Device software, called firmware, is updated from time to time through the maker’s own app. An update process does not ask for the seed phrase to be typed into a computer or website. A page that does ask is <a href="/foundations/wallets-security/phishing/">phishing</a>.</p>
+<div class="example"><p class="example-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.600-7 10-7 10 7 10 7-3.600 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>Two hypothetical moments at the device screen</span><em>Hypothetical illustration</em></p>
+<p><strong>The device helps.</strong> Iris copies an address to send 10 units of a coin. Malware on her computer silently replaces the copied address with another one. Her computer shows a normal-looking transfer. The hardware wallet shows the address that will really be signed, which starts with different characters from the one she intended. Iris notices, rejects the request and nothing is sent.</p>
+<p><strong>The device cannot help.</strong> A week later Iris visits a site that promises a reward. Her device shows a request it cannot fully decode, and the site urges her to confirm quickly. She presses the button. The request was an approval that lets a stranger’s contract move her tokens. The device did its job: it signed what its owner confirmed.</p>
+</div>
+<section class="notmean" aria-labelledby="what-it-does-not-mean"><h2 id="what-it-does-not-mean"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg><span>What it does NOT mean</span></h2>
+<ul>
+<li><strong>A hardware wallet is not a guarantee of safety.</strong> It removes one class of attack and leaves the others in place.</li>
+<li><strong>The device does not store coins.</strong> It stores keys. Losing or breaking it loses nothing if the seed phrase is safe.</li>
+<li><strong>Pressing the button is not a formality.</strong> It is the moment of consent, and it cannot be taken back.</li>
+<li><strong>The device is not the backup.</strong> The seed phrase is. Protecting the gadget and neglecting the paper gets the priorities backwards.</li>
+<li><strong>Offline keys do not make a malicious website harmless.</strong> The site only needs a signature, not the key.</li>
+</ul>
+</section>
+<h2 id="common-mistakes">Common mistakes</h2>
+<div class="mistakes">
+<ol>
+<li><strong>Confirming without reading.</strong> The screen is small and the habit of pressing “yes” forms quickly.</li>
+<li><strong>Typing the seed phrase into a computer.</strong> That one act turns the <a class="gl" href="/glossary/cold-wallet/" title="A crypto wallet whose private keys are generated and kept offline, away from internet-connected devices.">cold wallet</a> into a hot one.</li>
+<li><strong>Trusting a pre-configured device.</strong> A phrase supplied by someone else is a phrase that someone else knows.</li>
+<li><strong>Enabling blind signing and forgetting about it.</strong> Every unreadable request after that is approved on trust.</li>
+<li><strong>Never checking the backup.</strong> A phrase copied with an error is discovered only when the device fails. Check it only with the wallet’s own on-device recovery check or backup screen, or by restoring onto a genuine spare device that you set up yourself and reset afterwards. Never type the words into a website or a look-alike app.</li>
+</ol>
+</div>
+<h2 id="risks-and-limitations">Risks and limitations</h2>
+<ul>
+<li>Devices can be lost, damaged or discontinued. Access then depends entirely on the seed phrase.</li>
+<li>Physical attacks on devices have been demonstrated by researchers. They usually require possession of the device and specialised skill.</li>
+<li>Small screens cannot always show complex contract interactions in a readable way.</li>
+<li>Designs differ between makers in chips, connections and how much of the software is open to inspection. This page does not compare products.</li>
+</ul>
+<div class="takeaway"><p class="takeaway-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg><span>Key takeaway</span></p>
+<p>A hardware wallet keeps keys on a separate device and signs there, which protects them from malware on the computer. It does not protect against approving a malicious request or revealing the seed phrase.</p>
+</div>
+
+      <section class="sources" aria-labelledby="sources">
+        <h2 id="sources">Sources and further reading</h2>
+        <ul>
+          <li><cite>Mastering Bitcoin</cite>, Andreas M. Antonopoulos. Chapters on wallets and security, including hardware signing devices</li>
+          <li><cite>Mastering Ethereum</cite>, Andreas M. Antonopoulos and Gavin Wood (2018). Chapters on wallets and on transactions and signatures</li>
+          <li><a class="ext" href="https://ethereum.org/en/security/" rel="noopener noreferrer" target="_blank">Ethereum security and scam prevention<span class="sr-only"> (opens in a new tab)</span></a>, ethereum.org. A hardware wallet provides offline storage for private keys, and the transaction message should be read before signing</li>
+          <li><a class="ext" href="https://www.ledger.com/academy/topics/ledgersolutions/best-practices-to-securely-buy-ledger-signer" rel="noopener noreferrer" target="_blank">Ledger Academy: Buying a Ledger securely<span class="sr-only"> (opens in a new tab)</span></a>. Buy from the maker or an authorised reseller; devices from unauthorised sellers can be tampered with</li>
+          <li><a class="ext" href="https://trezor.io/support/a/is-my-device-safe-to-use" rel="noopener noreferrer" target="_blank">Trezor Support: Is my device safe to use?<span class="sr-only"> (opens in a new tab)</span></a>. Never buy from an unauthorised third party; check the package for signs of tampering</li>
+        </ul>
+      </section>
+
+      <aside class="edu-note" aria-label="Educational notice">
+        <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+        <p><strong>Educational content only.</strong> This page explains a concept. It is not financial advice and not a recommendation to buy, sell or hold anything. <a href="/educational-disclaimer/">Full disclaimer</a>. Last updated <time datetime="2026-11-21">21 November 2026</time>.</p>
+      </aside>
+    </div>
+  </div>
+  <section class="related band" aria-labelledby="related">
+    <div class="wrap">
+      <h2 id="related">Related topics</h2>
+      <div class="card-grid">
+<a class="card topic-card" href="/foundations/wallets-security/hot-and-cold-wallets/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Wallets &amp; Security</span>
+    <span class="card-title">Hot &amp; Cold Wallets</span>
+    <span class="card-text">A hot wallet keeps private keys on an internet-connected device, and a cold wallet keeps them offline. The trade-off is convenience against exposure to remote attacks.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/wallets-security/signing-transactions/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Wallets &amp; Security</span>
+    <span class="card-title">Signing Transactions</span>
+    <span class="card-text">Signing uses a private key to authorise a transaction or message. The signature is the consent, so a malicious request that gets signed can hand over assets without the seed phrase ever being revealed.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/wallets-security/seed-phrases/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="15" r="4.5"/><path d="M11.3 11.7L20 3M16 7l3 3M13.5 9.5l2 2"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Wallets &amp; Security</span>
+    <span class="card-title">Seed Phrases</span>
+    <span class="card-text">A seed phrase is a list of words, commonly 12 or 24, from which a wallet can regenerate all of its private keys. It is the master secret and the only backup of the wallet.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/wallets-security/private-keys/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="15" r="4.5"/><path d="M11.3 11.7L20 3M16 7l3 3M13.5 9.5l2 2"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Wallets &amp; Security</span>
+    <span class="card-title">Private Keys</span>
+    <span class="card-text">A private key is a secret number that authorises spending from a blockchain address. Whoever has the key controls the funds, and nobody can reset or reissue it.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/wallets-security/token-approvals/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Wallets &amp; Security</span>
+    <span class="card-title">Token Approvals</span>
+    <span class="card-text">A token approval gives a smart contract standing permission to spend a specific token from a wallet, often an unlimited amount, and it stays in force until it is revoked.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/compare/hot-wallet-vs-cold-wallet/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v18"/><path d="M5 7h5M14 7h5M5 12h5M14 12h5M5 17h5M14 17h5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Compare</span>
+    <span class="card-title">Hot Wallet vs Cold Wallet</span>
+    <span class="card-text">A hot wallet keeps its keys on a device connected to the internet. A cold wallet keeps them offline. The trade-off is between convenience and exposure to remote attack.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager wrap" aria-label="More in this shelf"><a class="pager-link pager-prev" href="/foundations/wallets-security/hot-and-cold-wallets/"><span><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg>Previous</span><strong>Hot &amp; Cold Wallets</strong></a>
+    <a class="pager-up" href="/foundations/wallets-security/">Back to Wallets &amp; Security</a><a class="pager-link pager-next" href="/foundations/wallets-security/addresses-and-sending/"><span>Next<svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span><strong>Addresses &amp; Sending Safely</strong></a>
+  </nav>
+</article>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Hardware Wallets","description":"A hardware wallet is a small dedicated device that stores private keys offline and signs transactions on the device itself, so the keys never reach the computer or phone it is used with.","inLanguage":"en","dateModified":"2026-11-21","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"edgeTR Academy"}}]}
+</script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR" loading="lazy">
+        <p>Learn the market. Understand the tools. Make your own decisions.</p>
+        <p class="footer-family">Part of <strong>Ethos Empire</strong></p>
+        <ul class="trust" aria-label="What edgeTR Academy is"><li>Free to read</li><li>No login</li><li>No paywall</li><li>Educational reference</li>
+        </ul>
+      </div>
+      <nav aria-label="Learn and browse">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="/learn/">Learn: Chapters 1-10</a></li>
+          <li><a href="/library/">Library</a></li>
+          <li><a href="/patterns/">Pattern gallery</a></li>
+          <li><a href="/foundations/">Foundations</a></li>
+          <li><a href="/compare/">Compare</a></li>
+          <li><a href="/glossary/">A-Z Glossary</a></li>
+          <li><a href="/watch/">Watch in 60 Seconds</a></li>
+          <li><a href="/search/">Search</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Library shelves">
+        <h2>Library</h2>
+        <ul>
+          <li><a href="/library/candlesticks/">Candlesticks</a></li>
+          <li><a href="/library/chart-patterns/">Chart Patterns</a></li>
+          <li><a href="/library/indicators/">Indicators</a></li>
+          <li><a href="/library/market-structure/">Market Structure</a></li>
+          <li><a href="/library/support-resistance/">Support &amp; Resistance</a></li>
+          <li><a href="/library/bull-bear-long-short/">Bull, Bear, Long &amp; Short</a></li>
+          <li><a href="/library/trading-mechanics/">Trading Mechanics</a></li>
+          <li><a href="/library/">All shelves</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Foundations shelves">
+        <h2>Foundations</h2>
+        <ul>
+          <li><a href="/foundations/markets-finance/">Markets &amp; Finance</a></li>
+          <li><a href="/foundations/crypto/">Crypto Basics</a></li>
+          <li><a href="/foundations/bitcoin/">Bitcoin Knowledge Center</a></li>
+          <li><a href="/foundations/blockchain/">Blockchain</a></li>
+          <li><a href="/foundations/wallets-security/">Wallets &amp; Security</a></li>
+          <li><a href="/foundations/exchanges-dex-defi/">Exchanges, DEX &amp; DeFi</a></li>
+          <li><a href="/foundations/derivatives-perpetuals/">Derivatives &amp; Perpetuals</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="About">
+        <h2>About</h2>
+        <ul>
+          <li><a href="/about/">About edgeTR Academy</a></li>
+          <li><a href="/educational-disclaimer/">Educational disclaimer</a></li>
+          <li><a href="/terms/">Terms of use</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/contact/">Contact and support</a></li>
+          <li><a href="/about/#editorial-standards">Editorial standards</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-disclaimer"><strong>Educational only.</strong> edgeTR Academy provides educational information only. It does not provide financial, investment, legal or tax advice, does not recommend specific assets or trades, and does not guarantee outcomes. Users are responsible for their own research and decisions. <a href="/educational-disclaimer/">Read the full disclaimer</a>.</p>
+    <p class="footer-legal">&copy; 2026 edgeTR Academy, part of Ethos Empire. Free to read. No account needed. <a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/contact/">Contact</a></p>
+  </div>
+</footer>
+<script src="/js/search-core.js" defer></script>
+<script src="/js/site.js" defer></script>
+</body>
+</html>

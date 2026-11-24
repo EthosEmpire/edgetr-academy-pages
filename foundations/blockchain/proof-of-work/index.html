@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en" data-base="/">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proof of Work | edgeTR Academy</title>
+<meta name="description" content="Proof of work secures a blockchain by making block production cost computation and energy: miners compete to find a block hash below a target, and rewriting history means redoing that work.">
+<meta name="theme-color" content="#070b12">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://edgetr.com/foundations/blockchain/proof-of-work/">
+<meta property="og:url" content="https://edgetr.com/foundations/blockchain/proof-of-work/">
+<meta property="og:image" content="https://edgetr.com/img/brand/og-default.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="edgeTR Academy">
+<meta property="og:title" content="Proof of Work">
+<meta property="og:description" content="Proof of work secures a blockchain by making block production cost computation and energy: miners compete to find a block hash below a target, and rewriting history means redoing that work.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.edgetrSearch)document.documentElement.classList.remove("js")},3000)</script>
+</head>
+<body class="page-article">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="edgeTR Academy home">
+      <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR">
+      <span class="brand-sub">Academy</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="/learn/">Learn</a></li>
+        <li><a href="/library/">Library</a></li>
+        <li><a href="/foundations/" aria-current="true">Foundations</a></li>
+        <li><a href="/compare/">Compare</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+        <li class="nav-search-link"><a href="/search/">Search</a></li>
+      </ul>
+    </nav>
+    <form class="header-search" action="/search/" method="get" role="search" aria-label="Site search" data-suggest>
+      <label class="sr-only" for="hq">Search the Academy</label>
+      <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="hq" name="q" type="search" placeholder="Search: RSI, doji, wallet..." autocomplete="off" spellcheck="false" aria-controls="hq-list" aria-expanded="false" aria-autocomplete="list" role="combobox">
+      <kbd aria-hidden="true">/</kbd>
+      <div class="suggest" id="hq-list" role="listbox" aria-label="Search suggestions" hidden></div>
+    </form>
+    <a class="header-search-btn" href="/search/" aria-label="Search"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false">
+      <span class="sr-only">Menu</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<article class="article">
+  <header class="article-hero">
+    <div class="wrap">
+      
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/foundations/">Foundations</a></li>
+    <li><a href="/foundations/blockchain/">Blockchain</a></li>
+    <li><span aria-current="page">Proof of Work</span></li>
+  </ol>
+</nav>
+
+      <p class="eyebrow">Foundations · Blockchain</p>
+      <h1>Proof of Work</h1>
+      <p class="lede">Proof of work secures a blockchain by making block production cost computation and energy: miners compete to find a block hash below a target, and rewriting history means redoing that work.</p>
+      <ul class="meta-chips"><li><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></li>
+        <li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>5 min read</span></li><li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Updated <time datetime="2026-11-21">21 November 2026</time></span></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="wrap article-grid">
+    <aside class="toc" aria-label="On this page">
+      <details open>
+        <summary>On this page</summary>
+        <ol>
+          <li><a href="#why-it-matters">Why it matters</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#difficulty">Difficulty</a></li>
+          <li><a href="#why-this-secures-the-chain">Why this secures the chain</a></li>
+          <li><a href="#going-deeper">Going deeper</a></li>
+          <li><a href="#what-it-does-not-mean">What it does NOT mean</a></li>
+          <li><a href="#common-misunderstandings">Common misunderstandings</a></li>
+          <li><a href="#risks-and-limits">Risks and limits</a></li>
+        </ol>
+      </details>
+    </aside>
+
+    <div class="prose">
+
+      <h2 id="why-it-matters">Why it matters</h2>
+<p>Proof of work is the mechanism that made Bitcoin possible, and it remains the security model of the largest <a class="gl" href="/glossary/cryptocurrency/" title="A digital asset whose ownership and transfers are recorded on a blockchain and secured by cryptography instead of by a central institution.">cryptocurrency</a>. It is also the source of the two things most people have heard about mining: that it uses a great deal of electricity, and that it creates new coins. Both follow from one idea, that producing a block should be expensive and checking it should be cheap.</p>
+<p>This page explains the general mechanism. Bitcoin’s implementation is covered in <a href="/foundations/bitcoin/proof-of-work-and-mining/">proof of work and mining</a>.</p>
+<h2 id="how-it-works">How it works</h2>
+<figure class="viz viz--flow" data-animate><div class="viz-title">The mining loop</div><div class="viz-canvas"><ol class="dg-flow dg-flow--row dg-flow--long" style="--n:5"><li class="dg-step t-neutral" style="--i:0"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="8" width="5.5" height="8" rx="1.2"/><rect x="9.25" y="8" width="5.5" height="8" rx="1.2"/><rect x="16" y="8" width="5.5" height="8" rx="1.2"/><path d="M8 12h1.25M14.75 12H16"/></svg></span><span class="dg-step-body"><strong>Build a block</strong><span>Collect transactions and form a header.</span></span></li><li class="dg-step t-neutral" style="--i:1"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></span><span class="dg-step-body"><strong>Hash it</strong><span>Include a number called the nonce.</span></span></li><li class="dg-step t-warn" style="--i:2"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></span><span class="dg-step-body"><strong>Below the target?</strong><span>Almost always no. Change the nonce and repeat.</span></span></li><li class="dg-step t-bull" style="--i:3"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 22V3"/><path d="M5 4h13l-3 4.500 3 4.500H5"/></svg></span><span class="dg-step-body"><strong>Found one</strong><span>Broadcast the block at once.</span></span></li><li class="dg-step t-info" style="--i:4"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8L16.5 9.5"/></svg></span><span class="dg-step-body"><strong>Others verify</strong><span>One hash is enough to check it.</span></span></li></ol></div><figcaption>Finding a valid hash takes an enormous number of attempts. Checking one takes a single calculation.</figcaption></figure>
+<p><strong>Proof of work (PoW)</strong> is a way of deciding who may add the next block. Participants called <strong>miners</strong> compete to solve a puzzle that can only be solved by trial and error.</p>
+<p>The puzzle uses a <a href="/foundations/blockchain/blocks-and-hashes/">hash function</a>. A miner assembles a candidate block and hashes its header. The network requires the result to be a number below a certain <strong>target</strong>. Because a hash is unpredictable, the only way to find a qualifying one is to keep changing a field in the header, called the <strong>nonce</strong>, and hash again, billions of times.</p>
+<p>The first miner to find a valid hash broadcasts the block. Every <a href="/foundations/blockchain/nodes-validators-miners/">node</a> can confirm it with a single hash calculation. The winning miner receives newly issued coins and the fees from the transactions included.</p>
+<div class="callout callout--beginner"><p class="callout-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 8.500l5.500 3.500-5.500 3.500z"/></svg><span>In plain words</span></p>
+<p>Imagine a lottery where each ticket costs a little electricity, and the winning ticket earns the right to write the next page of a shared ledger. Buying tickets is expensive. Checking whether a ticket has won takes a glance. Anyone wanting to rewrite an old page would have to win the lottery again for that page and for every page since.</p>
+</div>
+<h2 id="difficulty">Difficulty</h2>
+<figure class="viz viz--bars" data-animate><div class="viz-title">Average attempts needed as the target tightens (simplified)</div><div class="viz-canvas"><div class="dg-bars" role="list"><div class="dg-bar t-info" role="listitem" style="--i:0"><div class="dg-bar-head"><span class="dg-bar-label">Hash must start with 4 zeros</span><span class="dg-bar-value">65,536</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:2%"></span></div></div><div class="dg-bar t-warn" role="listitem" style="--i:1"><div class="dg-bar-head"><span class="dg-bar-label">Hash must start with 5 zeros</span><span class="dg-bar-value">1,048,576</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:6.3%"></span></div><p class="dg-bar-note">One more zero: 16 times the work.</p></div><div class="dg-bar t-bear" role="listitem" style="--i:2"><div class="dg-bar-head"><span class="dg-bar-label">Hash must start with 6 zeros</span><span class="dg-bar-value">16,777,216</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:100%"></span></div></div></div></div><figcaption>Each hexadecimal character has 16 possible values, so each extra required zero multiplies the expected work by 16.</figcaption></figure>
+<p>The lower the target, the fewer hashes qualify and the more attempts are needed. This is the <strong>difficulty</strong>. A simplified way to picture it is a required number of leading zeros in the hash.</p>
+<p>Difficulty is not fixed. The protocol adjusts it so that blocks keep arriving at a planned pace however much computing power joins or leaves.</p>
+<figure class="viz viz--flow" data-animate><div class="viz-title">How difficulty keeps block times steady</div><div class="viz-canvas"><ol class="dg-flow dg-flow--row" style="--n:4"><li class="dg-step t-neutral" style="--i:0"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.5"/><path d="M2 21a7 7 0 0 1 14 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.5a7 7 0 0 1 4 6.5"/></svg></span><span class="dg-step-body"><strong>More miners join</strong><span>Total computing power rises.</span></span></li><li class="dg-step t-warn" style="--i:1"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><span class="dg-step-body"><strong>Blocks arrive faster</strong><span>Faster than the intended pace.</span></span></li><li class="dg-step t-info" style="--i:2"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></span><span class="dg-step-body"><strong>Difficulty rises</strong><span>The target is lowered at the next adjustment.</span></span></li><li class="dg-step t-bull" style="--i:3"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span><span class="dg-step-body"><strong>Pace restored</strong><span>Blocks return to the intended interval.</span></span></li></ol></div><figcaption>The same loop runs in reverse when miners leave. Bitcoin adjusts every 2,016 blocks, aiming for about ten minutes per block.</figcaption></figure>
+<p>The combined computing power of all miners is called the <strong>hash rate</strong>. A miner’s chance of finding the next block is its share of the total hash rate.</p>
+<h2 id="why-this-secures-the-chain">Why this secures the chain</h2>
+<p>Each block’s hash depends on the block before it. To alter an old transaction, an attacker would have to redo the proof of work for that block and for every block after it, and then overtake the honest chain, which keeps growing in the meantime. Nodes follow the chain with the most accumulated work, so the attacker needs to out-compute the rest of the network combined.</p>
+<p>The cost of that is real: specialised hardware and electricity. Security under proof of work is therefore proportional to the resources honest miners spend. The wider principle is described in <a href="/foundations/blockchain/consensus/">consensus</a>.</p>
+<h2 id="going-deeper">Going deeper</h2>
+<p><strong>Mining pools.</strong> A small miner might wait years to find a block. Miners therefore combine their computing power in pools and share the rewards in proportion to work contributed. Pools make income steadier, and they concentrate block production in a small number of coordinators.</p>
+<p><strong>Majority attacks.</strong> An actor with more than half of the hash rate could build a competing chain faster than everyone else and reverse recent transactions. On the largest network the cost of doing so is very high. Smaller proof-of-work chains have suffered such attacks, in some cases using rented computing power.</p>
+<p><strong>Energy use.</strong> Proof of work consumes electricity by design, because the cost is what makes rewriting history expensive. Critics point to the scale of the consumption and its environmental effects. Supporters reply that the expenditure buys security, and that miners seek out the cheapest power, which is sometimes surplus or renewable. Estimates of total consumption and of the energy mix vary considerably between sources. The alternative approach is <a href="/foundations/blockchain/proof-of-stake/">proof of stake</a>, compared directly in <a href="/compare/proof-of-work-vs-proof-of-stake/">proof of work vs proof of stake</a>.</p>
+<div class="example"><p class="example-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.600-7 10-7 10 7 10 7-3.600 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>Share of hash rate, share of blocks</span><em>Hypothetical illustration</em></p>
+<p>Hypothetical numbers. A network aims for one block every 10 minutes, which is 6 per hour and 6 x 24 = 144 per day. A mining pool controls 10% of the total hash rate.</p>
+<ul>
+<li>Expected blocks per day for the pool: 144 x 10% = 14.4.</li>
+<li>This is an average. On a given day the pool might find 9 blocks or 20, because each attempt is independent.</li>
+</ul>
+<p>Now suppose the total hash rate doubles while the pool’s own machines stay the same.</p>
+<ul>
+<li>The pool’s share falls from 10% to 5%.</li>
+<li>Until the next adjustment, blocks arrive about every 5 minutes. The pool still finds about 14.4 a day: 288 x 5%.</li>
+<li>After difficulty adjusts, the pace returns to 144 a day and the pool’s expectation becomes 144 x 5% = 7.2.</li>
+</ul>
+<p>The pool’s electricity cost has not changed. Its expected reward has halved.</p>
+</div>
+<section class="notmean" aria-labelledby="what-it-does-not-mean"><h2 id="what-it-does-not-mean"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg><span>What it does NOT mean</span></h2>
+<ul>
+<li><strong>Miners do not solve useful mathematical problems.</strong> The puzzle is a deliberate guessing task whose only output is proof that work was done.</li>
+<li><strong>More mining power does not create more coins.</strong> Difficulty adjusts so that issuance follows the schedule.</li>
+<li><strong>More mining power does not make the network faster.</strong> Block times are held steady by the same adjustment.</li>
+<li><strong>A majority of hash rate is not control of the rules.</strong> Nodes still reject invalid blocks.</li>
+<li><strong>Proof of work is not secure in the abstract.</strong> A chain is only as hard to attack as the work protecting that particular chain.</li>
+</ul>
+</section>
+<h2 id="common-misunderstandings">Common misunderstandings</h2>
+<div class="mistakes">
+<ol>
+<li><strong>Thinking mining is how transactions are verified.</strong> Every full node verifies. Mining decides who adds the next block.</li>
+<li><strong>Treating all proof-of-work chains as equally safe.</strong> Total hash rate differs enormously between networks.</li>
+<li><strong>Assuming the energy debate has a settled answer.</strong> Figures and conclusions differ between credible sources.</li>
+</ol>
+</div>
+<h2 id="risks-and-limits">Risks and limits</h2>
+<ul>
+<li>Security depends on mining remaining economically worthwhile.</li>
+<li>Hash rate and pool coordination can become concentrated.</li>
+<li>Low-hash-rate chains are exposed to majority attacks.</li>
+<li>Electricity use draws environmental and regulatory scrutiny, which differs by country.</li>
+<li>Throughput is limited, and confirmation is probabilistic. See <a href="/foundations/blockchain/finality-and-throughput/">finality and throughput</a>.</li>
+</ul>
+<div class="takeaway"><p class="takeaway-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg><span>Key takeaway</span></p>
+<p>Proof of work makes each block expensive to produce and trivial to check, so the history of the chain can only be rewritten by redoing the work behind it. The energy it consumes is the cost of that security, not a side effect.</p>
+</div>
+
+      <section class="sources" aria-labelledby="sources">
+        <h2 id="sources">Sources and further reading</h2>
+        <ul>
+          <li><a class="ext" href="https://bitcoin.org/bitcoin.pdf" rel="noopener noreferrer" target="_blank">Bitcoin: A Peer-to-Peer Electronic Cash System<span class="sr-only"> (opens in a new tab)</span></a>, Satoshi Nakamoto (2008). Sections on proof of work, incentive and calculations</li>
+          <li><cite>Mastering Bitcoin</cite>, Andreas M. Antonopoulos. Chapter on mining and consensus</li>
+        </ul>
+      </section>
+
+      <aside class="edu-note" aria-label="Educational notice">
+        <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+        <p><strong>Educational content only.</strong> This page explains a concept. It is not financial advice and not a recommendation to buy, sell or hold anything. <a href="/educational-disclaimer/">Full disclaimer</a>. Last updated <time datetime="2026-11-21">21 November 2026</time>.</p>
+      </aside>
+    </div>
+  </div>
+  <section class="related band" aria-labelledby="related">
+    <div class="wrap">
+      <h2 id="related">Related topics</h2>
+      <div class="card-grid">
+<a class="card topic-card" href="/foundations/bitcoin/proof-of-work-and-mining/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Bitcoin Knowledge Center</span>
+    <span class="card-title">Proof of Work &amp; Mining</span>
+    <span class="card-text">Mining is the process by which Bitcoin blocks are created. Miners compete to find a hash below a target, and that costly search is called proof of work.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/blockchain/proof-of-stake/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Blockchain</span>
+    <span class="card-title">Proof of Stake</span>
+    <span class="card-text">Proof of stake secures a blockchain with locked capital: validators deposit the network&#39;s coin as a stake, are chosen to propose and vote on blocks, and can lose that stake for misbehaving.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/compare/proof-of-work-vs-proof-of-stake/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v18"/><path d="M5 7h5M14 7h5M5 12h5M14 12h5M5 17h5M14 17h5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Compare</span>
+    <span class="card-title">Proof of Work vs Proof of Stake</span>
+    <span class="card-text">Proof of Work secures a blockchain with computation and energy. Proof of Stake secures it with locked-up coins. Both make it costly to rewrite the ledger.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/blockchain/consensus/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.5"/><path d="M2 21a7 7 0 0 1 14 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.5a7 7 0 0 1 4 6.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Blockchain</span>
+    <span class="card-title">Consensus</span>
+    <span class="card-text">Consensus is the process by which the independent computers of a blockchain network agree on a single history of transactions without relying on a central authority.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/blockchain/blocks-and-hashes/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="8" width="5.5" height="8" rx="1.2"/><rect x="9.25" y="8" width="5.5" height="8" rx="1.2"/><rect x="16" y="8" width="5.5" height="8" rx="1.2"/><path d="M8 12h1.25M14.75 12H16"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Blockchain</span>
+    <span class="card-title">Blocks &amp; Hashes</span>
+    <span class="card-text">A block is a batch of transactions plus the hash of the previous block. A cryptographic hash is a fixed-length fingerprint of data, in which any change to the input changes the output.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/blockchain/nodes-validators-miners/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.5M7 16.5h.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Blockchain</span>
+    <span class="card-title">Nodes, Validators &amp; Miners</span>
+    <span class="card-text">Nodes store and verify a blockchain&#39;s ledger. Miners, under proof of work, and validators, under proof of stake, are the participants that propose new blocks for the nodes to check.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager wrap" aria-label="More in this shelf"><a class="pager-link pager-prev" href="/foundations/blockchain/consensus/"><span><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg>Previous</span><strong>Consensus</strong></a>
+    <a class="pager-up" href="/foundations/blockchain/">Back to Blockchain</a><a class="pager-link pager-next" href="/foundations/blockchain/proof-of-stake/"><span>Next<svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span><strong>Proof of Stake</strong></a>
+  </nav>
+</article>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Proof of Work","description":"Proof of work secures a blockchain by making block production cost computation and energy: miners compete to find a block hash below a target, and rewriting history means redoing that work.","inLanguage":"en","dateModified":"2026-11-21","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"edgeTR Academy"}}]}
+</script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR" loading="lazy">
+        <p>Learn the market. Understand the tools. Make your own decisions.</p>
+        <p class="footer-family">Part of <strong>Ethos Empire</strong></p>
+        <ul class="trust" aria-label="What edgeTR Academy is"><li>Free to read</li><li>No login</li><li>No paywall</li><li>Educational reference</li>
+        </ul>
+      </div>
+      <nav aria-label="Learn and browse">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="/learn/">Learn: Chapters 1-10</a></li>
+          <li><a href="/library/">Library</a></li>
+          <li><a href="/patterns/">Pattern gallery</a></li>
+          <li><a href="/foundations/">Foundations</a></li>
+          <li><a href="/compare/">Compare</a></li>
+          <li><a href="/glossary/">A-Z Glossary</a></li>
+          <li><a href="/watch/">Watch in 60 Seconds</a></li>
+          <li><a href="/search/">Search</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Library shelves">
+        <h2>Library</h2>
+        <ul>
+          <li><a href="/library/candlesticks/">Candlesticks</a></li>
+          <li><a href="/library/chart-patterns/">Chart Patterns</a></li>
+          <li><a href="/library/indicators/">Indicators</a></li>
+          <li><a href="/library/market-structure/">Market Structure</a></li>
+          <li><a href="/library/support-resistance/">Support &amp; Resistance</a></li>
+          <li><a href="/library/bull-bear-long-short/">Bull, Bear, Long &amp; Short</a></li>
+          <li><a href="/library/trading-mechanics/">Trading Mechanics</a></li>
+          <li><a href="/library/">All shelves</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Foundations shelves">
+        <h2>Foundations</h2>
+        <ul>
+          <li><a href="/foundations/markets-finance/">Markets &amp; Finance</a></li>
+          <li><a href="/foundations/crypto/">Crypto Basics</a></li>
+          <li><a href="/foundations/bitcoin/">Bitcoin Knowledge Center</a></li>
+          <li><a href="/foundations/blockchain/">Blockchain</a></li>
+          <li><a href="/foundations/wallets-security/">Wallets &amp; Security</a></li>
+          <li><a href="/foundations/exchanges-dex-defi/">Exchanges, DEX &amp; DeFi</a></li>
+          <li><a href="/foundations/derivatives-perpetuals/">Derivatives &amp; Perpetuals</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="About">
+        <h2>About</h2>
+        <ul>
+          <li><a href="/about/">About edgeTR Academy</a></li>
+          <li><a href="/educational-disclaimer/">Educational disclaimer</a></li>
+          <li><a href="/terms/">Terms of use</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/contact/">Contact and support</a></li>
+          <li><a href="/about/#editorial-standards">Editorial standards</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-disclaimer"><strong>Educational only.</strong> edgeTR Academy provides educational information only. It does not provide financial, investment, legal or tax advice, does not recommend specific assets or trades, and does not guarantee outcomes. Users are responsible for their own research and decisions. <a href="/educational-disclaimer/">Read the full disclaimer</a>.</p>
+    <p class="footer-legal">&copy; 2026 edgeTR Academy, part of Ethos Empire. Free to read. No account needed. <a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/contact/">Contact</a></p>
+  </div>
+</footer>
+<script src="/js/search-core.js" defer></script>
+<script src="/js/site.js" defer></script>
+</body>
+</html>

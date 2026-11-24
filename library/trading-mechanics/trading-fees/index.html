@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en" data-base="/">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trading Fees: Maker &amp; Taker | edgeTR Academy</title>
+<meta name="description" content="Exchanges charge a fee on each fill: the maker rate applies to orders that add resting liquidity to the book and the taker rate to orders that remove it.">
+<meta name="theme-color" content="#070b12">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://edgetr.com/library/trading-mechanics/trading-fees/">
+<meta property="og:url" content="https://edgetr.com/library/trading-mechanics/trading-fees/">
+<meta property="og:image" content="https://edgetr.com/img/brand/og-default.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="edgeTR Academy">
+<meta property="og:title" content="Trading Fees: Maker &amp; Taker">
+<meta property="og:description" content="Exchanges charge a fee on each fill: the maker rate applies to orders that add resting liquidity to the book and the taker rate to orders that remove it.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.edgetrSearch)document.documentElement.classList.remove("js")},3000)</script>
+</head>
+<body class="page-article">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="edgeTR Academy home">
+      <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR">
+      <span class="brand-sub">Academy</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="/learn/">Learn</a></li>
+        <li><a href="/library/" aria-current="true">Library</a></li>
+        <li><a href="/foundations/">Foundations</a></li>
+        <li><a href="/compare/">Compare</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+        <li class="nav-search-link"><a href="/search/">Search</a></li>
+      </ul>
+    </nav>
+    <form class="header-search" action="/search/" method="get" role="search" aria-label="Site search" data-suggest>
+      <label class="sr-only" for="hq">Search the Academy</label>
+      <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="hq" name="q" type="search" placeholder="Search: RSI, doji, wallet..." autocomplete="off" spellcheck="false" aria-controls="hq-list" aria-expanded="false" aria-autocomplete="list" role="combobox">
+      <kbd aria-hidden="true">/</kbd>
+      <div class="suggest" id="hq-list" role="listbox" aria-label="Search suggestions" hidden></div>
+    </form>
+    <a class="header-search-btn" href="/search/" aria-label="Search"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false">
+      <span class="sr-only">Menu</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<article class="article">
+  <header class="article-hero">
+    <div class="wrap">
+      
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/library/">Library</a></li>
+    <li><a href="/library/trading-mechanics/">Trading Mechanics</a></li>
+    <li><span aria-current="page">Trading Fees: Maker &amp; Taker</span></li>
+  </ol>
+</nav>
+
+      <p class="eyebrow">Library · Trading Mechanics</p>
+      <h1>Trading Fees: Maker &amp; Taker</h1>
+      <p class="lede">Exchanges charge a fee on each fill: the maker rate applies to orders that add resting liquidity to the book and the taker rate to orders that remove it.</p>
+      <ul class="meta-chips"><li><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></li>
+        <li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>4 min read</span></li><li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Updated <time datetime="2026-11-21">21 November 2026</time></span></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="wrap article-grid">
+    <aside class="toc" aria-label="On this page">
+      <details open>
+        <summary>On this page</summary>
+        <ol>
+          <li><a href="#why-it-matters">Why it matters</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#how-it-is-calculated">How it is calculated</a></li>
+          <li><a href="#going-deeper">Going deeper</a></li>
+          <li><a href="#what-it-does-not-mean">What it does NOT mean</a></li>
+          <li><a href="#common-mistakes">Common mistakes</a></li>
+          <li><a href="#risks-and-limitations">Risks and limitations</a></li>
+        </ol>
+      </details>
+    </aside>
+
+    <div class="prose">
+
+      <h2 id="why-it-matters">Why it matters</h2>
+<p>Fees are a trading cost that is certain. A trade may gain or lose, but the fee is charged either way, on the way in and on the way out. Small percentages look harmless until they are multiplied by <a class="gl" href="/glossary/position-sizing/" title="Deciding how large a position to open, usually from the amount of money that would be lost if the stop loss is hit.">position size</a>, by leverage and by the number of trades.</p>
+<p>Knowing how fees are structured also explains why exchanges treat two orders at the same price differently.</p>
+<h2 id="how-it-works">How it works</h2>
+<figure class="viz viz--split" data-animate><div class="viz-title">Maker vs taker</div><div class="viz-canvas"><div class="dg-split"><div class="dg-side t-info"><div class="dg-side-head"><span class="dg-side-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg></span><div><p class="dg-side-title">MAKER</p><p>Adds an order to the book and waits.</p></div></div><ul><li>Typically a resting limit order</li><li>Provides liquidity for others</li><li>Usually the lower fee, sometimes a rebate</li><li>The fill is not certain</li></ul></div><div class="dg-side t-warn"><div class="dg-side-head"><span class="dg-side-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><div><p class="dg-side-title">TAKER</p><p>Trades against an order already in the book.</p></div></div><ul><li>Market orders and marketable limit orders</li><li>Removes liquidity</li><li>Usually the higher fee</li><li>Fills immediately</li></ul></div></div></div><figcaption>The role is decided per fill by what the order did, not by who the trader is.</figcaption></figure>
+<p>Most <a class="gl" href="/glossary/order-book/" title="The live list of all open buy and sell orders for a market, arranged by price.">order-book</a> exchanges use a <strong>maker-taker</strong> model with two rates.</p>
+<ul>
+<li>The <strong>maker</strong> is the side whose order was already resting in the <a href="/library/trading-mechanics/order-book/">order book</a>. It made liquidity available.</li>
+<li>The <strong>taker</strong> is the side whose order arrived and traded against it. It took that liquidity away.</li>
+</ul>
+<p>Every fill has one of each. Exchanges usually charge takers more, because a busy book of resting orders is what attracts traders in the first place. Some venues go further and pay makers a small <strong>rebate</strong>.</p>
+<div class="callout callout--beginner"><p class="callout-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 8.500l5.500 3.500-5.500 3.500z"/></svg><span>In plain words</span></p>
+<p>Think of a market stall. The stallholder who sets out goods and waits all day is the maker. The customer who walks up and buys on the spot is the taker. The market’s owner wants full stalls, so stallholders get the cheaper deal.</p>
+</div>
+<h2 id="how-it-is-calculated">How it is calculated</h2>
+<div class="formula"><code>Fee = fill size x fill price x fee rate</code><span>The fee is charged on the full value of the fill, on every fill. A round trip therefore pays at least twice.</span></div>
+<p>Which rate applies depends on what the order did, not on its name:</p>
+<div class="table-wrap" data-scroll-label="Table"><table><thead>
+<tr>
+<th>Order</th>
+<th>Role</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/library/trading-mechanics/market-orders/">Market order</a></td>
+<td>Taker</td>
+<td>It always trades against resting orders</td>
+</tr>
+<tr>
+<td><a href="/library/trading-mechanics/limit-orders/">Limit order</a> that rests, then fills</td>
+<td>Maker</td>
+<td>It was waiting in the book</td>
+</tr>
+<tr>
+<td><a class="gl" href="/glossary/limit-order/" title="An order to buy or sell at a specified price or better, which waits in the order book until it can be filled.">Limit order</a> that trades immediately</td>
+<td>Taker</td>
+<td>It crossed the spread on arrival</td>
+</tr>
+<tr>
+<td>Triggered <a class="gl" href="/glossary/stop-order/" title="An order that stays inactive until price reaches a chosen trigger level, then becomes a market or limit order.">stop-market order</a></td>
+<td>Taker</td>
+<td>It becomes a <a class="gl" href="/glossary/market-order/" title="An order to buy or sell immediately at the best prices currently available.">market order</a></td>
+</tr>
+</tbody>
+</table></div><figure class="viz viz--bars" data-animate><div class="viz-title">Fees for one round trip on a hypothetical schedule</div><div class="viz-canvas"><div class="dg-bars" role="list"><div class="dg-bar t-info" role="listitem" style="--i:0"><div class="dg-bar-head"><span class="dg-bar-label">Maker in, maker out</span><span class="dg-bar-value">0.1%</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:50%"></span></div><p class="dg-bar-note">0.05% + 0.05% of the position value.</p></div><div class="dg-bar t-neutral" role="listitem" style="--i:1"><div class="dg-bar-head"><span class="dg-bar-label">Maker in, taker out</span><span class="dg-bar-value">0.15%</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:75%"></span></div><p class="dg-bar-note">0.05% + 0.10%.</p></div><div class="dg-bar t-warn" role="listitem" style="--i:2"><div class="dg-bar-head"><span class="dg-bar-label">Taker in, taker out</span><span class="dg-bar-value">0.2%</span></div><div class="dg-bar-track"><span class="dg-bar-fill" style="--w:100%"></span></div><p class="dg-bar-note">0.10% + 0.10%.</p></div></div></div><figcaption>Hypothetical rates: maker 0.05%, taker 0.10% per fill. Real schedules differ from exchange to exchange and change over time.</figcaption></figure>
+<p>Fee schedules are set by each exchange. Common features include <strong>tiers</strong>, where rates fall as recent trading volume rises, different schedules for spot and derivatives, and discounts tied to the exchange’s own programmes. The published schedule of the venue in question is the only reliable source for actual rates.</p>
+<h2 id="going-deeper">Going deeper</h2>
+<h3 id="fees-are-charged-on-position-size">Fees are charged on position size</h3>
+<p>On a leveraged position, the fee is calculated on the full position, not on the margin behind it. With <a href="/library/trading-mechanics/leverage/">leverage</a>, a fee that is small against the position becomes large against the trader’s own funds.</p>
+<div class="table-wrap" data-scroll-label="Table"><table><thead>
+<tr>
+<th>Leverage</th>
+<th>Round-trip taker fees as % of position</th>
+<th>As % of margin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1x</td>
+<td>0.20%</td>
+<td>0.20%</td>
+</tr>
+<tr>
+<td>5x</td>
+<td>0.20%</td>
+<td>1%</td>
+</tr>
+<tr>
+<td>10x</td>
+<td>0.20%</td>
+<td>2%</td>
+</tr>
+<tr>
+<td>20x</td>
+<td>0.20%</td>
+<td>4%</td>
+</tr>
+</tbody>
+</table></div><p>The table uses the hypothetical 0.10% taker rate from the figure above.</p>
+<h3 id="the-other-costs-of-a-trade">The other costs of a trade</h3>
+<p>The maker or taker fee is only the visible part.</p>
+<div class="table-wrap" data-scroll-label="Table"><table><thead>
+<tr>
+<th>Cost</th>
+<th>When it applies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/library/trading-mechanics/bid-ask-spread/">Spread</a></td>
+<td>Whenever a trade is made immediately</td>
+</tr>
+<tr>
+<td><a href="/library/trading-mechanics/slippage/">Slippage</a></td>
+<td>Market-type orders, mostly in thin or fast markets</td>
+</tr>
+<tr>
+<td><a href="/foundations/derivatives-perpetuals/funding-rate/">Funding</a></td>
+<td>Periodically while a <a class="gl" href="/glossary/perpetual-futures/" title="A futures contract with no expiry date, kept close to the spot price by regular funding payments between longs and shorts.">perpetual futures</a> position is open. It can be paid or received</td>
+</tr>
+<tr>
+<td>Borrowing interest</td>
+<td>While a margin loan is open</td>
+</tr>
+<tr>
+<td>Withdrawal and <a href="/foundations/crypto/gas-and-network-fees/">network fees</a></td>
+<td>When assets are moved off the exchange or on-chain</td>
+</tr>
+<tr>
+<td><a class="gl" href="/glossary/liquidation/" title="The forced closing of a leveraged position by the exchange or protocol when its margin no longer covers its losses.">Liquidation</a> fee</td>
+<td>If a leveraged position is force-closed</td>
+</tr>
+</tbody>
+</table></div><h3 id="decentralized-exchanges">Decentralized exchanges</h3>
+<p>A swap on a <a class="gl" href="/glossary/dex/" title="A decentralized exchange: a set of smart contracts that lets users trade tokens directly from their own wallets.">decentralized exchange</a> usually has no maker and taker rates. The trader pays a swap fee, most of which typically goes to the <a class="gl" href="/glossary/liquidity-provider/" title="Someone who deposits tokens into a liquidity pool so that others can trade against them, in return for a share of trading fees.">liquidity providers</a> of the pool, plus the <a class="gl" href="/glossary/gas-fee/" title="The fee paid to a blockchain network to process a transaction, normally charged in the network's native coin.">network fee</a> for the transaction itself.</p>
+<div class="example"><p class="example-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.600-7 10-7 10 7 10 7-3.600 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>Fees on one hypothetical round trip</span><em>Hypothetical illustration</em></p>
+<p>A trader opens a position of 10 units at a price of 100, worth 1,000, and later closes it at the same price. The exchange’s hypothetical schedule is 0.05% maker and 0.10% taker.</p>
+<ul>
+<li><strong>Both orders are market orders.</strong> Each fill costs 0.10% of 1,000, which is 1.00. The round trip costs 2.00, or 0.20% of the position. Price must move about 0.20% in the trade’s favour just to cover fees, before the spread.</li>
+<li><strong>Both orders are resting limit orders.</strong> Each fill costs 0.05%, which is 0.50. The round trip costs 1.00, or 0.10%.</li>
+<li><strong>The position is held with 10x leverage.</strong> The margin is 100. The same 2.00 in taker fees equals 2% of the margin.</li>
+</ul>
+</div>
+<section class="notmean" aria-labelledby="what-it-does-not-mean"><h2 id="what-it-does-not-mean"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg><span>What it does NOT mean</span></h2>
+<ul>
+<li><strong>“Zero fee” does not mean zero cost.</strong> The cost may sit in a wider spread, in the price received, or in other charges.</li>
+<li><strong>A limit order does not always earn the maker rate.</strong> If it trades on arrival, it is a taker order.</li>
+<li><strong>The fee rate is not the whole cost of trading.</strong> Spread and slippage are often larger than the explicit fee.</li>
+</ul>
+</section>
+<h2 id="common-mistakes">Common mistakes</h2>
+<div class="mistakes">
+<ol>
+<li><strong>Counting the fee once.</strong> Opening and closing are separate fills, each with its own fee.</li>
+<li><strong>Measuring fees against the position only.</strong> With leverage, the same fee is a much larger share of the margin.</li>
+<li><strong>Ignoring holding costs.</strong> Funding and borrowing interest accumulate for as long as a position stays open.</li>
+<li><strong>Assuming all exchanges charge alike.</strong> Rates, tiers and what counts as a maker order differ between venues.</li>
+</ol>
+</div>
+<h2 id="risks-and-limitations">Risks and limitations</h2>
+<ul>
+<li>Fees are certain, while the outcome of a trade is not. Frequent trading raises the hurdle every trade has to clear.</li>
+<li>Fee schedules can change, and promotional rates can end.</li>
+<li>Pursuing the maker rate means using orders that may not fill.</li>
+<li>Comparing venues on headline fees alone leaves out spread, depth and reliability.</li>
+</ul>
+<div class="takeaway"><p class="takeaway-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg><span>Key takeaway</span></p>
+<p>Makers add resting liquidity and usually pay less. Takers remove it and usually pay more. Fees apply to every fill and to the full position size, and schedules differ by exchange.</p>
+</div>
+
+      <section class="sources" aria-labelledby="sources">
+        <h2 id="sources">Sources and further reading</h2>
+        <ul>
+          <li><cite>Trading and Exchanges: Market Microstructure for Practitioners</cite>, Larry Harris (2003). Transaction costs and how exchanges price liquidity</li>
+          <li><a class="ext" href="https://www.sec.gov/newsroom/speeches-statements/us-equity-market-structure" rel="noopener noreferrer" target="_blank">U.S. Equity Market Structure: Making Our Markets Work Better for Investors<span class="sr-only"> (opens in a new tab)</span></a>, Luis A. Aguilar, U.S. Securities and Exchange Commission (speech) (2015). Explains maker-taker fees: a fee on traders who take liquidity and a rebate to traders who provide it</li>
+        </ul>
+      </section>
+
+      <aside class="edu-note" aria-label="Educational notice">
+        <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+        <p><strong>Educational content only.</strong> This page explains a concept. It is not financial advice and not a recommendation to buy, sell or hold anything. <a href="/educational-disclaimer/">Full disclaimer</a>. Last updated <time datetime="2026-11-21">21 November 2026</time>.</p>
+      </aside>
+    </div>
+  </div>
+  <section class="related band" aria-labelledby="related">
+    <div class="wrap">
+      <h2 id="related">Related topics</h2>
+      <div class="card-grid">
+<a class="card topic-card" href="/library/trading-mechanics/market-orders/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Trading Mechanics</span>
+    <span class="card-title">Market Orders</span>
+    <span class="card-text">A market order is an instruction to buy or sell immediately at the best prices currently available, accepting whatever those prices turn out to be.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/library/trading-mechanics/limit-orders/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Trading Mechanics</span>
+    <span class="card-title">Limit Orders</span>
+    <span class="card-text">A limit order is an instruction to buy or sell only at a stated price or better, which fixes the worst acceptable price but leaves the fill uncertain.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/library/trading-mechanics/bid-ask-spread/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 4L3 8l4 4"/><path d="M3 8h14"/><path d="M17 12l4 4-4 4"/><path d="M21 16H7"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Trading Mechanics</span>
+    <span class="card-title">Bid, Ask &amp; Spread</span>
+    <span class="card-text">The bid is the highest price a buyer is offering, the ask is the lowest price a seller will accept, and the spread is the gap between the two.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/library/trading-mechanics/slippage/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 5L5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Trading Mechanics</span>
+    <span class="card-title">Slippage</span>
+    <span class="card-text">Slippage is the difference between the price a trader expected when sending an order and the price at which the order was actually filled.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/derivatives-perpetuals/funding-rate/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 5L5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Derivatives &amp; Perpetuals</span>
+    <span class="card-title">Funding Rate</span>
+    <span class="card-text">The funding rate is a periodic payment exchanged between long and short holders of a perpetual future that pulls the contract price toward the spot index.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/crypto/gas-and-network-fees/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22a7 7 0 0 0 7-7c0-3-2-5-3-7-1 2-2 3-3 3 0-3-1-6-4-9 0 4-4 7-4 13a7 7 0 0 0 7 7z"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Crypto Basics</span>
+    <span class="card-title">Gas &amp; Network Fees</span>
+    <span class="card-text">A network fee is what a blockchain charges to process a transaction. On Ethereum-style chains it is measured in gas: the fee is the gas used multiplied by the price per unit of gas.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager wrap" aria-label="More in this shelf"><a class="pager-link pager-prev" href="/library/trading-mechanics/slippage/"><span><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg>Previous</span><strong>Slippage</strong></a>
+    <a class="pager-up" href="/library/trading-mechanics/">Back to Trading Mechanics</a><a class="pager-link pager-next" href="/library/trading-mechanics/entry-and-exit/"><span>Next<svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span><strong>Entry &amp; Exit</strong></a>
+  </nav>
+</article>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Trading Fees: Maker & Taker","description":"Exchanges charge a fee on each fill: the maker rate applies to orders that add resting liquidity to the book and the taker rate to orders that remove it.","inLanguage":"en","dateModified":"2026-11-21","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"edgeTR Academy"}}]}
+</script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR" loading="lazy">
+        <p>Learn the market. Understand the tools. Make your own decisions.</p>
+        <p class="footer-family">Part of <strong>Ethos Empire</strong></p>
+        <ul class="trust" aria-label="What edgeTR Academy is"><li>Free to read</li><li>No login</li><li>No paywall</li><li>Educational reference</li>
+        </ul>
+      </div>
+      <nav aria-label="Learn and browse">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="/learn/">Learn: Chapters 1-10</a></li>
+          <li><a href="/library/">Library</a></li>
+          <li><a href="/patterns/">Pattern gallery</a></li>
+          <li><a href="/foundations/">Foundations</a></li>
+          <li><a href="/compare/">Compare</a></li>
+          <li><a href="/glossary/">A-Z Glossary</a></li>
+          <li><a href="/watch/">Watch in 60 Seconds</a></li>
+          <li><a href="/search/">Search</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Library shelves">
+        <h2>Library</h2>
+        <ul>
+          <li><a href="/library/candlesticks/">Candlesticks</a></li>
+          <li><a href="/library/chart-patterns/">Chart Patterns</a></li>
+          <li><a href="/library/indicators/">Indicators</a></li>
+          <li><a href="/library/market-structure/">Market Structure</a></li>
+          <li><a href="/library/support-resistance/">Support &amp; Resistance</a></li>
+          <li><a href="/library/bull-bear-long-short/">Bull, Bear, Long &amp; Short</a></li>
+          <li><a href="/library/trading-mechanics/">Trading Mechanics</a></li>
+          <li><a href="/library/">All shelves</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Foundations shelves">
+        <h2>Foundations</h2>
+        <ul>
+          <li><a href="/foundations/markets-finance/">Markets &amp; Finance</a></li>
+          <li><a href="/foundations/crypto/">Crypto Basics</a></li>
+          <li><a href="/foundations/bitcoin/">Bitcoin Knowledge Center</a></li>
+          <li><a href="/foundations/blockchain/">Blockchain</a></li>
+          <li><a href="/foundations/wallets-security/">Wallets &amp; Security</a></li>
+          <li><a href="/foundations/exchanges-dex-defi/">Exchanges, DEX &amp; DeFi</a></li>
+          <li><a href="/foundations/derivatives-perpetuals/">Derivatives &amp; Perpetuals</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="About">
+        <h2>About</h2>
+        <ul>
+          <li><a href="/about/">About edgeTR Academy</a></li>
+          <li><a href="/educational-disclaimer/">Educational disclaimer</a></li>
+          <li><a href="/terms/">Terms of use</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/contact/">Contact and support</a></li>
+          <li><a href="/about/#editorial-standards">Editorial standards</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-disclaimer"><strong>Educational only.</strong> edgeTR Academy provides educational information only. It does not provide financial, investment, legal or tax advice, does not recommend specific assets or trades, and does not guarantee outcomes. Users are responsible for their own research and decisions. <a href="/educational-disclaimer/">Read the full disclaimer</a>.</p>
+    <p class="footer-legal">&copy; 2026 edgeTR Academy, part of Ethos Empire. Free to read. No account needed. <a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/contact/">Contact</a></p>
+  </div>
+</footer>
+<script src="/js/search-core.js" defer></script>
+<script src="/js/site.js" defer></script>
+</body>
+</html>

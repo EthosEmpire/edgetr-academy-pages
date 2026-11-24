@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en" data-base="/">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Contract Risk | edgeTR Academy</title>
+<meta name="description" content="Smart contract risk is the chance that the code holding funds in a blockchain application fails, is exploited or is changed, causing a loss that usually cannot be reversed.">
+<meta name="theme-color" content="#070b12">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://edgetr.com/foundations/exchanges-dex-defi/smart-contract-risk/">
+<meta property="og:url" content="https://edgetr.com/foundations/exchanges-dex-defi/smart-contract-risk/">
+<meta property="og:image" content="https://edgetr.com/img/brand/og-default.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="edgeTR Academy">
+<meta property="og:title" content="Smart Contract Risk">
+<meta property="og:description" content="Smart contract risk is the chance that the code holding funds in a blockchain application fails, is exploited or is changed, causing a loss that usually cannot be reversed.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.edgetrSearch)document.documentElement.classList.remove("js")},3000)</script>
+</head>
+<body class="page-article">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="edgeTR Academy home">
+      <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR">
+      <span class="brand-sub">Academy</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="/learn/">Learn</a></li>
+        <li><a href="/library/">Library</a></li>
+        <li><a href="/foundations/" aria-current="true">Foundations</a></li>
+        <li><a href="/compare/">Compare</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+        <li class="nav-search-link"><a href="/search/">Search</a></li>
+      </ul>
+    </nav>
+    <form class="header-search" action="/search/" method="get" role="search" aria-label="Site search" data-suggest>
+      <label class="sr-only" for="hq">Search the Academy</label>
+      <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="hq" name="q" type="search" placeholder="Search: RSI, doji, wallet..." autocomplete="off" spellcheck="false" aria-controls="hq-list" aria-expanded="false" aria-autocomplete="list" role="combobox">
+      <kbd aria-hidden="true">/</kbd>
+      <div class="suggest" id="hq-list" role="listbox" aria-label="Search suggestions" hidden></div>
+    </form>
+    <a class="header-search-btn" href="/search/" aria-label="Search"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false">
+      <span class="sr-only">Menu</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<article class="article">
+  <header class="article-hero">
+    <div class="wrap">
+      
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/foundations/">Foundations</a></li>
+    <li><a href="/foundations/exchanges-dex-defi/">Exchanges, DEX &amp; DeFi</a></li>
+    <li><span aria-current="page">Smart Contract Risk</span></li>
+  </ol>
+</nav>
+
+      <p class="eyebrow">Foundations · Exchanges, DEX &amp; DeFi</p>
+      <h1>Smart Contract Risk</h1>
+      <p class="lede">Smart contract risk is the chance that the code holding funds in a blockchain application fails, is exploited or is changed, causing a loss that usually cannot be reversed.</p>
+      <ul class="meta-chips"><li><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></li>
+        <li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>5 min read</span></li><li><span class="chip"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Updated <time datetime="2026-11-21">21 November 2026</time></span></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="wrap article-grid">
+    <aside class="toc" aria-label="On this page">
+      <details open>
+        <summary>On this page</summary>
+        <ol>
+          <li><a href="#why-it-matters">Why it matters</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#oracles">Oracles</a></li>
+          <li><a href="#audits">Audits</a></li>
+          <li><a href="#going-deeper">Going deeper</a></li>
+          <li><a href="#what-it-does-not-mean">What it does NOT mean</a></li>
+          <li><a href="#common-misunderstandings">Common misunderstandings</a></li>
+          <li><a href="#risks-and-limits">Risks and limits</a></li>
+        </ol>
+      </details>
+    </aside>
+
+    <div class="prose">
+
+      <h2 id="why-it-matters">Why it matters</h2>
+<p>In DeFi, a <a href="/foundations/blockchain/smart-contracts/">smart contract</a> does the job that a bank, a broker or an exchange does elsewhere: it holds the funds. When that code fails, there is usually no company to complain to, no insurer and no way of reversing the transaction.</p>
+<p>Every page on this shelf that mentions a protocol, a pool or a receipt token is describing something exposed to this risk.</p>
+<h2 id="how-it-works">How it works</h2>
+<figure class="viz viz--stack" data-animate><div class="viz-title">Where smart contract risk comes from</div><div class="viz-canvas"><div class="dg-stack"><div class="dg-layer t-bear" style="--i:0"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></svg></span><div><strong>Bugs in the code</strong><span>A mistake in logic or arithmetic that lets funds be taken or frozen.</span></div></div><div class="dg-layer t-warn" style="--i:1"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="15" r="4.5"/><path d="M11.3 11.7L20 3M16 7l3 3M13.5 9.5l2 2"/></svg></span><div><strong>Privileged keys</strong><span>Administrators who can upgrade the code, pause it or move funds.</span></div></div><div class="dg-layer t-warn" style="--i:2"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.600-7 10-7 10 7 10 7-3.600 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><div><strong>Oracles</strong><span>Outside price data that can be wrong or manipulated.</span></div></div><div class="dg-layer t-neutral" style="--i:3"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12.5l9 5 9-5M3 17l9 5 9-5"/></svg></span><div><strong>Dependencies</strong><span>Other contracts, tokens and bridges the protocol relies on.</span></div></div><div class="dg-layer t-neutral" style="--i:4"><span class="dg-layer-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.5"/><path d="M2 21a7 7 0 0 1 14 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.5a7 7 0 0 1 4 6.5"/></svg></span><div><strong>Governance</strong><span>Token votes that can change the rules.</span></div></div></div></div><figcaption>A protocol is only as sound as the weakest of these.</figcaption></figure>
+<p>A smart contract runs exactly as written, which is not always as intended. <strong>Smart contract risk</strong> is the chance of loss from that gap, or from anyone with the power to change the code.</p>
+<p><strong>Bugs.</strong> Contract code is public, holds valuable assets and cannot easily be patched. An attacker who finds a flaw can use it at once. Well-known classes include reentrancy, where a contract is called again before it has updated its own records, and plain errors in arithmetic or access checks.</p>
+<p><strong>Privileged keys.</strong> Many contracts are upgradeable: a holder of an administrator key can replace the code. The same keys may be able to pause withdrawals or move funds. This allows bugs to be fixed. It also means the protocol is as trustworthy as the key holders and the security of their keys.</p>
+<p><strong>Dependencies.</strong> Protocols build on each other. A lending market depends on its price feeds, on the tokens it accepts and often on a <a href="/foundations/blockchain/bridges/">bridge</a>. A failure in any of them arrives as a loss here.</p>
+<div class="callout callout--beginner"><p class="callout-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 8.500l5.500 3.500-5.500 3.500z"/></svg><span>In plain words</span></p>
+<p>Think of a vending machine holding everyone’s money, with its wiring diagram posted on the wall. Most people use it as intended. Someone who studies the diagram and finds a fault can empty it, and there is no shopkeeper to stop them or to refund anyone.</p>
+</div>
+<h2 id="oracles">Oracles</h2>
+<figure class="viz viz--flow" data-animate><div class="viz-title">How a manipulated price becomes a loss</div><div class="viz-canvas"><ol class="dg-flow dg-flow--row" style="--n:4"><li class="dg-step t-neutral" style="--i:0"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 16c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 20c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/></svg></span><span class="dg-step-body"><strong>Thin price source</strong><span>A protocol reads a token's price from one small pool.</span></span></li><li class="dg-step t-warn" style="--i:1"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 4L3 8l4 4"/><path d="M3 8h14"/><path d="M17 12l4 4-4 4"/><path d="M21 16H7"/></svg></span><span class="dg-step-body"><strong>Price is pushed</strong><span>A large trade moves the pool far from the wider market.</span></span></li><li class="dg-step t-bear" style="--i:2"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.600-7 10-7 10 7 10 7-3.600 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><span class="dg-step-body"><strong>Protocol believes it</strong><span>Collateral is valued at the distorted price.</span></span></li><li class="dg-step t-bear" style="--i:3"><span class="dg-step-n" aria-hidden="true"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></svg></span><span class="dg-step-body"><strong>Funds leave</strong><span>More is borrowed than the collateral is really worth.</span></span></li></ol></div><figcaption>The contract did exactly what it was written to do. The flaw was in what it was told.</figcaption></figure>
+<p>A <a class="gl" href="/glossary/blockchain/" title="A shared record of transactions grouped into blocks, where each block is cryptographically linked to the one before it.">blockchain</a> cannot see prices by itself. An <strong>oracle</strong> is a service that publishes outside data, such as prices, on-chain. Lending protocols use oracles to value collateral and decide <a class="gl" href="/glossary/liquidation/" title="The forced closing of a leveraged position by the exchange or protocol when its margin no longer covers its losses.">liquidations</a>.</p>
+<p>If the oracle can be moved, the protocol can be fooled. The classic weakness is a price read from a single small <a href="/foundations/exchanges-dex-defi/amms-and-liquidity-pools/">liquidity pool</a>, which one large trade can shift. The capital for such a trade can sometimes be borrowed and repaid within a single transaction. Sturdier designs average prices over time and combine several sources, which raises the cost of manipulation without removing it.</p>
+<h2 id="audits">Audits</h2>
+<figure class="viz viz--split" data-animate><div class="viz-title">What an audit covers</div><div class="viz-canvas"><div class="dg-split"><div class="dg-side t-info"><div class="dg-side-head"><span class="dg-side-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></span><div><p class="dg-side-title">AN AUDIT DOES</p><p>Outside reviewers read one version of the code.</p></div></div><ul><li>Find many known kinds of bug</li><li>Record findings at a point in time</li><li>Show that outside review was sought</li></ul></div><div class="dg-side t-warn"><div class="dg-side-head"><span class="dg-side-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg></span><div><p class="dg-side-title">AN AUDIT DOES NOT</p><p>It is an opinion, not a warranty.</p></div></div><ul><li>Prove that no bugs remain</li><li>Cover code changed afterwards</li><li>Cover keys, oracles or economic design unless in scope</li><li>Compensate anyone after a loss</li></ul></div></div></div><figcaption>Audited protocols have been exploited. An audit lowers the risk and leaves some of it in place.</figcaption></figure>
+<p>An <strong>audit</strong> is a review of the code by an outside security firm. It reduces risk and is a reasonable thing to look for. It is also limited to a scope, a version and a date, and its findings may or may not have been fixed.</p>
+<h2 id="going-deeper">Going deeper</h2>
+<p><strong>Fixed code or changeable code.</strong> Code that cannot be changed cannot be repaired when a bug is found. Code that can be changed depends on whoever holds the keys. Protections such as time delays on upgrades and keys shared among several signers narrow the risk on either side.</p>
+<p><strong>Time is evidence, not proof.</strong> A contract that has held large sums for years without incident has survived a lot of scrutiny. Flaws have still been found in long-running code.</p>
+<p><strong>Approvals outlast use.</strong> A <a href="/foundations/wallets-security/token-approvals/">token approval</a> given to a contract remains after the user’s funds are withdrawn. If that contract is later exploited or upgraded maliciously, approved tokens in the wallet can be at risk.</p>
+<p><strong>Malice by design.</strong> Some contracts are written to take funds. That is fraud, not a bug, and is covered in <a href="/foundations/wallets-security/rug-pulls-and-honeypots/">rug pulls and honeypots</a>.</p>
+<p><strong>Rates do not offset it.</strong> A rate quoted by a protocol is variable, is not guaranteed and is often paid in a token whose price can fall. It carries the risks of the mechanism behind it, including the loss of the whole deposit.</p>
+<div class="example"><p class="example-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.600-7 10-7 10 7 10 7-3.600 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>A hypothetical oracle manipulation</span><em>Hypothetical illustration</em></p>
+<p>Made-up numbers, ignoring fees. A lending protocol values token T by reading one pool that holds 1,000 T and 100,000 of a <a class="gl" href="/glossary/stablecoin/" title="A crypto token designed to hold a steady value, usually one US dollar.">stablecoin</a> S. The pool price is 100,000 / 1,000 = 100 S per T, and k = 100,000,000.</p>
+<p>Someone swaps 100,000 S into the pool:</p>
+<ul>
+<li>new S balance: 200,000;</li>
+<li>required T balance: 100,000,000 / 200,000 = 500;</li>
+<li>new pool price: 200,000 / 500 = 400 S per T.</li>
+</ul>
+<p>The wider market still prices T at 100. The protocol now values 100 T of collateral at 100 x 400 = 40,000 instead of 10,000. With a maximum loan-to-value of 75%, it allows a loan of 30,000 against collateral really worth 10,000.</p>
+<p>When the pool price returns to 100, the protocol holds a loan of 30,000 backed by 10,000. The 20,000 gap is bad debt, borne by the people who supplied the borrowed tokens.</p>
+</div>
+<section class="notmean" aria-labelledby="what-it-does-not-mean"><h2 id="what-it-does-not-mean"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg><span>What it does NOT mean</span></h2>
+<ul>
+<li><strong>Audited does not mean safe.</strong> An audit lowers the chance of known kinds of error. It does not remove risk.</li>
+<li><strong>Open source does not mean reviewed.</strong> Public code is available to read, which is not the same as having been read carefully.</li>
+<li><strong>Decentralized does not mean nobody can change it.</strong> Many protocols have keys or votes that can alter the code.</li>
+<li><strong>A long history does not rule out a flaw.</strong> It makes one less likely, not impossible.</li>
+<li><strong>A large protocol is not insured.</strong> Compensation after an exploit is rare, partial and at the discretion of whoever funds it.</li>
+</ul>
+</section>
+<h2 id="common-misunderstandings">Common misunderstandings</h2>
+<div class="mistakes">
+<ol>
+<li><strong>Treating an audit badge as a guarantee.</strong> What matters is what was reviewed, when, by whom, and whether the findings were fixed.</li>
+<li><strong>Looking at one contract only.</strong> The risk includes every oracle, token and protocol it depends on.</li>
+<li><strong>Ignoring who holds the keys.</strong> An upgradeable contract can become a different contract.</li>
+<li><strong>Assuming the blockchain will undo a theft.</strong> Confirmed transactions are final in almost all cases.</li>
+<li><strong>Forgetting old approvals.</strong> Risk can persist in a wallet long after a protocol was last used.</li>
+</ol>
+</div>
+<h2 id="risks-and-limits">Risks and limits</h2>
+<ul>
+<li>Losses from exploits can be large for the affected funds, and fast.</li>
+<li>Users generally cannot assess code themselves and rely on the judgment of others.</li>
+<li>New, complex or heavily layered protocols have had less scrutiny.</li>
+<li>Legal recourse is uncertain, and those responsible are often unidentified.</li>
+<li>This risk exists alongside <a href="/foundations/exchanges-dex-defi/counterparty-risk/">counterparty risk</a>, not in place of it.</li>
+</ul>
+<div class="takeaway"><p class="takeaway-title"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg><span>Key takeaway</span></p>
+<p>Smart contract risk is the risk that the code holding the funds, or something it depends on, fails or is changed. Audits, time and careful design reduce it. Nothing removes it, and losses are usually permanent.</p>
+</div>
+
+      <section class="sources" aria-labelledby="sources">
+        <h2 id="sources">Sources and further reading</h2>
+        <ul>
+          <li><cite>Mastering Ethereum</cite>, Andreas M. Antonopoulos and Gavin Wood (2018). Includes a chapter on smart contract security and common vulnerabilities</li>
+          <li><a class="ext" href="https://ethereum.org/en/developers/docs/smart-contracts/security/" rel="noopener noreferrer" target="_blank">Smart contract security<span class="sr-only"> (opens in a new tab)</span></a>, ethereum.org. Immutability makes stolen assets hard to recover; audits do not catch every bug; upgrade patterns and admin keys add risk</li>
+          <li><a class="ext" href="https://ethereum.org/en/developers/docs/oracles/" rel="noopener noreferrer" target="_blank">Oracles<span class="sr-only"> (opens in a new tab)</span></a>, ethereum.org. Smart contracts cannot access off-chain data by default; a corrupt oracle means bad data in the contract</li>
+        </ul>
+      </section>
+
+      <aside class="edu-note" aria-label="Educational notice">
+        <svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+        <p><strong>Educational content only.</strong> This page explains a concept. It is not financial advice and not a recommendation to buy, sell or hold anything. <a href="/educational-disclaimer/">Full disclaimer</a>. Last updated <time datetime="2026-11-21">21 November 2026</time>.</p>
+      </aside>
+    </div>
+  </div>
+  <section class="related band" aria-labelledby="related">
+    <div class="wrap">
+      <h2 id="related">Related topics</h2>
+      <div class="card-grid">
+<a class="card topic-card" href="/foundations/blockchain/smart-contracts/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Blockchain</span>
+    <span class="card-title">Smart Contracts</span>
+    <span class="card-text">A smart contract is a program stored on a blockchain that runs exactly as written when a transaction calls it. Its code and balances are public, and bugs in it can be exploited.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/exchanges-dex-defi/counterparty-risk/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Exchanges, DEX &amp; DeFi</span>
+    <span class="card-title">Counterparty Risk</span>
+    <span class="card-text">Counterparty risk is the risk that the other party to an arrangement, such as an exchange, a lender or a token issuer, cannot or will not do what it promised.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/exchanges-dex-defi/what-is-defi/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.800 0 18M12 3c-3 3.200-3 14.800 0 18"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Exchanges, DEX &amp; DeFi</span>
+    <span class="card-title">What Is DeFi?</span>
+    <span class="card-text">DeFi, short for decentralized finance, is the collective name for financial services such as trading, lending and borrowing that run as smart contracts on public blockchains.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--beginner"><i aria-hidden="true"></i>Beginner</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/wallets-security/token-approvals/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Wallets &amp; Security</span>
+    <span class="card-title">Token Approvals</span>
+    <span class="card-text">A token approval gives a smart contract standing permission to spend a specific token from a wallet, often an unlimited amount, and it stays in force until it is revoked.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card accent-bear" href="/foundations/wallets-security/rug-pulls-and-honeypots/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Wallets &amp; Security</span>
+    <span class="card-title">Rug Pulls &amp; Honeypots</span>
+    <span class="card-text">A rug pull is when a project&#39;s developers abandon it and remove the liquidity or funds, leaving holders with a token they cannot sell for value. A honeypot is a token that can be bought but not sold.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+<a class="card topic-card" href="/foundations/blockchain/bridges/">
+  <span class="card-thumb" aria-hidden="true"><span class="thumb-ico"><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 4L3 8l4 4"/><path d="M3 8h14"/><path d="M17 12l4 4-4 4"/><path d="M21 16H7"/></svg></span></span>
+  <span class="card-body"><span class="card-eyebrow">Blockchain</span>
+    <span class="card-title">Bridges</span>
+    <span class="card-text">A blockchain bridge moves value between two chains, usually by locking an asset on one and issuing a matching token on the other. Bridges have been frequent targets of large exploits.</span>
+    <span class="card-meta"><span class="chip chip--diff chip--intermediate"><i aria-hidden="true"></i>Intermediate</span></span>
+  </span>
+</a>
+
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager wrap" aria-label="More in this shelf"><a class="pager-link pager-prev" href="/foundations/exchanges-dex-defi/apr-and-apy/"><span><svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg>Previous</span><strong>APR &amp; APY</strong></a>
+    <a class="pager-up" href="/foundations/exchanges-dex-defi/">Back to Exchanges, DEX &amp; DeFi</a><a class="pager-link pager-next" href="/foundations/exchanges-dex-defi/counterparty-risk/"><span>Next<svg class="ico " viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span><strong>Counterparty Risk</strong></a>
+  </nav>
+</article>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Smart Contract Risk","description":"Smart contract risk is the chance that the code holding funds in a blockchain application fails, is exploited or is changed, causing a loss that usually cannot be reversed.","inLanguage":"en","dateModified":"2026-11-21","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"edgeTR Academy"}}]}
+</script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/img/brand/edgetr-logo-horizontal.png" width="156" height="48" alt="edgeTR" loading="lazy">
+        <p>Learn the market. Understand the tools. Make your own decisions.</p>
+        <p class="footer-family">Part of <strong>Ethos Empire</strong></p>
+        <ul class="trust" aria-label="What edgeTR Academy is"><li>Free to read</li><li>No login</li><li>No paywall</li><li>Educational reference</li>
+        </ul>
+      </div>
+      <nav aria-label="Learn and browse">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="/learn/">Learn: Chapters 1-10</a></li>
+          <li><a href="/library/">Library</a></li>
+          <li><a href="/patterns/">Pattern gallery</a></li>
+          <li><a href="/foundations/">Foundations</a></li>
+          <li><a href="/compare/">Compare</a></li>
+          <li><a href="/glossary/">A-Z Glossary</a></li>
+          <li><a href="/watch/">Watch in 60 Seconds</a></li>
+          <li><a href="/search/">Search</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Library shelves">
+        <h2>Library</h2>
+        <ul>
+          <li><a href="/library/candlesticks/">Candlesticks</a></li>
+          <li><a href="/library/chart-patterns/">Chart Patterns</a></li>
+          <li><a href="/library/indicators/">Indicators</a></li>
+          <li><a href="/library/market-structure/">Market Structure</a></li>
+          <li><a href="/library/support-resistance/">Support &amp; Resistance</a></li>
+          <li><a href="/library/bull-bear-long-short/">Bull, Bear, Long &amp; Short</a></li>
+          <li><a href="/library/trading-mechanics/">Trading Mechanics</a></li>
+          <li><a href="/library/">All shelves</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Foundations shelves">
+        <h2>Foundations</h2>
+        <ul>
+          <li><a href="/foundations/markets-finance/">Markets &amp; Finance</a></li>
+          <li><a href="/foundations/crypto/">Crypto Basics</a></li>
+          <li><a href="/foundations/bitcoin/">Bitcoin Knowledge Center</a></li>
+          <li><a href="/foundations/blockchain/">Blockchain</a></li>
+          <li><a href="/foundations/wallets-security/">Wallets &amp; Security</a></li>
+          <li><a href="/foundations/exchanges-dex-defi/">Exchanges, DEX &amp; DeFi</a></li>
+          <li><a href="/foundations/derivatives-perpetuals/">Derivatives &amp; Perpetuals</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="About">
+        <h2>About</h2>
+        <ul>
+          <li><a href="/about/">About edgeTR Academy</a></li>
+          <li><a href="/educational-disclaimer/">Educational disclaimer</a></li>
+          <li><a href="/terms/">Terms of use</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/contact/">Contact and support</a></li>
+          <li><a href="/about/#editorial-standards">Editorial standards</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-disclaimer"><strong>Educational only.</strong> edgeTR Academy provides educational information only. It does not provide financial, investment, legal or tax advice, does not recommend specific assets or trades, and does not guarantee outcomes. Users are responsible for their own research and decisions. <a href="/educational-disclaimer/">Read the full disclaimer</a>.</p>
+    <p class="footer-legal">&copy; 2026 edgeTR Academy, part of Ethos Empire. Free to read. No account needed. <a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/contact/">Contact</a></p>
+  </div>
+</footer>
+<script src="/js/search-core.js" defer></script>
+<script src="/js/site.js" defer></script>
+</body>
+</html>
