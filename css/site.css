@@ -1010,3 +1010,15 @@ main:focus { outline: 2px solid transparent; }
   .js .family:not(.is-in) .fl-draw { stroke-dashoffset: 0; }
   .family-logo:hover, .family-logo:focus-within, .family-cta:hover, .family-cta:focus-visible { transform: none; }
 }
+
+/* ---- homepage identity section (SEO release): plain, readable text blocks that follow the existing card look ---- */
+.identity-lead { max-width: 72ch; color: var(--text-2); }
+.identity-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+.identity-grid article { border: 1px solid var(--line); background: rgba(255, 255, 255, 0.025); border-radius: var(--r); padding: 1.1rem 1.2rem; }
+.identity-grid h3 { font-size: 1.05rem; margin: 0 0 0.45rem; }
+.identity-grid p { margin: 0; font-size: 0.95rem; color: var(--text-2); }
+.identity-note { margin: 1.25rem 0 0; max-width: 78ch; color: var(--muted); font-size: 0.92rem; }
+@media (max-width: 900px) { .identity-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .identity-grid { grid-template-columns: minmax(0, 1fr); } }
+.gloss-defs { margin-block: 1.5rem 0; color: var(--muted); font-size: 0.92rem; }
+.gloss-defs strong { color: var(--text-2); font-weight: 600; margin-inline-end: 0.2em; }
